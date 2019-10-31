@@ -20,7 +20,7 @@ plt.rcParams['xtick.labelsize'] = 18
 plt.rcParams['ytick.labelsize'] = 18
 
 def PV_build_rates():
-    # add referecene to IRENA
+    # https://www.irena.org/statistics
     df = pd.read_csv('data/PV_capacity_IRENA_query.csv', sep=';',
                  index_col=0, encoding="latin-1")
 

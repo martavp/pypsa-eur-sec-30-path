@@ -4,9 +4,6 @@ Created on Sat Oct 26 11:25:50 2019
 
 @author: Marta
 
-TODO: Read IRENA data for wind and solar
-
-
 """
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -27,7 +24,7 @@ years=np.arange(1965, 2021, 2)
 
 
 technologies=['Hydro', 'Nuclear', 'Hard Coal', 'Lignite', 'Natural Gas', 
-              'Waste', 'Bioenergy', 'Wind', 'Solar']
+              'Waste', 'Bioenergy', 'Onshore Wind', 'Offshore Wind', 'Solar']
 
 
 agedata = pd.DataFrame(index = pd.Series(data=years, name='year'),
@@ -77,7 +74,7 @@ for tech in ['Hydro', 'Nuclear', 'Hard Coal', 'Lignite', 'Natural Gas']:
                               (i[3] > (year-5 )) & 
                               (i[3] < (year))]) 
     
-for tech in ['Waste', 'Bioenergy', 'Wind', 'Solar']:
+for tech in ['Waste', 'Bioenergy']: #, 'Wind', 'Solar']:
     agedata[tech][1965] = sum([i[2] for i in list(zip(data['Technology'], 
                                 data['Fueltype'],
                                 data['Capacity'], 
@@ -99,6 +96,19 @@ for tech in ['Waste', 'Bioenergy', 'Wind', 'Solar']:
                               #(i[4] == country) &  
                               (i[3] > (year-5 )) & 
                               (i[3] < (year))])
+
+# https://www.irena.org/statistics
+pv_df = pd.read_csv('data/PV_capacity_IRENA.csv', sep=';',
+                    index_col=0, encoding="latin-1")
+onwind_df = pd.read_csv('data/OnshoreWind_capacity_IRENA.csv', sep=';',
+                    index_col=0, encoding="latin-1")
+offwind_df = pd.read_csv('data/OffshoreWind_capacity_IRENA.csv', sep=';',
+                    index_col=0, encoding="latin-1")
+for year in years[-9:]:
+    agedata['Solar'][year] =  (pv_df[str(year-1)]['European Union']-pv_df[str(year-3)]['European Union'])
+    agedata['Onshore Wind'][year] =  (onwind_df[str(year-1)]['European Union']-onwind_df[str(year-3)]['European Union'])
+    agedata['Offshore Wind'][year] =  (offwind_df[str(year-1)]['European Union']-offwind_df[str(year-3)]['European Union'])
+agedata.fillna(0, inplace=True)    
     
 agedata=agedata/1000 #GW 
 #%%    
@@ -111,16 +121,16 @@ gs1.update(wspace=0.15)
 
 a0=agedata[['Hydro', 'Nuclear', 'Hard Coal', 'Lignite', 'Natural Gas']].plot.barh(stacked=True, 
           ax=ax0, color=['blue', 'pink', 'black', 'dimgrey', 'brown'], width=0.8, linewidth=0)
-a1 = agedata[['Waste', 'Bioenergy', 'Wind', 'Solar']].plot.barh(stacked=True, 
-            ax=ax1, color=['orange', 'peru', 'dodgerblue', 'gold'], width=0.8, linewidth=0)
+a1 = agedata[['Waste', 'Bioenergy', 'Onshore Wind', 'Offshore Wind', 'Solar']].plot.barh(stacked=True, 
+            ax=ax1, color=['orange', 'peru', 'dodgerblue', 'lightskyblue', 'gold'], width=0.8, linewidth=0)
 
 ax0.invert_xaxis()
 ax0.invert_yaxis()
 ax1.invert_yaxis()
 ax0.set_yticks([])
 ax0.set_xlim(35,0)
-ax1.set_xlim(0,10)
-ax1.set_xticks(np.arange(2,12,2))
+ax1.set_xlim(0,70)
+ax1.set_xticks(np.arange(0,70,20))
 ax0.set_ylabel('')
 ax1.set_ylabel('')
 
@@ -137,6 +147,6 @@ ax1.spines["left"].set_visible(False)
 ax0.spines["right"].set_visible(False)
 ax0.set_xlabel('Installed capacity (GW)', fontsize=16, x=1.15)
 ax0.set_title('Age', x=1.07)
-ax0.legend(loc=(-0.4,0.01), fontsize=14)
-ax1.legend(loc=(0.6,0.01), fontsize=14)
+ax0.legend(loc=(-0.5,0.7), fontsize=14)
+ax1.legend(loc=(0.6,0.7), fontsize=14)
 plt.savefig('../figures/age_distribution.png', dpi=300, bbox_inches='tight') 
