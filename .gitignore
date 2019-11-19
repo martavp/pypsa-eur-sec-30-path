@@ -1,0 +1,11 @@
+.ipynb_checkpoints
+*.bst
+*.aux
+*.blg
+*.log
+*.out
+*.spl
+*.synctex*
+*.sty
+*.nc
+
