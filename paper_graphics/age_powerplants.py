@@ -113,10 +113,10 @@ agedata.fillna(0, inplace=True)
 agedata=agedata/1000 #GW 
 #%%    
 
-plt.figure(figsize=(10,15))
-gs1 = gridspec.GridSpec(2, 2)
+plt.figure(figsize=(20,20))
+gs1 = gridspec.GridSpec(2, 3)
 ax0 = plt.subplot(gs1[0,0])
-ax1 = plt.subplot(gs1[0,1])
+ax1 = plt.subplot(gs1[0,1:3])
 gs1.update(wspace=0.15)
 
 a0=agedata[['Hydro', 'Nuclear', 'Hard Coal', 'Lignite', 'Natural Gas']].plot.barh(stacked=True, 
@@ -130,7 +130,7 @@ ax1.invert_yaxis()
 ax0.set_yticks([])
 ax0.set_xlim(35,0)
 ax1.set_xlim(0,70)
-ax1.set_xticks(np.arange(0,70,20))
+ax1.set_xticks(np.arange(0,70,10))
 ax0.set_ylabel('')
 ax1.set_ylabel('')
 
