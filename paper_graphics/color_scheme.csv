@@ -1,0 +1,25 @@
+tech, color
+onshore wind,#2e8b57
+offshore wind,#556b2f
+solar PV,#9acd32
+hydro,#87ceeb
+biomass,#cd853f
+nuclear,#b22222
+gas,#a9a9a9
+gas turbine,#696969
+gas boiler,#a9a9a9
+oil,#696969
+coal,#555555
+lignite,#000000
+resistive heater,#1e90ff
+heat pump,#87ceeb
+hydrogen storage,#800080
+battery storage,#800080
+hot water storage,#800080
+methanation,#ffa500
+transmission lines,#00008b
+renewable,#008000
+conventional,#a9a9a9
+balancing,#800080
+PtH,#0000ff
+
