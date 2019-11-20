@@ -18,7 +18,7 @@ plt.rcParams['ytick.direction'] = 'in'
 plt.rcParams['xtick.labelsize'] = 18
 plt.rcParams['ytick.labelsize'] = 18
 
-def plot_heating_historical():
+def plot_heating_historical():    
     base_dir='data/jrc-idees-2015'
     plt.figure(figsize=(25, 30))
     gs1 = gridspec.GridSpec(6, 5)
@@ -32,7 +32,7 @@ def plot_heating_historical():
     filename_countries = 'data/Country_codes_REINVEST_short.csv'
     countries_list = pd.read_csv(filename_countries, sep=';', encoding='latin-1', 
                           index_col=3)
-    #dictionary to convert 2-letter country code intocountry name
+    #dictionary to convert 2-letter country code into country name
     dict_2toname = dict(
                  zip(countries_list['2 letter code (ISO-3166-2)'].tolist(),
                     countries_list['Country'].tolist()))                           
@@ -42,16 +42,15 @@ def plot_heating_historical():
     dict_2toname['EL']= 'Greece'
 
     for i, country in enumerate(countries):
-    
-        excel_fec = pd.read_excel('{}/JRC-IDEES-2015_Residential_{}.xlsx'.format(base_dir,country), 
-                                  sheet_name='RES_hh_fec', index_col=0, header=0, squeeze=True) # the summary sheet
+        
+        excel_fec = pd.read_excel('{}/JRC-IDEES-2015_Residential_{}.xlsx'.format(base_dir,country), sheet_name='RES_hh_fec', index_col=0, header=0, squeeze=True) # the summary sheet
     
         excel_fec_ter = pd.read_excel('{}/JRC-IDEES-2015_Tertiary_{}.xlsx'.format(base_dir,country), 
                                       sheet_name='SER_hh_fec', index_col=0, header=0, squeeze=True) # the summary sheet
 
         s_fec = excel_fec.iloc[3:13,-16:]
         s_fec_ter = excel_fec_ter.iloc[3:13,-16:]
-        # print(s_fec)
+        #print(s_fec)        
         #print(s_fec_ter)
         years=np.arange(2000, 2016)
         technologies=['gas', 'heat resistors', 'heatpumps', 'geothermal', 
@@ -96,11 +95,11 @@ def plot_heating_historical():
                       pd.to_numeric(heat_supply.loc['electric boilers']),
                       pd.to_numeric(heat_supply.loc['heatpumps']),
                       pd.to_numeric(heat_supply.loc['derived heat'])], 
-                      colors=['black', 'midnightblue', 'peru',
-                              'dodgerblue', 'skyblue',  'lightcyan'],
+                      colors=['black', 'dimgray', 'peru',
+                              'dodgerblue', 'skyblue',  'lightcyan'],     
                       linewidth=0,
-                      labels=['solids-liquids', 'gas', 'biomass & waste',
-                           'electric boilers', 'heat pumps', 'derived heat',])               
+                      labels=['coal, LPG', 'gas', 'biomass & waste',
+                           'electric boilers', 'heat pumps', 'district heating',])               
         ax1.set_xlim(2000,2015)
         ax1.set_ylim(0,1)
         ax1.set_title(dict_2toname[country], fontsize=16)
