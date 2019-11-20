@@ -121,7 +121,7 @@
 
 \section{Historical Greenhouse Gases emissions in the European Union}
 
-The carbon budget from now onwards for the generation of electricity and the supply of heating in residential and services sector in Europe accounts for 21 GtCO$_2$. It has been estimated based on a global carbon budget of 800 GtCO$_2$ to avoid temperature increments above 2$^{\circ}$C relative to preindustrial period with a probability of greater than 66\% \cite{Figueres_2017, blog_budget}. The global budget is assumed to be split among regions according to a constant per-capita ratio which translates into a 6\% share for Europe \cite{Raupach_2014}. Out of the total emissions in Europe, the ratio corresponding to electricity and heating is considered constant and equal to present values. In 2017, electricity generation and heating in the residential and services sector emitted 1.565 GtCO$_2$ with represents, 43.5\% of European emissions \cite{UNFCCC_inventory}. \\
+The carbon budget from now onwards for the generation of electricity and the supply of heating in residential and services sector in Europe accounts for 21 GtCO$_2$. It has been estimated based on a global carbon budget of 800 GtCO$_2$ to avoid temperature increments above 2$^{\circ}$C relative to preindustrial period with a probability of greater than 66\% \cite{Figueres_2017, blog_budget}. The global budget is assumed to be split among regions according to a constant per-capita ratio which translates into a 6\% share for Europe \cite{Raupach_2014}. Out of the total emissions in Europe, the ratio corresponding to electricity and heating is considered constant and equal to present values. In 2017, electricity generation and heating in the residential and services sector emitted 1.56 GtCO$_2$ with represents, 43.5\% of European emissions,  \cite{UNFCCC_inventory} and Figure \ref{fig_historical_emissions} . \\
 
 \begin{figure}[!h]
 \centering
@@ -131,7 +131,7 @@ The carbon budget from now onwards for the generation of electricity and the sup
 
 \section{CO$_2$ restriction paths with equivalent budget}
 
-The 21 GtCO$_2$ budget $B$ can be spent following different transition paths. One option consists in assuming a linear CO$_2$ restriction path. Emissions will then reach zero in $t_f$
+The 21 GtCO$_2$ budget $B$ can be utilised following different transition paths. One option consists in assuming a linear CO$_2$ restriction path. Emissions will then reach zero in $t_f$
 
 \begin{equation}
 	t_f=t_0+\frac{2B}{e_0}
@@ -144,31 +144,29 @@ Alternatively, emissions can be assumed to follow a path defined by one minus th
 \begin{equation}
 \begin{aligned}
 &	e (t) = e_0(1- CDF_{\beta}(t)) \\
-&	CDF_{\beta} (t) =\int_{-\infty}^{t} PDF(t)_{\beta} dt \\
+&	CDF_{\beta} (t) =\int_{-\infty}^{t} PDF_{\beta}(t) dt \\
 &	PDF_{\beta} (t) =  \frac{\Gamma(\beta_1+\beta_2)}{\Gamma(\beta_1)+\Gamma(\beta_2)} t^{\beta_1-1} (1-t)^{\beta_2-1}
 \end{aligned}
 \end{equation}
 
-where $\Gamma$ is the gamma function. The cumulative emissions fulfil $\int_{0}^{\infty} e(t) dt =B$. \\
+where $\Gamma$ is the gamma function. The cumulative emissions fulfil $\int_{t_0}^{\infty} e(t) dt =B$. \\
 
-The third option considered is an exponential decay, following Raupach \textit{et al. }\cite{Raupach_2014}. In that case, emissions evolve as:
+The third option considered for the transition path is an exponential decay, following Raupach \textit{et al. }\cite{Raupach_2014}. In that case, emissions evolve as:
 \begin{equation}
 e(t) = e_0(1+(r+m)t)e^{-mt}
 \end{equation}
 
-where $r$ is the initial linear growth rate, which is assumed $r$=0 here, and the decay parameter $m$ is determined by imposing the integral of the path to be equal to the budget.
+where $r$ is the initial linear growth rate, which here is assumed to be $r$=0, and the decay parameter $m$ is determined by imposing the integral of the path to be equal to the budget.
 \begin{equation}
 \begin{aligned}
-& B=\int_{0}^{\infty} e_0(1+(r+m)t)e^{-mt} dt \\
+& B=\int_{t_0}^{\infty} e_0(1+(r+m)t)e^{-mt} dt \\
 & m=\frac{1+ \sqrt{1+\frac{rB}{e_0}}}{\frac{B}{e_0}}
 \end{aligned}
 \end{equation}
 
-Although the exponential decay path approaches asymptotically to zero, we assumed here that $e(2050)=0$. By doing that, the final point of the different transition paths is equivalent and all of them achieve net-zero emissions by 2050.
+Although the exponential decay path approaches asymptotically to zero, we assume here that $e(2050)=0$. By doing that, the final point of the different transition paths is equivalent and all of them achieve net-zero emissions by 2050.
 
-
-
-\section{Historical evolution of heating supply in residential and services sector in European countries}
+\section{Historical evolution of CO$_2$ emissions from heating supply in residential and services sector in European countries}
 
 \begin{figure}[!h]
 \centering
@@ -187,7 +185,7 @@ Although the exponential decay path approaches asymptotically to zero, we assume
 \begin{figure}[!h]
 \centering
 \includegraphics[width=\textwidth]{figures/age_distribution.png}
-\caption{Age distribution of European power plant in operation\cite{powerplantmatching, IRENA_2019}} \label{fig_age_distribution} 
+\caption{Age distribution of European power plants in operation\cite{powerplantmatching, IRENA_2019}} \label{fig_age_distribution} 
 \end{figure}
 
 \section{Historical build rates for solar photovoltaics in European countries}
@@ -195,9 +193,31 @@ Although the exponential decay path approaches asymptotically to zero, we assume
 \begin{figure}[!h]
 \centering
 \includegraphics[width=12cm]{figures/installation_rates_PV.png}
-\caption{Photovoltaic annual build rates for those European countries with a prominent peak \cite{IRENA_2019}. The sharp increase and decrease in the installation rates were caused by country-specific successive changes in the regulatory frameworks.} \label{fig_installation_rates_PV} 
+\caption{Photovoltaic annual build rates for those European countries with a prominent peak \cite{IRENA_2019}. The sharp increase and subsequent decrease in the installation rates were caused by country-specific successive changes in the regulatory frameworks. See for instance \cite{Report_Fraunhofer_2019, Victoria_2012}. } \label{fig_installation_rates_PV} 
 \end{figure}
  
+
+
+\section{Transition paths cautious and last-minute. Additional results}
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=12cm]{figures/installed_capacity.png}
+	\caption{Installed capacities for different technologies throughout transition paths cautious and last-minute shown in Fig. 1 in the main text.} \label{fig_installed_capacity} 
+\end{figure}
+
+\begin{figure}[!h]
+\centering
+%	\includegraphics[width=\columnwidth]{figures/spatial_plot_primary_energy.png}
+\caption{Primary energy in every country in 2050. (left) Cautious transition path, (right) Greenfield optimization for 2050.} \label{fig_spatial_plot} 
+\end{figure}
+
+\begin{figure}[!h]
+\centering
+%\includegraphics[width=\textwidth]{figures/.png}
+\caption{Evolution of technologies used to supply heating in residential and services sector in the cautious path. } \label{fig_heating_shares} 
+\end{figure}
+
 \FloatBarrier
 
 \section{Model description}
@@ -226,7 +246,7 @@ Second, the maximum power flowing through the links is limited by their maximum 
 \ubar{f}_{\ell,t} \cdot F_{\ell} \leq f_{\ell,t} \leq \bar{f}_{\ell,t} \cdot F_{\ell} \hspace{1cm} \forall\, \ell,t \; . \label{eq_links}
 \end{equation}
 
-For interconnecting transmission lines, the lengths $l_{\ell}$ are set by the distance between the geographical mid-points of each country, so that some of the transmission within each country is also reflected in the optimisation. A factor of 25\% is added to the line lengths to account for the fact that transmission lines cannot be placed as the crow flies due to land use restriction. For the transmission lines capacities $F_{\ell}$, a safety margin of 33\% of the installed capacity is used to satisfy n-1 requirements \cite{Brown_2016}. Linear optimal power flow is applied using Kirchhoff's formulation \cite{Horsch_2018}. \\
+For interconnecting transmission lines, the lengths $l_{\ell}$ are set by the distance between the geographical mid-points of each country, so that some of the transmission within each country is also reflected in the optimisation. A factor of 25\% is added to the line lengths to account for the fact that transmission lines cannot be placed as the crow flies due to land use restriction. For the transmission lines capacities $F_{\ell}$, a safety margin of 33\% of the installed capacity is used to satisfy n-1 requirements \cite{Brown_2016}. \\ %Linear optimal power flow is applied using Kirchhoff's formulation \cite{Horsch_2018}. 
 
 Third, for every hour the maximum capacity that can provide a generator or storage is bounded by the product between installed capacity $G_{n,s}$ and availabilities $\ubar{g}_{n,s,t}$, $\bar{g}_{n,s,t}$. For instance, for solar generators $\ubar{g}_{n,s,t}$ is zero and $\bar{g}_{n,s,t}$ refers to the capacity factor at time $t$ 
 
@@ -261,13 +281,16 @@ where the sum of transmission capacities $F_{\ell}$ multiplied by the lengths $l
 The maximum CO$_2$ allowed to be emitted by the system $\textrm{CAP}_{CO2}$ can be imposed through the constraint 
 
 \begin{equation}
-  \sum_{n,s,t}  \varepsilon_{s} \frac{ g_{n,s,t} }{\eta_{n,s}}  \leq  \textrm{CAP}_{CO2} \hspace{.4cm} \leftrightarrow \hspace{0.3cm} \mu_{CO2} \label{eq_co2cap}
+  \sum_{n,s,t}  \varepsilon_{s} \frac{ g_{n,s,t} }{\eta_{n,s}} + \sum_{n,s} \varepsilon_{s} (e_{n,s,t=0} - e_{n,s,t=T})  \leq  \textrm{CAP}_{CO2} \hspace{.4cm} \leftrightarrow \hspace{0.3cm} \mu_{CO2} \label{eq_co2cap}
 \end{equation}
 
 where $\varepsilon_{s}$ represents the specific emissions in CO$_2$-tonne-per-MWh\th{} of the fuel $s$, $\eta_{n,s}$ the efficiency and $g_{n,s,t}$ the generators dispatch. In this case, the Lagrange/KKT multiplier represents the shadow price of CO$_2$, \textit{i.e.}, the additional price that should be added for every unit of CO$_2$ to achieve the CO$_2$ reduction target in an open market. 
 
 \section{Sectors description and data}
 
+\textcolor[rgb]{1,0,0}{TODO: Add data references for electricity demand and annual demand, methodology description for modelling hourly heat demand. Describe modelling approach for wind and solar PV time series and reference repositories. 
+Describe temperature-dependency of heat pumps. Describe operation of CHP power plants. 
+Reference data for initially installed electricity and heat generation capacities. Describe path of deployment of district heating. Describe path of electrification of transport. Include formula for LCOE estimation. }
 
 \section{Cost assumptions}	
 

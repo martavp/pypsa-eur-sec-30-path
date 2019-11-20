@@ -119,7 +119,7 @@ ax0 = plt.subplot(gs1[0,0])
 ax1 = plt.subplot(gs1[0,1:3])
 gs1.update(wspace=0.15)
 
-a0=agedata[['Hydro', 'Nuclear', 'Hard Coal', 'Lignite', 'Natural Gas']].plot.barh(stacked=True, 
+a0=agedata[['Hydro', 'Nuclear', 'Lignite', 'Hard Coal',  'Natural Gas']].plot.barh(stacked=True, 
           ax=ax0, color=['blue', 'pink', 'black', 'dimgrey', 'brown'], width=0.8, linewidth=0)
 a1 = agedata[['Waste', 'Bioenergy', 'Onshore Wind', 'Offshore Wind', 'Solar']].plot.barh(stacked=True, 
             ax=ax1, color=['orange', 'peru', 'dodgerblue', 'lightskyblue', 'gold'], width=0.8, linewidth=0)

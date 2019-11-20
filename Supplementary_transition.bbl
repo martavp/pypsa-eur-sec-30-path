@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 \expandafter\ifx\csname url\endcsname\relax
   \def\url#1{\texttt{#1}}\fi
 \expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
@@ -51,18 +51,25 @@ L.~Mantzos, T.~Wiesenthal, N.~Matei, S.~Tchung-Ming, M.~Rózsai, H.~P. Russ,
   Capacity Statistics} 2019, {IRENA}}.
 \newline\urlprefix\url{https://www.irena.org/publications/2019/Mar/Renewable-Capacity-Statistics-2019}
 
+\bibitem{Report_Fraunhofer_2019}
+\href{https://www.ise.fraunhofer.de/content/dam/ise/de/documents/publications/studies/Photovoltaics-Report.pdf}{{Photovoltaics}
+  {Report}}, Tech. rep., Fraunhofer ISE (2019).
+\newline\urlprefix\url{https://www.ise.fraunhofer.de/content/dam/ise/de/documents/publications/studies/Photovoltaics-Report.pdf}
+
+\bibitem{Victoria_2012}
+M.~Victoria, C.~Gallego, I.~Anton, G.~Sala,
+  \href{http://www.eupvsec-proceedings.com/proceedings?paper=17736}{Past,
+  {Present} and {Future} of {Feed}-in {Tariffs} in {Spain}: {What} are their
+  {Real} {Costs}?}, 27th European Photovoltaic Solar Energy Conference and
+  Exhibition (2012) 4612--4616\href
+  {http://dx.doi.org/10.4229/27thEUPVSEC2012-6CV.3.49}
+  {\path{doi:10.4229/27thEUPVSEC2012-6CV.3.49}}.
+\newline\urlprefix\url{http://www.eupvsec-proceedings.com/proceedings?paper=17736}
+
 \bibitem{Brown_2016}
 T.~Brown, P.~Schierhorn, E.~Tr{\"o}ster, T.~Ackermann, Optimising the european
   transmission system for 77\% renewable electricity by 2030 10~(1)  3--9.
 \newblock \href {http://dx.doi.org/10.1049/iet-rpg.2015.0135}
   {\path{doi:10.1049/iet-rpg.2015.0135}}.
-
-\bibitem{Horsch_2018}
-J.~H{\"o}rsch, H.~Ronellenfitsch, D.~Witthaut, T.~Brown,
-  \href{http://www.sciencedirect.com/science/article/pii/S0378779617305138}{Linear
-  optimal power flow using cycle flows} 158 (2019) 126--135.
-\newblock \href {http://dx.doi.org/10.1016/j.epsr.2017.12.034}
-  {\path{doi:10.1016/j.epsr.2017.12.034}}.
-\newline\urlprefix\url{http://www.sciencedirect.com/science/article/pii/S0378779617305138}
 
 \end{thebibliography}

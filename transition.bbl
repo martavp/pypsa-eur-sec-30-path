@@ -156,6 +156,16 @@ T.~Brown, D.~Schlachtberger, A.~Kies, S.~Schramm, M.~Greiner,
   {\path{doi:10.1016/j.energy.2018.06.222}}.
 \newline\urlprefix\url{http://www.sciencedirect.com/science/article/pii/S036054421831288X}
 
+\bibitem{Child_2019}
+M.~Child, C.~Kemfert, D.~Bogdanov, C.~Breyer,
+  \href{http://www.sciencedirect.com/science/article/pii/S0960148119302319}{Flexible
+  electricity generation, grid exchange and storage for the transition to a
+  100\% renewable energy system in {Europe}}, Renewable Energy 139 (2019)
+  80--101.
+\newblock \href {http://dx.doi.org/10.1016/j.renene.2019.02.077}
+  {\path{doi:10.1016/j.renene.2019.02.077}}.
+\newline\urlprefix\url{http://www.sciencedirect.com/science/article/pii/S0960148119302319}
+
 \bibitem{Gross_2019}
 R.~Gross, R.~Hanna,
   \href{https://www.nature.com/articles/s41560-019-0383-5}{Path dependency in
@@ -163,6 +173,12 @@ R.~Gross, R.~Hanna,
 \newblock \href {http://dx.doi.org/10.1038/s41560-019-0383-5}
   {\path{doi:10.1038/s41560-019-0383-5}}.
 \newline\urlprefix\url{https://www.nature.com/articles/s41560-019-0383-5}
+
+\bibitem{DEA_2015}
+\href{https://ens.dk/sites/ens.dk/files/contents/material/file/regulation_and_planning_of_district_heating_in_denmark.pdf}{Regulation
+  and planning of district heating in {Denmark}}, Tech. rep., Danish Energy
+  Agency (2015).
+\newline\urlprefix\url{https://ens.dk/sites/ens.dk/files/contents/material/file/regulation_and_planning_of_district_heating_in_denmark.pdf}
 
 \bibitem{Carbon_pricing_2019}
 \href{https://openknowledge.worldbank.org/handle/10986/31755}{State and

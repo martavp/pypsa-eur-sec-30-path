@@ -66,7 +66,9 @@ def plot_heating_historical():
                                          s_fec_ter.loc['Derived heat'] )
 
         heat_supply.loc['electricity in circulation']=s_fec.loc['Electricity in circulation']
-
+        
+        heat_supply.loc['other']=heat_supply.loc['geothermal'] + heat_supply.loc['electricity in circulation']
+        
         heat_supply.loc['solids-liquids']=(s_fec.loc['Solids'] 
                                          + s_fec.loc['Liquified petroleum gas (LPG)'] 
                                          + s_fec.loc['Gas/Diesel oil incl. biofuels (GDO)']+
@@ -89,17 +91,19 @@ def plot_heating_historical():
         heat_supply=heat_supply/heat_supply.sum(axis=0)
 
         ax1 = plt.subplot(gs1[i//5, i-(i//5)*5])
+        ax1.set_facecolor('navy')
         ax1.stackplot(np.arange(2000,2016), [pd.to_numeric(heat_supply.loc['solids-liquids']),
                       pd.to_numeric(heat_supply.loc['gas']),
                       pd.to_numeric(heat_supply.loc['biomass']),
                       pd.to_numeric(heat_supply.loc['electric boilers']),
                       pd.to_numeric(heat_supply.loc['heatpumps']),
-                      pd.to_numeric(heat_supply.loc['derived heat'])], 
+                      pd.to_numeric(heat_supply.loc['derived heat']),
+                      pd.to_numeric(heat_supply.loc['other'])], 
                       colors=['black', 'dimgray', 'peru',
-                              'dodgerblue', 'skyblue',  'lightcyan'],     
+                              'dodgerblue', 'skyblue',  'lightcyan', 'navy'],     
                       linewidth=0,
                       labels=['coal, LPG', 'gas', 'biomass & waste',
-                           'electric boilers', 'heat pumps', 'district heating',])               
+                           'electric boilers', 'heat pumps', 'district heating', 'other'])               
         ax1.set_xlim(2000,2015)
         ax1.set_ylim(0,1)
         ax1.set_title(dict_2toname[country], fontsize=16)
