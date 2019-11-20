@@ -5,6 +5,12 @@
 \expandafter\ifx\csname href\endcsname\relax
   \def\href#1#2{#2} \def\path#1{#1}\fi
 
+\bibitem{UNFCCC_inventory}
+\href{https://www.eea.europa.eu/data-and-maps/data/national-emissions-reported-to-the-unfccc-and-to-the-eu-greenhouse-gas-monitoring-mechanism-15}{National
+  emissions reported to the {UNFCCC} and to the {EU} {Greenhouse} {Gas}
+  {Monitoring} {Mechanism} , {EEA}}.
+\newline\urlprefix\url{https://www.eea.europa.eu/data-and-maps/data/national-emissions-reported-to-the-unfccc-and-to-the-eu-greenhouse-gas-monitoring-mechanism-15}
+
 \bibitem{Figueres_2017}
 C.~Figueres, H.~J. Schellnhuber, G.~Whiteman, J.~Rockstr{\"o}m, A.~Hobley,
   S.~Rahmstorf,
@@ -27,12 +33,6 @@ M.~R. Raupach, S.~J. Davis, G.~P. Peters, R.~M. Andrew, J.~G. Canadell,
 \newblock \href {http://dx.doi.org/10.1038/nclimate2384}
   {\path{doi:10.1038/nclimate2384}}.
 \newline\urlprefix\url{https://www.nature.com/articles/nclimate2384}
-
-\bibitem{UNFCCC_inventory}
-\href{https://www.eea.europa.eu/data-and-maps/data/national-emissions-reported-to-the-unfccc-and-to-the-eu-greenhouse-gas-monitoring-mechanism-15}{National
-  emissions reported to the {UNFCCC} and to the {EU} {Greenhouse} {Gas}
-  {Monitoring} {Mechanism} , {EEA}}.
-\newline\urlprefix\url{https://www.eea.europa.eu/data-and-maps/data/national-emissions-reported-to-the-unfccc-and-to-the-eu-greenhouse-gas-monitoring-mechanism-15}
 
 \bibitem{IDEES}
 L.~Mantzos, T.~Wiesenthal, N.~Matei, S.~Tchung-Ming, M.~Rózsai, H.~P. Russ,
