@@ -17,9 +17,9 @@ hydrogen storage,#800080
 battery storage,#800080
 hot water storage,#800080
 methanation,#ffa500
-transmission lines,#00008b
-renewable,#008000
+transmission lines,#4d004d
+wind and solar,#008000
 conventional,#a9a9a9
-balancing,#800080
-PtH,#0000ff
+balancing,#b300b3
+Power-to-heat,#0000ff
 

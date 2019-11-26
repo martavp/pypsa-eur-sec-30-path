@@ -1,33 +1,33 @@
 Country;2 letter code (ISO-3166-2);3 letter code (ISO-3166-3);Eurostat
-Austria ;AT;AUT;AUSTRIA
-Belgium ;BE;BEL;BELGIUM
-Bulgaria ;BG;BGR;BULGARIA
+Austria;AT;AUT;AUSTRIA
+Belgium;BE;BEL;BELGIUM
+Bulgaria;BG;BGR;BULGARIA
 Bosnia Herzegovina;BA;BIH;
-Switzerland ;CH;CHE;
-Cyprus ;CY;CYP;
-Czech Republic ;CZ;CZE;CZECH_REPUBLIC
-Germany ;DE;DEU;GERMANY
-Denmark ;DK;DNK;DENMARK
-Spain ;ES;ESP;SPAIN
-Estonia ;EE;EST;
-Finland ;FI;FIN;FINLAND
-France ;FR;FRA;FRANCE
-United Kingdom ;GB;GBR;UK
-Greece ;GR;GRC;GREECE
-Croatia ;HR;HRV;CROATIA
-Hungary ;HU;HUN;HUNGARY
-Ireland ;IE;IRL;IRELAND
-Italy ;IT;ITA;ITALY
-Lithuania ;LT;LTU;LITHUANIA
-Luxembourg ;LU;LUX;LUXEMBOURG
-Latvia ;LV;LVA;LATVIA
-Malta ;MT;MLT;MALTA
-Netherlands ;NL;NLD;NETHERLANDS
-Norway ;NO;NOR;NORWAY
-Poland ;PL;POL;POLAND
-Portugal ;PT;PRT;PORTUGAL
-Romania ;RO;ROU;ROMANIA
+Switzerland;CH;CHE;
+Cyprus;CY;CYP;
+Czech Republic;CZ;CZE;CZECH_REPUBLIC
+Germany;DE;DEU;GERMANY
+Denmark;DK;DNK;DENMARK
+Spain;ES;ESP;SPAIN
+Estonia;EE;EST;
+Finland;FI;FIN;FINLAND
+France;FR;FRA;FRANCE
+United Kingdom;GB;GBR;UK
+Greece;GR;GRC;GREECE
+Croatia;HR;HRV;CROATIA
+Hungary;HU;HUN;HUNGARY
+Ireland;IE;IRL;IRELAND
+Italy;IT;ITA;ITALY
+Lithuania;LT;LTU;LITHUANIA
+Luxembourg;LU;LUX;LUXEMBOURG
+Latvia;LV;LVA;LATVIA
+Malta;MT;MLT;MALTA
+Netherlands;NL;NLD;NETHERLANDS
+Norway;NO;NOR;NORWAY
+Poland;PL;POL;POLAND
+Portugal;PT;PRT;PORTUGAL
+Romania;RO;ROU;ROMANIA
 Serbia;RS;SRB;SERBIA
-Slovakia ;SK;SVK;
-Slovenia ;SI;SVN;SLOVENIA
-Sweden ;SE;SWE;SWEDEN
+Slovakia;SK;SVK;
+Slovenia;SI;SVN;SLOVENIA
+Sweden;SE;SWE;SWEDEN
