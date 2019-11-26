@@ -145,14 +145,13 @@ A remaining global carbon budget of 800 Gigatons (Gt) of CO$_2$ can be emitted f
 
 \paragraph{\textbf{Stranded assets}} \
 
-\textcolor[rgb]{1,0,0}{TODO: write this section including the following ideas: A significant share of the operating capacity in Europe was installed less than 25 years ago, see Supplementary Note 3. Among the `young' power plants, gas is the predominant technology.
-Some technologies have such high cost that they are not selected for the optimal system configuration unless CO$_2$ emissions are heavily restricted. This is the case for large storage energy capacities, such as electric batteries and H$_2$ storage, and methanation. Cumulative cost for cautious path represents 9421 billion euros (B\EUR), while last-minute path accounts for 9694 B\EUR. Mention differences between the two transition paths. Add comments on stranded assets (Fig. \ref{fig_utilisation_factors})
-The early retirement of electricity infrastructure is one of the most cost-effective actions to reduce committed emissions and enable a 2$^{\circ}$C-compatible future evolution of global emissions \cite{Tong_2019}.}
+The two alternative transition paths arrive at a similar system configuration in 2050. 
+Due to their high cost, some of are not selected until the final years, in which heavily restricted CO$_2$, disallows the use of gas and they are necessary to balance renewable generation. This is the case for large storage energy capacities, such as electric batteries and H$_2$ storage, and methanation. Cumulative cost for cautious path represents 9421 billion euros (B\EUR), while last-minute path accounts for 9694 B\EUR. Gas power plants represent the main stranded assets causing the higher cost of last-minute path. The lower CO$_2$ emissions restriction in 2030 and earlier allow the installation of such plants. However, the drastic emissions allowance in subsequent years, avoids the operation of gas power plants. The Europe-averaged utilisation factors shown in Fig. \ref{fig_utilisation_factors} are closed to zero from 2040 onwards for the gas units in the last-minute path. For both transition paths, even in the initial years the utilisation factor of gas is below 30\%. This is a consequence of the role that gas units play as backup technology securing electricity and heat supply when there is a significant deficit of renewable generation, but it is also a consequence of the large capacity of gas recently installed in Europe. The pyramid age of existing electricity generation technologies in Europe, Fig. 4 in Supplementary Materials, unveils that most of the `younger' power plants use gas. Since most of the gas capacity in Europe was installed less than 25 years ago, part of this capacity represent a stranded asset during the initial years for both transition paths. Although, infrautilisation of existing generation capacity might be seen as an unnecessary contribution to higher cost of energy it must be remarked that the early retirement of electricity infrastructure has been identified as one of the most cost-effective actions to reduce committed emissions and enable a 2$^{\circ}$C-compatible future evolution of global emissions \cite{Tong_2019}.
 
 \begin{figure*}[!h]
 \centering
 \includegraphics[width=12cm]{figures/LCOE.png}
-\caption{Levelized Cost of Energy (LCOE) for the European electricity and heating system throughout transition paths cautious and last-minute shown in Fig. \ref{fig_carbon_budget}.} \label{fig_system_cost} 
+\caption{Levelized Cost of Energy (LCOE) for the European electricity and heating system throughout transition paths cautious and last-minute shown in Fig. \ref{fig_carbon_budget}. Conventional includes costs associated with coal, lignite, and gas power plants producing electricity as well as gas consumed in gas boilers and CPH units. Power-to-heat category includes costs associated with heat pumps and heat resistors. } \label{fig_system_cost} 
 \end{figure*}
 
 \begin{figure}[!h]
@@ -169,7 +168,7 @@ During the past decade, several European countries have shown sudden increments 
 \begin{figure}[!h]
 \centering
 \includegraphics[width=\columnwidth]{figures/build_rates.png}
-\caption{Annual build rates for different technologies throughout transition paths cautious and last-minute shown in Fig. \ref{fig_carbon_budget}.} \label{fig_build_rates} 
+\caption{Annual build rates for different technologies throughout transition paths cautious and last-minute shown in Fig. \ref{fig_carbon_budget}. \textcolor[rgb]{1,0,0}{TODO: We are considering making a new Figure combining these results with the historical installation rates shown in Fig. 4 in the Supplementary Materials.} } \label{fig_build_rates} 
 \end{figure}
 
 
@@ -179,13 +178,19 @@ During the past decade, several European countries have shown sudden increments 
 
 \begin{figure*}[!h]
 \centering
-\includegraphics[width=16cm]{figures/primary_energy_go.png}
+\includegraphics[width=14cm]{figures/primary_energy_go.png}
 \caption{Evolution of primary energy mix in every country for the transition path cautious.} \label{fig_primary_energy} 
 \end{figure*}
 
 \paragraph{\textbf{High CO$_2$ prices needed}} \
 
-\textcolor[rgb]{1,0,0}{TODO: Decide on the country constraint for gas usage.  Plot evolution of CO$_2$ price and write paragraph discussing it. }
+\textcolor[rgb]{1,0,0}{TODO: Write paragraph discussing evolution of CO$_2$ price. Include caveat due to not modelling biomass. Add comment on possible alternative to setting CO2 price such as economic aids for certain technologies. }
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=\columnwidth]{figures/co2_price.png}
+\caption{Historical evolution of CO$_2$ price in the European Trading System \cite{ETS} and required CO$_2$ price obtained from the model throughout transition paths cautious and last-minute shown in Fig. \ref{fig_carbon_budget}} \label{fig_co2price} 
+\end{figure}
 
 
 \paragraph{\textbf{Early action allows room for decision-making later}} \
@@ -205,7 +210,9 @@ During the past decade, several European countries have shown sudden increments 
 
 \textcolor[rgb]{1,0,0}{TODO: Run cautious path including path representing the electrification of the transport sector and write paragraph discussing the results.}
 
+\paragraph{\textbf{Heterogeneity among European countries}} \
 
+\textcolor[rgb]{1,0,0}{TODO: Discuss final system configuration obtain as a result of the path vs. greenfield optimization in 2050.}
 
 %\begin{footnotesize}
 \section{Methods}

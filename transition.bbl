@@ -186,14 +186,6 @@ R.~Gross, R.~Hanna,
   (2019).
 \newline\urlprefix\url{https://openknowledge.worldbank.org/handle/10986/31755}
 
-\bibitem{Victoria_storage}
-M.~Victoria, K.~Zhu, T.~Brown, G.~B. Andresen, M.~Greiner,
-  \href{http://arxiv.org/abs/1906.06936}{The role of storage technologies
-  throughout the decarbonisation of the sector-coupled european energy system},
-  accepted in Energy Conversion and Management, preprint:\href
-  {http://arxiv.org/abs/1906.06936} {\path{arXiv:1906.06936}}.
-\newline\urlprefix\url{http://arxiv.org/abs/1906.06936}
-
 \bibitem{Bogdanov_2019}
 D.~Bogdanov, J.~Farfan, K.~Sadovskaia, A.~Aghahosseini, M.~Child, A.~Gulagi,
   A.~S. Oyewo, L.~Barbosa, C.~Breyer,
@@ -305,6 +297,10 @@ F.~W. Geels, B.~K. Sovacool, T.~Schwanen, S.~Sorrell,
 \newblock \href {http://dx.doi.org/10.1126/science.aao3760}
   {\path{doi:10.1126/science.aao3760}}.
 \newline\urlprefix\url{https://science.sciencemag.org/content/357/6357/1242}
+
+\bibitem{ETS}
+\href{https://sandbag.org.uk/carbon-price-viewer/}{Carbon price viewer}.
+\newline\urlprefix\url{https://sandbag.org.uk/carbon-price-viewer/}
 
 \bibitem{Egli_2019}
 F.~Egli, B.~Steffen, T.~S. Schmidt,
