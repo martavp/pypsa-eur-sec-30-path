@@ -53,7 +53,7 @@ def plot_historical_sectoral_emissions():
     e["total wL"] = "Total (with LULUCF, with indirect CO2)"
     e["total woL"] = "Total (without LULUCF, with indirect CO2)"
     e["industry energy"] = '1.A.2 - Manufacturing Industries and Construction'
-    e["biomass"] = '4.E Biomass Burning 4(V) Biomass Burning' #'4.E Biomass Burning'
+    #e["biomass"] = '4.E Biomass Burning 4(V) Biomass Burning' #'4.E Biomass Burning'
     pol = ["All greenhouse gases - (CO2 equivalent)"] #"CO2" 
     # In agriculture and waste, CO2 and CO2 equivalent emissions are very different
 
@@ -133,7 +133,7 @@ def plot_historical_sectoral_emissions():
                   emissions.loc['industry energy'] +
                   emissions.loc['agriculture'] +
                   emissions.loc['waste management'] +
-                  emissions.loc['biomass'])[1990]
+                  emissions.loc['energy (others)'])[1990]
     #print(total_1990)
 
     # selecte CO$_2$ or GHG emissions

@@ -75,7 +75,8 @@ def plot_carbon_budget():
                            columns=pd.Series(data=['last-minute', 'cautious'], name='paths'))
     
     colors = pl.cm.hot(np.linspace(0,1,6))
-    colors=['firebrick', 'red', 'darkorange', 'gold', 'green', 'blue']
+    #colors=['firebrick', 'red', 'darkorange', 'gold', 'green', 'blue']
+    colors=['lightgray', 'red', 'lightgray', 'gold', 'lightgray', 'lightgray']
     plt.figure(figsize=(10, 6))
     gs1 = gridspec.GridSpec(1, 1)
     ax1 = plt.subplot(gs1[0,0])
