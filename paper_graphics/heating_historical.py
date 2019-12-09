@@ -1,6 +1,9 @@
 # -*- coding: utf-8 -*-
 """
 Created on Thu Oct 24 19:20:37 2019
+1. Usar colores de referencia
+2. Sustituir edad por año de instalación
+3. Añadir datos de thewindpower
 
 @author: Marta
 """

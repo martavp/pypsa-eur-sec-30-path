@@ -1,8 +1,8 @@
 tech, color
 onshore wind,#2e8b57
 offshore wind,#556b2f
-solar PV,#9acd32
-hydro,#00ffff
+solar PV,#adff2f
+hydro,#1e90ff
 biomass,#cd853f
 nuclear,#b22222
 gas,#a9a9a9
@@ -26,3 +26,4 @@ electricity,#0000ff
 rural heat,#ff0000
 urban heat,#ffa500
 cooling,#00aecc
+waste,#ffa500
