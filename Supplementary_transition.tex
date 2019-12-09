@@ -90,7 +90,7 @@
 
 \begin{frontmatter}
 
-\title{Supplementary Materials for ``The benefits of ambitious short-term targets when decarbonising the European electricity and heating energy system'' }
+\title{Supplementary Materials for ``The benefits of ambitious short-term targets when decarbonising the coupled electricity and heating energy system in Europe'' }
 
 %\author[mymainaddress,iClimate]{Marta Victoria\corref{mycorrespondingauthor}}
 %\ead{mvp@eng.au.dk}
@@ -121,7 +121,7 @@
 
 \section{Historical Greenhouse Gases emissions in the European Union}
 
-The carbon budget from now onwards for the generation of electricity and the supply of heating in residential and services sector in Europe accounts for 21 GtCO$_2$. It has been estimated based on a global carbon budget of 800 GtCO$_2$ to avoid temperature increments above 2$^{\circ}$C relative to preindustrial period with a probability of greater than 66\% \cite{Figueres_2017, blog_budget}. The global budget is assumed to be split among regions according to a constant per-capita ratio which translates into a 6\% share for Europe \cite{Raupach_2014}. Out of the total emissions in Europe, the ratio corresponding to electricity and heating is considered constant and equal to present values. In 2017, electricity generation and heating in the residential and services sector emitted 1.56 GtCO$_2$ with represents, 43.5\% of European emissions,  \cite{UNFCCC_inventory} and Figure \ref{fig_historical_emissions} . \\
+The carbon budget from now onwards for the generation of electricity and the supply of heating in residential and services sector in Europe accounts for 21 GtCO$_2$. It has been estimated based on a global carbon budget of 800 GtCO$_2$ to avoid temperature increments above 2$^{\circ}$C relative to preindustrial period with a probability of greater than 66\% \cite{Figueres_2017, blog_budget}. The global budget is assumed to be split among regions according to a constant per-capita ratio which translates into a 6\% share for Europe \cite{Raupach_2014}. Out of the total emissions in Europe, the ratio corresponding to electricity and heating is considered constant and equal to present values. In 2017, electricity generation and heating in the residential and services sector emitted 1.56 GtCO$_2$ which represents 43.5\% of European emissions,  \cite{UNFCCC_inventory} and Figure \ref{fig_historical_emissions} . \\
 
 \begin{figure}[!h]
 \centering
@@ -131,13 +131,12 @@ The carbon budget from now onwards for the generation of electricity and the sup
 
 \section{CO$_2$ restriction paths with equivalent budget}
 
-The 21 GtCO$_2$ budget $B$ can be utilised following different transition paths. One option consists in assuming a linear CO$_2$ restriction path. Emissions will then reach zero in $t_f$
+The $B$=21 GtCO$_2$ budget can be utilised following different transition paths. One option consists in assuming a linear CO$_2$ restriction path. Emissions will then reach zero in $t_f$
 
 \begin{equation}
 	t_f=t_0+\frac{2B}{e_0}
 \end{equation}
-
-Where $t_0$=2020, and $e_0$ represents the carbon emissions from electricity and heating sector in 2020, which are assumed to be the same as in 2017. \\
+where $t_0$=2020, and $e_0$ represents the carbon emissions from electricity and heating sector in 2020, which are assumed to be the same as in 2017. \\
 
 Alternatively, emissions can be assumed to follow a path defined by one minus the cumulative distribution function (CDF$_\beta$) of a beta distribution in which $\beta_1$ = $\beta_2$. 
 
@@ -148,7 +147,6 @@ Alternatively, emissions can be assumed to follow a path defined by one minus th
 &	PDF_{\beta} (t) =  \frac{\Gamma(\beta_1+\beta_2)}{\Gamma(\beta_1)+\Gamma(\beta_2)} t^{\beta_1-1} (1-t)^{\beta_2-1}
 \end{aligned}
 \end{equation}
-
 where $\Gamma$ is the gamma function. The cumulative emissions fulfil $\int_{t_0}^{\infty} e(t) dt =B$. \\
 
 The third option considered for the transition path is an exponential decay, following Raupach \textit{et al. }\cite{Raupach_2014}. In that case, emissions evolve as:
@@ -290,7 +288,7 @@ where $\varepsilon_{s}$ represents the specific emissions in CO$_2$-tonne-per-MW
 
 \textcolor[rgb]{1,0,0}{TODO: Add data references for electricity demand and annual demand, methodology description for modelling hourly heat demand. Describe modelling approach for wind and solar PV time series and reference repositories. 
 Describe temperature-dependency of heat pumps. Describe operation of CHP power plants. 
-Reference data for initially installed electricity and heat generation capacities. Describe path of deployment of district heating. Describe path of electrification of transport. Include formula for LCOE estimation. }
+Reference data for initially installed electricity and heat generation capacities. Describe path of deployment of district heating. Describe path of electrification of transport. Include formula for LCOE estimation.  Describe 2020 transmission capacities from TYNDP. Describe biomass assumptions from JRC-ENSPRESO. Describe existing power plants from plantmatching, IRENA, thewindpower and methodology to estimate commissioning date when missing. Describe reference and method for existing heating capacities.}
 
 \section{Cost assumptions}	
 

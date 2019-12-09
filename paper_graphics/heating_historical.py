@@ -1,6 +1,9 @@
 # -*- coding: utf-8 -*-
 """
 Created on Thu Oct 24 19:20:37 2019
+1. Usar colores de referencia
+2. Sustituir edad por año de instalación
+3. Añadir datos de thewindpower
 
 @author: Marta
 """
@@ -68,7 +71,7 @@ def plot_heating_historical():
         heat_supply.loc['electricity in circulation']=s_fec.loc['Electricity in circulation']
         
         heat_supply.loc['other']=heat_supply.loc['geothermal'] + heat_supply.loc['electricity in circulation']
-        
+        #solids-liquids includs: solids, liquified petroleum gas (LPG), gas/diesel oil. incl. biofuels
         heat_supply.loc['solids-liquids']=(s_fec.loc['Solids'] 
                                          + s_fec.loc['Liquified petroleum gas (LPG)'] 
                                          + s_fec.loc['Gas/Diesel oil incl. biofuels (GDO)']+
@@ -102,8 +105,8 @@ def plot_heating_historical():
                       colors=['black', 'dimgray', 'peru',
                               'dodgerblue', 'skyblue',  'lightcyan', 'navy'],     
                       linewidth=0,
-                      labels=['coal, LPG', 'gas', 'biomass & waste',
-                           'electric boilers', 'heat pumps', 'district heating', 'other'])               
+                      labels=['coal, oil, LPG', 'gas', 'biomass & waste',
+                           'electric boilers', 'heat pumps', 'district heating', 'geothermal & other'])               
         ax1.set_xlim(2000,2015)
         ax1.set_ylim(0,1)
         ax1.set_title(dict_2toname[country], fontsize=16)
