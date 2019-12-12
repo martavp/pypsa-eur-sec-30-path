@@ -86,31 +86,37 @@ def plot_historical_sectoral_emissions():
 
 
     
-    ax1.stackplot(np.arange(1990,2018), [pd.to_numeric(emissions.loc['electricity']),
-                  pd.to_numeric(emissions.loc['residential non-elec'] + 
-                                        emissions.loc['services non-elec']),
-                  pd.to_numeric(emissions.loc['road non-elec']),
-                  pd.to_numeric(emissions.loc['rail non-elec']),
-                  pd.to_numeric(emissions.loc['domestic navigation']),
-                  pd.to_numeric(emissions.loc['domestic aviation']),
-                  pd.to_numeric(emissions.loc['international navigation']),
-                  pd.to_numeric(emissions.loc['international aviation']),
-                  pd.to_numeric(emissions.loc['industrial processes']),
-                  pd.to_numeric(emissions.loc['industry energy']),
-                  pd.to_numeric(emissions.loc['agriculture']),
-                  pd.to_numeric(emissions.loc['waste management']),
-                  pd.to_numeric(emissions.loc['energy (others)'])], 
- 
-                  colors=['firebrick', 'orange',  'dodgerblue', 'skyblue', 
+    ax1.stackplot(np.arange(1990,2018), 
+                  
+                  [pd.to_numeric(emissions.loc['road non-elec']),
+                      pd.to_numeric(emissions.loc['rail non-elec']),
+                      pd.to_numeric(emissions.loc['domestic navigation']),
+                      pd.to_numeric(emissions.loc['domestic aviation']),
+                      pd.to_numeric(emissions.loc['international navigation']),
+                      pd.to_numeric(emissions.loc['international aviation']),
+                      pd.to_numeric(emissions.loc['industrial processes']),
+                      pd.to_numeric(emissions.loc['industry energy']),
+                      pd.to_numeric(emissions.loc['agriculture']),
+                      pd.to_numeric(emissions.loc['waste management']),
+                      pd.to_numeric(emissions.loc['energy (others)']),
+                      pd.to_numeric(emissions.loc['residential non-elec'] + 
+                                    emissions.loc['services non-elec']),
+                      pd.to_numeric(emissions.loc['electricity']),],                   
+    
+                   colors=[ 'dodgerblue', 'skyblue', 
                               'midnightblue',  'lightcyan', 'pink', 'purple',
-                              'dimgray', 'lightgray', 'yellowgreen', 'peru', 'black'], 
+                              'dimgray', 'lightgray', 'yellowgreen', 'peru', 
+                              'black', 'orange', 'firebrick',],  
+ 
                   linewidth=0,
-                  labels=['electricity generation + CHP', 'heating in residential and services',
-                              'road transport', 'rail transport', 
+                  
+                  labels=[    'road transport', 'rail transport', 
                               'domestic navigation', 'domestic aviation',
                               'international navigation', 'international aviation',
                               'industry (process emissions)', 'industry (energy provision)', 
-                              'agriculture', 'waste', 'energy (others)'])    
+                              'agriculture', 'waste', 'energy (others)',
+                              'heating in residential and services',
+                              'electricity generation + central heat',])                 
 
     #the graph is slightly different to that shown in 
     #https://www.eea.europa.eu/data-and-maps/indicators/greenhouse-gas-emission-trends-6/assessment-2

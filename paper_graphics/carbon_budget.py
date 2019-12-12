@@ -34,8 +34,8 @@ def plot_carbon_budget():
     e['residential non-elec'] = '1.A.4.b - Residential'
     e['services non-elec'] = '1.A.4.a - Commercial/Institutional'
     e["total woL"] = "Total (without LULUCF, with indirect CO2)"
-
-    pol = "CO2" #["All greenhouse gases - (CO2 equivalent)","CO2"]
+    
+    pol = ["CO2"] # ["All greenhouse gases - (CO2 equivalent)"] 
 
     eu28 = ['FR', 'DE', 'GB', 'IT', 'ES', 'PL', 'SE', 'NL', 'BE', 'FI', 'CZ',
             'DK', 'PT', 'RO', 'AT', 'BG', 'EE', 'GR', 'LV',
@@ -159,7 +159,7 @@ def plot_carbon_budget():
                  bbox=dict(boxstyle="round", linewidth=2, 
                            fc='white', ec='gold')) 
                  
-    ax1.set_yticks(np.arange(0.5,3,0.5))
+    ax1.set_yticks(np.arange(0.5,2.5,0.5))
     ax1.plot([2020],[0.8*(emissions[1990]['electricity'] + 
                  emissions[1990]['residential non-elec'] + 
                  emissions[1990]['services non-elec'])],
