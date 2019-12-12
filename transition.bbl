@@ -186,6 +186,16 @@ R.~Gross, R.~Hanna,
   (2019).
 \newline\urlprefix\url{https://openknowledge.worldbank.org/handle/10986/31755}
 
+\bibitem{Victoria_2019_storage}
+M.~Victoria, K.~Zhu, T.~Brown, G.~B. Andresen, M.~Greiner,
+  \href{http://www.sciencedirect.com/science/article/pii/S0196890419309835}{The
+  role of storage technologies throughout the decarbonisation of the
+  sector-coupled {European} energy system}, Energy Conversion and Management
+  201 (2019) 111977.
+\newblock \href {http://dx.doi.org/10.1016/j.enconman.2019.111977}
+  {\path{doi:10.1016/j.enconman.2019.111977}}.
+\newline\urlprefix\url{http://www.sciencedirect.com/science/article/pii/S0196890419309835}
+
 \bibitem{Bogdanov_2019}
 D.~Bogdanov, J.~Farfan, K.~Sadovskaia, A.~Aghahosseini, M.~Child, A.~Gulagi,
   A.~S. Oyewo, L.~Barbosa, C.~Breyer,
@@ -231,6 +241,34 @@ C.~F. Heuberger, I.~Staffell, N.~Shah, N.~M. Dowell,
 \newblock \href {http://dx.doi.org/10.1038/s41560-018-0159-3}
   {\path{doi:10.1038/s41560-018-0159-3}}.
 \newline\urlprefix\url{https://www.nature.com/articles/s41560-018-0159-3}
+
+\bibitem{JRC-EU-TIMES}
+S.~Simoes, W.~Nijs, P.~Ruiz, A.~Sgobbi, D.~Radu, P.~Bolat, C.~Thiel,
+  S.~Peteves,
+  \href{https://ec.europa.eu/jrc/en/scientific-tool/jrc-eu-times-model-assessing-long-term-role-energy-technologies}{The
+  {JRC}-{EU}-{TIMES} model, assessing the long-term role of the {SET} plan
+  energy technologies}.
+\newline\urlprefix\url{https://ec.europa.eu/jrc/en/scientific-tool/jrc-eu-times-model-assessing-long-term-role-energy-technologies}
+
+\bibitem{Loffler_2019}
+K.~L{\"o}ffler, T.~Burandt, K.~Hainsch, P.-Y. Oei,
+  \href{http://www.sciencedirect.com/science/article/pii/S2211467X19301142}{Modeling
+  the low-carbon transition of the {European} energy system - {A} quantitative
+  assessment of the stranded assets problem}, Energy Strategy Reviews 26
+  100422.
+\newblock \href {http://dx.doi.org/10.1016/j.esr.2019.100422}
+  {\path{doi:10.1016/j.esr.2019.100422}}.
+\newline\urlprefix\url{http://www.sciencedirect.com/science/article/pii/S2211467X19301142}
+
+\bibitem{Ueckerdt_2017}
+F.~Ueckerdt, R.~Pietzcker, Y.~Scholz, D.~Stetter, A.~Giannousakis, G.~Luderer,
+  \href{http://www.sciencedirect.com/science/article/pii/S014098831630130X}{Decarbonizing
+  global power supply under region-specific consideration of challenges and
+  options of integrating variable renewables in the {REMIND} model}, Energy
+  Economics 64  665--684.
+\newblock \href {http://dx.doi.org/10.1016/j.eneco.2016.05.012}
+  {\path{doi:10.1016/j.eneco.2016.05.012}}.
+\newline\urlprefix\url{http://www.sciencedirect.com/science/article/pii/S014098831630130X}
 
 \bibitem{Pfenninger_2017}
 S.~Pfenninger,
