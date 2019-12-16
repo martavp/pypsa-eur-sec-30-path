@@ -72,4 +72,48 @@ T.~Brown, P.~Schierhorn, E.~Tr{\"o}ster, T.~Ackermann, Optimising the european
 \newblock \href {http://dx.doi.org/10.1049/iet-rpg.2015.0135}
   {\path{doi:10.1049/iet-rpg.2015.0135}}.
 
+\bibitem{OPSD}
+\href{https://data.open-power-system-data.org/time_series/2018-03-13/.}{Open
+  {Power} {System} {Data}. 2018. {Data} {Package} {Time} series. {Version}
+  2018-03-13. ({Primary} data from various sources, for a complete list see
+  {URL}).}
+\newline\urlprefix\url{https://data.open-power-system-data.org/time_series/2018-03-13/.}
+
+\bibitem{Victoria_2019b}
+M.~Victoria, G.~B. Andresen,
+  \href{https://onlinelibrary.wiley.com/doi/full/10.1002/pip.3126}{Using
+  validated reanalysis data to investigate the impact of the {PV} system
+  configurations at high penetration levels in european countries}, Progress in
+  Photovoltaics: Research and Applications 27~(7)  576--592.
+\newblock \href {http://dx.doi.org/10.1002/pip.3126}
+  {\path{doi:10.1002/pip.3126}}.
+\newline\urlprefix\url{https://onlinelibrary.wiley.com/doi/full/10.1002/pip.3126}
+
+\bibitem{Brown_2018}
+T.~Brown, D.~Schlachtberger, A.~Kies, S.~Schramm, M.~Greiner,
+  \href{http://www.sciencedirect.com/science/article/pii/S036054421831288X}{Synergies
+  of sector coupling and transmission reinforcement in a cost-optimised, highly
+  renewable {European} energy system}, Energy 160 (2018) 720--739.
+\newblock \href {http://dx.doi.org/10.1016/j.energy.2018.06.222}
+  {\path{doi:10.1016/j.energy.2018.06.222}}.
+\newline\urlprefix\url{http://www.sciencedirect.com/science/article/pii/S036054421831288X}
+
+\bibitem{TYNDP2016}
+\href{https://tyndp.entsoe.eu/maps-data/}{{Ten}-{Year} {Network} {Development}
+  {Plan} 2016, {ENTSOE}}.
+\newline\urlprefix\url{https://tyndp.entsoe.eu/maps-data/}
+
+\bibitem{thewindpower}
+\href{https://www.thewindpower.net/}{Wind energy database}.
+\newline\urlprefix\url{https://www.thewindpower.net/}
+
+\bibitem{HRE}
+\href{www.heatroadmap.eu}{Deliverable 3.1: {Profile} of heating and cooling
+  demand in 2015. {Data} {Annex}. {Heat} {Roadmap} {Europe}}.
+\newline\urlprefix\url{www.heatroadmap.eu}
+
+\bibitem{NUTS3}
+\href{https://data.europa.eu}{Population density by {NUTS} 3 region}.
+\newline\urlprefix\url{https://data.europa.eu}
+
 \end{thebibliography}

@@ -260,6 +260,14 @@ K.~L{\"o}ffler, T.~Burandt, K.~Hainsch, P.-Y. Oei,
   {\path{doi:10.1016/j.esr.2019.100422}}.
 \newline\urlprefix\url{http://www.sciencedirect.com/science/article/pii/S2211467X19301142}
 
+\bibitem{Babrowski_2014}
+S.~Babrowski, T.~Heffels, P.~Jochem, W.~Fichtner,
+  \href{https://doi.org/10.1007/s12667-013-0085-1}{Reducing computing time of
+  energy system models by a myopic approach} 5~(1)  65--83.
+\newblock \href {http://dx.doi.org/10.1007/s12667-013-0085-1}
+  {\path{doi:10.1007/s12667-013-0085-1}}.
+\newline\urlprefix\url{https://doi.org/10.1007/s12667-013-0085-1}
+
 \bibitem{Ueckerdt_2017}
 F.~Ueckerdt, R.~Pietzcker, Y.~Scholz, D.~Stetter, A.~Giannousakis, G.~Luderer,
   \href{http://www.sciencedirect.com/science/article/pii/S014098831630130X}{Decarbonizing
