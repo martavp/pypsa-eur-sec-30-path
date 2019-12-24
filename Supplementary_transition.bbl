@@ -116,4 +116,46 @@ T.~Brown, D.~Schlachtberger, A.~Kies, S.~Schramm, M.~Greiner,
 \href{https://data.europa.eu}{Population density by {NUTS} 3 region}.
 \newline\urlprefix\url{https://data.europa.eu}
 
+\bibitem{CFSR}
+S.~{Saha}, S.~{Moorthi}, X.~{Wu}, J.~{Wang}, S.~{Nadiga}, P.~{Tripp},
+  D.~{Behringer}, Y.-T. {Hou}, H.~{Chuang}, M.~{Iredell}, M.~{Ek}, J.~{Meng},
+  R.~{Yang}, M.~P. {Mendez}, H.~{van den Dool}, Q.~{Zhang}, W.~{Wang},
+  M.~{Chen}, E.~{Becker}, \href{https://doi.org/10.5065/D6N877VB}{{NCEP}
+  climate forecast system version 2 ({CFSv2}) selected hourly time-series
+  products} (2011).
+\newline\urlprefix\url{https://doi.org/10.5065/D6N877VB}
+
+\bibitem{Staffell_2012}
+I.~Staffell, D.~Brett, N.~Brandon, A.~Hawkes,
+  \href{https://pubs.rsc.org/en/content/articlelanding/2012/ee/c2ee22653g}{A
+  review of domestic heat pumps}, Energy \& Environmental Science 5~(11)
+  9291--9306.
+\newblock \href {http://dx.doi.org/10.1039/C2EE22653G}
+  {\path{doi:10.1039/C2EE22653G}}.
+\newline\urlprefix\url{https://pubs.rsc.org/en/content/articlelanding/2012/ee/c2ee22653g}
+
+\bibitem{heating_capacities}
+\href{https://ec.europa.eu/energy/en/studies/mapping-and-analyses-current-and-future-2020-2030-heatingcooling-fuel-deployment}{Mapping
+  and analyses of the current and future (2020 - 2030) heating/cooling fuel
+  deployment (fossil/renewables)}.
+\newline\urlprefix\url{https://ec.europa.eu/energy/en/studies/mapping-and-analyses-current-and-future-2020-2030-heatingcooling-fuel-deployment}
+
+\bibitem{DH_penetration}
+\href{https://www.euroheat.org/knowledge-hub/country-profiles/}{{Euro} {Heat}
+  and {Power}}.
+\newline\urlprefix\url{https://www.euroheat.org/knowledge-hub/country-profiles/}
+
+\bibitem{JRC_biomass}
+P.~Ruiz, A.~Sgobbi, W.~Nijs, C.~Thiel, F.~Dalla, T.~Kobert, G.~Elbersen, G.~H.
+  Alterra,
+  \href{https://setis.ec.europa.eu/sites/default/files/reports/biomass_potentials_in_europe.pdf}{The
+  {JRC}-{EU}-{TIMES} model. bioenergy potentials for {EU} and neighbouring
+  countries}.
+\newline\urlprefix\url{https://setis.ec.europa.eu/sites/default/files/reports/biomass_potentials_in_europe.pdf}
+
+\bibitem{ENSPRESO}
+\href{https://data.jrc.ec.europa.eu/dataset/74ed5a04-7d74-4807-9eab-b94774309d9f/resource/94aca7d6-89af-4969-a74c-2c7ab4376788}{{ENSPRESO}
+  {Biomass} database, {JRC}}.
+\newline\urlprefix\url{https://data.jrc.ec.europa.eu/dataset/74ed5a04-7d74-4807-9eab-b94774309d9f/resource/94aca7d6-89af-4969-a74c-2c7ab4376788}
+
 \end{thebibliography}

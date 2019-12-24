@@ -22,14 +22,16 @@ filename='../table_inputs.tex'
              
 file = open(filename, 'w')
 technologies=['onwind', 'offwind', 'solar-utility', 'solar-rooftop', 'OCGT',
-              'CCGT', 'coal', 'lignite', 'nuclear', 'hydro', 'PHS', 
+              'CCGT', 'coal', 'lignite', 'nuclear', 'hydro', 'ror', 'PHS', 
               'hydrogen storage', 'battery storage', 
               'battery inverter', 'electrolysis', 'fuel cell', 'methanation', 
               'DAC',
               'central gas boiler', 'decentral gas boiler', 
-              'central resistive heater', 'decentral resistive heater', 'CHP',
-              'central water tank', 'decentral water tank', 'water tank charger',
-              'HVDC overhead', 'HVDC inverter pair']
+              'central resistive heater', 'decentral resistive heater', 'central CHP',
+              'central water tank storage', 'decentral water tank storage', 'water tank charger',
+              'HVDC overhead', 'HVDC inverter pair',
+              'central air-sourced heat pump', 'decentral air-sourced heat pump',
+              'central ground-sourced heat pump', 'decentral ground-sourced heat pump']
             
 name={'onwind' : 'Onshore Wind',
       'offwind' : 'Offshore Wind',
@@ -41,6 +43,7 @@ name={'onwind' : 'Onshore Wind',
       'lignite': 'Lignite', 
       'nuclear': 'Nuclear',
       'hydro':'Reservoir hydro', 
+      'ror':'run of river',
       'PHS':'PHS',
       'battery inverter': 'Battery inverter', 
       'battery storage': 'Battery storage',
@@ -50,17 +53,20 @@ name={'onwind' : 'Onshore Wind',
       'methanation': 'Methanation', 
       'DAC': 'DAC (direct-air capture)',
       'central gas boiler': 'Central gas boiler', 
-      'decentral gas boiler': 'Decentral gas boilter',
+      'decentral gas boiler': 'Decentral gas boiler',
       'central resistive heater':'Central resistive heater', 
       'decentral resistive heater':'Decentral resistive heater',
-      'CHP':'Combined Heat and Power',
-      'central water tank': 'Central water tank', 
-      'decentral water tank': 'Decentral water tank', 
+      'central CHP':'Combined Heat and Power (CHP)',
+      'central water tank storage': 'Central water tank storage', 
+      'decentral water tank storage': 'Decentral water tank storage', 
       'water tank charger': 'Water tank charger/discharger',
       'HVDC overhead':'HVDC overhead', 
-      'HVDC inverter pair':'HVDC inverter pair'}
+      'HVDC inverter pair':'HVDC inverter pair',
+      'central air-sourced heat pump': 'Central air-sourced heat pump', 
+      'decentral air-sourced heat pump': 'Decentral air-sourced heat pump',
+      'central ground-sourced heat pump': 'Central ground-sourced heat pump', 
+      'decentral ground-sourced heat pump':  'Decentral ground-sourced heat pump'}
 
-# Run-of-river\tnote{b} & 3000 &kW\el & 2 & 80 & 0.9 & \cite{schroeder2013} \\
 
 # Air-sourced heat pump decentral & 1050 & kW\th  & 3.5& 20 & variable & \cite{Henning20141003,PalzerThesis} \\
 # Air-sourced heat pump central & 700 & kW\th  & 3.5& 20 & variable & \cite{PalzerThesis} \\
@@ -103,25 +109,86 @@ Table including costs as a function of years
 years=np.arange(2020,2055,5)
 filename='../table_costs.tex'
 file = open(filename, 'w')
-technologies=[t for t in technologies if t not in ['CHP', 'central water tank', 'decentral water tank', 'water tank charger']]
+technologies=[t for t in technologies if t not in ['water tank charger']]
+dic_units={'EUR/kWel':'\EUR/kW$_{el}$',
+           'EUR/kWth':'\EUR/kW$_{th}$',
+           'EUR/kWH2':'\EUR/kW$_{H2}$',
+           'EUR/kWhth':'\EUR/kWh$_{th}$',
+           'EUR/(tCO2/a)': '\EUR/(tCO$_2$/a)',
+           'EUR/m3':'\EUR/m$^3$',
+           'EUR/MW/km':'\EUR/MWkm',
+           'EUR/MW':'\EUR/MW',
+           'USD/kWel':'USD/kW$_{el}$',
+           'USD/kWh':'USD/kWh'}
 for technology in technologies:
-    file.write(' ' +name[technology] + ' & ')
+    file.write(' ' +name[technology] + ' & ')    
+    file.write(dic_units[costs.loc[idx[technology,'investment'],'unit']]+ ' & ' )
+
     for year in years:
         costs_year = pd.read_csv('data/costs/costs_' + str(year) +'.csv',index_col=list(range(2))).sort_index()
-        file.write(str(int(costs_year.loc[idx[technology,'investment'],'value']))+ ' & ' )
+        if technology=='hydrogen storage':
+            file.write(str(round(costs_year.loc[idx[technology,'investment'],'value'],1))+ ' & ' )
+        else:
+            file.write(str(int(costs_year.loc[idx[technology,'investment'],'value']))+ ' & ' )
+        
+        
     file.write( ' ')
     file.write('\\') 
     file.write('\\') 
 file.close()    
 
- 
+#%%
+"""
+Table including fuel characteristics
+"""
+
+filename='../table_fuels.tex'
+file = open(filename, 'w') 
+for fuel in ['nuclear', 'coal', 'lignite', 'gas', 'biomass']:
+    if idx[fuel,'fuel'] in costs.index:
+        cost = str(round(costs.loc[idx[fuel,'fuel'],'value'],1))
+    else:
+        cost = ' '
+    if idx[fuel,'CO2 intensity'] in costs.index:
+        emissions = str(round(costs.loc[idx[fuel,'CO2 intensity'],'value'],3))
+    else:
+        emissions = ' '
+     
+    file.write(' ' + fuel 
+    + ' & ' +  cost
+    + ' & ' + ' '
+    + ' & ' +  emissions   
+    + ' & ' + ' ')
+
+    file.write('\\') 
+    file.write('\\') 
+file.close()    
+
+
+#%%
+"""
+Table including initial distruct heating penetration
+"""
+DH_df = pd.read_csv('data/existing_infrastructure/district_heating_share.csv',
+                    index_col=0)
+
+filename='../table_DH.tex'
+file = open(filename, 'w') 
+for country in DH_df.index:
+    
+    file.write(' ' + country
+    + ' & ' +  str(DH_df['2015'][country],2) +' ')
+
+    file.write('\\') 
+    file.write('\\') 
+file.close() 
 #%%
 """
 Table including TYNDP transimission capacities
 """
 #https://tyndp.entsoe.eu/maps-data/
 #TYNDP 2016 Market modelling data
-df_raw = pd.read_excel('data/exsiting_infrastructure/TYNDP2016 market modelling data.xlsx',
+df_raw = pd.read_excel('data/existing_infrastructure/TYNDP2016 market modelling data.xlsx',
                        sheet_name='ref. transmission capacities',index_col=0)
 
 #%%
@@ -144,7 +211,7 @@ df.columns = [2020,2030]
 
 #df = df.reindex(columns=np.arange(2020,2055,5))
 
-df.to_csv('data/exsiting_infrastructure/TYNDP2016.csv')
+df.to_csv('data/existing_infrastructure/TYNDP2016.csv')
 #%%
 #write latex table
 

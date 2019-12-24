@@ -22,7 +22,6 @@ plt.rcParams['ytick.labelsize'] = 18
 
 # Conventional capacities read from power plants database: 
 #https://github.com/FRESNA/powerplantmatching
-
 data=pd.read_csv('data/matched_data_red.csv')
 years=np.arange(1965, 2021, 5)
 
@@ -54,7 +53,7 @@ dic_Fueltype = {'Hydro' : 'Hydro',
                 'Waste' : 'Waste',
                 'Wind' : 'Wind', 
                 'Solar' : 'Solar'}
-country='Spain'
+#country='Spain'
 for tech in ['Hydro', 'Nuclear', 'Hard Coal', 'Lignite', 'Natural Gas']:
     agedata[tech][1965] = sum([i[2] for i in list(zip(data['Technology'], 
                                 data['Fueltype'],
@@ -116,6 +115,31 @@ for year in years[-4:-1]:
 agedata['Solar'][2020] =  (pv_df[str(2018)]['European Union']-pv_df[str(2015)]['European Union'])
 agedata['Onshore Wind'][2020] =  (onwind_df[str(2018)]['European Union']-onwind_df[str(2015)]['European Union'])
 agedata['Offshore Wind'][2020] =  (offwind_df[str(2018)]['European Union']-offwind_df[str(2015)]['European Union'])
+
+
+# onshore, offshore capacities read from thewindpowerdatabase 
+# https://www.thewindpower.net/ 
+#using two separators, EOL=\r\n  and ','
+database = pd.read_csv('data/existing_infrastructure/Windfarms_World_20190224.csv', 
+                            sep="\r\n|','", engine='python' )
+#filter by continent
+database = database.loc[database['Continent'] == 'Europe']   
+#filter plants whose total power is known
+database = database.loc[database['Total power (kW)']   != '#ND']                              
+# if the Comissioning date is unknown, it assumes the plant was always there
+# (build rates obtained are lower than using IRENA, maybe too many unknown comissioning date)
+database['Commissioning date (Format: yyyy or yyyymm)'] = ['0000' if (x=='#ND')
+       else x for x in database['Commissioning date (Format: yyyy or yyyymm)']]  
+
+for year in years[:-4]:   
+    agedata['Onshore Wind'][year] = 0.001*sum([int(i[0]) for i in list(zip(database['Total power (kW)'], 
+                                                                    database['Offshore - Shore distance (km)'], 
+                                                                    database['Commissioning date (Format: yyyy or yyyymm)'])) #kW -> MW
+                                    if  ([1] == 'No') & (int(i[2][0:4]) < year) & (int(i[2][0:4]) > year-5)])
+    agedata['Offshore Wind'][year] = 0.001*sum([int(i[0]) for i in list(zip(database['Total power (kW)'], 
+                                                                    database['Offshore - Shore distance (km)'], 
+                                                                    database['Commissioning date (Format: yyyy or yyyymm)'])) 
+                                    if  ([1] != 'No') & (int(i[2][0:4]) < year) & (int(i[2][0:4]) > year-5)]) #kW -> MW
 
 agedata.fillna(0, inplace=True)    
 agedata=agedata/1000 #GW 

@@ -80,7 +80,7 @@ def plot_historical_sectoral_emissions():
                                                                               'international navigation', 'industry energy']].sum(axis=0)
 
 
-    plt.figure(figsize=(15, 8))
+    plt.figure(figsize=(16, 8))
     gs1 = gridspec.GridSpec(1, 1)
     ax1 = plt.subplot(gs1[0,0])
 
@@ -116,7 +116,7 @@ def plot_historical_sectoral_emissions():
                               'industry (process emissions)', 'industry (energy provision)', 
                               'agriculture', 'waste', 'energy (others)',
                               'heating in residential and services',
-                              'electricity generation + central heat',])                 
+                              'electricity generation + central heating',])                 
 
     #the graph is slightly different to that shown in 
     #https://www.eea.europa.eu/data-and-maps/indicators/greenhouse-gas-emission-trends-6/assessment-2
