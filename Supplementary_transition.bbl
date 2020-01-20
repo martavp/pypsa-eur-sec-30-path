@@ -158,4 +158,91 @@ P.~Ruiz, A.~Sgobbi, W.~Nijs, C.~Thiel, F.~Dalla, T.~Kobert, G.~Elbersen, G.~H.
   {Biomass} database, {JRC}}.
 \newline\urlprefix\url{https://data.jrc.ec.europa.eu/dataset/74ed5a04-7d74-4807-9eab-b94774309d9f/resource/94aca7d6-89af-4969-a74c-2c7ab4376788}
 
+\bibitem{DEA_2019}
+\href{https://ens.dk/en/our-services/projections-and-models/technology-data/technology-data-generation-electricity-and}{Technology
+  {Data} for {Generation} of {Electricity} and {District} {Heating}, update
+  november 2019}, Tech. rep., Danish Energy Agency and Energinet.dk (2019).
+\newline\urlprefix\url{https://ens.dk/en/our-services/projections-and-models/technology-data/technology-data-generation-electricity-and}
+
+\bibitem{Vartiainen_2019}
+E.~Vartiainen, G.~Masson, C.~Breyer, D.~Moser, E.~R. Medina,
+  \href{https://onlinelibrary.wiley.com/doi/abs/10.1002/pip.3189}{Impact of
+  weighted average cost of capital, capital expenditure, and other parameters
+  on future utility-scale {PV} levelised cost of electricity}, Progress in
+  Photovoltaics: Research and Applications\href
+  {http://dx.doi.org/10.1002/pip.3189} {\path{doi:10.1002/pip.3189}}.
+\newline\urlprefix\url{https://onlinelibrary.wiley.com/doi/abs/10.1002/pip.3189}
+
+\bibitem{Vartiainen_2017}
+E.~Vartiainen, G.~Masson, C.~Breyer,
+  \href{http://www.etip-pv.eu/fileadmin/Documents/ETIP_PV_Publications_2017-2018/LCOE_Report_March_2017.pdf}{The
+  true competitiveness of solar {PV}: a {European} case study}, Tech. rep.,
+  European technology and innovation platform for photovoltaics (2017).
+\newline\urlprefix\url{http://www.etip-pv.eu/fileadmin/Documents/ETIP_PV_Publications_2017-2018/LCOE_Report_March_2017.pdf}
+
+\bibitem{Lazard_2019}
+\href{https://www.lazard.com/media/451086/lazards-levelized-cost-of-energy-version-130-vf.pdf}{{Lazard's}
+  {Levelized} {Cost} of {Energy} {Analysis}, version 13.0}.
+\newline\urlprefix\url{https://www.lazard.com/media/451086/lazards-levelized-cost-of-energy-version-130-vf.pdf}
+
+\bibitem{Schroeder_2013}
+A.~Schr\"oeder, F.~Kunz, F.~Meiss, R.~Mendelevitch, C.~von Hirschhausen,
+  \href{https://www.econstor.eu/handle/10419/80348}{Current and prospective
+  costs of electricity generation until 2050, {Data} {Documentation}, {DIW} 68.
+  {Berlin}: {Deutsches} {Institut}}.
+\newline\urlprefix\url{https://www.econstor.eu/handle/10419/80348}
+
+\bibitem{Budischak_2013}
+C.~Budischak, D.~Sewell, H.~Thomson, L.~Mach, D.~E. Veron, W.~Kempton,
+  \href{http://www.sciencedirect.com/science/article/pii/S0378775312014759}{Cost-minimized
+  combinations of wind power, solar power and electrochemical storage, powering
+  the grid up to 99.9\% of the time}, Journal of Power Sources 225 (2013)
+  60--74.
+\newblock \href {http://dx.doi.org/10.1016/j.jpowsour.2012.09.054}
+  {\path{doi:10.1016/j.jpowsour.2012.09.054}}.
+\newline\urlprefix\url{http://www.sciencedirect.com/science/article/pii/S0378775312014759}
+
+\bibitem{Steward_2009b}
+D.~Steward, \href{https://www.nrel.gov/docs/fy09osti/45873.pdf}{Scenario
+  development and analysis of hydrogen as a large-scale energy storage medium
+  {NREL}}, Tech. rep. (2009).
+\newline\urlprefix\url{https://www.nrel.gov/docs/fy09osti/45873.pdf}
+
+\bibitem{Schaber_2013}
+K.~Schaber, \href{https://d-nb.info/1058680781/34}{Integration of {Variable}
+  {Renewable} {Energies} in the {European} power system: a model-based analysis
+  of transmission grid extensions and energy sector coupling}, Ph.D. thesis, TU
+  {M{\"u}nchen} (2013).
+\newline\urlprefix\url{https://d-nb.info/1058680781/34}
+
+\bibitem{Fasihi_2017}
+M.~Fasihi, D.~Bogdanov, C.~Breyer,
+  \href{https://www.mdpi.com/2071-1050/9/2/306}{Long-{Term} {Hydrocarbon}
+  {Trade} {Options} for the {Maghreb} {Region} and {Europe}—{Renewable}
+  {Energy} {Based} {Synthetic} {Fuels} for a {Net} {Zero} {Emissions} {World}},
+  Sustainability 9~(2) (2017) 306.
+\newblock \href {http://dx.doi.org/10.3390/su9020306}
+  {\path{doi:10.3390/su9020306}}.
+\newline\urlprefix\url{https://www.mdpi.com/2071-1050/9/2/306}
+
+\bibitem{Hagspiel_2014}
+S.~Hagspiel, C.~J{\"a}gemann, D.~Lindenberger, T.~Brown, S.~Cherevatskiy,
+  E.~Tr{\"o}ster,
+  \href{http://www.sciencedirect.com/science/article/pii/S0360544214000322}{Cost-optimal
+  power system extension under flow-based market coupling}, Energy 66 (2014)
+  654--666.
+\newblock \href {http://dx.doi.org/10.1016/j.energy.2014.01.025}
+  {\path{doi:10.1016/j.energy.2014.01.025}}.
+\newline\urlprefix\url{http://www.sciencedirect.com/science/article/pii/S0360544214000322}
+
+\bibitem{BP_2019}
+\href{https://www.bp.com/content/dam/bp/business-sites/en/global/corporate/pdfs/energy-economics/statistical-review/bp-stats-review-2019-full-report.pdf}{{BP}
+  {Statistical} {Review} of {World} {Energy}}.
+\newline\urlprefix\url{https://www.bp.com/content/dam/bp/business-sites/en/global/corporate/pdfs/energy-economics/statistical-review/bp-stats-review-2019-full-report.pdf}
+
+\bibitem{EIA_emission_coefficients}
+\href{https://www.eia.gov/environment/emissions/co2_vol_mass.php}{{Carbon}
+  {Dioxide} {Emission} {Coefficients}, {EIA}}.
+\newline\urlprefix\url{https://www.eia.gov/environment/emissions/co2_vol_mass.php}
+
 \end{thebibliography}
