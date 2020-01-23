@@ -31,12 +31,12 @@ technologies=['onwind', 'offwind', 'solar-utility', 'solar-rooftop', 'OCGT',
               'central gas boiler', 'decentral gas boiler', 
               'central resistive heater', 'decentral resistive heater',               
               'central water tank storage', 'decentral water tank storage', 'water tank charger',             
-              'central heat pump', 'decentral heat pump', 
+              #'central heat pump', 'decentral heat pump', 
                'DAC',
               #'central air-sourced heat pump', 
-              #'decentral air-sourced heat pump',
-              #'central ground-sourced heat pump', 
-              #'decentral ground-sourced heat pump'
+              'decentral air-sourced heat pump',
+              'central ground-sourced heat pump', 
+              'decentral ground-sourced heat pump'
               ]
             
 name={'onwind' : 'Onshore Wind',
@@ -71,12 +71,12 @@ name={'onwind' : 'Onshore Wind',
       'water tank charger': 'Water tank charger/discharger',
       'HVDC overhead':'HVDC overhead', 
       'HVDC inverter pair':'HVDC inverter pair',
-      'central heat pump': 'Central heat pump', 
-      'decentral heat pump': 'Decentral heat pump',
+      #'central heat pump': 'Central heat pump', 
+      #'decentral heat pump': 'Decentral heat pump',
       #'central air-sourced heat pump': 'Central air-sourced heat pump', 
-      #'decentral air-sourced heat pump': 'Decentral air-sourced heat pump',
-      #'central ground-sourced heat pump': 'Central ground-sourced heat pump', 
-      #'decentral ground-sourced heat pump':  'Decentral ground-sourced heat pump'
+      'decentral air-sourced heat pump': 'Decentral air-sourced heat pump',
+      'central ground-sourced heat pump': 'Central ground-sourced heat pump', 
+      'decentral ground-sourced heat pump':  'Decentral ground-sourced heat pump'
       }
 
 dic_ref = {'Technology Data for Energy Plants for Electricity and District heating generation':'DEA_2019',
@@ -107,7 +107,13 @@ for technology in technologies:
         lifetime = str(int(costs.loc[idx[technology,'lifetime'],'value']))
     else:
         lifetime= ' '
-    if idx[technology,'efficiency'] in costs.index:
+    if idx[technology,'efficiency'] in costs.index and technology not in ['onwind', 
+          'offwind', 'central gas CHP', 'biomass CHP', 'battery storage', 
+          'hydrogen storage underground', 'hydrogen storage tank', 
+          'central water tank storage', 'decentral water tank storage',
+          'decentral air-sourced heat pump', 'central ground-sourced heat pump',
+          'decentral ground-sourced heat pump']:
+        
         efficiency = str(round(costs.loc[idx[technology,'efficiency'],'value'],2))
     else:
         efficiency= ' '  
@@ -144,12 +150,10 @@ dic_units={'EUR/kWel':'\EUR/kW$_{el}$',
            'EUR/MW':'\EUR/MW',
            'USD/kWel':'USD/kW$_{el}$',
            'USD/kWh':'USD/kWh',
-<<<<<<< HEAD
            'EUR/kWh': '\EUR/kWh',
-           'EUR/kW': '\EUR/kW'}
-=======
+           'EUR/kW': '\EUR/kW',
            'EUR/kWh': '\EUR/kWh'}
->>>>>>> cc3545a66c07b1a8f79575e9f8c3781706d0d5c0
+
 for technology in technologies:
     file.write(' ' +name[technology] + ' & ')    
     file.write(dic_units[costs.loc[idx[technology,'investment'],'unit']]+ ' & ' )
