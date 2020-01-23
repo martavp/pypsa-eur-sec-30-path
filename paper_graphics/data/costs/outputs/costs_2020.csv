@@ -41,17 +41,22 @@ battery storage,lifetime,20.0,years,Technology Data for Energy Plants for Electr
 biomass CHP,FOM,3.569,%/year,Technology Data for Energy Plants for Electricity and District heating generation
 biomass CHP,VOM,1.9,EUR/MWh,Technology Data for Energy Plants for Electricity and District heating generation
 biomass CHP,efficiency,1.0,per unit,Technology Data for Energy Plants for Electricity and District heating generation
-biomass CHP,investment,3500.0,EUR/kW,Technology Data for Energy Plants for Electricity and District heating generation
+biomass CHP,investment,3500.0,EUR/kWel,Technology Data for Energy Plants for Electricity and District heating generation
 biomass CHP,lifetime,25.0,years,Technology Data for Energy Plants for Electricity and District heating generation
+biomass EOP,FOM,3.569,%/year,Technology Data for Energy Plants for Electricity and District heating generation
+biomass EOP,VOM,1.9,EUR/MWh,Technology Data for Energy Plants for Electricity and District heating generation
+biomass EOP,efficiency,1.0,per unit,Technology Data for Energy Plants for Electricity and District heating generation
+biomass EOP,investment,3500.0,EUR/kWel,Technology Data for Energy Plants for Electricity and District heating generation
+biomass EOP,lifetime,25.0,years,Technology Data for Energy Plants for Electricity and District heating generation
 biomass HOP,FOM,5.764,%/year,Technology Data for Energy Plants for Electricity and District heating generation
 biomass HOP,VOM,0.6,EUR/MWh,Technology Data for Energy Plants for Electricity and District heating generation
 biomass HOP,efficiency,1.0,per unit,Technology Data for Energy Plants for Electricity and District heating generation
-biomass HOP,investment,890.0,EUR/kW,Technology Data for Energy Plants for Electricity and District heating generation
+biomass HOP,investment,890.0,EUR/kWel,Technology Data for Energy Plants for Electricity and District heating generation
 biomass HOP,lifetime,25.0,years,Technology Data for Energy Plants for Electricity and District heating generation
 central coal CHP,FOM,1.632,%/year,Technology Data for Energy Plants for Electricity and District heating generation
 central coal CHP,VOM,2.9,EUR/MWh,Technology Data for Energy Plants for Electricity and District heating generation
 central coal CHP,efficiency,1.0,per unit,Technology Data for Energy Plants for Electricity and District heating generation
-central coal CHP,investment,1900.0,EUR/kW,Technology Data for Energy Plants for Electricity and District heating generation
+central coal CHP,investment,1900.0,EUR/kWel,Technology Data for Energy Plants for Electricity and District heating generation
 central coal CHP,lifetime,25.0,years,Technology Data for Energy Plants for Electricity and District heating generation
 central gas CHP,FOM,3.305,%/year,Technology Data for Energy Plants for Electricity and District heating generation
 central gas CHP,VOM,4.4,EUR/MWh,Technology Data for Energy Plants for Electricity and District heating generation
@@ -61,17 +66,17 @@ central gas CHP,lifetime,25.0,years,Technology Data for Energy Plants for Electr
 central gas boiler,FOM,1.3,%/year,Technology Data for Energy Plants for Electricity and District heating generation
 central gas boiler,VOM,1.1,EUR/MWh,Technology Data for Energy Plants for Electricity and District heating generation
 central gas boiler,efficiency,1.0,per unit,Technology Data for Energy Plants for Electricity and District heating generation
-central gas boiler,investment,150.0,EUR/kWhth,Technology Data for Energy Plants for Electricity and District heating generation
+central gas boiler,investment,150.0,EUR/kWth,Technology Data for Energy Plants for Electricity and District heating generation
 central gas boiler,lifetime,25.0,years,Technology Data for Energy Plants for Electricity and District heating generation
-central heat pump,FOM,0.304,%/year,Technology Data for Energy Plants for Electricity and District heating generation
-central heat pump,VOM,3.2,EUR/MWh,Technology Data for Energy Plants for Electricity and District heating generation
-central heat pump,efficiency,4.0,per unit,Technology Data for Energy Plants for Electricity and District heating generation
-central heat pump,investment,657.9999999999999,EUR/kWth,Technology Data for Energy Plants for Electricity and District heating generation
-central heat pump,lifetime,25.0,years,Technology Data for Energy Plants for Electricity and District heating generation
+central ground-sourced heat pump,FOM,0.304,%/year,Technology Data for Energy Plants for Electricity and District heating generation
+central ground-sourced heat pump,VOM,3.2,EUR/MWh,Technology Data for Energy Plants for Electricity and District heating generation
+central ground-sourced heat pump,efficiency,4.0,per unit,Technology Data for Energy Plants for Electricity and District heating generation
+central ground-sourced heat pump,investment,657.9999999999999,EUR/kWth,Technology Data for Energy Plants for Electricity and District heating generation
+central ground-sourced heat pump,lifetime,25.0,years,Technology Data for Energy Plants for Electricity and District heating generation
 central resistive heater,FOM,0.713,%/year,Technology Data for Energy Plants for Electricity and District heating generation
 central resistive heater,VOM,0.9,EUR/MWh,Technology Data for Energy Plants for Electricity and District heating generation
 central resistive heater,efficiency,0.99,per unit,Technology Data for Energy Plants for Electricity and District heating generation
-central resistive heater,investment,150.0,EUR/kWhth,Technology Data for Energy Plants for Electricity and District heating generation
+central resistive heater,investment,150.0,EUR/kWth,Technology Data for Energy Plants for Electricity and District heating generation
 central resistive heater,lifetime,20.0,years,Technology Data for Energy Plants for Electricity and District heating generation
 central solar thermal,FOM,1.4,%/year,HP
 central solar thermal,investment,140000.0,EUR/1000m2,HP
@@ -79,7 +84,7 @@ central solar thermal,lifetime,20.0,years,HP
 central water tank storage,FOM,0.518,%/year,Technology Data for Energy Plants for Electricity and District heating generation
 central water tank storage,VOM,0.0,EUR/MWh,Technology Data for Energy Plants for Electricity and District heating generation
 central water tank storage,efficiency,1.0,per unit,Technology Data for Energy Plants for Electricity and District heating generation
-central water tank storage,investment,0.5795555555555556,EUR/m3,Technology Data for Energy Plants for Electricity and District heating generation
+central water tank storage,investment,0.5795555555555556,EUR/kWh,Technology Data for Energy Plants for Electricity and District heating generation
 central water tank storage,lifetime,20.0,years,Technology Data for Energy Plants for Electricity and District heating generation
 coal,CO2 intensity,0.354,tCO2/MWth,https://www.eia.gov/environment/emissions/co2_vol_mass.php
 coal,FOM,1.6,%/year,Lazard’s Levelized Cost of Energy Analysis - Version 13.0
@@ -88,23 +93,29 @@ coal,efficiency,0.33,per unit,Lazard’s Levelized Cost of Energy Analysis - Ver
 coal,fuel,8.15,EUR/MWhth,BP 2019
 coal,investment,4162.5,EUR/kWel,Lazard’s Levelized Cost of Energy Analysis - Version 13.0
 coal,lifetime,40.0,years,Lazard’s Levelized Cost of Energy Analysis - Version 13.0
+decentral air-sourced heat pump,FOM,0.03,%/year,Technology Data for Energy Plants for Electricity and District heating generation
+decentral air-sourced heat pump,VOM,0.0,EUR/MWh,Technology Data for Energy Plants for Electricity and District heating generation
+decentral air-sourced heat pump,discount rate,0.04,per unit,Palzer thesis
+decentral air-sourced heat pump,efficiency,4.0,per unit,Technology Data for Energy Plants for Electricity and District heating generation
+decentral air-sourced heat pump,investment,939.9999999999999,EUR/kWth,Technology Data for Energy Plants for Electricity and District heating generation
+decentral air-sourced heat pump,lifetime,18.0,years,Technology Data for Energy Plants for Electricity and District heating generation
 decentral gas boiler,FOM,0.066,%/year,Technology Data for Energy Plants for Electricity and District heating generation
 decentral gas boiler,VOM,0.0,EUR/MWh,Technology Data for Energy Plants for Electricity and District heating generation
 decentral gas boiler,discount rate,0.04,per unit,Palzer thesis
 decentral gas boiler,efficiency,1.0,per unit,Technology Data for Energy Plants for Electricity and District heating generation
-decentral gas boiler,investment,312.07960099900004,EUR/kWhth,Technology Data for Energy Plants for Electricity and District heating generation
+decentral gas boiler,investment,312.07960099900004,EUR/kWth,Technology Data for Energy Plants for Electricity and District heating generation
 decentral gas boiler,lifetime,20.0,years,Technology Data for Energy Plants for Electricity and District heating generation
-decentral heat pump,FOM,0.019,%/year,Technology Data for Energy Plants for Electricity and District heating generation
-decentral heat pump,VOM,0.0,EUR/MWh,Technology Data for Energy Plants for Electricity and District heating generation
-decentral heat pump,discount rate,0.04,per unit,Palzer thesis
-decentral heat pump,efficiency,4.0,per unit,Technology Data for Energy Plants for Electricity and District heating generation
-decentral heat pump,investment,1500.0,EUR/kWth,Technology Data for Energy Plants for Electricity and District heating generation
-decentral heat pump,lifetime,20.0,years,Technology Data for Energy Plants for Electricity and District heating generation
+decentral ground-sourced heat pump,FOM,0.019,%/year,Technology Data for Energy Plants for Electricity and District heating generation
+decentral ground-sourced heat pump,VOM,0.0,EUR/MWh,Technology Data for Energy Plants for Electricity and District heating generation
+decentral ground-sourced heat pump,discount rate,0.04,per unit,Palzer thesis
+decentral ground-sourced heat pump,efficiency,4.0,per unit,Technology Data for Energy Plants for Electricity and District heating generation
+decentral ground-sourced heat pump,investment,1500.0,EUR/kWth,Technology Data for Energy Plants for Electricity and District heating generation
+decentral ground-sourced heat pump,lifetime,20.0,years,Technology Data for Energy Plants for Electricity and District heating generation
 decentral resistive heater,FOM,0.002,%/year,Technology Data for Energy Plants for Electricity and District heating generation
 decentral resistive heater,VOM,0.0,EUR/MWh,Technology Data for Energy Plants for Electricity and District heating generation
 decentral resistive heater,discount rate,0.04,per unit,Palzer thesis
 decentral resistive heater,efficiency,1.0,per unit,Technology Data for Energy Plants for Electricity and District heating generation
-decentral resistive heater,investment,975.2487531218751,EUR/kWhth,Technology Data for Energy Plants for Electricity and District heating generation
+decentral resistive heater,investment,975.2487531218751,EUR/kWth,Technology Data for Energy Plants for Electricity and District heating generation
 decentral resistive heater,lifetime,30.0,years,Technology Data for Energy Plants for Electricity and District heating generation
 decentral solar thermal,FOM,1.3,%/year,HP
 decentral solar thermal,discount rate,0.04,per unit,Palzer thesis
@@ -112,7 +123,7 @@ decentral solar thermal,investment,270000.0,EUR/1000m2,HP
 decentral solar thermal,lifetime,20.0,years,HP
 decentral water tank storage,FOM,1.0,%/year,HP
 decentral water tank storage,discount rate,0.04,per unit,Palzer thesis
-decentral water tank storage,investment,860.0,EUR/m3,IWES Interaktion
+decentral water tank storage,investment,18.37606837606838,EUR/kWh,IWES Interaktion
 decentral water tank storage,lifetime,20.0,years,HP
 electrolysis,FOM,5.0,%/year,Technology Data for Energy Plants for Electricity and District heating generation
 electrolysis,VOM,0.0,EUR/MWh,Technology Data for Energy Plants for Electricity and District heating generation

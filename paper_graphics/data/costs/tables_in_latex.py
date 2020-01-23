@@ -144,8 +144,12 @@ dic_units={'EUR/kWel':'\EUR/kW$_{el}$',
            'EUR/MW':'\EUR/MW',
            'USD/kWel':'USD/kW$_{el}$',
            'USD/kWh':'USD/kWh',
+<<<<<<< HEAD
            'EUR/kWh': '\EUR/kWh',
            'EUR/kW': '\EUR/kW'}
+=======
+           'EUR/kWh': '\EUR/kWh'}
+>>>>>>> cc3545a66c07b1a8f79575e9f8c3781706d0d5c0
 for technology in technologies:
     file.write(' ' +name[technology] + ' & ')    
     file.write(dic_units[costs.loc[idx[technology,'investment'],'unit']]+ ' & ' )
@@ -154,6 +158,8 @@ for technology in technologies:
         costs_year = pd.read_csv('outputs/costs_' + str(year) +'.csv',index_col=list(range(2))).sort_index()
         if technology=='hydrogen storage':
             file.write(str(round(costs_year.loc[idx[technology,'investment'],'value'],1))+ ' & ' )
+        elif technology=='central water tank storage':
+            file.write(str(int(np.ceil(costs_year.loc[idx[technology,'investment'],'value'])))+ ' & ' )
         else:
             file.write(str(int(costs_year.loc[idx[technology,'investment'],'value']))+ ' & ' )
         
