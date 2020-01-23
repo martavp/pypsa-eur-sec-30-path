@@ -192,21 +192,15 @@ A.~Schr\"oeder, F.~Kunz, F.~Meiss, R.~Mendelevitch, C.~von Hirschhausen,
   {Berlin}: {Deutsches} {Institut}}.
 \newline\urlprefix\url{https://www.econstor.eu/handle/10419/80348}
 
-\bibitem{Budischak_2013}
-C.~Budischak, D.~Sewell, H.~Thomson, L.~Mach, D.~E. Veron, W.~Kempton,
-  \href{http://www.sciencedirect.com/science/article/pii/S0378775312014759}{Cost-minimized
-  combinations of wind power, solar power and electrochemical storage, powering
-  the grid up to 99.9\% of the time}, Journal of Power Sources 225 (2013)
-  60--74.
-\newblock \href {http://dx.doi.org/10.1016/j.jpowsour.2012.09.054}
-  {\path{doi:10.1016/j.jpowsour.2012.09.054}}.
-\newline\urlprefix\url{http://www.sciencedirect.com/science/article/pii/S0378775312014759}
-
-\bibitem{Steward_2009b}
-D.~Steward, \href{https://www.nrel.gov/docs/fy09osti/45873.pdf}{Scenario
-  development and analysis of hydrogen as a large-scale energy storage medium
-  {NREL}}, Tech. rep. (2009).
-\newline\urlprefix\url{https://www.nrel.gov/docs/fy09osti/45873.pdf}
+\bibitem{Hagspiel_2014}
+S.~Hagspiel, C.~J{\"a}gemann, D.~Lindenberger, T.~Brown, S.~Cherevatskiy,
+  E.~Tr{\"o}ster,
+  \href{http://www.sciencedirect.com/science/article/pii/S0360544214000322}{Cost-optimal
+  power system extension under flow-based market coupling}, Energy 66 (2014)
+  654--666.
+\newblock \href {http://dx.doi.org/10.1016/j.energy.2014.01.025}
+  {\path{doi:10.1016/j.energy.2014.01.025}}.
+\newline\urlprefix\url{http://www.sciencedirect.com/science/article/pii/S0360544214000322}
 
 \bibitem{Schaber_2013}
 K.~Schaber, \href{https://d-nb.info/1058680781/34}{Integration of {Variable}
@@ -224,16 +218,6 @@ M.~Fasihi, D.~Bogdanov, C.~Breyer,
 \newblock \href {http://dx.doi.org/10.3390/su9020306}
   {\path{doi:10.3390/su9020306}}.
 \newline\urlprefix\url{https://www.mdpi.com/2071-1050/9/2/306}
-
-\bibitem{Hagspiel_2014}
-S.~Hagspiel, C.~J{\"a}gemann, D.~Lindenberger, T.~Brown, S.~Cherevatskiy,
-  E.~Tr{\"o}ster,
-  \href{http://www.sciencedirect.com/science/article/pii/S0360544214000322}{Cost-optimal
-  power system extension under flow-based market coupling}, Energy 66 (2014)
-  654--666.
-\newblock \href {http://dx.doi.org/10.1016/j.energy.2014.01.025}
-  {\path{doi:10.1016/j.energy.2014.01.025}}.
-\newline\urlprefix\url{http://www.sciencedirect.com/science/article/pii/S0360544214000322}
 
 \bibitem{BP_2019}
 \href{https://www.bp.com/content/dam/bp/business-sites/en/global/corporate/pdfs/energy-economics/statistical-review/bp-stats-review-2019-full-report.pdf}{{BP}

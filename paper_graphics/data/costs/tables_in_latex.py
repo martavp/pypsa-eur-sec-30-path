@@ -23,16 +23,16 @@ filename='../../../table_inputs.tex'
 file = open(filename, 'w')
 technologies=['onwind', 'offwind', 'solar-utility', 'solar-rooftop', 'OCGT',
               'CCGT', 'coal', 'lignite', 'nuclear', 'hydro', 'ror', 'PHS', 
-              'hydrogen storage underground', 'hydrogen storage tank', 
+              'central gas CHP', 'biomass CHP', 'biomass HOP',
+              'HVDC overhead', 'HVDC inverter pair',              
               'battery storage', 
               'battery inverter', 'electrolysis', 'fuel cell', 'methanation', 
-              'DAC',
+              'hydrogen storage underground', 'hydrogen storage tank', 
               'central gas boiler', 'decentral gas boiler', 
-              'central resistive heater', 'decentral resistive heater', 
-              'central gas CHP', 'biomass CHP', 'biomass HOP',
-              'central water tank storage', 'decentral water tank storage', 'water tank charger',
-              'HVDC overhead', 'HVDC inverter pair',
+              'central resistive heater', 'decentral resistive heater',               
+              'central water tank storage', 'decentral water tank storage', 'water tank charger',             
               'central heat pump', 'decentral heat pump', 
+               'DAC',
               #'central air-sourced heat pump', 
               #'decentral air-sourced heat pump',
               #'central ground-sourced heat pump', 
@@ -82,14 +82,14 @@ name={'onwind' : 'Onshore Wind',
 dic_ref = {'Technology Data for Energy Plants for Electricity and District heating generation':'DEA_2019',
            'Impact of weighted average cost of capital, capital expenditure, and other parameters on future utility‐scale PV levelised cost of electricity': 'Vartiainen_2019',
            'European PV Technology and Innovation Platform' : 'Vartiainen_2017',
-           'Lazard’s Levelized Cost of Energy Analysis - Version 13.0': 'Lazard_2019',
-           'IEA2010': 'Schroeder_2013',
-           'budischak2013':'Budischak_2013',
-           'NREL http://www.nrel.gov/docs/fy09osti/45873.pdf; budischak2013': 'Steward_2009b, Budischak_2013',
+           'Lazard’s Levelized Cost of Energy Analysis - Version 13.0': 'Lazard_2019',           
+           #'budischak2013':'Budischak_2013',
+           #'NREL http://www.nrel.gov/docs/fy09osti/45873.pdf; budischak2013': 'Steward_2009b, Budischak_2013',
            'Schaber thesis':'Schaber_2013',
            'Hagspiel':'Hagspiel_2014',
            'Fasihi':'Fasihi_2017',
            'HP' : 'DEA_2019',
+           'DIW DataDoc http://hdl.handle.net/10419/80348' : 'Schroeder_2013',
            888 : 'water tank charger'}
 
 # Solar thermal collector decentral & 270 & m$^{2}$ & 1.3 & 20 & variable & \cite{Henning20141003} \\
@@ -111,7 +111,7 @@ for technology in technologies:
         efficiency = str(round(costs.loc[idx[technology,'efficiency'],'value'],2))
     else:
         efficiency= ' '  
-    if technology != 'water tank charger':    
+    if technology not in ['water tank charger', 'hydro', 'ror', 'PHS']:   
         source = costs.loc[idx[technology,'lifetime'],'source']
     else:
         source = costs.loc[idx[technology,'efficiency'],'source']
@@ -144,7 +144,8 @@ dic_units={'EUR/kWel':'\EUR/kW$_{el}$',
            'EUR/MW':'\EUR/MW',
            'USD/kWel':'USD/kW$_{el}$',
            'USD/kWh':'USD/kWh',
-           'EUR/kW(h)': '\EUR/kWh'}
+           'EUR/kWh': '\EUR/kWh',
+           'EUR/kW': '\EUR/kW'}
 for technology in technologies:
     file.write(' ' +name[technology] + ' & ')    
     file.write(dic_units[costs.loc[idx[technology,'investment'],'unit']]+ ' & ' )
@@ -156,7 +157,9 @@ for technology in technologies:
         else:
             file.write(str(int(costs_year.loc[idx[technology,'investment'],'value']))+ ' & ' )
         
-    if technology != 'water tank charger':    
+    if technology not in ['water tank charger', 'hydro', 'ror', 'PHS']:
+    # water tank charger has no lifetime, hydro reference for lifetime 
+    # is IEA2011, but for cost is DIW    
         source = costs.loc[idx[technology,'lifetime'],'source']
     else:
         source = costs.loc[idx[technology,'efficiency'],'source']    
@@ -173,11 +176,12 @@ dic_ref = {'BP 2019':'BP_2019',
            'https://www.eia.gov/environment/emissions/co2_vol_mass.php' : 'EIA_emission_coefficients',
            'DIW': 'Schroeder_2013',
            'IEA2011b' : 'BP_2019',
-           'Lazard’s Levelized Cost of Energy Analysis - Version 13.0': 'Lazard_2019',}
+           'Lazard’s Levelized Cost of Energy Analysis - Version 13.0': 'Lazard_2019',
+           'JRC and Zappa': ' '}
 
 filename='../../../table_fuels.tex'
 file = open(filename, 'w') 
-for fuel in [ 'coal', 'lignite', 'gas', 'nuclear', 'biomass']:
+for fuel in [ 'coal', 'lignite', 'gas', 'nuclear', 'solid biomass']:
     if idx[fuel,'fuel'] in costs.index:
         cost = str(round(costs.loc[idx[fuel,'fuel'],'value'],1))
         source1 = costs.loc[idx[fuel,'fuel'],'source']
@@ -189,15 +193,22 @@ for fuel in [ 'coal', 'lignite', 'gas', 'nuclear', 'biomass']:
         source2 = costs.loc[idx[fuel,'CO2 intensity'],'source'] 
     else:
         emissions = ' '
-     
-    file.write(' ' + fuel 
-    + ' & ' +  cost
-    + ' & ' + 
-    ' \\' + 'cite{' + dic_ref[source1]+ '} '
-    + ' & ' +  emissions   
-    + ' & ' + 
-    ' \\' + 'cite{' + dic_ref[source2]+ '} ')
-
+    if technology not in ['nuclear', 'solid biomass'] :
+        file.write(' ' + fuel 
+                   + ' & ' +  cost
+                   + ' & ' + 
+                   ' \\' + 'cite{' + dic_ref[source1]+ '} '
+                   + ' & ' +  emissions   
+                   + ' & ' + 
+                   ' \\' + 'cite{' + dic_ref[source2]+ '} ')
+    else:
+       file.write(' ' + fuel 
+                   + ' & ' +  cost
+                   + ' & ' + 
+                   ' \\' + 'cite{' + dic_ref[source1]+ '} '
+                   + ' & ' +  0
+                   + ' & ' + 
+                   ' ') 
     file.write('\\') 
     file.write('\\') 
 file.close()    
