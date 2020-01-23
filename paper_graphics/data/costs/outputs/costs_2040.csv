@@ -63,20 +63,20 @@ central gas CHP,VOM,4.1,EUR/MWh,Technology Data for Energy Plants for Electricit
 central gas CHP,efficiency,1.0,per unit,Technology Data for Energy Plants for Electricity and District heating generation
 central gas CHP,investment,540.0,EUR/kWel,Technology Data for Energy Plants for Electricity and District heating generation
 central gas CHP,lifetime,25.0,years,Technology Data for Energy Plants for Electricity and District heating generation
-central gas boiler,FOM,1.333,%/year,Technology Data for Energy Plants for Electricity and District heating generation
+central gas boiler,FOM,3.0,%/year,Technology Data for Energy Plants for Electricity and District heating generation
 central gas boiler,VOM,1.0,EUR/MWh,Technology Data for Energy Plants for Electricity and District heating generation
 central gas boiler,efficiency,1.0,per unit,Technology Data for Energy Plants for Electricity and District heating generation
-central gas boiler,investment,135.0,EUR/kWth,Technology Data for Energy Plants for Electricity and District heating generation
+central gas boiler,investment,60.0,EUR/kWth,Technology Data for Energy Plants for Electricity and District heating generation
 central gas boiler,lifetime,25.0,years,Technology Data for Energy Plants for Electricity and District heating generation
 central ground-sourced heat pump,FOM,0.355,%/year,Technology Data for Energy Plants for Electricity and District heating generation
 central ground-sourced heat pump,VOM,3.8,EUR/MWh,Technology Data for Energy Plants for Electricity and District heating generation
 central ground-sourced heat pump,efficiency,4.0,per unit,Technology Data for Energy Plants for Electricity and District heating generation
 central ground-sourced heat pump,investment,562.5899999999999,EUR/kWth,Technology Data for Energy Plants for Electricity and District heating generation
 central ground-sourced heat pump,lifetime,25.0,years,Technology Data for Energy Plants for Electricity and District heating generation
-central resistive heater,FOM,0.719,%/year,Technology Data for Energy Plants for Electricity and District heating generation
+central resistive heater,FOM,1.617,%/year,Technology Data for Energy Plants for Electricity and District heating generation
 central resistive heater,VOM,1.0,EUR/MWh,Technology Data for Energy Plants for Electricity and District heating generation
 central resistive heater,efficiency,0.99,per unit,Technology Data for Energy Plants for Electricity and District heating generation
-central resistive heater,investment,135.0,EUR/kWth,Technology Data for Energy Plants for Electricity and District heating generation
+central resistive heater,investment,60.0,EUR/kWth,Technology Data for Energy Plants for Electricity and District heating generation
 central resistive heater,lifetime,20.0,years,Technology Data for Energy Plants for Electricity and District heating generation
 central solar thermal,FOM,1.4,%/year,HP
 central solar thermal,investment,140000.0,EUR/1000m2,HP
@@ -111,12 +111,11 @@ decentral ground-sourced heat pump,discount rate,0.04,per unit,Palzer thesis
 decentral ground-sourced heat pump,efficiency,4.0,per unit,Technology Data for Energy Plants for Electricity and District heating generation
 decentral ground-sourced heat pump,investment,1299.9999999999998,EUR/kWth,Technology Data for Energy Plants for Electricity and District heating generation
 decentral ground-sourced heat pump,lifetime,20.0,years,Technology Data for Energy Plants for Electricity and District heating generation
-decentral resistive heater,FOM,0.002,%/year,Technology Data for Energy Plants for Electricity and District heating generation
-decentral resistive heater,VOM,0.0,EUR/MWh,Technology Data for Energy Plants for Electricity and District heating generation
+decentral resistive heater,FOM,2.0,%/year,Schaber thesis
 decentral resistive heater,discount rate,0.04,per unit,Palzer thesis
-decentral resistive heater,efficiency,1.0,per unit,Technology Data for Energy Plants for Electricity and District heating generation
-decentral resistive heater,investment,883.3287895944538,EUR/kWth,Technology Data for Energy Plants for Electricity and District heating generation
-decentral resistive heater,lifetime,30.0,years,Technology Data for Energy Plants for Electricity and District heating generation
+decentral resistive heater,efficiency,0.9,per unit,Schaber thesis
+decentral resistive heater,investment,100.0,EUR/kWth,Schaber thesis
+decentral resistive heater,lifetime,20.0,years,Schaber thesis
 decentral solar thermal,FOM,1.3,%/year,HP
 decentral solar thermal,discount rate,0.04,per unit,Palzer thesis
 decentral solar thermal,investment,270000.0,EUR/1000m2,HP
