@@ -23,26 +23,19 @@ filename='../../../table_inputs.tex'
 file = open(filename, 'w')
 technologies=['onwind', 'offwind', 'solar-utility', 'solar-rooftop', 'OCGT',
               'CCGT', 'coal', 'lignite', 'nuclear', 'hydro', 'ror', 'PHS', 
-              'central gas CHP', 'biomass CHP', 'biomass HOP',
+              'central gas CHP', 'biomass CHP', 'central coal CHP',
+              'biomass HOP','biomass EOP',
               'HVDC overhead', 'HVDC inverter pair',              
               'battery storage', 
-              'battery inverter', 'electrolysis', 'fuel cell', 'methanation', 
+              'battery inverter', 'electrolysis', 'fuel cell',
               'hydrogen storage underground', 'hydrogen storage tank', 
+              'DAC', 'methanation', 
               'central gas boiler', 'decentral gas boiler', 
               'central resistive heater', 'decentral resistive heater', 
-              'central gas CHP','central coal CHP', 
-              'biomass CHP', 'biomass HOP', 'biomass EOP',
-              'central water tank storage', 'decentral water tank storage', 'water tank charger',
-              'HVDC overhead', 'HVDC inverter pair',
-              #'central heat pump', 'decentral heat pump', 
-              'central resistive heater', 'decentral resistive heater',               
-              'central water tank storage', 'decentral water tank storage', 'water tank charger',             
-              'central heat pump', 'decentral heat pump', 
-               'DAC',
-              #'central air-sourced heat pump', 
-              'central ground-sourced heat pump', 
-              'decentral ground-sourced heat pump',
+              'central water tank storage', 'decentral water tank storage', 'water tank charger',                 
               'decentral air-sourced heat pump',
+              'central ground-sourced heat pump', 
+              'decentral ground-sourced heat pump'
               ]
             
 name={'onwind' : 'Onshore Wind',
@@ -79,9 +72,10 @@ name={'onwind' : 'Onshore Wind',
       'water tank charger': 'Water tank charger/discharger',
       'HVDC overhead':'HVDC overhead', 
       'HVDC inverter pair':'HVDC inverter pair',
-      'central heat pump': 'Central heat pump', 
-      'decentral heat pump': 'Decentral heat pump',
+      #'central heat pump': 'Central heat pump', 
+      #'decentral heat pump': 'Decentral heat pump',
       #'central air-sourced heat pump': 'Central air-sourced heat pump', 
+      'decentral air-sourced heat pump': 'Decentral air-sourced heat pump',
       'central ground-sourced heat pump': 'Central ground-sourced heat pump', 
       'decentral air-sourced heat pump': 'Decentral air-sourced heat pump',
       'decentral ground-sourced heat pump':  'Decentral ground-sourced heat pump'
@@ -98,7 +92,12 @@ dic_ref = {'Technology Data for Energy Plants for Electricity and District heati
            'Fasihi':'Fasihi_2017',
            'HP' : 'DEA_2019',
            'DIW DataDoc http://hdl.handle.net/10419/80348' : 'Schroeder_2013',
-           888 : 'water tank charger'}
+           888 : 'water tank charger', 
+           'BP 2019':'BP_2019',
+           'https://www.eia.gov/environment/emissions/co2_vol_mass.php' : 'EIA_emission_coefficients',
+           'DIW': 'Schroeder_2013',
+           'IEA2011b' : 'BP_2019',
+           'Is a 100% renewable European power system feasible by 2050?': 'Zappa_2019, JRC_biomass'}
 
 # Solar thermal collector decentral & 270 & m$^{2}$ & 1.3 & 20 & variable & \cite{Henning20141003} \\
 # Solar thermal collector central & 140 & m$^{2}$ & 1.4 & 20 & variable & \cite{Henning20141003} \\
@@ -115,7 +114,13 @@ for technology in technologies:
         lifetime = str(int(costs.loc[idx[technology,'lifetime'],'value']))
     else:
         lifetime= ' '
-    if idx[technology,'efficiency'] in costs.index:
+    if idx[technology,'efficiency'] in costs.index and technology not in ['onwind', 
+          'offwind', 'central gas CHP', 'biomass CHP', 'battery storage', 'central coal CHP' 
+          'hydrogen storage underground', 'hydrogen storage tank', 
+          'central water tank storage', 'decentral water tank storage',
+          'decentral air-sourced heat pump', 'central ground-sourced heat pump',
+          'decentral ground-sourced heat pump']:
+        
         efficiency = str(round(costs.loc[idx[technology,'efficiency'],'value'],2))
     else:
         efficiency= ' '  
@@ -152,19 +157,18 @@ dic_units={'EUR/kWel':'\EUR/kW$_{el}$',
            'EUR/MW':'\EUR/MW',
            'USD/kWel':'USD/kW$_{el}$',
            'USD/kWh':'USD/kWh',
-           'EUR/kWh': '\EUR/kWh',
-           'EUR/kW': '\EUR/kW'}
            'EUR/kWh': '\EUR/kWh'}
+
+
+
 for technology in technologies:
     file.write(' ' +name[technology] + ' & ')    
     file.write(dic_units[costs.loc[idx[technology,'investment'],'unit']]+ ' & ' )
 
     for year in years:
         costs_year = pd.read_csv('outputs/costs_' + str(year) +'.csv',index_col=list(range(2))).sort_index()
-        if technology=='hydrogen storage':
+        if technology in ['hydrogen storage underground', 'central water tank storage']:       
             file.write(str(round(costs_year.loc[idx[technology,'investment'],'value'],1))+ ' & ' )
-        elif technology=='central water tank storage':
-            file.write(str(int(np.ceil(costs_year.loc[idx[technology,'investment'],'value'])))+ ' & ' )
         else:
             file.write(str(int(costs_year.loc[idx[technology,'investment'],'value']))+ ' & ' )
         
@@ -183,12 +187,6 @@ file.close()
 """
 Table including fuel characteristics
 """
-dic_ref = {'BP 2019':'BP_2019',
-           'https://www.eia.gov/environment/emissions/co2_vol_mass.php' : 'EIA_emission_coefficients',
-           'DIW': 'Schroeder_2013',
-           'IEA2011b' : 'BP_2019',
-           'Lazard’s Levelized Cost of Energy Analysis - Version 13.0': 'Lazard_2019',
-           'JRC and Zappa': ' '}
 
 filename='../../../table_fuels.tex'
 file = open(filename, 'w') 
@@ -204,7 +202,7 @@ for fuel in [ 'coal', 'lignite', 'gas', 'nuclear', 'solid biomass']:
         source2 = costs.loc[idx[fuel,'CO2 intensity'],'source'] 
     else:
         emissions = ' '
-    if technology not in ['nuclear', 'solid biomass'] :
+    if fuel not in ['nuclear', 'solid biomass'] :
         file.write(' ' + fuel 
                    + ' & ' +  cost
                    + ' & ' + 
@@ -217,7 +215,7 @@ for fuel in [ 'coal', 'lignite', 'gas', 'nuclear', 'solid biomass']:
                    + ' & ' +  cost
                    + ' & ' + 
                    ' \\' + 'cite{' + dic_ref[source1]+ '} '
-                   + ' & ' +  0
+                   + ' & ' +  str(0)
                    + ' & ' + 
                    ' ') 
     file.write('\\') 

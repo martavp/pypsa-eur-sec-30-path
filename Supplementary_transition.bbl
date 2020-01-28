@@ -146,7 +146,7 @@ I.~Staffell, D.~Brett, N.~Brandon, A.~Hawkes,
 \newline\urlprefix\url{https://www.euroheat.org/knowledge-hub/country-profiles/}
 
 \bibitem{JRC_biomass}
-P.~Ruiz, A.~Sgobbi, W.~Nijs, C.~Thiel, F.~Dalla, T.~Kobert, G.~Elbersen, G.~H.
+P.~Ruiz, A.~Sgobbi, W.~Nijs, C.~Thiel, F.~Dalla, T.~Kobert, B.~Elbersen, G.~H.
   Alterra,
   \href{https://setis.ec.europa.eu/sites/default/files/reports/biomass_potentials_in_europe.pdf}{The
   {JRC}-{EU}-{TIMES} model. bioenergy potentials for {EU} and neighbouring
@@ -202,13 +202,6 @@ S.~Hagspiel, C.~J{\"a}gemann, D.~Lindenberger, T.~Brown, S.~Cherevatskiy,
   {\path{doi:10.1016/j.energy.2014.01.025}}.
 \newline\urlprefix\url{http://www.sciencedirect.com/science/article/pii/S0360544214000322}
 
-\bibitem{Schaber_2013}
-K.~Schaber, \href{https://d-nb.info/1058680781/34}{Integration of {Variable}
-  {Renewable} {Energies} in the {European} power system: a model-based analysis
-  of transmission grid extensions and energy sector coupling}, Ph.D. thesis, TU
-  {M{\"u}nchen} (2013).
-\newline\urlprefix\url{https://d-nb.info/1058680781/34}
-
 \bibitem{Fasihi_2017}
 M.~Fasihi, D.~Bogdanov, C.~Breyer,
   \href{https://www.mdpi.com/2071-1050/9/2/306}{Long-{Term} {Hydrocarbon}
@@ -219,6 +212,13 @@ M.~Fasihi, D.~Bogdanov, C.~Breyer,
   {\path{doi:10.3390/su9020306}}.
 \newline\urlprefix\url{https://www.mdpi.com/2071-1050/9/2/306}
 
+\bibitem{Schaber_2013}
+K.~Schaber, \href{https://d-nb.info/1058680781/34}{Integration of {Variable}
+  {Renewable} {Energies} in the {European} power system: a model-based analysis
+  of transmission grid extensions and energy sector coupling}, Ph.D. thesis, TU
+  {M{\"u}nchen} (2013).
+\newline\urlprefix\url{https://d-nb.info/1058680781/34}
+
 \bibitem{BP_2019}
 \href{https://www.bp.com/content/dam/bp/business-sites/en/global/corporate/pdfs/energy-economics/statistical-review/bp-stats-review-2019-full-report.pdf}{{BP}
   {Statistical} {Review} of {World} {Energy}}.
@@ -228,5 +228,14 @@ M.~Fasihi, D.~Bogdanov, C.~Breyer,
 \href{https://www.eia.gov/environment/emissions/co2_vol_mass.php}{{Carbon}
   {Dioxide} {Emission} {Coefficients}, {EIA}}.
 \newline\urlprefix\url{https://www.eia.gov/environment/emissions/co2_vol_mass.php}
+
+\bibitem{Zappa_2019}
+W.~Zappa, M.~Junginger, M.~van~den Broek,
+  \href{http://www.sciencedirect.com/science/article/pii/S0306261918312790}{Is
+  a 100\% renewable {European} power system feasible by 2050?}, Applied Energy
+  233-234 (2019) 1027--1050.
+\newblock \href {http://dx.doi.org/10.1016/j.apenergy.2018.08.109}
+  {\path{doi:10.1016/j.apenergy.2018.08.109}}.
+\newline\urlprefix\url{http://www.sciencedirect.com/science/article/pii/S0306261918312790}
 
 \end{thebibliography}

@@ -369,21 +369,15 @@ Add description of hydrogen storage, batteries and methanation. }
 \footnotesize
 \centering
 \begin{threeparttable}
-\caption{Cost assumptions per technology and year.} \label{tab:cost per year}
+\caption{Cost assumptions per technology and year. All costs are given in real 2015 money. } \label{tab:cost per year}
 \centering
-\begin{tabularx}{\textwidth}{lccccccccr}
+\begin{tabularx}{18cm}{lccccccccr}
 \toprule
 
 Technology\tnote{1}& Unit & 2020&2025&2030&2035&2040&2045&2050&source\\
 \midrule
 \input{table_costs.tex}
 
-%Electrolysis\\
-%Hot water tank central\\
-%Hot water tank individual\\
-%Direct air capture\\
-%Methanation\\
-%Oil power plant\\
 
 \bottomrule
 \end{tabularx}
@@ -393,7 +387,6 @@ Technology\tnote{1}& Unit & 2020&2025&2030&2035&2040&2045&2050&source\\
 \end{threeparttable}
 \end{table*}
 
-%\ra{1.05}
 \begin{table*}
 \centering
 \begin{threeparttable}
@@ -446,12 +439,12 @@ Technology & FOM\tnote{a} & Lifetime & Efficiency & Source\\
 
 \item [a] Fixed Operation and Maintenance (FOM) costs are given as a percentage of the overnight cost per year.
 \item [b] Hydroelectric facilities are not expanded in this model and are considered to be fully amortized.
-%\item [c] The fuel cell technology is solid oxide, with partial (30\%)
-%  replacement after 10 years, following \cite{NRELhydrogen}. The more conservative estimate of efficiency has been taken, in line with other sources \cite{dea2016}.
+\item [c] Efficiency for Combined Heat and Power (CHP) plants depends on the electricity/heat output and it is modelled as described in the text. 
+\item [d] Coefficient of performance (COP) of heat pump is modelled as a function of temperature, as described in the text. 
+%\item [c] The fuel cell technology is solid oxide, with partial (30\%) replacement after 10 years, following \cite{NRELhydrogen}. The more conservative estimate of efficiency has been taken, in line with other sources \cite{dea2016}.
 %SOFC: exchange*overnight*(1+30%-replacement-10-years-out) = 0.7532*390*(1+0.3/(1.07)**10) = 338.55 \cite{NRELhydrogen}
-%\item [d] Hydrogen storage is in overground steel tanks following \cite{budischak2013}. The usage of existing underground caverns to store hydrogen could be more than 10 times cheaper \cite{Zakeri2015,ESYSTechnologiesteckbrief}, but a study of cavern potentials across Europe was not within the scope of this study.
-%\item [e] Investments in methanation and DAC are not allowed independently, only together as `Methanation+DAC', see text.
-%\item [f] The costs for distribution infrastructure and building retrofitting are approximate (see text) and they are therefore not optimised or included in the presented total system costs, but calculated retrospectively and analysed in the text.
+\item [e] Investments in methanation and DAC are not allowed independently, only together as `Methanation+DAC', see text.
+\item [f] \textcolor[rgb]{1,0,0}{The costs for distribution infrastructure and building retrofitting are approximate (see text) and they are therefore not optimised or included in the presented total system costs, but calculated retrospectively and analysed in the text.}
 \end{tablenotes}
 \end{threeparttable}
 \end{table*}
@@ -473,7 +466,9 @@ Fuel & Cost  & Source & Emissions & Source \\
 
 \begin{tablenotes}
 
-\item [a] Add item
+\item [a] Raw biomass fuel cost is assumed as the middle value of the range provided in the references for different European countries and types of sustainable biomass. 
+% range in Zappa_2019: 1.4 € GJ−1 to 14.4 € GJ−1
+
 
 \end{tablenotes}
 \end{threeparttable}
