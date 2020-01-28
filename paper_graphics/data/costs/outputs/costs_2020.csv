@@ -83,7 +83,7 @@ central water tank storage,VOM,0.0,EUR/MWh,Technology Data for Energy Plants for
 central water tank storage,efficiency,1.0,per unit,Technology Data for Energy Plants for Electricity and District heating generation
 central water tank storage,investment,0.5795555555555556,EUR/kWh,Technology Data for Energy Plants for Electricity and District heating generation
 central water tank storage,lifetime,20.0,years,Technology Data for Energy Plants for Electricity and District heating generation
-coal,CO2 intensity,0.354,tCO2/MWth,https://www.eia.gov/environment/emissions/co2_vol_mass.php
+coal,CO2 intensity,0.3361257109943121,tCO2/MWth,Entwicklung der spezifischen Kohlendioxid-Emissionen des deutschen Strommix in den Jahren 1990 - 2018
 coal,FOM,1.6,%/year,Lazard’s Levelized Cost of Energy Analysis - Version 13.0
 coal,VOM,3.5,EUR/MWhel,Lazard’s Levelized Cost of Energy Analysis - Version 13.0
 coal,efficiency,0.33,per unit,Lazard’s Levelized Cost of Energy Analysis - Version 13.0
@@ -127,8 +127,8 @@ fuel cell,VOM,0.0,EUR/MWh,Technology Data for Energy Plants for Electricity and 
 fuel cell,efficiency,1.0,per unit,Technology Data for Energy Plants for Electricity and District heating generation
 fuel cell,investment,1300.0,EUR/kWel,Technology Data for Energy Plants for Electricity and District heating generation
 fuel cell,lifetime,10.0,years,Technology Data for Energy Plants for Electricity and District heating generation
-gas,CO2 intensity,0.187,tCO2/MWth,https://www.eia.gov/environment/emissions/co2_vol_mass.php
-gas,fuel,21.6,EUR/MWhth,IEA2011b
+gas,CO2 intensity,0.20097559219526245,tCO2/MWth,Entwicklung der spezifischen Kohlendioxid-Emissionen des deutschen Strommix in den Jahren 1990 - 2018
+gas,fuel,20.1,EUR/MWhth,BP 2019
 hydro,FOM,1.0,%/year,DIW DataDoc http://hdl.handle.net/10419/80348
 hydro,efficiency,0.9,per unit,DIW DataDoc http://hdl.handle.net/10419/80348
 hydro,investment,2208.1616064,EUR/kWel,DIW DataDoc http://hdl.handle.net/10419/80348
@@ -143,7 +143,7 @@ hydrogen storage underground,VOM,3e-05,EUR/MWh,Technology Data for Energy Plants
 hydrogen storage underground,efficiency,1.0,per unit,Technology Data for Energy Plants for Electricity and District heating generation
 hydrogen storage underground,investment,3.0,EUR/kWh,Technology Data for Energy Plants for Electricity and District heating generation
 hydrogen storage underground,lifetime,100.0,years,Technology Data for Energy Plants for Electricity and District heating generation
-lignite,CO2 intensity,0.33399999999999996,tCO2/MWth,https://www.eia.gov/environment/emissions/co2_vol_mass.php
+lignite,CO2 intensity,0.4069083447332422,tCO2/MWth,Entwicklung der spezifischen Kohlendioxid-Emissionen des deutschen Strommix in den Jahren 1990 - 2018
 lignite,FOM,1.6,%/year,Lazard’s Levelized Cost of Energy Analysis - Version 13.0
 lignite,VOM,3.5,EUR/MWhel,Lazard’s Levelized Cost of Energy Analysis - Version 13.0
 lignite,efficiency,0.33,per unit,Lazard’s Levelized Cost of Energy Analysis - Version 13.0
@@ -171,7 +171,7 @@ offwind-ac-station,investment,250.0,EUR/kWel,DEA https://ens.dk/en/our-services/
 offwind-dc-connection-submarine,investment,2000.0,EUR/MW/km,DTU report based on Fig 34 of https://ec.europa.eu/energy/sites/ener/files/documents/2014_nsog_report.pdf
 offwind-dc-connection-underground,investment,1000.0,EUR/MW/km,Haertel 2017; average + 13% learning reduction
 offwind-dc-station,investment,400.0,EUR/kWel,Haertel 2017; assuming one onshore and one offshore node + 13% learning reduction
-oil,CO2 intensity,0.248,tCO2/MWth,https://www.eia.gov/environment/emissions/co2_vol_mass.php
+oil,CO2 intensity,0.26646986824105406,tCO2/MWth,Entwicklung der spezifischen Kohlendioxid-Emissionen des deutschen Strommix in den Jahren 1990 - 2018
 oil,FOM,2.566,%/year,Technology Data for Energy Plants for Electricity and District heating generation
 oil,VOM,6.0,EUR/MWhel,Technology Data for Energy Plants for Electricity and District heating generation
 oil,efficiency,0.37,per unit,Technology Data for Energy Plants for Electricity and District heating generation
