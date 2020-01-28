@@ -29,14 +29,26 @@ technologies=['onwind', 'offwind', 'solar-utility', 'solar-rooftop', 'OCGT',
               'battery inverter', 'electrolysis', 'fuel cell', 'methanation', 
               'hydrogen storage underground', 'hydrogen storage tank', 
               'central gas boiler', 'decentral gas boiler', 
+              'central resistive heater', 'decentral resistive heater', 
+              'central gas CHP','central coal CHP', 
+              'biomass CHP', 'biomass HOP', 'biomass EOP',
+              'central water tank storage', 'decentral water tank storage', 'water tank charger',
+              'HVDC overhead', 'HVDC inverter pair',
+              #'central heat pump', 'decentral heat pump', 
               'central resistive heater', 'decentral resistive heater',               
               'central water tank storage', 'decentral water tank storage', 'water tank charger',             
               #'central heat pump', 'decentral heat pump', 
                'DAC',
               #'central air-sourced heat pump', 
+<<<<<<< HEAD
               'decentral air-sourced heat pump',
               'central ground-sourced heat pump', 
               'decentral ground-sourced heat pump'
+=======
+              'central ground-sourced heat pump', 
+              'decentral ground-sourced heat pump',
+              'decentral air-sourced heat pump',
+>>>>>>> 4d5912bfb6634570a7986d9efe78dfb22d1e6f71
               ]
             
 name={'onwind' : 'Onshore Wind',
@@ -45,11 +57,11 @@ name={'onwind' : 'Onshore Wind',
       'solar-rooftop' : 'Solar PV (rooftop)', 
       'OCGT': 'OCGT', 
       'CCGT': 'CCGT', 
-      'coal':  'Coal', 
+      'coal':  'Coal power plant', 
       'lignite': 'Lignite', 
       'nuclear': 'Nuclear',
       'hydro':'Reservoir hydro', 
-      'ror':'run of river',
+      'ror':'Run of river',
       'PHS':'PHS',
       'battery inverter': 'Battery inverter', 
       'battery storage': 'Battery storage',
@@ -64,7 +76,9 @@ name={'onwind' : 'Onshore Wind',
       'central resistive heater':'Central resistive heater', 
       'decentral resistive heater':'Decentral resistive heater',
       'central gas CHP':' Gas CHP',
+      'central coal CHP':' Coal CHP',
       'biomass CHP':'Biomass CHP',
+      'biomass EOP':'Biomass power plant',
       'biomass HOP':'Biomass central heat plant',
       'central water tank storage': 'Central water tank storage', 
       'decentral water tank storage': 'Decentral water tank storage', 
@@ -74,8 +88,13 @@ name={'onwind' : 'Onshore Wind',
       #'central heat pump': 'Central heat pump', 
       #'decentral heat pump': 'Decentral heat pump',
       #'central air-sourced heat pump': 'Central air-sourced heat pump', 
+<<<<<<< HEAD
       'decentral air-sourced heat pump': 'Decentral air-sourced heat pump',
       'central ground-sourced heat pump': 'Central ground-sourced heat pump', 
+=======
+      'central ground-sourced heat pump': 'Central ground-sourced heat pump', 
+      'decentral air-sourced heat pump': 'Decentral air-sourced heat pump',
+>>>>>>> 4d5912bfb6634570a7986d9efe78dfb22d1e6f71
       'decentral ground-sourced heat pump':  'Decentral ground-sourced heat pump'
       }
 
@@ -142,7 +161,7 @@ file = open(filename, 'w')
 technologies=[t for t in technologies if t not in ['water tank charger']]
 dic_units={'EUR/kWel':'\EUR/kW$_{el}$',
            'EUR/kWth':'\EUR/kW$_{th}$',
-           'EUR/kWH2':'\EUR/kW$_{H2}$',
+           'EUR/kWH2':'\EUR/kW$_{H_2}$',
            'EUR/kWhth':'\EUR/kWh$_{th}$',
            'EUR/(tCO2/a)': '\EUR/(tCO$_2$/a)',
            'EUR/m3':'\EUR/m$^3$',
@@ -151,9 +170,14 @@ dic_units={'EUR/kWel':'\EUR/kW$_{el}$',
            'USD/kWel':'USD/kW$_{el}$',
            'USD/kWh':'USD/kWh',
            'EUR/kWh': '\EUR/kWh',
+<<<<<<< HEAD
            'EUR/kW': '\EUR/kW',
            'EUR/kWh': '\EUR/kWh'}
 
+=======
+           'EUR/kW': '\EUR/kW'}
+           'EUR/kWh': '\EUR/kWh'}
+>>>>>>> 4d5912bfb6634570a7986d9efe78dfb22d1e6f71
 for technology in technologies:
     file.write(' ' +name[technology] + ' & ')    
     file.write(dic_units[costs.loc[idx[technology,'investment'],'unit']]+ ' & ' )
