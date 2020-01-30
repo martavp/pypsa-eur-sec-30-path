@@ -97,7 +97,9 @@ dic_ref = {'Technology Data for Energy Plants for Electricity and District heati
            'https://www.eia.gov/environment/emissions/co2_vol_mass.php' : 'EIA_emission_coefficients',
            'DIW': 'Schroeder_2013',
            'IEA2011b' : 'BP_2019',
-           'Is a 100% renewable European power system feasible by 2050?': 'Zappa_2019, JRC_biomass'}
+           'Is a 100% renewable European power system feasible by 2050?': 'Zappa_2019, JRC_biomass',
+           'Entwicklung der spezifischen Kohlendioxid-Emissionen des deutschen Strommix in den Jahren 1990 - 2018': 'German Environment Agency',
+}
 
 # Solar thermal collector decentral & 270 & m$^{2}$ & 1.3 & 20 & variable & \cite{Henning20141003} \\
 # Solar thermal collector central & 140 & m$^{2}$ & 1.4 & 20 & variable & \cite{Henning20141003} \\
