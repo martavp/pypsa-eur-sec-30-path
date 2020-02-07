@@ -196,6 +196,7 @@ ror,FOM,2.0,%/year,DIW DataDoc http://hdl.handle.net/10419/80348
 ror,efficiency,0.9,per unit,DIW DataDoc http://hdl.handle.net/10419/80348
 ror,investment,3312.2424096000004,EUR/kWel,DIW DataDoc http://hdl.handle.net/10419/80348
 ror,lifetime,80.0,years,IEA2010
+solar,lifetime,30.0,years,
 solar-rooftop,FOM,2.0,%/year,ETIP PV
 solar-rooftop,discount rate,0.04,per unit,standard for decentral
 solar-rooftop,investment,1127.450980392157,EUR/kWel,European PV Technology and Innovation Platform
