@@ -90,15 +90,15 @@ dic_ref = {'Technology Data for Energy Plants for Electricity and District heati
            'Schaber thesis':'Schaber_2013',
            'Hagspiel':'Hagspiel_2014',
            'Fasihi':'Fasihi_2017',
-           'HP' : 'DEA_2019',
+           'HP' : ' ',
            'DIW DataDoc http://hdl.handle.net/10419/80348' : 'Schroeder_2013',
-           888 : 'water tank charger', 
+            888 : 'water tank charger', 
            'BP 2019':'BP_2019',
            'https://www.eia.gov/environment/emissions/co2_vol_mass.php' : 'EIA_emission_coefficients',
            'DIW': 'Schroeder_2013',
            'IEA2011b' : 'BP_2019',
            'Is a 100% renewable European power system feasible by 2050?': 'Zappa_2019, JRC_biomass',
-           'Entwicklung der spezifischen Kohlendioxid-Emissionen des deutschen Strommix in den Jahren 1990 - 2018': 'German Environment Agency',
+           'Entwicklung der spezifischen Kohlendioxid-Emissionen des deutschen Strommix in den Jahren 1990 - 2018': 'German_Environment_Agency',
 }
 
 # Solar thermal collector decentral & 270 & m$^{2}$ & 1.3 & 20 & variable & \cite{Henning20141003} \\

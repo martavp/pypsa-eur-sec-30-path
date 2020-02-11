@@ -1,0 +1,242 @@
+\begin{thebibliography}{10}
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+\expandafter\ifx\csname href\endcsname\relax
+  \def\href#1#2{#2} \def\path#1{#1}\fi
+
+\bibitem{Figueres_2017}
+C.~Figueres, H.~J. Schellnhuber, G.~Whiteman, J.~Rockstr{\"o}m, A.~Hobley,
+  S.~Rahmstorf,
+  \href{http://www.nature.com/news/three-years-to-safeguard-our-climate-1.22201}{Three
+  years to safeguard our climate}, Nature News 546~(7660)  593.
+\newblock \href {http://dx.doi.org/10.1038/546593a}
+  {\path{doi:10.1038/546593a}}.
+\newline\urlprefix\url{http://www.nature.com/news/three-years-to-safeguard-our-climate-1.22201}
+
+\bibitem{blog_budget}
+\href{https://cicero.oslo.no/en/posts/climate/how-much-carbon-dioxide-can-we-emit}{G.
+  {Peters}, {How} much carbon dioxide can we emit?}
+\newline\urlprefix\url{https://cicero.oslo.no/en/posts/climate/how-much-carbon-dioxide-can-we-emit}
+
+\bibitem{Raupach_2014}
+M.~R. Raupach, S.~J. Davis, G.~P. Peters, R.~M. Andrew, J.~G. Canadell,
+  P.~Ciais, P.~Friedlingstein, F.~Jotzo, D.~P. Vuuren, C.~L. Qu{\'e}r{\'e},
+  \href{https://www.nature.com/articles/nclimate2384}{Sharing a quota on
+  cumulative carbon emissions}, Nature Climate Change 4~(10) (2014) 873--879.
+\newblock \href {http://dx.doi.org/10.1038/nclimate2384}
+  {\path{doi:10.1038/nclimate2384}}.
+\newline\urlprefix\url{https://www.nature.com/articles/nclimate2384}
+
+\bibitem{UNFCCC_inventory}
+\href{https://www.eea.europa.eu/data-and-maps/data/national-emissions-reported-to-the-unfccc-and-to-the-eu-greenhouse-gas-monitoring-mechanism-15}{National
+  emissions reported to the {UNFCCC} and to the {EU} {Greenhouse} {Gas}
+  {Monitoring} {Mechanism} , {EEA}}.
+\newline\urlprefix\url{https://www.eea.europa.eu/data-and-maps/data/national-emissions-reported-to-the-unfccc-and-to-the-eu-greenhouse-gas-monitoring-mechanism-15}
+
+\bibitem{IDEES}
+L.~Mantzos, T.~Wiesenthal, N.~Matei, S.~Tchung-Ming, M.~Rózsai, H.~P. Russ,
+  A.~Soria,
+  \href{http://www.sciencedirect.com/science/article/pii/S0360544216310295}{{JRC}-{IDEES}:
+  {Integrated} {Database} of the {European} {Energy} {Sector}}\href
+  {http://dx.doi.org/10.2760/182725} {\path{doi:10.2760/182725}}.
+\newline\urlprefix\url{http://www.sciencedirect.com/science/article/pii/S0360544216310295}
+
+\bibitem{powerplantmatching}
+\href{https://github.com/FRESNA/powerplantmatching}{powerplantmatching}.
+\newline\urlprefix\url{https://github.com/FRESNA/powerplantmatching}
+
+\bibitem{IRENA_2019}
+\href{https://www.irena.org/publications/2019/Mar/Renewable-Capacity-Statistics-2019}{{Renewable
+  Capacity Statistics} 2019, {IRENA}}.
+\newline\urlprefix\url{https://www.irena.org/publications/2019/Mar/Renewable-Capacity-Statistics-2019}
+
+\bibitem{Report_Fraunhofer_2019}
+\href{https://www.ise.fraunhofer.de/content/dam/ise/de/documents/publications/studies/Photovoltaics-Report.pdf}{{Photovoltaics}
+  {Report}}, Tech. rep., Fraunhofer ISE (2019).
+\newline\urlprefix\url{https://www.ise.fraunhofer.de/content/dam/ise/de/documents/publications/studies/Photovoltaics-Report.pdf}
+
+\bibitem{Victoria_2012}
+M.~Victoria, C.~Gallego, I.~Anton, G.~Sala,
+  \href{http://www.eupvsec-proceedings.com/proceedings?paper=17736}{Past,
+  {Present} and {Future} of {Feed}-in {Tariffs} in {Spain}: {What} are their
+  {Real} {Costs}?}, 27th European Photovoltaic Solar Energy Conference and
+  Exhibition (2012) 4612--4616\href
+  {http://dx.doi.org/10.4229/27thEUPVSEC2012-6CV.3.49}
+  {\path{doi:10.4229/27thEUPVSEC2012-6CV.3.49}}.
+\newline\urlprefix\url{http://www.eupvsec-proceedings.com/proceedings?paper=17736}
+
+\bibitem{Brown_2016}
+T.~Brown, P.~Schierhorn, E.~Tr{\"o}ster, T.~Ackermann, Optimising the european
+  transmission system for 77\% renewable electricity by 2030 10~(1)  3--9.
+\newblock \href {http://dx.doi.org/10.1049/iet-rpg.2015.0135}
+  {\path{doi:10.1049/iet-rpg.2015.0135}}.
+
+\bibitem{OPSD}
+\href{https://data.open-power-system-data.org/time_series/2018-03-13/.}{Open
+  {Power} {System} {Data}. 2018. {Data} {Package} {Time} series. {Version}
+  2018-03-13. ({Primary} data from various sources, for a complete list see
+  {URL}).}
+\newline\urlprefix\url{https://data.open-power-system-data.org/time_series/2018-03-13/.}
+
+\bibitem{Victoria_2019b}
+M.~Victoria, G.~B. Andresen,
+  \href{https://onlinelibrary.wiley.com/doi/full/10.1002/pip.3126}{Using
+  validated reanalysis data to investigate the impact of the {PV} system
+  configurations at high penetration levels in european countries}, Progress in
+  Photovoltaics: Research and Applications 27~(7)  576--592.
+\newblock \href {http://dx.doi.org/10.1002/pip.3126}
+  {\path{doi:10.1002/pip.3126}}.
+\newline\urlprefix\url{https://onlinelibrary.wiley.com/doi/full/10.1002/pip.3126}
+
+\bibitem{Brown_2018}
+T.~Brown, D.~Schlachtberger, A.~Kies, S.~Schramm, M.~Greiner,
+  \href{http://www.sciencedirect.com/science/article/pii/S036054421831288X}{Synergies
+  of sector coupling and transmission reinforcement in a cost-optimised, highly
+  renewable {European} energy system}, Energy 160 (2018) 720--739.
+\newblock \href {http://dx.doi.org/10.1016/j.energy.2018.06.222}
+  {\path{doi:10.1016/j.energy.2018.06.222}}.
+\newline\urlprefix\url{http://www.sciencedirect.com/science/article/pii/S036054421831288X}
+
+\bibitem{TYNDP2016}
+\href{https://tyndp.entsoe.eu/maps-data/}{{Ten}-{Year} {Network} {Development}
+  {Plan} 2016, {ENTSOE}}.
+\newline\urlprefix\url{https://tyndp.entsoe.eu/maps-data/}
+
+\bibitem{thewindpower}
+\href{https://www.thewindpower.net/}{Wind energy database}.
+\newline\urlprefix\url{https://www.thewindpower.net/}
+
+\bibitem{HRE}
+\href{www.heatroadmap.eu}{Deliverable 3.1: {Profile} of heating and cooling
+  demand in 2015. {Data} {Annex}. {Heat} {Roadmap} {Europe}}.
+\newline\urlprefix\url{www.heatroadmap.eu}
+
+\bibitem{NUTS3}
+\href{https://data.europa.eu}{Population density by {NUTS} 3 region}.
+\newline\urlprefix\url{https://data.europa.eu}
+
+\bibitem{CFSR}
+S.~{Saha}, S.~{Moorthi}, X.~{Wu}, J.~{Wang}, S.~{Nadiga}, P.~{Tripp},
+  D.~{Behringer}, Y.-T. {Hou}, H.~{Chuang}, M.~{Iredell}, M.~{Ek}, J.~{Meng},
+  R.~{Yang}, M.~P. {Mendez}, H.~{van den Dool}, Q.~{Zhang}, W.~{Wang},
+  M.~{Chen}, E.~{Becker}, \href{https://doi.org/10.5065/D6N877VB}{{NCEP}
+  climate forecast system version 2 ({CFSv2}) selected hourly time-series
+  products} (2011).
+\newline\urlprefix\url{https://doi.org/10.5065/D6N877VB}
+
+\bibitem{Staffell_2012}
+I.~Staffell, D.~Brett, N.~Brandon, A.~Hawkes,
+  \href{https://pubs.rsc.org/en/content/articlelanding/2012/ee/c2ee22653g}{A
+  review of domestic heat pumps}, Energy \& Environmental Science 5~(11)
+  9291--9306.
+\newblock \href {http://dx.doi.org/10.1039/C2EE22653G}
+  {\path{doi:10.1039/C2EE22653G}}.
+\newline\urlprefix\url{https://pubs.rsc.org/en/content/articlelanding/2012/ee/c2ee22653g}
+
+\bibitem{heating_capacities}
+\href{https://ec.europa.eu/energy/en/studies/mapping-and-analyses-current-and-future-2020-2030-heatingcooling-fuel-deployment}{Mapping
+  and analyses of the current and future (2020 - 2030) heating/cooling fuel
+  deployment (fossil/renewables)}.
+\newline\urlprefix\url{https://ec.europa.eu/energy/en/studies/mapping-and-analyses-current-and-future-2020-2030-heatingcooling-fuel-deployment}
+
+\bibitem{DH_penetration}
+\href{https://www.euroheat.org/knowledge-hub/country-profiles/}{{Euro} {Heat}
+  and {Power}}.
+\newline\urlprefix\url{https://www.euroheat.org/knowledge-hub/country-profiles/}
+
+\bibitem{JRC_biomass}
+P.~Ruiz, A.~Sgobbi, W.~Nijs, C.~Thiel, F.~Dalla, T.~Kobert, B.~Elbersen, G.~H.
+  Alterra,
+  \href{https://setis.ec.europa.eu/sites/default/files/reports/biomass_potentials_in_europe.pdf}{The
+  {JRC}-{EU}-{TIMES} model. bioenergy potentials for {EU} and neighbouring
+  countries}.
+\newline\urlprefix\url{https://setis.ec.europa.eu/sites/default/files/reports/biomass_potentials_in_europe.pdf}
+
+\bibitem{ENSPRESO}
+\href{https://data.jrc.ec.europa.eu/dataset/74ed5a04-7d74-4807-9eab-b94774309d9f/resource/94aca7d6-89af-4969-a74c-2c7ab4376788}{{ENSPRESO}
+  {Biomass} database, {JRC}}.
+\newline\urlprefix\url{https://data.jrc.ec.europa.eu/dataset/74ed5a04-7d74-4807-9eab-b94774309d9f/resource/94aca7d6-89af-4969-a74c-2c7ab4376788}
+
+\bibitem{DEA_2019}
+\href{https://ens.dk/en/our-services/projections-and-models/technology-data/technology-data-generation-electricity-and}{Technology
+  {Data} for {Generation} of {Electricity} and {District} {Heating}, update
+  november 2019}, Tech. rep., Danish Energy Agency and Energinet.dk (2019).
+\newline\urlprefix\url{https://ens.dk/en/our-services/projections-and-models/technology-data/technology-data-generation-electricity-and}
+
+\bibitem{Vartiainen_2019}
+E.~Vartiainen, G.~Masson, C.~Breyer, D.~Moser, E.~R. Medina,
+  \href{https://onlinelibrary.wiley.com/doi/abs/10.1002/pip.3189}{Impact of
+  weighted average cost of capital, capital expenditure, and other parameters
+  on future utility-scale {PV} levelised cost of electricity}, Progress in
+  Photovoltaics: Research and Applications\href
+  {http://dx.doi.org/10.1002/pip.3189} {\path{doi:10.1002/pip.3189}}.
+\newline\urlprefix\url{https://onlinelibrary.wiley.com/doi/abs/10.1002/pip.3189}
+
+\bibitem{Vartiainen_2017}
+E.~Vartiainen, G.~Masson, C.~Breyer,
+  \href{http://www.etip-pv.eu/fileadmin/Documents/ETIP_PV_Publications_2017-2018/LCOE_Report_March_2017.pdf}{The
+  true competitiveness of solar {PV}: a {European} case study}, Tech. rep.,
+  European technology and innovation platform for photovoltaics (2017).
+\newline\urlprefix\url{http://www.etip-pv.eu/fileadmin/Documents/ETIP_PV_Publications_2017-2018/LCOE_Report_March_2017.pdf}
+
+\bibitem{Lazard_2019}
+\href{https://www.lazard.com/media/451086/lazards-levelized-cost-of-energy-version-130-vf.pdf}{{Lazard's}
+  {Levelized} {Cost} of {Energy} {Analysis}, version 13.0}.
+\newline\urlprefix\url{https://www.lazard.com/media/451086/lazards-levelized-cost-of-energy-version-130-vf.pdf}
+
+\bibitem{Schroeder_2013}
+A.~Schr\"oeder, F.~Kunz, F.~Meiss, R.~Mendelevitch, C.~von Hirschhausen,
+  \href{https://www.econstor.eu/handle/10419/80348}{Current and prospective
+  costs of electricity generation until 2050, {Data} {Documentation}, {DIW} 68.
+  {Berlin}: {Deutsches} {Institut}}.
+\newline\urlprefix\url{https://www.econstor.eu/handle/10419/80348}
+
+\bibitem{Hagspiel_2014}
+S.~Hagspiel, C.~J{\"a}gemann, D.~Lindenberger, T.~Brown, S.~Cherevatskiy,
+  E.~Tr{\"o}ster,
+  \href{http://www.sciencedirect.com/science/article/pii/S0360544214000322}{Cost-optimal
+  power system extension under flow-based market coupling}, Energy 66 (2014)
+  654--666.
+\newblock \href {http://dx.doi.org/10.1016/j.energy.2014.01.025}
+  {\path{doi:10.1016/j.energy.2014.01.025}}.
+\newline\urlprefix\url{http://www.sciencedirect.com/science/article/pii/S0360544214000322}
+
+\bibitem{Fasihi_2017}
+M.~Fasihi, D.~Bogdanov, C.~Breyer,
+  \href{https://www.mdpi.com/2071-1050/9/2/306}{Long-{Term} {Hydrocarbon}
+  {Trade} {Options} for the {Maghreb} {Region} and {Europe}—{Renewable}
+  {Energy} {Based} {Synthetic} {Fuels} for a {Net} {Zero} {Emissions} {World}},
+  Sustainability 9~(2) (2017) 306.
+\newblock \href {http://dx.doi.org/10.3390/su9020306}
+  {\path{doi:10.3390/su9020306}}.
+\newline\urlprefix\url{https://www.mdpi.com/2071-1050/9/2/306}
+
+\bibitem{Schaber_2013}
+K.~Schaber, \href{https://d-nb.info/1058680781/34}{Integration of {Variable}
+  {Renewable} {Energies} in the {European} power system: a model-based analysis
+  of transmission grid extensions and energy sector coupling}, Ph.D. thesis, TU
+  {M{\"u}nchen} (2013).
+\newline\urlprefix\url{https://d-nb.info/1058680781/34}
+
+\bibitem{BP_2019}
+\href{https://www.bp.com/content/dam/bp/business-sites/en/global/corporate/pdfs/energy-economics/statistical-review/bp-stats-review-2019-full-report.pdf}{{BP}
+  {Statistical} {Review} of {World} {Energy}}.
+\newline\urlprefix\url{https://www.bp.com/content/dam/bp/business-sites/en/global/corporate/pdfs/energy-economics/statistical-review/bp-stats-review-2019-full-report.pdf}
+
+\bibitem{German_Environment_Agency}
+\href{https://www.umweltbundesamt.de/sites/default/files/medien/1410/publikationen/2019-04-10_cc_10-2019_strommix_2019.pdf}{Development
+  of the specific carbon dioxide emissions of the {German} electricity mix in
+  the years 1990 - 2018, {German} {Environment} {Agency}}.
+\newline\urlprefix\url{https://www.umweltbundesamt.de/sites/default/files/medien/1410/publikationen/2019-04-10_cc_10-2019_strommix_2019.pdf}
+
+\bibitem{Zappa_2019}
+W.~Zappa, M.~Junginger, M.~van~den Broek,
+  \href{http://www.sciencedirect.com/science/article/pii/S0306261918312790}{Is
+  a 100\% renewable {European} power system feasible by 2050?}, Applied Energy
+  233-234 (2019) 1027--1050.
+\newblock \href {http://dx.doi.org/10.1016/j.apenergy.2018.08.109}
+  {\path{doi:10.1016/j.apenergy.2018.08.109}}.
+\newline\urlprefix\url{http://www.sciencedirect.com/science/article/pii/S0306261918312790}
+
+\end{thebibliography}

@@ -76,7 +76,7 @@ def plot_carbon_budget():
     
     colors = pl.cm.hot(np.linspace(0,1,6))
     #colors=['firebrick', 'red', 'darkorange', 'gold', 'green', 'blue']
-    colors=['lightgray', 'red', 'lightgray', 'gold', 'lightgray', 'lightgray']
+    colors=['lightgray', 'lightgray', 'red',  'gold', 'lightgray', 'lightgray']
     plt.figure(figsize=(10, 6))
     gs1 = gridspec.GridSpec(1, 1)
     ax1 = plt.subplot(gs1[0,0])
@@ -97,9 +97,9 @@ def plot_carbon_budget():
 
     ax1.annotate('Electricity + Heating', xy=(1995,2.2), 
              color='black', fontsize=20) 
-    ax1.annotate('Electricity', xy=(1995,1.45), 
+    ax1.annotate('Electricity & central heating', xy=(1991,1.45), 
              color='dimgray', fontsize=20)
-    ax1.annotate('Heating', xy=(1995,0.8), 
+    ax1.annotate('Individual heating', xy=(1991,0.8), 
              color='dimgray', fontsize=20)
         
     plt.tight_layout()
@@ -111,7 +111,7 @@ def plot_carbon_budget():
     t=t_0+(t_f-t_0)*np.arange(0,1.01,0.01)
 
     i=0
-    for beta_0 in [10, 3, 1]: # beta decay
+    for beta_0 in [10, 1, 3]: # beta decay
         e=(1-beta.cdf(np.arange(0,1.01,0.01), beta_0, beta_0))*e_0
         ax1.plot(t,e,linewidth=3, color=colors[i], alpha=0.75,label=None)
         i=i+1
@@ -144,14 +144,14 @@ def plot_carbon_budget():
 #                 alpha=0.75, label=None) 
 #        i=i+1
     
-    ax1.annotate('last-minute', xy=(2025,1.4), 
+    ax1.annotate('hare', xy=(2025,1.4), #last-minute
                  xytext=(2028, 1.65),
                  color='red', fontsize=20, 
                  arrowprops = dict(arrowstyle = "->", alpha=1,
                                color='red', linewidth=2),
                  bbox=dict(boxstyle="round", linewidth=2, 
                            fc='white', ec='red'))
-    ax1.annotate('cautious', xy=(2040,0.15), 
+    ax1.annotate('tortoise', xy=(2040,0.15), #cautious
                  xytext=(2040, 0.5),
                  color='gold', fontsize=20, 
                  arrowprops = dict(arrowstyle = "->", alpha=1,
@@ -170,6 +170,11 @@ def plot_carbon_budget():
                  emissions[1990]['residential non-elec'] + 
                  emissions[1990]['services non-elec'])],
          marker='*', markersize=12, markerfacecolor='black',
+         markeredgecolor='black')
+    ax1.plot([2030],[0.45*(emissions[1990]['electricity'] + 
+                 emissions[1990]['residential non-elec'] + 
+                 emissions[1990]['services non-elec'])],
+         marker='*', markersize=12, markerfacecolor='white',
          markeredgecolor='black')
     ax1.plot([2050, 2050],[0.2*(emissions[1990]['electricity'] + 
            emissions[1990]['residential non-elec'] + 
