@@ -389,6 +389,7 @@ def prepare_network(options):
                      nodes + " " + carrier,
                      carrier=carrier)
 
+        p_max_pu = 0.9 if generator=='nuclear' else 1.0
         network.madd("Link",
                      nodes + " " + generator,
                      bus0=nodes + " " + carrier,
@@ -396,6 +397,7 @@ def prepare_network(options):
                      marginal_cost=costs.at[generator,'efficiency']*costs.at[generator,'VOM'], #NB: VOM is per MWel
                      capital_cost=costs.at[generator,'efficiency']*costs.at[generator,'fixed'], #NB: fixed cost is per MWel
                      p_nom_extendable=True,
+                     p_max_pu=p_max_pu,
                      efficiency=costs.at[generator,'efficiency'])
 
         network.madd("Store",
