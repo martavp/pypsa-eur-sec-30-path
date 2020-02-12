@@ -155,6 +155,9 @@ def plot_historical_sectoral_emissions():
     ax1.plot([2030],[0.6*total_1990],
              marker='*', markersize=12, markerfacecolor='black',
              markeredgecolor='black')
+    ax1.plot([2030],[0.45*total_1990],
+             marker='*', markersize=12, markerfacecolor='white',
+             markeredgecolor='black')
     ax1.plot([2050, 2050],[0.2*total_1990, 0.05*total_1990],
              color='gray', linewidth=4, alpha=0.5) 
     ax1.plot([2050],[0.2*total_1990],'ro',

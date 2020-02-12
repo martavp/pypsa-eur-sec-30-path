@@ -5,26 +5,18 @@
 \expandafter\ifx\csname href\endcsname\relax
   \def\href#1#2{#2} \def\path#1{#1}\fi
 
-\bibitem{Figueres_2017}
-C.~Figueres, H.~J. Schellnhuber, G.~Whiteman, J.~Rockstr{\"o}m, A.~Hobley,
-  S.~Rahmstorf,
-  \href{http://www.nature.com/news/three-years-to-safeguard-our-climate-1.22201}{Three
-  years to safeguard our climate}, Nature News 546~(7660)  593.
-\newblock \href {http://dx.doi.org/10.1038/546593a}
-  {\path{doi:10.1038/546593a}}.
-\newline\urlprefix\url{http://www.nature.com/news/three-years-to-safeguard-our-climate-1.22201}
-
-\bibitem{blog_budget}
-\href{https://cicero.oslo.no/en/posts/climate/how-much-carbon-dioxide-can-we-emit}{G.
-  {Peters}, {How} much carbon dioxide can we emit?}
-\newline\urlprefix\url{https://cicero.oslo.no/en/posts/climate/how-much-carbon-dioxide-can-we-emit}
+\bibitem{IPCC_1.5}
+\href{https://www.ipcc.ch/sr15/}{Global {Warming} of 1.5$^{\circ}${C},
+  {Intergovernmental} {Panel} on {Climate} {Change} ({IPCC})}, Tech. rep.
+  (2018).
+\newline\urlprefix\url{https://www.ipcc.ch/sr15/}
 
 \bibitem{Raupach_2014}
 M.~R. Raupach, S.~J. Davis, G.~P. Peters, R.~M. Andrew, J.~G. Canadell,
   P.~Ciais, P.~Friedlingstein, F.~Jotzo, D.~P. Vuuren, C.~L. Qu{\'e}r{\'e},
   \href{https://www.nature.com/articles/nclimate2384}{Sharing a quota on
   cumulative carbon emissions}, Nature Climate Change 4~(10) (2014) 873--879.
-\newblock \href {http://dx.doi.org/10.1038/nclimate2384}
+\newblock \href {https://doi.org/10.1038/nclimate2384}
   {\path{doi:10.1038/nclimate2384}}.
 \newline\urlprefix\url{https://www.nature.com/articles/nclimate2384}
 
@@ -38,13 +30,9 @@ M.~R. Raupach, S.~J. Davis, G.~P. Peters, R.~M. Andrew, J.~G. Canadell,
 L.~Mantzos, T.~Wiesenthal, N.~Matei, S.~Tchung-Ming, M.~Rózsai, H.~P. Russ,
   A.~Soria,
   \href{http://www.sciencedirect.com/science/article/pii/S0360544216310295}{{JRC}-{IDEES}:
-  {Integrated} {Database} of the {European} {Energy} {Sector}}\href
-  {http://dx.doi.org/10.2760/182725} {\path{doi:10.2760/182725}}.
+  {Integrated} {Database} of the {European} {Energy} {Sector}} (2017).
+\newblock \href {https://doi.org/10.2760/182725} {\path{doi:10.2760/182725}}.
 \newline\urlprefix\url{http://www.sciencedirect.com/science/article/pii/S0360544216310295}
-
-\bibitem{powerplantmatching}
-\href{https://github.com/FRESNA/powerplantmatching}{powerplantmatching}.
-\newline\urlprefix\url{https://github.com/FRESNA/powerplantmatching}
 
 \bibitem{IRENA_2019}
 \href{https://www.irena.org/publications/2019/Mar/Renewable-Capacity-Statistics-2019}{{Renewable
@@ -62,14 +50,14 @@ M.~Victoria, C.~Gallego, I.~Anton, G.~Sala,
   {Present} and {Future} of {Feed}-in {Tariffs} in {Spain}: {What} are their
   {Real} {Costs}?}, 27th European Photovoltaic Solar Energy Conference and
   Exhibition (2012) 4612--4616\href
-  {http://dx.doi.org/10.4229/27thEUPVSEC2012-6CV.3.49}
+  {https://doi.org/10.4229/27thEUPVSEC2012-6CV.3.49}
   {\path{doi:10.4229/27thEUPVSEC2012-6CV.3.49}}.
 \newline\urlprefix\url{http://www.eupvsec-proceedings.com/proceedings?paper=17736}
 
 \bibitem{Brown_2016}
 T.~Brown, P.~Schierhorn, E.~Tr{\"o}ster, T.~Ackermann, Optimising the european
   transmission system for 77\% renewable electricity by 2030 10~(1)  3--9.
-\newblock \href {http://dx.doi.org/10.1049/iet-rpg.2015.0135}
+\newblock \href {https://doi.org/10.1049/iet-rpg.2015.0135}
   {\path{doi:10.1049/iet-rpg.2015.0135}}.
 
 \bibitem{OPSD}
@@ -85,7 +73,7 @@ M.~Victoria, G.~B. Andresen,
   validated reanalysis data to investigate the impact of the {PV} system
   configurations at high penetration levels in european countries}, Progress in
   Photovoltaics: Research and Applications 27~(7)  576--592.
-\newblock \href {http://dx.doi.org/10.1002/pip.3126}
+\newblock \href {https://doi.org/10.1002/pip.3126}
   {\path{doi:10.1002/pip.3126}}.
 \newline\urlprefix\url{https://onlinelibrary.wiley.com/doi/full/10.1002/pip.3126}
 
@@ -94,7 +82,7 @@ T.~Brown, D.~Schlachtberger, A.~Kies, S.~Schramm, M.~Greiner,
   \href{http://www.sciencedirect.com/science/article/pii/S036054421831288X}{Synergies
   of sector coupling and transmission reinforcement in a cost-optimised, highly
   renewable {European} energy system}, Energy 160 (2018) 720--739.
-\newblock \href {http://dx.doi.org/10.1016/j.energy.2018.06.222}
+\newblock \href {https://doi.org/10.1016/j.energy.2018.06.222}
   {\path{doi:10.1016/j.energy.2018.06.222}}.
 \newline\urlprefix\url{http://www.sciencedirect.com/science/article/pii/S036054421831288X}
 
@@ -102,6 +90,10 @@ T.~Brown, D.~Schlachtberger, A.~Kies, S.~Schramm, M.~Greiner,
 \href{https://tyndp.entsoe.eu/maps-data/}{{Ten}-{Year} {Network} {Development}
   {Plan} 2016, {ENTSOE}}.
 \newline\urlprefix\url{https://tyndp.entsoe.eu/maps-data/}
+
+\bibitem{powerplantmatching}
+\href{https://github.com/FRESNA/powerplantmatching}{powerplantmatching}.
+\newline\urlprefix\url{https://github.com/FRESNA/powerplantmatching}
 
 \bibitem{thewindpower}
 \href{https://www.thewindpower.net/}{Wind energy database}.
@@ -130,7 +122,7 @@ I.~Staffell, D.~Brett, N.~Brandon, A.~Hawkes,
   \href{https://pubs.rsc.org/en/content/articlelanding/2012/ee/c2ee22653g}{A
   review of domestic heat pumps}, Energy \& Environmental Science 5~(11)
   9291--9306.
-\newblock \href {http://dx.doi.org/10.1039/C2EE22653G}
+\newblock \href {https://doi.org/10.1039/C2EE22653G}
   {\path{doi:10.1039/C2EE22653G}}.
 \newline\urlprefix\url{https://pubs.rsc.org/en/content/articlelanding/2012/ee/c2ee22653g}
 
@@ -170,7 +162,7 @@ E.~Vartiainen, G.~Masson, C.~Breyer, D.~Moser, E.~R. Medina,
   weighted average cost of capital, capital expenditure, and other parameters
   on future utility-scale {PV} levelised cost of electricity}, Progress in
   Photovoltaics: Research and Applications\href
-  {http://dx.doi.org/10.1002/pip.3189} {\path{doi:10.1002/pip.3189}}.
+  {https://doi.org/10.1002/pip.3189} {\path{doi:10.1002/pip.3189}}.
 \newline\urlprefix\url{https://onlinelibrary.wiley.com/doi/abs/10.1002/pip.3189}
 
 \bibitem{Vartiainen_2017}
@@ -198,7 +190,7 @@ S.~Hagspiel, C.~J{\"a}gemann, D.~Lindenberger, T.~Brown, S.~Cherevatskiy,
   \href{http://www.sciencedirect.com/science/article/pii/S0360544214000322}{Cost-optimal
   power system extension under flow-based market coupling}, Energy 66 (2014)
   654--666.
-\newblock \href {http://dx.doi.org/10.1016/j.energy.2014.01.025}
+\newblock \href {https://doi.org/10.1016/j.energy.2014.01.025}
   {\path{doi:10.1016/j.energy.2014.01.025}}.
 \newline\urlprefix\url{http://www.sciencedirect.com/science/article/pii/S0360544214000322}
 
@@ -208,7 +200,7 @@ M.~Fasihi, D.~Bogdanov, C.~Breyer,
   {Trade} {Options} for the {Maghreb} {Region} and {Europe}—{Renewable}
   {Energy} {Based} {Synthetic} {Fuels} for a {Net} {Zero} {Emissions} {World}},
   Sustainability 9~(2) (2017) 306.
-\newblock \href {http://dx.doi.org/10.3390/su9020306}
+\newblock \href {https://doi.org/10.3390/su9020306}
   {\path{doi:10.3390/su9020306}}.
 \newline\urlprefix\url{https://www.mdpi.com/2071-1050/9/2/306}
 
@@ -235,7 +227,7 @@ W.~Zappa, M.~Junginger, M.~van~den Broek,
   \href{http://www.sciencedirect.com/science/article/pii/S0306261918312790}{Is
   a 100\% renewable {European} power system feasible by 2050?}, Applied Energy
   233-234 (2019) 1027--1050.
-\newblock \href {http://dx.doi.org/10.1016/j.apenergy.2018.08.109}
+\newblock \href {https://doi.org/10.1016/j.apenergy.2018.08.109}
   {\path{doi:10.1016/j.apenergy.2018.08.109}}.
 \newline\urlprefix\url{http://www.sciencedirect.com/science/article/pii/S0306261918312790}
 

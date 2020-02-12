@@ -121,14 +121,15 @@
 
 \end{frontmatter}
 
-\section{Historical Greenhouse Gases emissions in the European Union}
+\section{Historical greenhouse gases emissions in the European Union}
 
-The carbon budget from now onwards for the generation of electricity and the supply of heating in residential and services sector in Europe accounts for 21 GtCO$_2$. It has been estimated based on a global carbon budget of 800 GtCO$_2$ to avoid temperature increments above 2$^{\circ}$C relative to preindustrial period with a probability of greater than 66\% \cite{Figueres_2017, blog_budget}. The global budget is assumed to be split among regions according to a constant per-capita ratio which translates into a 6\% share for Europe \cite{Raupach_2014}. Out of the total emissions in Europe, the ratio corresponding to electricity and heating is considered constant and equal to present values. In 2017, electricity generation and heating in the residential and services sector emitted 1.56 GtCO$_2$ which represents 43.5\% of European emissions,  \cite{UNFCCC_inventory} and Figure \ref{fig_historical_emissions} . \\
+The carbon budget from now onwards for the generation of electricity and the supply of heating in residential and services sector in Europe accounts for 21 GtCO$_2$. It has been estimated based on a global carbon budget of 800 GtCO$_2$ to avoid temperature increments above 1.75$^{\circ}$C relative to preindustrial period with a probability of greater than 66\% \cite{IPCC_1.5}. The global budget is assumed to be split among regions according to a constant per-capita ratio which translates into a 6\% share for Europe \cite{Raupach_2014}. Out of the total emissions in Europe, the ratio corresponding to electricity and heating is considered constant and equal to present values. In 2017, electricity generation and heating in the residential and services sector emitted 1.56 GtCO$_2$ which represents 43.5\% of European emissions,  \cite{UNFCCC_inventory} and Figure \ref{fig_historical_emissions} . \\
+%Figueres_2017, blog_budget
 
 \begin{figure}[!h]
 \centering
 \includegraphics[width=\textwidth]{figures/historical_sectoral_emissions.png}
-\caption{Sectoral distribution of historical emissions in the European Union \cite{UNFCCC_inventory}. The stars indicate committed EU reduction targets.} \label{fig_historical_emissions} 
+\caption{Sectoral distribution of historical emissions in the European Union \cite{UNFCCC_inventory}. The black stars indicate committed EU reduction targets, while white star marks under-discussion target.} \label{fig_historical_emissions} 
 \end{figure}
 
 \section{CO$_2$ restriction paths with equivalent budget}
@@ -155,7 +156,6 @@ The third option considered for the transition path is an exponential decay, fol
 \begin{equation}
 e(t) = e_0(1+(r+m)t)e^{-mt}
 \end{equation}
-
 where $r$ is the initial linear growth rate, which here is assumed to be $r$=0, and the decay parameter $m$ is determined by imposing the integral of the path to be equal to the budget.
 \begin{equation}
 \begin{aligned}
@@ -163,8 +163,9 @@ where $r$ is the initial linear growth rate, which here is assumed to be $r$=0, 
 & m=\frac{1+ \sqrt{1+\frac{rB}{e_0}}}{\frac{B}{e_0}}
 \end{aligned}
 \end{equation}
-
 Although the exponential decay path approaches asymptotically to zero, we assume here that $e(2050)=0$. By doing that, the final point of the different transition paths is equivalent and all of them achieve net-zero emissions by 2050.
+
+\FloatBarrier
 
 \section{Historical evolution of CO$_2$ emissions from heating supply in residential and services sector in European countries}
 
@@ -180,13 +181,9 @@ Although the exponential decay path approaches asymptotically to zero, we assume
 \caption{Historical share of technologies used to supply heating demand in residential and services sector \cite{IDEES}. } \label{fig_historical_heating} 
 \end{figure}
 
-\section{Power plants in operation in Europe}
 
-\begin{figure}[!h]
-\centering
-\includegraphics[width=\textwidth]{figures/age_distribution_2years_width.png}
-\caption{Age distribution of European power plants in operation \cite{powerplantmatching, IRENA_2019}} \label{fig_age_distribution} 
-\end{figure}
+
+\FloatBarrier
 
 \section{Historical build rates for solar photovoltaics in European countries}
 
@@ -197,24 +194,37 @@ Although the exponential decay path approaches asymptotically to zero, we assume
 \end{figure}
  
 
+\FloatBarrier
 
 \section{Transition paths cautious and last-minute. Additional results}
 
 \begin{figure}[!h]
 	\centering
-	\includegraphics[width=12cm]{figures/installed_capacity_Base.png}
-	\caption{Installed capacities for different technologies throughout transition paths cautious and last-minute shown in Fig. 1 in the main text.} \label{fig_installed_capacity} 
+	\includegraphics[width=\columnwidth]{figures/installed_capacity_Base.png}
+	\caption{Installed capacities for different technologies throughout transition paths shown in Fig. 1 in the main text.} \label{fig_installed_capacity} 
 \end{figure}
 
 \begin{figure}[!h]
 \centering
+\includegraphics[width=\columnwidth]{figures/build_rates_Base.png}
+\caption{Annual build rates for different technologies throughout transition paths shown in Fig. 1 in the main text. } \label{fig_build_rates} 
+\end{figure}
+
+\begin{figure*}[!h]
+\centering
+\includegraphics[width=0.8\columnwidth]{figures/electricity_production_Base_go.png}
+\caption{Evolution of electricity generation mix in every country for the Tortoise transition path.} \label{fig_primary_energy} 
+\end{figure*}
+
+%\begin{figure}[!h]
+%\centering
 %	\includegraphics[width=\columnwidth]{figures/spatial_plot_primary_energy.png}
-\caption{Primary energy in every country in 2050. (left) Cautious transition path, (right) Greenfield optimization for 2050.} \label{fig_spatial_plot} 
-\end{figure}
+%\caption{Primary energy in every country in 2050. (left) Cautious transition path, (right) Greenfield optimization for 2050.} \label{fig_spatial_plot} 
+%\end{figure}
 
 \begin{figure}[!h]
 \centering
-\includegraphics[width=14cm]{figures/heat_production_Base_go.png}
+\includegraphics[width=0.8\columnwidth]{figures/heat_production_Base_go.png}
 \caption{Evolution of technologies used to supply heating in residential and services sector in the cautious path. } \label{fig_heating_shares} 
 \end{figure}
 
@@ -454,7 +464,7 @@ Technology & FOM\tnote{a} & Lifetime & Efficiency & Source\\
 \begin{threeparttable}
 \caption{Costs and emissions coefficient of fuels.} \label{tab:costs}
 \centering
-\begin{tabularx}{0.6\textwidth}{lrrrl}
+\begin{tabularx}{0.7\textwidth}{lrrrl}
 \toprule
 Fuel & Cost  & Source & Emissions & Source \\
  & [\EUR/MWh$_{th}$] & & [tCO$_2$/MWh$_{th}$] &  \\
@@ -481,7 +491,7 @@ Fuel & Cost  & Source & Emissions & Source \\
 \caption{Cost evolution assumed for the different technologies. } \label{fig_cost_evolution} 
 \end{figure}
 
-
+\FloatBarrier
  
 \section{References}
 \bibliography{bib_transition}

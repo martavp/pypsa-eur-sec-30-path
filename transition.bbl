@@ -23,6 +23,11 @@
   appraisal on national energy and climate plans, 2019}.
 \newline\urlprefix\url{https://europa.eu/rapid/press-release_IP-19-2993_en.htm}
 
+\bibitem{GreenDeal}
+\href{https://ec.europa.eu/info/sites/info/files/european-green-deal-communication_en.pdf}{The
+  {European} {Green} {Deal}}.
+\newline\urlprefix\url{https://ec.europa.eu/info/sites/info/files/european-green-deal-communication_en.pdf}
+
 \bibitem{Warren_2019}
 M.~Warren, \href{http://www.nature.com/articles/d41586-019-00861-z}{Thousands
   of scientists are backing the kids striking for climate change}, Nature 567
@@ -229,7 +234,7 @@ C.~Gerbaulet, C.~von Hirschhausen, C.~Kemfert, C.~Lorenz, P.~Y. Oei,
 K.~Poncelet, E.~Delarue, D.~Six, W.~D'haeseleer, Myopic optimization models for
   simulation of investment decisions in the electric power sector, in: 13th
   {International} {Conference} on the {European} {Energy} {Market} ({EEM}),
-  2016, pp. 1--9, iSSN: 2165-4093.
+  2016, pp. 1--9.
 \newblock \href {http://dx.doi.org/10.1109/EEM.2016.7521261}
   {\path{doi:10.1109/EEM.2016.7521261}}.
 
@@ -259,6 +264,14 @@ K.~L{\"o}ffler, T.~Burandt, K.~Hainsch, P.-Y. Oei,
 \newblock \href {http://dx.doi.org/10.1016/j.esr.2019.100422}
   {\path{doi:10.1016/j.esr.2019.100422}}.
 \newline\urlprefix\url{http://www.sciencedirect.com/science/article/pii/S2211467X19301142}
+
+\bibitem{McGlade_2015}
+C.~McGlade, P.~Ekins, \href{https://www.nature.com/articles/nature14016}{The
+  geographical distribution of fossil fuels unused when limiting global warming
+  to 2$^{\circ}${C}}, Nature 517~(7533) (2015) 187--190.
+\newblock \href {http://dx.doi.org/10.1038/nature14016}
+  {\path{doi:10.1038/nature14016}}.
+\newline\urlprefix\url{https://www.nature.com/articles/nature14016}
 
 \bibitem{Babrowski_2014}
 S.~Babrowski, T.~Heffels, P.~Jochem, W.~Fichtner,
@@ -290,7 +303,7 @@ S.~Pfenninger,
 S.~Pfenninger, L.~Hirth, I.~Schlecht, E.~Schmid, F.~Wiese, T.~Brown, C.~Davis,
   M.~Gidden, H.~Heinrichs, C.~Heuberger, S.~Hilpert, U.~Krien, C.~Matke,
   A.~Nebel, R.~Morrison, B.~Müller, G.~Pleßmann, M.~Reeg, J.~C. Richstein,
-  A.~Shivakumar, I.~Staffell, T.~Tröndle, C.~Wingenbach,
+  A.~Shivakumar, I.~Staffell, T.~Tr{\"o}ndle, C.~Wingenbach,
   \href{http://www.sciencedirect.com/science/article/pii/S2211467X17300809}{Opening
   the black box of energy modelling: Strategies and lessons learned}, Energy
   Strategy Reviews 19  63--71.
@@ -298,19 +311,11 @@ S.~Pfenninger, L.~Hirth, I.~Schlecht, E.~Schmid, F.~Wiese, T.~Brown, C.~Davis,
   {\path{doi:10.1016/j.esr.2017.12.002}}.
 \newline\urlprefix\url{http://www.sciencedirect.com/science/article/pii/S2211467X17300809}
 
-\bibitem{Figueres_2017}
-C.~Figueres, H.~J. Schellnhuber, G.~Whiteman, J.~Rockstr{\"o}m, A.~Hobley,
-  S.~Rahmstorf,
-  \href{http://www.nature.com/news/three-years-to-safeguard-our-climate-1.22201}{Three
-  years to safeguard our climate}, Nature News 546~(7660)  593.
-\newblock \href {http://dx.doi.org/10.1038/546593a}
-  {\path{doi:10.1038/546593a}}.
-\newline\urlprefix\url{http://www.nature.com/news/three-years-to-safeguard-our-climate-1.22201}
-
-\bibitem{blog_budget}
-\href{https://cicero.oslo.no/en/posts/climate/how-much-carbon-dioxide-can-we-emit}{G.
-  {Peters}, {How} much carbon dioxide can we emit?}
-\newline\urlprefix\url{https://cicero.oslo.no/en/posts/climate/how-much-carbon-dioxide-can-we-emit}
+\bibitem{IPCC_1.5}
+\href{https://www.ipcc.ch/sr15/}{Global {Warming} of 1.5$^{\circ}${C},
+  {Intergovernmental} {Panel} on {Climate} {Change} ({IPCC})}, Tech. rep.
+  (2018).
+\newline\urlprefix\url{https://www.ipcc.ch/sr15/}
 
 \bibitem{Raupach_2014}
 M.~R. Raupach, S.~J. Davis, G.~P. Peters, R.~M. Andrew, J.~G. Canadell,
@@ -330,8 +335,8 @@ M.~R. Raupach, S.~J. Davis, G.~P. Peters, R.~M. Andrew, J.~G. Canadell,
 \bibitem{Tong_2019}
 D.~Tong, Q.~Zhang, Y.~Zheng, K.~Caldeira, C.~Shearer, C.~Hong, Y.~Qin, S.~J.
   Davis, \href{https://www.nature.com/articles/s41586-019-1364-3}{Committed
-  emissions from existing energy infrastructure jeopardize 1.5 °c climate
-  target}, Nature 572~(7769)  373--377.
+  emissions from existing energy infrastructure jeopardize 1.5 $^{\circ}$c
+  climate target}, Nature 572~(7769)  373--377.
 \newblock \href {http://dx.doi.org/10.1038/s41586-019-1364-3}
   {\path{doi:10.1038/s41586-019-1364-3}}.
 \newline\urlprefix\url{https://www.nature.com/articles/s41586-019-1364-3}
@@ -343,6 +348,15 @@ F.~W. Geels, B.~K. Sovacool, T.~Schwanen, S.~Sorrell,
 \newblock \href {http://dx.doi.org/10.1126/science.aao3760}
   {\path{doi:10.1126/science.aao3760}}.
 \newline\urlprefix\url{https://science.sciencemag.org/content/357/6357/1242}
+
+\bibitem{powerplantmatching}
+\href{https://github.com/FRESNA/powerplantmatching}{powerplantmatching}.
+\newline\urlprefix\url{https://github.com/FRESNA/powerplantmatching}
+
+\bibitem{IRENA_2019}
+\href{https://www.irena.org/publications/2019/Mar/Renewable-Capacity-Statistics-2019}{{Renewable
+  Capacity Statistics} 2019, {IRENA}}.
+\newline\urlprefix\url{https://www.irena.org/publications/2019/Mar/Renewable-Capacity-Statistics-2019}
 
 \bibitem{ETS}
 \href{https://sandbag.org.uk/carbon-price-viewer/}{Carbon price viewer}.
