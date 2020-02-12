@@ -119,12 +119,12 @@ decentral water tank storage,investment,18.37606837606838,EUR/kWh,IWES Interakti
 decentral water tank storage,lifetime,20.0,years,HP
 electrolysis,FOM,5.0,%/year,Technology Data for Energy Plants for Electricity and District heating generation
 electrolysis,VOM,0.0,EUR/MWh,Technology Data for Energy Plants for Electricity and District heating generation
-electrolysis,efficiency,0.659,per unit,Technology Data for Energy Plants for Electricity and District heating generation
+electrolysis,efficiency,0.8,per unit,budischak2013
 electrolysis,investment,550.0,EUR/kWel,Technology Data for Energy Plants for Electricity and District heating generation
 electrolysis,lifetime,25.0,years,Technology Data for Energy Plants for Electricity and District heating generation
 fuel cell,FOM,5.0,%/year,Technology Data for Energy Plants for Electricity and District heating generation
 fuel cell,VOM,0.0,EUR/MWh,Technology Data for Energy Plants for Electricity and District heating generation
-fuel cell,efficiency,0.5,per unit,Technology Data for Energy Plants for Electricity and District heating generation
+fuel cell,efficiency,0.58,per unit,budischak2013
 fuel cell,investment,1100.0,EUR/kWel,Technology Data for Energy Plants for Electricity and District heating generation
 fuel cell,lifetime,10.0,years,Technology Data for Energy Plants for Electricity and District heating generation
 gas,CO2 intensity,0.20097559219526245,tCO2/MWth,Entwicklung der spezifischen Kohlendioxid-Emissionen des deutschen Strommix in den Jahren 1990 - 2018
