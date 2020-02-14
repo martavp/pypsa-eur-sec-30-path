@@ -28,5 +28,6 @@ urban heat,#ffa500
 cooling,#00aecc
 waste,#ffa500
 gas CHP,#800080
+gas CHP elec,#800080
 OCGT,#ffa500
 CCGT,#ff4500

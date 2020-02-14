@@ -134,12 +134,13 @@ agedata=agedata/1000 #GW
 
 #future build_rates
 idx = pd.IndexSlice
-cum_cap=pd.read_csv('results/version-Base/csvs/metrics.csv', sep=',', 
+version= 'Base_old_H2' #'wo_DH_exp' 
+cum_cap=pd.read_csv('results//version-' + version +'//csvs//metrics.csv', sep=',', 
                     index_col=0, header=[0,1,2])
 path_name_go='go'
 path_name_wait='wait'
 years_future=np.arange(2020, 2050, 1)
-technologies=technologies+['gas boiler', 'gas CHP', 'heat pump', 'resistive heater', 'battery', 'H2', 'biomass CHP', 'biomass HOP', 'biomass EOP']
+technologies=technologies+['gas boiler', 'gas CHP', 'gas CHP elec', 'heat pump', 'resistive heater', 'battery', 'H2', 'biomass CHP', 'biomass HOP', 'biomass EOP']
 build_rates_go = pd.DataFrame(index = pd.Series(data=years_future, name='year'),
                        columns = pd.Series(data=technologies, name='technology'))
 build_rates_wait = pd.DataFrame(index = pd.Series(data=years_future, name='year'),
@@ -153,6 +154,7 @@ expansion_dic={'Nuclear':'nuclear expansion',
                'Offshore Wind':'offwind expansion', 
                'Solar': 'solar expansion',
                'gas CHP':'gas CHP electric expansion',
+               'gas CHP elec':'gas CHP electric expansion',
                'gas boiler': 'gas boiler expansion',
                'heat pump':'heat pump expansion',
                'resistive heater': 'resistive heater expansion',
@@ -164,14 +166,16 @@ expansion_dic={'Nuclear':'nuclear expansion',
                'biomass EOP': 'biomass HOP expansion'}
 
 for year in years_future:    
-    for technology in [t for t in technologies if t not in ('Hydro','Waste', 'Bioenergy', 'Natural Gas' )]: 
+    for technology in [t for t in technologies if t not in ('Hydro','Waste', 'Bioenergy', 'Natural Gas', 'gas CHP elec')]: 
         year_ref=2025+5*((year-2020)//5)
         build_rates_go[technology][year]= cum_cap.loc[expansion_dic[technology],idx[path_name_go, 'opt', str(year_ref)]]
-        build_rates_go['Natural Gas'][year]= (cum_cap.loc[expansion_dic['OCGT'],idx[path_name_go, 'opt', str(year_ref)]]
-                                            + cum_cap.loc[expansion_dic['CCGT'],idx[path_name_go, 'opt', str(year_ref)]])
+        build_rates_go['gas CHP elec'][year]= 0.45*cum_cap.loc[expansion_dic['gas CHP'],idx[path_name_go, 'opt', str(year_ref)]]        
+        build_rates_go['Natural Gas'][year]= (0.42*cum_cap.loc[expansion_dic['OCGT'],idx[path_name_go, 'opt', str(year_ref)]]
+                                            + 0.59*cum_cap.loc[expansion_dic['CCGT'],idx[path_name_go, 'opt', str(year_ref)]])
         build_rates_wait[technology][year]= cum_cap.loc[expansion_dic[technology],idx[path_name_wait, 'opt', str(year_ref)]]
-        build_rates_wait['Natural Gas'][year]= (cum_cap.loc[expansion_dic['OCGT'],idx[path_name_wait, 'opt', str(year_ref)]]
-                                            + cum_cap.loc[expansion_dic['CCGT'],idx[path_name_wait, 'opt', str(year_ref)]])
+        build_rates_wait['gas CHP elec'][year]= 0.45*cum_cap.loc[expansion_dic['gas CHP'],idx[path_name_go, 'opt', str(year_ref)]]        
+        build_rates_wait['Natural Gas'][year]= (0.42*cum_cap.loc[expansion_dic['OCGT'],idx[path_name_wait, 'opt', str(year_ref)]]
+                                            + 0.59*cum_cap.loc[expansion_dic['CCGT'],idx[path_name_wait, 'opt', str(year_ref)]])
 build_rates_go=build_rates_go/(5*1000) #5years->1 year, MW->GW 
 build_rates_wait=build_rates_wait/(5*1000) #5years->1 year, MW->GW 
 #%%    
@@ -221,7 +225,7 @@ ax0.set_zorder(1)
 ax0.legend(loc=(1.7,0.5), fontsize=16)
 ax1.legend(loc=(0.3,0.5), fontsize=16)
 
-a2 = build_rates_go[['Nuclear', 'Lignite', 'Hard Coal',  'Natural Gas', 'gas CHP']].plot.barh(stacked=True, legend=None,
+a2 = build_rates_go[['Nuclear', 'Lignite', 'Hard Coal',  'Natural Gas', 'gas CHP elec']].plot.barh(stacked=True, legend=None,
      ax=ax2, color=[color['nuclear'], color['lignite'], color['coal'], color['gas'], color['gas CHP']], alpha=1, width=0.8, linewidth=0)
 
 a3 = build_rates_go[['Onshore Wind', 'Offshore Wind', 'Solar', 'biomass CHP', 'biomass HOP', 'biomass EOP']].plot.barh(stacked=True, legend=None,
@@ -247,7 +251,7 @@ ax3.set_xticks([])
 #ax2.set_xlabel('Installed capacity (GW)', fontsize=16, x=1.15)
 ax2.text(25, 28, 'Tortoise path', fontsize=18)
 
-a4 = build_rates_wait[['Nuclear', 'Lignite', 'Hard Coal',  'Natural Gas', 'gas CHP']].plot.barh(stacked=True, legend=None,
+a4 = build_rates_wait[['Nuclear', 'Lignite', 'Hard Coal',  'Natural Gas', 'gas CHP elec']].plot.barh(stacked=True, legend=None,
      ax=ax4, color=[color['nuclear'], color['lignite'], color['coal'], color['gas'], color['gas CHP']], alpha=1, width=0.8, linewidth=0)
 a5 = build_rates_wait[['Onshore Wind', 'Offshore Wind', 'Solar', 'biomass CHP', 'biomass HOP', 'biomass EOP']].plot.barh(stacked=True, legend=None,
      ax=ax5, color=[color['onshore wind'], color['offshore wind'], color['solar PV'], color['biomass'],color['biomass'], color['biomass']], alpha=1, width=0.8, linewidth=0)
@@ -268,7 +272,7 @@ ax5.spines["left"].set_visible(False)
 ax4.spines["right"].set_visible(False)
 ax4.set_xlabel('Installation rate GW)', fontsize=16, x=1.15)
 ax4.text(20, 28, 'Hare path', fontsize=18)
-plt.savefig('../figures/age_distribution.png', dpi=300, bbox_inches='tight') 
+plt.savefig('../figures/age_distribution_' + version + '.png', dpi=300, bbox_inches='tight') 
 
 #%%
 
@@ -335,7 +339,7 @@ ax4.set_xlabel('Installation rate (GW)', fontsize=16, x=1.15)
 ax5.text(20, 3, 'Hare path', fontsize=18)
 
 
-plt.savefig('../figures/heating_expansion.png', dpi=300, bbox_inches='tight') 
+plt.savefig('../figures/heating_expansion_' + version + '.png', dpi=300, bbox_inches='tight') 
 
 #%%
 
@@ -392,4 +396,4 @@ ax5.spines["left"].set_visible(False)
 ax4.spines["right"].set_visible(False)
 ax4.set_xlabel('Installation rate Energy capacity (GWh)', fontsize=16, x=1.15)
 ax5.text(20, 3, 'Hare path', fontsize=18)
-plt.savefig('../figures/storage_expansion.png', dpi=300, bbox_inches='tight') 
+plt.savefig('../figures/storage_expansion_' + version + '.png', dpi=300, bbox_inches='tight') 
