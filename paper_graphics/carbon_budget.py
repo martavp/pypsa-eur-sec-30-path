@@ -175,7 +175,7 @@ def plot_carbon_budget():
                  emissions[1990]['residential non-elec'] + 
                  emissions[1990]['services non-elec'])],
          marker='*', markersize=12, markerfacecolor='white',
-         markeredgecolor='black')
+         markeredgecolor='black')    
     ax1.plot([2050, 2050],[0.2*(emissions[1990]['electricity'] + 
            emissions[1990]['residential non-elec'] + 
            emissions[1990]['services non-elec']),
@@ -188,15 +188,19 @@ def plot_carbon_budget():
                  emissions[1990]['services non-elec'])],'ro',
          marker='*', markersize=12, markerfacecolor='black',
          markeredgecolor='black') 
-        
+    ax1.plot([2050],[0.015*(emissions[1990]['electricity'] + 
+                 emissions[1990]['residential non-elec'] + 
+                 emissions[1990]['services non-elec'])],
+         marker='*', markersize=12, markerfacecolor='white', linewidth=0,
+         markeredgecolor='black', label='EU under-discussion target')    
     ax1.plot([2050],[0.05*(emissions[1990]['electricity'] + 
                  emissions[1990]['residential non-elec'] + 
                  emissions[1990]['services non-elec'])],'ro',
          marker='*', markersize=12, markerfacecolor='black',
-         markeredgecolor='black', label='EU targets')
+         markeredgecolor='black', label='EU commited target')
         
     ax1.legend(fancybox=False, fontsize=20,
-           loc=(0.7,0.85), facecolor='white', frameon=False)
+           loc=(0.5,0.83), facecolor='white', frameon=False)
 
     ax1.plot(emissions.loc['electricity'], color='gray', linewidth=3, label=None) 
     ax1.plot(emissions.loc['residential non-elec'] + emissions.loc['services non-elec'], color='gray', linewidth=3, label=None) 
