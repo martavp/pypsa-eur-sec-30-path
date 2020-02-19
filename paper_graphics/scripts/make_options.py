@@ -53,6 +53,7 @@ options["chp"] = True
 options['cooling_coupling'] = True
 options['add_methanation'] = True
 options['biomass'] = True
+#options['HS'] = 0.02
 #options['gas_autonomy'] = True
 
 

@@ -12,7 +12,11 @@ costs = pd.read_csv('data/costs/costs_2020.csv',index_col=list(range(2))).sort_i
 costs = costs.loc[:, "value"].unstack(level=1).groupby("technology").sum()
 
 lf = costs.lifetime
+lf['gas'] = lf['CCGT']
+lf['chp'] = lf['central gas CHP']
+
 eff = costs.efficiency
+eff['central gas CHP electric'] = 0.468
 
 cc = pd.read_csv('data/Country_codes_REINVEST.csv',sep=';',index_col=0)
 
@@ -67,6 +71,9 @@ index = (df_.Retrofit - df_.YearCommissioned) < df_.Fueltype.map(lf)*0.5
 df_.YearCommissioned[index] = df_.Retrofit[index]
 df_.YearCommissioned[~index] = df_.Retrofit[~index]-df_.Fueltype.map(lf)[~index]*0.5
 
+chp = df_[df_.Set == 'CHP']
+chp = chp[~chp.Country.isin(["ES","GR","PT","IT","BG"])]
+
 # ## initialise the summary df
 df_agg = df[df.YearCommissioned.notnull()].reindex(columns=['Fueltype','Country','Capacity','YearCommissioned'])
 
@@ -93,6 +100,8 @@ df_agg = pd.concat([df_agg,df_])
 index = df_agg.index[(df_agg.Fueltype == 'gas')]
 df_agg.loc[index,'Fueltype'] = 'CCGT'
 
+index = df_agg.index[df_agg.index.isin(chp.index)]
+df_agg.loc[index,'Fueltype'] = 'chp'
 
 # # Wind
 df = pd.read_csv('data/existing_2020/Windfarms_World_20190224.csv',usecols=np.arange(0,27),index_col=0,quotechar="'")
@@ -166,6 +175,8 @@ n = pypsa.Network(snakemake.input.network_name)
 nodes = n.buses.index[n.buses.carrier == "AC"]
 
 techs = set(rename_fuel.values())
+techs.add('chp')
+
 index = df_agg.Fueltype.map(lf)+df_agg.YearCommissioned > year
 df = df_agg[index]
 df = df.groupby(['Country','Fueltype']).Capacity.sum().unstack()
@@ -188,7 +199,7 @@ if options['split_onwind']:
 n.generators.loc[s.index,'p_nom_min'] = s
 
 links = list(techs-set(generators))
-df_l = df[links].stack().reset_index(level=[0,1])
+df_l = df[links].rename(columns={'chp':'central gas CHP electric'}).stack().reset_index(level=[0,1])
 index = df_l.Country+' '+df_l.Fueltype
 s = pd.Series(index=index,data=(df_l[0]/df_l.Fueltype.map(eff)).values)
 n.links.loc[s.index,'p_nom_min'] = s
@@ -198,7 +209,7 @@ n.links.loc[s.index,'p_nom_min'] = s
 techs = ['gas boiler','resistive heater','heat pump']
 df = pd.read_csv('data/existing_2020/existing_heating_in_MW.csv',index_col=0)
 
-s = pd.read_csv('data/existing_2020/district_heating_share.csv',index_col=0)['2020'] # district heating shares in 2020
+s = pd.read_csv('data/existing_2020/district_heating_share.csv',index_col=0)['2015'] # district heating shares in 2020
 s = s.reindex(nodes)
 
 for tech in techs:

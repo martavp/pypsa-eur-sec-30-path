@@ -101,6 +101,8 @@ elif options['line_volume_limit_factor'] is None: # means opt transmission volum
     n_g.links.loc[line.index,'p_nom_min'] = line.p_nom_opt
     n_g.links.loc[line.index,'p_nom_extendable'] = True
 elif options['line_volume_limit_factor'] == 'TYNDP': # fix the transmission capacities
+    n_g.links.loc[line.index,'p_nom'] = line.p_nom_opt
     n_g.links.loc[line.index,'p_nom_extendable'] = False
+
 
 n_g.export_to_netcdf(snakemake.output.network_name)

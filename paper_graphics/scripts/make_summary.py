@@ -198,6 +198,7 @@ def calculate_supply_energy(n,label,supply_energy):
 
 def calculate_metrics(n,label,metrics):
 
+    # renewable power capacity and energy generated
     nodes = list(n.buses.index[n.buses.carrier == "AC"])
     on_gene = n.generators_t.p_max_pu.filter(like='onwind').mean()*n.generators.p_nom_opt.filter(like='onwind')
     off_gene = n.generators_t.p_max_pu.filter(like='offwind').mean()*n.generators.p_nom_opt.filter(like='offwind')
@@ -222,7 +223,8 @@ def calculate_metrics(n,label,metrics):
         metrics.at[t+' capacity',label] = n.generators.p_nom_opt.filter(like=t).sum()
         metrics.at[t+' expansion',label] = (n.generators.p_nom_opt-n.generators.p_nom_min).filter(like=t).sum()
 
-    techs = ['heat pump','resistive heater','gas boiler','CHP heat','nuclear','coal','lignite','OCGT','CCGT','Electrolysis','Sabatier']
+    # link utilisation factor, power capacity, generated energy
+    techs = ['heat pump','resistive heater','gas boiler','gas CHP electric','nuclear','coal','lignite','OCGT','CCGT','Electrolysis','Sabatier','biomass CHP electric','biomass HOP','biomass EOP']
     for t in techs:
         metrics.at[t+ ' uti',label] = n.links_t.p0.filter(like=t).sum().sum()/(n.links.p_nom_opt.filter(like=t).sum()*8760)
         metrics.at[t+' capacity',label] = n.links.p_nom_opt.filter(like=t).sum()
@@ -235,6 +237,16 @@ def calculate_metrics(n,label,metrics):
     metrics.at[t+' energy',label] = -n.links_t.p1[[s + ' oil' for s in nodes]].sum().sum()
     metrics.at[t+' expansion',label] = (n.links.p_nom_opt-n.links.p_nom_min)[[s + ' oil' for s in nodes]].sum()
 
+    # market revenue and total expenditure
+    techs = ['nuclear','coal','lignite','CCGT','OCGT']
+    for t in techs:
+        metrics.at[t+' revenue',label] = (-n.links_t.p1.filter(like=t).rename(columns=lambda x:x[:2])*n.buses_t.marginal_price[nodes]).sum().sum()
+
+    techs = ['CCGT','OCGT','central gas CHP','gas boiler']
+    for t in techs:
+        metrics.at[t+' fuel cost',label] = n.links_t.p0.filter(like=t).sum().sum()*n.stores.marginal_cost['DE gas store']
+
+    # storage 
     techs = ['battery','H2','water tank']
     for t in techs:
         metrics.at[t+ ' store energy',label] = n.stores.e_nom_opt.filter(like=t).sum()

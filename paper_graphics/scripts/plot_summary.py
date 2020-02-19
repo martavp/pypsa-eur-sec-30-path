@@ -42,6 +42,8 @@ def rename_techs(label):
         label = "solar PV"
     if "heat pump" in label:
         label = "heat pump"
+    if "biomass" in label:
+        label = "biomass"
     if label == "Sabatier":
         label = "methanation"
     if label == "offwind":

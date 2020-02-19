@@ -162,9 +162,7 @@ def prepare_data():
 
     df_hot_water.index = snapshots
 
-    df_heat = (df_heat-df_hot_water)*(1-options['HS']/100.)+df_hot_water
-
-    #df_heat = df_heat*(1-options['HS']/100.)
+    df_heat = (df_heat-df_hot_water)*(1-options['HS']*(options['year']-2020))+df_hot_water
 
     with pd.HDFStore('data/heating/cop-2015_{}.h5'.format(options['TI']), mode='r') as store:
         ashp_cop = store['ashp_cop_profiles']
