@@ -106,7 +106,7 @@
 
 \begin{abstract}
 
-
+It is now clear that urgent actions are needed to mitigate climate change and a CO$_2$-neutral society must be attained by 2050. The open question is how to transition towards that society in a way that is effective, fast, and fair. In a context of increasing public awareness, discussions on the possibility of increasing CO$_2$ reduction targets for Europe have started. Here, we model alternative transition paths with equivalent emissions budget for the sector-coupled networked European energy system. We show that ambitious CO$_2$ reductions in the short term not only trigger a cheaper transition but also incentivise smoother built rates for the required new capacities which could be beneficial for local economies and jobs creation.
 
 \end{abstract}
 
@@ -120,7 +120,7 @@
 
 \end{frontmatter}
 
-%\linenumbers
+\linenumbers
 
 Achieving a climate-neutral European Union in 2050 \cite{in-depth_2018} requires meeting the in-between milestones. Although carbon emissions will most probably curb by 20\% in 2020, relative to 1990 \cite{EEA_totalGHG}, it is unclear whether this will be the case for the -40\% objective settled for 2030. The national energy plans for the coming decade submitted by member states do not add up the necessary reduction to meet the target \cite{EU-appraisal_2019}, while in the context of a \textit{European Green Deal} a more ambitious reduction of -55\% is currently under discussion \cite{GreenDeal}. At the same time and led by young people \cite{Warren_2019}, society is claiming for more ambitious climate actions \cite{Rinscheid_2019}. Electricity generation is expected to spearhead the transition spurred by the dramatic cost reduction of wind \cite{Lantz_2012} and solar photovoltaics (PV) \cite{Creutzig_2017, Haegel_2019}. A vast body of literature shows that a power system based on wind, solar, and hydro generation can supply hourly electricity demand in Europe as long as proper balancing is provided 
 \cite{Eriksen_2017, Schlachtberger_2017, Gils_2017a, Brown_response}. This can be done reinforcing interconnections among neighbouring countries \cite{Rodriguez_2014} to smooth renewable fluctuations by regional aggregation or through temporal balancing using local storage \cite{Rasmussen_2012, Cebulla_2017}. Moreover, coupling the power system with other sectors such as heating or transport could provide additional flexibilities facilitating the system operation and simultaneously helping to abate emissions in those sectors \cite{Connolly_2016, Brown_2018, Child_2019}. 
@@ -168,14 +168,14 @@ During the past decade, several European countries have shown sudden increments 
 
 \begin{figure*}[!h]
 \centering
-\includegraphics[width=0.8\textwidth]{figures/age_distribution_wo_DH_exp.png}
+\includegraphics[width=0.8\textwidth]{figures/age_distribution_w_TYNDP.png}
 \caption{Age distribution of European power plants in operation \cite{powerplantmatching, IRENA_2019} and required installation in both pathways.} \label{fig_age_distribution} 
 \end{figure*}
 
 
 \begin{figure*}[!h]
 \centering
-\includegraphics[width=0.8\textwidth]{figures/heating_expansion_wo_DH_exp.png}
+\includegraphics[width=0.8\textwidth]{figures/heating_expansion_w_TYNDP.png}
 \caption{Required heating capacities expansion in both pathways.} \label{fig_heating_expansion} 
 \end{figure*}
 
@@ -203,31 +203,33 @@ CO$_2$ prices much higher than those historically attained in the ETS market are
 \caption{Historical evolution of CO$_2$ price in the European Trading System \cite{ETS} and required CO$_2$ price obtained from the model throughout transition paths shown in Fig. \ref{fig_carbon_budget}} \label{fig_co2price} 
 \end{figure}
 
-\paragraph{\textbf{Transitioning without grid expansion}} \
-
-\textcolor[rgb]{1,0,0}{TODO: Write paragraph discussing the different results
-obtained when the expansion of transmission lines after 2030 is not allowed. }
-
-\paragraph{\textbf{Early action allows room for decision-making later}} \
-
-\textcolor[rgb]{1,0,0}{TODO: Run cautious path banning the use of coal and lignite after 2025/2030 and write paragraph discussing the results}
-
 
 \paragraph{\textbf{The challenging decarbonisation of the heating sector}} \
 
-District heating has proven to be extremely useful to decarbonise the heating sector. It allows cheaper centralised heating technologies such as heat pumps, heat resistors, gas boilers and CHP units, and makes possible a fast conversion because it is easier to substitute one central heating unit that a myriad of individual domestic systems. On the top of that, district heating enables long-term thermal energy storage, via cheap large water pits, Fig. \ref{fog_Fourier} that help balancing the large seasonal variation of heating demand, Supplementary Note X. In the initial paths, district heating penetrations were kept fixed at their values in 2015 \cite{DH_penetration} throughout the entire path. \textcolor[rgb]{1,0,0}{When they are assumed to expand linearly so that all the urban heat demand in every country is supplied via district heating, system cost reduces by X B\EUR. Individual heat pump capacities are substituted by ... (estimar el coste del district heating).}
+District heating has proven to be extremely useful to decarbonise the heating sector. It allows cheaper centralised technologies such as heat pumps and CHP units, and makes possible a fast conversion because it is easier to substitute one central heating unit that a myriad of individual domestic systems. On the top of that, district heating enables long-term thermal energy storage, via cheap large water pits, Fig.\ref{fig_Fourier}, that help balancing the large seasonal variation of heating demand, Supplementary Note 7. In the initial paths, district heating penetration in every country was kept fixed at its value in 2015 \cite{DH_penetration} throughout the entire path. When they are assumed to expand linearly so that all the urban heat demand in every country is supplied via district heating, cumulative system cost for the Tortoise path reduces by 250 B\EUR. The additional cost of extending and maintaining the required district heating network can be estimated in 10 B\EUR/year \cite{Brown_2018} which roughly offsets the gains. However, including in the calculation the avoided expansion of gas distribution networks when district heating is deployed, makes this option clearly cheaper. 
 
 \paragraph{\textbf{Impact of building retrofitting}} \
 
-\textcolor[rgb]{1,0,0}{TODO: Run cautious path including path for reduction of heating demand, e.g. 3\% per year and write paragraph discussing the results}
+
+\textcolor[rgb]{1,0,0}{TODO: Run cautious path including path for reduction of heating demand, e.g. 2\% per year and write paragraph discussing the results}
+
+
+\paragraph{\textbf{Transitioning without grid expansion}} \
+
+When the model is allowed to optimized transmission capacities after 2030 together with the generation and storage assets, the optimal configuration in 2050 includes transmission volume approximately three times larger than that of 2030.  Although, the cumulative system cost is 84 B€ lower it is unclear that it compensates the social acceptance issues associated with increasing transmission. A reinforced network favours the penetration of onshore and offshore wind whose capacities can increase in regions where the resource is high. The wind generation can be easily transported and smoothed by the grid. Lower hydrogen storage capacities are also needed due to the network contribution to wind balancing. 
+
+
+
 
 \paragraph{\textbf{Coupling the transport sector}} \
 
 \textcolor[rgb]{1,0,0}{TODO: Run cautious path including path representing the electrification of the transport sector and write paragraph discussing the results.}
 
-\paragraph{\textbf{Heterogeneity among European countries}} \
+%\paragraph{\textbf{Early action allows room for decision-making later}} \
+%\textcolor[rgb]{1,0,0}{TODO: Run cautious path banning the use of coal and lignite after 2025/2030 and write paragraph discussing the results}
 
-\textcolor[rgb]{1,0,0}{TODO: Discuss final system configuration obtained as a result of the path vs. greenfield optimization in 2050.}
+%\paragraph{\textbf{Heterogeneity among European countries}} \
+%\textcolor[rgb]{1,0,0}{TODO: Discuss final system configuration obtained as a result of the path vs. greenfield optimization in 2050.}
 
 %\begin{footnotesize}
 \section{Methods}

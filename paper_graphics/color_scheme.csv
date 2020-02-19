@@ -2,6 +2,9 @@ tech, color
 onshore wind,#2e8b57
 offshore wind,#556b2f
 solar PV,#adff2f
+onwind,#2e8b57
+offwind,#556b2f
+solar,#adff2f
 hydro,#1e90ff
 biomass,#cd853f
 nuclear,#b22222

@@ -134,8 +134,8 @@ agedata=agedata/1000 #GW
 
 #future build_rates
 idx = pd.IndexSlice
-version= 'Base_old_H2' #'wo_DH_exp' 
-cum_cap=pd.read_csv('results//version-' + version +'//csvs//metrics.csv', sep=',', 
+version= 'w_TYNDP' #'Base_old_H2' #'wo_DH_exp' 
+cum_cap=pd.read_csv('results/version-' + version +'/csvs/metrics.csv', sep=',', 
                     index_col=0, header=[0,1,2])
 path_name_go='go'
 path_name_wait='wait'
@@ -168,14 +168,15 @@ expansion_dic={'Nuclear':'nuclear expansion',
 for year in years_future:    
     for technology in [t for t in technologies if t not in ('Hydro','Waste', 'Bioenergy', 'Natural Gas', 'gas CHP elec')]: 
         year_ref=2025+5*((year-2020)//5)
-        build_rates_go[technology][year]= cum_cap.loc[expansion_dic[technology],idx[path_name_go, 'opt', str(year_ref)]]
-        build_rates_go['gas CHP elec'][year]= 0.45*cum_cap.loc[expansion_dic['gas CHP'],idx[path_name_go, 'opt', str(year_ref)]]        
-        build_rates_go['Natural Gas'][year]= (0.42*cum_cap.loc[expansion_dic['OCGT'],idx[path_name_go, 'opt', str(year_ref)]]
-                                            + 0.59*cum_cap.loc[expansion_dic['CCGT'],idx[path_name_go, 'opt', str(year_ref)]])
-        build_rates_wait[technology][year]= cum_cap.loc[expansion_dic[technology],idx[path_name_wait, 'opt', str(year_ref)]]
-        build_rates_wait['gas CHP elec'][year]= 0.45*cum_cap.loc[expansion_dic['gas CHP'],idx[path_name_go, 'opt', str(year_ref)]]        
-        build_rates_wait['Natural Gas'][year]= (0.42*cum_cap.loc[expansion_dic['OCGT'],idx[path_name_wait, 'opt', str(year_ref)]]
-                                            + 0.59*cum_cap.loc[expansion_dic['CCGT'],idx[path_name_wait, 'opt', str(year_ref)]])
+        line_limit='TYNDP'
+        build_rates_go[technology][year]= cum_cap.loc[expansion_dic[technology],idx[path_name_go, line_limit, str(year_ref)]]
+        build_rates_go['gas CHP elec'][year]= 0.45*cum_cap.loc[expansion_dic['gas CHP'],idx[path_name_go, line_limit, str(year_ref)]]        
+        build_rates_go['Natural Gas'][year]= (0.42*cum_cap.loc[expansion_dic['OCGT'],idx[path_name_go, line_limit, str(year_ref)]]
+                                            + 0.59*cum_cap.loc[expansion_dic['CCGT'],idx[path_name_go, line_limit, str(year_ref)]])
+        build_rates_wait[technology][year]= cum_cap.loc[expansion_dic[technology],idx[path_name_wait, line_limit, str(year_ref)]]
+        build_rates_wait['gas CHP elec'][year]= 0.45*cum_cap.loc[expansion_dic['gas CHP'],idx[path_name_go, line_limit, str(year_ref)]]        
+        build_rates_wait['Natural Gas'][year]= (0.42*cum_cap.loc[expansion_dic['OCGT'],idx[path_name_wait, line_limit, str(year_ref)]]
+                                            + 0.59*cum_cap.loc[expansion_dic['CCGT'],idx[path_name_wait, line_limit, str(year_ref)]])
 build_rates_go=build_rates_go/(5*1000) #5years->1 year, MW->GW 
 build_rates_wait=build_rates_wait/(5*1000) #5years->1 year, MW->GW 
 #%%    

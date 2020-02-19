@@ -105,6 +105,15 @@ M.~Victoria, G.~B. Andresen,
   {\path{doi:10.1002/pip.3126}}.
 \newline\urlprefix\url{https://onlinelibrary.wiley.com/doi/full/10.1002/pip.3126}
 
+\bibitem{Victoria_2019_EUPVSEC}
+M.~Victoria, K.~Zhu, T.~Brown, G.~B. Andresen, M.~Greiner,
+  \href{https://onlinelibrary.wiley.com/doi/abs/10.1002/pip.3198}{The role of
+  photovoltaics in a sustainable {European} energy system under variable
+  {CO$_2$} emissions targets, transmission capacities, and costs assumptions},
+  Progress in Photovoltaics: Research and Applications\href
+  {http://dx.doi.org/10.1002/pip.3198} {\path{doi:10.1002/pip.3198}}.
+\newline\urlprefix\url{https://onlinelibrary.wiley.com/doi/abs/10.1002/pip.3198}
+
 \bibitem{Corine_2014}
 \href{https://www.eea.europa.eu/data-and-maps/data/clc-2006-raster-4}{Corine
   land cover 2006}, Tech. rep., EEA (2014).
@@ -114,6 +123,13 @@ M.~Victoria, G.~B. Andresen,
 \href{https://www.eea.europa.eu/data-and-maps/data/natura-8}{Natura 2000 data -
   the {European} network of protected sites}.
 \newline\urlprefix\url{https://www.eea.europa.eu/data-and-maps/data/natura-8}
+
+\bibitem{Scholz_2012}
+Y.~Scholz, \href{https://elib.uni-stuttgart.de/handle/11682/2032}{Renewable
+  energy based electricity supply at low costs - development of the {REMix}
+  model and application for {Europe}}, Ph.D. thesis, University of Stuttgart
+  (2012).
+\newline\urlprefix\url{https://elib.uni-stuttgart.de/handle/11682/2032}
 
 \bibitem{Brown_2018}
 T.~Brown, D.~Schlachtberger, A.~Kies, S.~Schramm, M.~Greiner,
@@ -288,5 +304,16 @@ W.~Zappa, M.~Junginger, M.~van~den Broek,
 \newblock \href {http://dx.doi.org/10.1016/j.apenergy.2018.08.109}
   {\path{doi:10.1016/j.apenergy.2018.08.109}}.
 \newline\urlprefix\url{http://www.sciencedirect.com/science/article/pii/S0306261918312790}
+
+\bibitem{Gerhardt_2015}
+N.~Gerhardt, A.~Scholz, F.~Sandau, H.~H.,
+  \href{http://www.energiesystemtechnik.iwes.fraunhofer.de/de/projekte/suche/2015/interaktion_strom_waerme_verkehr.html}{Interaktion
+  ee-strom, w{"a}rme und verkehr. {Tech. rep.} {Fraunhofer} {IWES}}.
+\newline\urlprefix\url{http://www.energiesystemtechnik.iwes.fraunhofer.de/de/projekte/suche/2015/interaktion_strom_waerme_verkehr.html}
+
+\bibitem{gas_distribution}
+\href{https://www.bundesnetzagentur.de/DE/Sachgebiete/ElektrizitaetundGas/Unternehmen_Institutionen/DatenaustauschundMonitoring/Monitoring/Monitoringberichte/Monitoring_Berichte.html}{Tech.
+  rep. {Monitoringbericht 2017}. {Bundesnetzagentur}}.
+\newline\urlprefix\url{https://www.bundesnetzagentur.de/DE/Sachgebiete/ElektrizitaetundGas/Unternehmen_Institutionen/DatenaustauschundMonitoring/Monitoring/Monitoringberichte/Monitoring_Berichte.html}
 
 \end{thebibliography}
