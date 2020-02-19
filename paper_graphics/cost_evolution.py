@@ -116,5 +116,6 @@ for technology in technologies:
              linestyle=style[technology], alpha=0.8, label=name[technology])    
 ax1.set_ylim([0.2,1])    
 ax1.set_xlim([2020,2050]) 
+ax1.grid(linestyle='--')
 ax1.legend(loc=(1.01,0.1), fontsize=16)
 plt.savefig('../figures/cost_evolution.png', dpi=300, bbox_inches='tight')        

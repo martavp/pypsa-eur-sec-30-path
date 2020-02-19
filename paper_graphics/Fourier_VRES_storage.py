@@ -12,7 +12,7 @@ import matplotlib.gridspec as gridspec
 import pypsa
 
 path = '../../postnetworks/'  
-years=['2025'] 
+years=['2050'] 
 
 techs=['elec_demand','battery', 'H2', 'H2 underground', 'PHS', 'EV_battery', 
        'ITES', 'LTES', 'onwind', 'solar', 'hydro']
@@ -23,7 +23,7 @@ datos = pd.DataFrame(index=pd.MultiIndex.from_product([pd.Series(data=techs, nam
 idx = pd.IndexSlice
 
 for year in years:
-    network_name= path+'postnetwork-go_opt_' + year + '.nc'  
+    network_name= path+'postnetwork-go_TYNDP_' + year + '.nc'  
     network = pypsa.Network(network_name)
     datos.loc[idx['elec_demand', year], :] = network.loads_t.p[network.loads.index[network.loads.index.str.len() == 2]].sum(axis=1).values
     datos.loc[idx['heat_demand', year], :] = network.loads_t.p[network.loads.index[network.loads.index.str[3:] == 'heat']].sum(axis=1).values    
@@ -94,7 +94,7 @@ dic_linewidth={'elec_demand':2,
                'heat_demand':2,
                'solar':5,
                'onwind':2,
-               'battery':2,
+               'battery':5,
                'H2':2,
                'H2 underground':2,
                'PHS': 2,
@@ -106,7 +106,7 @@ dic_linestyle={'elec_demand':'--',
                'battery':'-',
                'H2': '-',
                'H2 underground':'-',
-               'PHS':'-',
+               'PHS':'--',
                'LTES':'-'}
 dic_alpha={'elec_demand':1,
            'heat_demand':1,

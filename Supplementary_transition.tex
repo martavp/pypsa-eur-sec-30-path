@@ -368,8 +368,13 @@ A two-step method was implemented to fill commissioning date for power plants wh
 %From David's: The transmission lines between countries are treated as a transport model with controllable dispatch (a coupled source and sink), constrained by energy conservation at each node. This is considered to be a justifiable approximation because many of the international connections are already controllable point-to-point high-voltage direct current (HVDC) connections, such as those undersea (like France-Britain), those over land (like the Spain-France INELFE project) or those in the planning phase (like the HVDC link planned between Germany and Belgium), while the flow on borders with only high-voltage alternating current (HVAC) connections are being increasingly controlled by phase-shifting transformers (like the German-Dutch, German-Polish and German-Czech borders). This also follows the way that interconnectors are handled in market clearing with Net Transfer Capacities (NTCs) on many borders.
 Existing power plants are assumed to be decommissioned at their corresponding commissioning date plus lifetime (Table \ref{tab:inputs}). When a power plant has been retrofitted, we assume that its operating life is extended by half of its nominal lifetime. 
 For heating capacities, 25\% of existing capacities in 2015 are assumed to be decommissioned in every time step after 2020.
+\begin{figure*}[!h]
+\centering
+\includegraphics[width=0.9\textwidth]{figures/age_distribution_existing.png}
+\caption{Age distribution of European power plants in operation \cite{powerplantmatching, IRENA_2019}.} 
+\end{figure*}
 
-
+\FloatBarrier
 \subsection{Levelised Cost of Energy (LCOE)}
 
 The Levelised Cost of Energy is defined as the total system cost per unit of consumed energy, that is, including supplied electricity and heating demand. \\
