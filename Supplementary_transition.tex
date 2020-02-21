@@ -129,7 +129,7 @@ The carbon budget from now onwards for the generation of electricity and the sup
 \begin{figure}[!h]
 \centering
 \includegraphics[width=\textwidth]{figures/historical_sectoral_emissions.png}
-\caption{Sectoral distribution of historical emissions in the European Union \cite{UNFCCC_inventory}. The black stars indicate committed EU reduction targets, while white stars mark under-discussion target.} \label{fig_historical_emissions} 
+\caption{Sectoral distribution of historical emissions in the European Union \cite{UNFCCC_inventory}. The black stars indicate committed EU reduction targets, while white stars mark under-discussion targets.} \label{fig_historical_emissions} 
 \end{figure}
 
 \section{CO$_2$ restriction paths with equivalent budget}
@@ -195,6 +195,7 @@ Although the exponential decay path approaches asymptotically to zero, we assume
 \caption{Photovoltaic annual build rates for those European countries with a prominent peak \cite{IRENA_2019}. The sharp increase and subsequent decrease in the installation rates were caused by country-specific successive changes in the regulatory frameworks. See for instance \cite{Report_Fraunhofer_2019, Victoria_2012}. } \label{fig_installation_rates_PV} 
 \end{figure}
  
+\FloatBarrier
 
 \section{Model description}
 
@@ -325,7 +326,7 @@ Link & 2020 & 2030 & Link & 2020 & 2030 & Link & 2020 & 2030  \\
 
 \subsection{Heating sector}
 
-Annual heat demands for European countries are retrieved from \cite{HRE}. They are converted into hourly heat demand based on the population-weighted \cite{NUTS3} Heating Degree Hour (HDH), that is, heating is assumed to be proportional to the difference between ambient temperature and a threshold temperature. 17$^{\circ}$C is assumed as threshold temperature. Ambient temperature is read from the same reanalysis database \cite{CFSR} used to model wind and solar PV time series. \textcolor[rgb]{1,0,0}{TODO: Change to daily profiles?} For every country, heating demand is split between low-population density areas and high-population density areas. 44.6\%  of the European population is estimated to live in the latter \cite{Brown_2018} where district heating systems can be deployed. In high-density population areas, heating can be supplied by central ground-sourced heat pumps, heat resistors and gas boilers, as well as by CPH units. All the previous technologies are assumed to be integrated in district heating networks. Furthermore, individual air-sourced heat pumps are also allowed in those areas. In low-density population areas, heating can be supplied by individual ground-sourced heat pumps, heat resistors and gas boilers. Costs, lifetimes, and efficiencies of the different technologies are included in Table \ref{tab:cost per year}. \
+Annual heat demands for European countries are retrieved from \cite{HRE}. They are converted into hourly heat demand based on the population-weighted \cite{NUTS3} Heating Degree Hour (HDH), that is, heating is assumed to be proportional to the difference between ambient temperature and a threshold temperature. 17$^{\circ}$C is assumed as threshold temperature. Ambient temperature is read from the same reanalysis database \cite{CFSR} used to model wind and solar PV time series. For every country, heating demand is split between low-population density areas and high-population density areas. 44.6\%  of the European population is estimated to live in the latter \cite{Brown_2018} where district heating systems can be deployed. In high-density population areas, heating can be supplied by central ground-sourced heat pumps, heat resistors and gas boilers, as well as by CPH units. All the previous technologies are assumed to be integrated in district heating networks. Furthermore, individual air-sourced heat pumps are also allowed in those areas. In low-density population areas, heating can be supplied by individual ground-sourced heat pumps, heat resistors and gas boilers. Costs, lifetimes, and efficiencies of the different technologies are included in Table \ref{tab:cost per year}. \
 
 The Coefficient of Performance (COP) of heat-pumps depends on ambient or ground temperature to capture the lower COP in winter. COP depends on the difference between the source and the sink temperatures $\Delta T = T_{sink}-T_{source}$. For air-sourced heat pumps (ASHP), $COP= 6.81 + 0.121 \Delta T +  0.000630 \Delta T^2$, for ground-sourced heat pumps (GSHP), $COP=8.77 + 0.150 \Delta T + 0.000734 \Delta T^2$ \cite{Staffell_2012}. The sink water temperature is assumed to be $T_{sink}=55^{\circ}$C, the source temperature for air and ground is taken from the same reanalysis database used to estimate heating demand \cite{CFSR}. Thermal energy can be stored in large water pits associated with district heating systems and individual thermal energy storage (TES), \textit{i.e.}, small water tanks.  A thermal energy density of 46.8 kWh$_{th}$/m$^3$ is assumed, corresponding to a temperature difference of 40 K. The decay of thermal energy $1 - \exp(- \frac{1}{24 \tau})$ is assumed to have a time constant of $\tau$=180 days for central TES and $\tau$=3 days for individual TES. Charging and discharging efficiencies are 90\% due to pipe losses.\\
 
@@ -497,7 +498,7 @@ Fuel & Cost  & Source & Emissions & Source \\
 
 \FloatBarrier
 
-\section{Transition paths cautious and last-minute. Additional results}
+\section{Transition paths Tortoise and Hare. Additional results}
 
 \begin{figure}[!h]
 	\centering
@@ -517,6 +518,12 @@ Fuel & Cost  & Source & Emissions & Source \\
 \caption{Annual build rates for batteries and hydrogen storage throughout transition paths shown in Fig. 1 in the main text.} \label{fig_battery_hydrogen} 
 \end{figure*}
 
+\begin{figure}[!h]
+\centering
+\includegraphics[width=\columnwidth]{figures/utilisation_factors_w_TYNDP.png}
+\caption{Utilisation factors for lignite, coal, gas, and nuclear power plants throughout transition paths shown in Fig. \ref{fig_carbon_budget}.} \label{fig_utilisation_factors} 
+\end{figure}
+
 \begin{figure*}[!h]
 \centering
 \includegraphics[width=0.8\columnwidth]{figures/electricity_production_w_TYNDP_go.png}
@@ -531,7 +538,7 @@ Fuel & Cost  & Source & Emissions & Source \\
 
 \begin{figure}[!h]
 \centering
-\includegraphics[width=0.8\columnwidth]{figures/heat_production_Base_go.png}
+\includegraphics[width=0.8\columnwidth]{figures/heat_production_w_TYNDP_go.png}
 \caption{Evolution of technologies used to supply heating in residential and services sector in the cautious path. } \label{fig_heating_shares} 
 \end{figure}
 
@@ -544,7 +551,7 @@ For the Tortoise, path cumulative system cost reduces by 250 B\EUR. The addition
 
 \section{Transition paths including electricity transmission grid expansion}
 
-In this scenario, the model is rerun assuming that for years from 2035 onwards, transmission capacities are optimized together with the rest of the system components using 2030 values as the lower boundary. Allowing the expansion of transmission capacities results into a decrease of B€ in the cumulative cost for the Cautious path. The reinforced interconnection contribute to the spatial smoothing of wind fluctuations, increasing the optimal onshore and offshore wind capacities at the end of the path. The required energy capacity for hydrogen storage is reduced due to interconnections contribution to balancing wind generation balancing. 
+In this scenario, the model is rerun assuming that for years from 2035 onwards, transmission capacities are optimized together with the rest of the system components using 2030 values as the lower boundary. Allowing the expansion of transmission capacities results into a decrease of 84 B\EUR in the cumulative cost for the Cautious path. The reinforced interconnection contribute to the spatial smoothing of wind fluctuations, increasing the optimal onshore and offshore wind capacities at the end of the path. The required energy capacity for hydrogen storage is reduced due to interconnections contribution to balancing wind generation balancing. 
 
 \FloatBarrier
 
