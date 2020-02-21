@@ -89,18 +89,18 @@
 
 \begin{frontmatter}
 
-\title{The benefits of ambitious short-term targets when decarbonising the coupled electricity and heating energy system in Europe}
+\title{The benefits of ambitious short-term targets when decarbonising the sector-coupled energy system in Europe}
 
-%\author[mymainaddress,iClimate]{Marta Victoria\corref{mycorrespondingauthor}}
-%\ead{mvp@eng.au.dk}
-%\author[mymainaddress]{Kun Zhu}
-%\author[kitaddress]{Tom Brown}
-%\author[mymainaddress,iClimate]{Gorm B. Andresen}
-%\author[mymainaddress,iClimate]{Martin Greiner}
-%\cortext[mycorrespondingauthor]{Corresponding author}
-%\address[mymainaddress]{Department of Engineering, Aarhus University, Inge Lehmanns Gade 10, 8000 Aarhus, Denmark}
-%\address[iClimate]{iCLIMATE Interdisciplinary Centre for Climate Change, Aarhus University}
-%\address[kitaddress]{Institute for Automation and Applied Informatics (IAI), Karlsruhe Institute of Technology (KIT), Forschungszentrum 449, 76344, Eggenstein-Leopoldshafen, Germany}
+\author[mymainaddress,iClimate]{Marta Victoria\corref{mycorrespondingauthor}}
+\ead{mvp@eng.au.dk}
+\author[mymainaddress]{Kun Zhu}
+\author[kitaddress]{Tom Brown}
+\author[mymainaddress,iClimate]{Gorm B. Andresen}
+\author[mymainaddress,iClimate]{Martin Greiner}
+\cortext[mycorrespondingauthor]{Corresponding author}
+\address[mymainaddress]{Department of Engineering, Aarhus University, Inge Lehmanns Gade 10, 8000 Aarhus, Denmark}
+\address[iClimate]{iCLIMATE Interdisciplinary Centre for Climate Change, Aarhus University}
+\address[kitaddress]{Institute for Automation and Applied Informatics (IAI), Karlsruhe Institute of Technology (KIT), Forschungszentrum 449, 76344, Eggenstein-Leopoldshafen, Germany}
 
 
 
@@ -130,7 +130,7 @@ CO$_2$ emissions from heating in residential and services sector show a more mod
 Greenfield optimisation of the future European energy system, that is, building the system from scratch, shows that sector-coupling decreases the system cost and reduces the need for extending transmission lines due to the additional local flexibility brought by heating and transport sectors \cite{Brown_2018}. Sector-coupling allows further CO$_2$ reductions before large capacities of storage become necessary, providing more time to develop further storage technologies \cite{Victoria_2019_storage}. Greenfield optimisation is useful to investigate the optimal configuration of the fully-decarbonised system, but it does not provide insights on how to transition towards it. Today's generation fleet and decisions taken in intermediate steps will shape the final configuration. 
 Alternative transition paths for the European power system have been analysed using myopic optimisation, without full foresight over the investment horizon \cite{Bogdanov_2019, Plesmann_2017, Gerbaulet_2019, Poncelet_2016}. Myopic optimisation results in higher cumulative system cost than optimising the entire transition period with perfect foresight because the former leads to stranded investments \cite{Gerbaulet_2019, Heuberger_2018}. However, the myopic approach is less sensitive to the assumed discount rate and can capture better short-sighted behaviour of political actors and investors. 
 
-Here, we use a sector-coupled networked model of the European energy system and myopic optimisation in 5-years steps from now to 2050 to investigate the impact of different CO$_2$ restriction paths with the same carbon budget. In every time step, the expansion of generation, storage and interconnection capacities in every country is allowed  if it results cost-effective under the corresponding global emissions constraint. We show that a transition path with more ambitious short-term CO$_2$ targets reduces the cumulative system cost and requires more stable build rates, which are beneficial from the point of view of social acceptance, local industry, and jobs creation. Compared to existing transition paths analyses for the European power system \cite{Plesmann_2017, Gerbaulet_2019, Poncelet_2016}, our research includes the coupling with the heating \textcolor[rgb]{1,0,0}{(and transport)} sector. The use of alternative CO$_2$ reduction paths with constant cumulative emissions is also a novelty of this work. 
+Here, we use a sector-coupled networked model of the European energy system and myopic optimisation in 5-years steps from now to 2050 to investigate the impact of different CO$_2$ restriction paths with the same carbon budget. In every time step, the expansion of generation, storage and interconnection capacities in every country is allowed  if it results cost-effective under the corresponding global emissions constraint. We show that a transition path with more ambitious short-term CO$_2$ targets reduces the cumulative system cost and requires more stable build rates, which are beneficial from the point of view of social acceptance, local industry, and jobs creation. Compared to existing transition paths analyses for the European power system \cite{Plesmann_2017, Gerbaulet_2019, Poncelet_2016}, our research includes the coupling with the heating and transport sectors. The use of alternative CO$_2$ reduction paths with constant cumulative emissions is also a novelty of this work. 
 
 Integrated Assessment Models (IAMs) with similar spatial resolution than our model, i.e., one node per country, have also been used to investigate the sector-coupled decarbonization of Europe \cite{in-depth_2018, JRC-EU-TIMES, Creutzig_2017}. However, IAMs typically use a much lower time resolution, \textit{e.g.} using a few time slices to represent a full year \cite{JRC-EU-TIMES, Loffler_2019, Poncelet_2016, McGlade_2015, Babrowski_2014} or considering the residual load duration curve \cite{Creutzig_2017, Ueckerdt_2017}. The hourly resolution in our model unveils several effects that are critical to the operation of highly renewable systems, such as the solar and wind non-correlations smoothed by the grid, the role of long-term storage, and the system operation during cold spells, \textsl{i.e.} a cold week with low wind and solar generation. By using an open model, we ensure transparency and reproducibility of the results in a  discipline with high policy relevance such as it is energy modelling \cite{Pfenninger_2017, Pfenninger_2018}. 
 
@@ -146,7 +146,7 @@ A remaining global carbon budget of 800 Gigatons (Gt) of CO$_2$ can be emitted f
 
 \paragraph{\textbf{Cumulative costs and stranded assets}} \
 
-Here we investigate the consequences of following two alternative transition paths. As in Aesop's fable, the Tortoise path represents a cautious approach in which significant emissions reduction are attained in the early years. In the Hare path, the low initial reduction targets quickly deplete the carbon budget requiring a sharp reduction later. The two alternative paths arrive at a similar system configuration in 2050. Only in the later years, under heavy CO$_2$ restriction, balancing technologies appear in the system. They include large storage capacities comprising electric batteries and H$_2$ storage, methanation, and reinforced interconnections.  Cumulative cost for the Tortoise path represents 7,800 billion euros (B\EUR), while the Hare path accounts for 8,100 B\EUR. The newly built conventional capacity for electricity generation is very modest in both cases, Fig. \ref{fig_age_distribution}. Decarbonising the power system has proven to be cheaper than the heating sector \cite{Zhu_2019}. Consequently, although CO$_2$ allowances differ, the electricity sector gets quickly decarbonised in both paths. More notable differences appear in new conventional heating capacities, Fig. \ref{fig_heating_expansion}. Regarding new renewable generation and power-to-heat capacities, both paths show major differences.
+Here we investigate the consequences of following two alternative transition paths. As in Aesop's fable, the Tortoise path represents a cautious approach in which significant emissions reduction are attained in the early years. In the Hare path, the low initial reduction targets quickly deplete the carbon budget requiring a sharp reduction later. The two alternative paths arrive at a similar system configuration in 2050. Only in the later years, under heavy CO$_2$ restriction, balancing technologies appear in the system. They include large storage capacities comprising electric batteries and H$_2$ storage, methanation, and reinforced interconnections.  Cumulative cost for the Tortoise path represents 7,869 billion euros (B\EUR), while the Hare path accounts for 8,211 B\EUR. The newly built conventional capacity for electricity generation is very modest in both cases, Fig. \ref{fig_age_distribution}. Decarbonising the power system has proven to be cheaper than the heating sector \cite{Zhu_2019}. Consequently, although CO$_2$ allowances differ, the electricity sector gets quickly decarbonised in both paths. More notable differences appear in new conventional heating capacities, Fig. \ref{fig_heating_expansion}. Regarding new renewable generation and power-to-heat capacities, both paths show major differences.
 
 Although conventional electricity generators do not extend significantly, the already existing capacities become stranded assets. Utilisation factors for gas power plants drop, Supplementary Note 8, and market revenues are not enough to recover costs at any point, Fig \ref{fig_revenue_vs_expenditure}. This is a consequence of the large capacity of gas recently installed in Europe. Fig. \ref{fig_age_distribution} shows that most of the gas capacity in Europe was installed less than 25 years ago, part of this capacity represents a stranded asset for both transition paths. Although, infrautilisation of existing generation capacity might be seen as an unnecessary contribution to a higher cost of energy it must be remarked that the early retirement of electricity infrastructure has been identified as one of the most cost-effective actions to reduce committed emissions and enable a 2$^{\circ}$C-compatible future evolution of global emissions \cite{Tong_2019}.
 
@@ -154,25 +154,25 @@ Although conventional electricity generators do not extend significantly, the al
 
 \begin{figure*}[!h]
 \centering
-\includegraphics[width=14cm]{figures/LCOE_w_TYNDP.png}
-\caption{Levelized Cost of Energy (LCOE) for the European electricity and heating system throughout transition paths cautious and last-minute shown in Fig. \ref{fig_carbon_budget}. Conventional includes costs associated with coal, lignite, and gas power plants producing electricity as well as gas consumed in gas boilers and CPH units. Power-to-heat category includes costs associated with heat pumps and heat resistors. Balancing includes cost of electric batteries, H$_2$ storage, and methanation. } \label{fig_system_cost} 
+\includegraphics[width=14cm]{figures/LCOE_Base.png}
+\caption{Levelized Cost of Energy (LCOE) for the European electricity and heating system throughout transition paths Tortoise and Hare shown in Fig. \ref{fig_carbon_budget}. Conventional includes costs associated with coal, lignite, and gas power plants producing electricity as well as gas consumed in gas boilers and CPH units. Power-to-heat category includes costs associated with heat pumps and heat resistors. Balancing includes cost of electric batteries, H$_2$ storage, and methanation. } \label{fig_system_cost} 
 \end{figure*}
 
 \begin{figure*}[!h]
 \centering
-\includegraphics[width=0.8\textwidth]{figures/age_distribution_w_TYNDP.png}
+\includegraphics[width=0.8\textwidth]{figures/age_distribution_Base.png}
 \caption{Age distribution of European power plants in operation \cite{powerplantmatching, IRENA_2019} and required annual installation in both paths.} \label{fig_age_distribution} 
 \end{figure*}
 
 \begin{figure*}[!h]
 \centering
-\includegraphics[width=0.8\textwidth]{figures/heating_expansion_w_TYNDP.png}
+\includegraphics[width=0.8\textwidth]{figures/heating_expansion_Base.png}
 \caption{Required heating capacities expansion in both paths.} \label{fig_heating_expansion} 
 \end{figure*}
 
 \begin{figure}[!h]
 \centering
-\includegraphics[width=\columnwidth]{figures/revenue_vs_expenditure_w_TYNDP.png}
+\includegraphics[width=\columnwidth]{figures/revenue_vs_expenditure_Base.png}
 \caption{Ratio of market revenues to total expenditure for lignite, coal, gas, and nuclear power plants throughout transition paths shown in Fig. \ref{fig_carbon_budget}. } \label{fig_revenue_vs_expenditure} 
 \end{figure}
 
@@ -184,7 +184,7 @@ During the past decade, several European countries have shown sudden increments 
 
 \paragraph{\textbf{Balancing renewable generation}} \
 
-Modeling an entire year with hourly resolution unveils the strong links among renewable generation technologies and balancing strategies. For countries and time steps in which large solar PV capacities are deployed, it is also cost-effective to install large battery capacities to smooth the strong daily solar generation pattern. Conversely, onshore and offshore wind capacities require H$_2$ storage and reinforced interconnections to balance wind synoptic fluctuations \cite{Rasmussen_2012, Rodriguez_2014, Schlachtberger_2017, Victoria_2019_storage}. This can also be appreciated by looking at the dominant dispatch frequencies exposed by the Fourier power spectra of the dispatch time series, Fig. \ref{fig_Fourier}. The optimal renewable mix in every country depends on the local resources and the already existing capacities, see Fig. 11 in Supplementary Note 8. Nevertheless, it should be remarked that the analysis of near-optimal solutions has recently shown that country-specific mixes can vary significantly while keeping the total system cost only slightly higher than the minimum \cite{Neumann_2019}. 
+Modelling an entire year with hourly resolution unveils the strong links among renewable generation technologies and balancing strategies. For countries and time steps in which large solar PV capacities are deployed, it is also cost-effective to install large battery capacities to smooth the strong daily solar generation pattern. Conversely, onshore and offshore wind capacities require H$_2$ storage and reinforced interconnections to balance wind synoptic fluctuations \cite{Rasmussen_2012, Rodriguez_2014, Schlachtberger_2017, Victoria_2019_storage}. This can also be appreciated by looking at the dominant dispatch frequencies exposed by the Fourier power spectra of the dispatch time series, Fig. \ref{fig_Fourier}. The optimal renewable mix in every country depends on the local resources and the already existing capacities, see Fig. 11 in Supplementary Note 8. Nevertheless, it should be remarked that the analysis of near-optimal solutions has recently shown that country-specific mixes can vary significantly while keeping the total system cost only slightly higher than the minimum \cite{Neumann_2019}. 
 
 \begin{figure}[!h]
 \centering
@@ -207,12 +207,11 @@ CO$_2$ prices much higher than those historically attained in the ETS market are
 
 \paragraph{\textbf{The challenging decarbonisation of the heating sector}} \
 
-District heating has proven to be extremely useful to decarbonise the heating sector. It allows cheaper centralised technologies such as heat pumps and CHP units, and makes possible a fast conversion because it is easier to substitute one central heating unit than a myriad of individual domestic systems. On top of that, district heating enables long-term thermal energy storage, via cheap large water pits, Fig.\ref{fig_Fourier}, that help to balance the large seasonal variation of heating demand, Supplementary Note 6. Previously, district heating penetration in every country was kept fixed at its value in 2015 \cite{DH_penetration} throughout the entire paths. When district heating is assumed to expand linearly so that in 2050 it covers the entire urban heat demand in every country, cumulative system cost for the Tortoise path reduces by 250 B\EUR. The additional cost of extending and maintaining the required district heating networks can be estimated in 10 B\EUR/year \cite{Brown_2018} which roughly offsets the gains. However, including in the calculation the avoided expansion of gas distribution networks when district heating is deployed, makes this option certainly cheaper. 
+District heating has proven to be extremely useful to decarbonise the heating sector. It allows cheaper centralised technologies such as heat pumps and CHP units, and makes possible a fast conversion because it is easier to substitute one central heating unit than a myriad of individual domestic systems. On top of that, district heating enables long-term thermal energy storage, via cheap large water pits, Fig.\ref{fig_Fourier}, that help to balance the large seasonal variation of heating demand, Supplementary Note 6. Previously, district heating penetration in every country was kept fixed at its value in 2015 \cite{DH_penetration} throughout the entire paths. When district heating is assumed to expand linearly so that in 2050 it covers the entire urban heat demand in every country, cumulative system cost for the Tortoise path reduces by 13 B\EUR. Although the additional cost of extending and maintaining the required district heating networks can be estimated in 10 B\EUR/year \cite{Brown_2018} including in the calculation the avoided expansion of gas distribution networks when district heating is deployed, makes this option certainly cheaper. 
 
 \paragraph{\textbf{Impact of building retrofitting}} \
 
-
-\textcolor[rgb]{1,0,0}{TODO: Run cautious path including path for reduction of heating demand, e.g. 2\% per year and write paragraph discussing the results}
+Retrofitting building stock at a rate of 2\% have been observed in the past \textcolor[rgb]{1,0,0}{Add reference}. Assuming a 2\% reduction of space heating per year and neglecting any rebound effect, this will translate into an aproximatlely decrease of 40\% of heating demand in 2050. Cumulative system cost decreases by \textcolor[rgb]{1,0,0}{X} \EUR compared to the paths with constant heating demand.
 
 
 \paragraph{\textbf{Transitioning without grid expansion}} \
@@ -222,7 +221,7 @@ When the model is allowed to optimized transmission capacities after 2030 togeth
 
 \paragraph{\textbf{Coupling the transport sector}} \
 
-\textcolor[rgb]{1,0,0}{TODO: Run cautious path including path representing the electrification of the transport sector and write paragraph discussing the results.}
+Finally, Tortoise and Hare paths are run again including the coupling of transport sector, which includes the model of road and rail transport as described in the Supplementary Note 6.  For every transition path and time step, the electrification of the transport sector is assumed to be equal to the CO$_2$ emissions reduction relative to 2020. In this way, emissions in the transport sector curb parallel to those of heating and electricity sectors. At every moment, a quarter of the Electric Vehicles available are assumed to provide vehicle-to-grid services. \textcolor[rgb]{1,0,0}{TODO: Add a couple of lines discussing the results of this run. }
 
 %\paragraph{\textbf{Early action allows room for decision-making later}} \
 %\textcolor[rgb]{1,0,0}{TODO: Run cautious path banning the use of coal and lignite after 2025/2030 and write paragraph discussing the results}
@@ -243,6 +242,16 @@ Costs assumed for the different technologies depend on time (Supplementary Note 
 %\end{footnotesize}
 
 \section{Data availability and code availability}
+
+The model is implemented in the open-source framework Python for Power System Analysis (PyPSA) \cite{PyPSA}. The model and data used in this paper can be retrieved from \textcolor[rgb]{1,0,0}{XXX}
+
+\section{Authors contribution}
+
+M. Victoria designed the analysis, drafted the manuscript and contributed to the data acquisition, analysis and interpretation of data. K. Zhu contributed to the data acquisition, modelling, analysis and interpretation of data. 
+T. Brown, G. B. Andresen and M. Greiner made substantial revisions of the manuscript. 
+
+\section{Acknowledgements}
+M. Victoria, K. Zhu, G. B. Andresen and M. Greiner are fully or partially funded by the RE-INVEST project, which is supported by  the  Innovation  Fund  Denmark  under  grant  number  6154-00022B. T.B. acknowledges funding from the Helmholtz Association under grant no. VH-NG-1352. The responsibility for the contents lies solely with the authors.
 
 \section{References}
 \bibliography{bib_transition}

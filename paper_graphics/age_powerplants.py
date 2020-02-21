@@ -134,7 +134,7 @@ agedata=agedata/1000 #GW
 
 #future build_rates
 idx = pd.IndexSlice
-version= 'w_TYNDP' #'Base_old_H2' #'wo_DH_exp' 
+version= 'w_DH_exp' #'Base'
 cum_cap=pd.read_csv('results/version-' + version +'/csvs/metrics.csv', sep=',', 
                     index_col=0, header=[0,1,2])
 path_name_go='go'
@@ -166,7 +166,7 @@ expansion_dic={'Nuclear':'nuclear expansion',
                'biomass EOP': 'biomass HOP expansion'}
 
 for year in years_future:    
-    for technology in [t for t in technologies if t not in ('Hydro','Waste', 'Biomass', 'Natural Gas', 'gas CHP', 'gas CHP elec')]: 
+    for technology in [t for t in technologies if t not in ('Hydro','Waste', 'Biomass', 'Natural Gas', 'gas CHP elec')]: 
         year_ref=2025+5*((year-2020)//5)
         line_limit='TYNDP'
         build_rates_go[technology][year]= cum_cap.loc[expansion_dic[technology],idx[path_name_go, line_limit, str(year_ref)]]
@@ -328,7 +328,7 @@ ax3.set_xticks([])
 #ax2.set_xlabel('Installed capacity (GW)', fontsize=16, x=1.15)
 ax3.text(20, 2, 'Tortoise path', fontsize=18)
 ax2.set_zorder(1)
-ax2.legend(loc=(3.2,0.35), fontsize=16)
+ax2.legend(loc=(2.02,0.35), fontsize=16)
 ax3.legend(loc=(0.6,0.5), fontsize=16)
 
 a4 = build_rates_wait[['gas boiler', 'gas CHP']].plot.barh(stacked=True, legend=None,

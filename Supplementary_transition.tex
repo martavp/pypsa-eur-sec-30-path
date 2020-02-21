@@ -92,18 +92,18 @@
 
 \begin{frontmatter}
 
-\title{Supplementary Materials for ``The benefits of ambitious short-term targets when decarbonising the coupled electricity and heating energy system in Europe'' }
+\title{Supplementary Materials for ``The benefits of ambitious short-term targets when decarbonising the sector-coupled energy system in Europe'' }
 
-%\author[mymainaddress,iClimate]{Marta Victoria\corref{mycorrespondingauthor}}
-%\ead{mvp@eng.au.dk}
-%\author[mymainaddress]{Kun Zhu}
-%\author[kitaddress]{Tom Brown}
-%\author[mymainaddress,iClimate]{Gorm B. Andresen}
-%\author[mymainaddress,iClimate]{Martin Greiner}
-%\cortext[mycorrespondingauthor]{Corresponding author}
-%\address[mymainaddress]{Department of Engineering, Aarhus University, Inge Lehmanns Gade 10, 8000 Aarhus, Denmark}
-%\address[iClimate]{iCLIMATE Interdisciplinary Centre for Climate Change, Aarhus University}
-%\address[kitaddress]{Institute for Automation and Applied Informatics (IAI), Karlsruhe Institute of Technology (KIT), Forschungszentrum 449, 76344, Eggenstein-Leopoldshafen, Germany}
+\author[mymainaddress,iClimate]{Marta Victoria\corref{mycorrespondingauthor}}
+\ead{mvp@eng.au.dk}
+\author[mymainaddress]{Kun Zhu}
+\author[kitaddress]{Tom Brown}
+\author[mymainaddress,iClimate]{Gorm B. Andresen}
+\author[mymainaddress,iClimate]{Martin Greiner}
+\cortext[mycorrespondingauthor]{Corresponding author}
+\address[mymainaddress]{Department of Engineering, Aarhus University, Inge Lehmanns Gade 10, 8000 Aarhus, Denmark}
+\address[iClimate]{iCLIMATE Interdisciplinary Centre for Climate Change, Aarhus University}
+\address[kitaddress]{Institute for Automation and Applied Informatics (IAI), Karlsruhe Institute of Technology (KIT), Forschungszentrum 449, 76344, Eggenstein-Leopoldshafen, Germany}
 
 
 
@@ -263,9 +263,76 @@ The maximum CO$_2$ allowed to be emitted by the system $\textrm{CAP}_{CO2}$ can 
 
 where $\varepsilon_{s}$ represents the specific emissions in CO$_2$-tonne-per-MWh\th{} of the fuel $s$, $\eta_{n,s}$ the efficiency and $g_{n,s,t}$ the generators dispatch. In this case, the Lagrange/KKT multiplier represents the shadow price of CO$_2$, \textit{i.e.}, the additional price that should be added for every unit of CO$_2$ to achieve the CO$_2$ reduction target in an open market. 
 
+
+\begin{figure}[!t]
+\centering
+    %trim={<left> <lower> <right> <upper>}
+  \begin{adjustbox}{scale=0.60,trim=5 6.8cm 0 0}
+  \begin{circuitikz}
+  \draw (1.5,14.5) to [short,i^=grid connection] (1.5,13);
+  \draw [ultra thick] (-5,13) node[anchor=south]{electric bus} -- (6,13);
+  \draw(2.5,13) |- +(0,0.5) to [short,i^=$$] +(2,0.5);
+  \draw (0,-0.5) ;
+  \draw (0.5,13) -- +(0,-0.5) node[sground]{};
+  \draw (2.5,12) node[vsourcesinshape, rotate=270](V2){}
+  (V2.left) -- +(0,0.6);
+  \draw (2.5,11.2) node{generators};
+    \node[draw,minimum width=1cm,minimum height=0.6cm,anchor=south west] at (3.4,11.9){storage};
+    \draw (4,13) to (4,12.5);
+
+
+  \draw [ultra thick] (-6,10) node[anchor=south]{transport} -- (-3,10);
+  \draw (-5.5,10) -- +(0,-0.5) node[sground]{};
+  \draw (-3.5,10) to [short,i_=${}$] (-3.5,13);
+  \draw (-3.2,11.5)  node[rotate=90]{discharge};
+  \draw (-4.5,13) to [short,i^=${}$] (-4.5,10);
+  \draw (-4.2,11.5)  node[rotate=90]{charge};
+  \node[draw,minimum width=1cm,minimum height=0.6cm,anchor=south west] at (-4.5,8.9){battery};
+  \draw (-4,10) to (-4,9.5);
+
+    \draw [ultra thick] (2,10) -- (6.5,10)  node[anchor=south]{heat};
+  \draw (3.5,10) -- +(0,-0.5) node[sground]{};
+  % esource (empty source) is a dipole, so remove the legs by making it connect a distance of its own width
+  % follows: http://tex.stackexchange.com/questions/87275/use-circuitikz-voltage-source-icon-as-a-node
+  \draw (4.5,9.35) to [esource] (4.5,8.5);
+  \draw (4.5,10) -- (4.5,9.35);
+  \draw (4.5,8.3) node{solar thermal};
+  \draw (5,13) to [short,i^=heat pump;] (5,10);
+  \draw (6.2,11) node{resistive heater};
+  \node[draw,minimum width=1cm,minimum height=0.6cm,anchor=south west] at (5.5,8.9){hot water tank};
+  \draw (6,10) to (6,9.5);
+
+
+  \draw [ultra thick] (-2,10)  -- (0.5,10) node[anchor=south]{hydrogen};
+  \draw (-1.5,13) to [short,i_=${}$] (-1.5,10);
+    \draw (-1.2,11.5)  node[rotate=90]{electrolysis};
+  \draw (-0.5,10) to [short,i^=${}$] (-0.5,13);
+  \draw (-0.2,11.5)  node[rotate=90]{fuel cell};
+  \draw (-1,10) to (-1,9.5);
+  \node[draw,minimum width=1cm,minimum height=0.6cm,anchor=south west] at (-1.5,8.9){store};
+
+  %\draw (0,10) to [short,i_=${}$] (0,8);
+  \draw [ultra thick] (0.5,8) node[anchor=south]{methane} -- (3,8);
+  \draw (1.5,8) to [short,i_=${}$] (1.5,13);
+  \draw (2.5,8) to [short,i_=${}$] (2.5,10);
+  %\node[draw,minimum width=1cm,minimum height=0.6cm,anchor=south west] at (0.5,6.9){store};
+  %\draw (1,8) to (1,7.5);
+  %\draw (0.3,9)  node[rotate=90]{methanation};
+  \draw (1.8,9.2)  node[rotate=90]{generator/CHP};
+  \draw (2.8,9)  node[rotate=90]{boiler/CHP};
+
+  \end{circuitikz}
+
+\end{adjustbox}
+\caption{Energy flow at a single node representing a country. Within each node, there is a bus (thick horizontal line) for every sector 
+(electricity, transport and heating), to which different loads (triangles), energy sources (circles), storage units (rectangles) and converters (lines connecting buses) are attached.}
+\label{Fig_buses}
+\end{figure}
+
+
 \section{Sectors description and data}
 
-\textcolor[rgb]{1,0,0}{TODO: Add figure with the sectors included.}
+
 
 \subsection{Electricity sector}
 Hourly electricity demand for every country corresponding to 2015 is retrieved from EU Network Transmission System Operators of Electricity (ENTSO-E) via the convenient dataset prepared by the Open Power System Data (OPSD) initiative \cite{OPSD}. In every country, electricity can be generated by solar PV, onshore wind, offshore wind, Open Cycle Gas Turbines (OCGT), Combined Cycle Gas Turbines (CCGT), coal, lignite, and nuclear power plants and CHP units using either gas, coal or biomass. Their costs, lifetimes and efficiencies are shown in Table \ref{tab:cost per year}.  To represent scheduled shut-down, a constant 90\% availability is assumed for nuclear power plants. Country-wise onshore and offshore wind capacity factor time series are modeled by converting wind velocity from Climate Forecast System Reanalysis (CFSR) \cite{CFSR} into wind generation, following the methodology described in \cite{Andresen_2015}. CFSR database comprises hourly resolution and spatial resolution equal to 0.3125$^{\circ}$x0.3125$^{\circ}$, which in Europe roughly corresponds to 40x40 km$^2$. For every country, a capacity layout proportional to wind resource is assumed. Following \cite{Schlachtberger_2017}, large countries are divided into up to 4 regions sorted by wind resource. Independent classes of generators with different time series and average full load hours are added to a single node representing a country. Their optimised capacities are later aggregated on a country level for analysis. Time series representing the hourly capacity factors for solar PV were obtained by converting bias-corrected CFSR reanalysis irradiance into solar electricity generation, assuming a uniform capacity layout across every country. Details on the conversion and aggregation methodology can be found in \cite{Victoria_2019b}, the complete time series dataset is available in \href{https://doi.org/10.5281/zenodo.1321809}{10.5281/zenodo.1321809}. 50\% of PV capacity in every country is assumed to be utility-scale installations and 50\% rooftop PV systems with the cost and characteristics gathered in Tables \ref{tab:cost per year} and \ref{tab:inputs}. Discount rate is assumed to be 7\% for the former and 4\% for the latter. As discussed in \cite{Victoria_2019_EUPVSEC} the impact of this assumption is limited. The maximum capacity for onshore wind, offshore wind, and solar PV that can be installed in every country is limited by the estimated potentials. Those are determined by summing the available land in every reanalysis gridcell, which in turn is calculated by considering only the suitable land for every technology, according to the Corine Land Cover database \cite{Corine_2014} and subtracting Natura 2000 protected areas \cite{Natura2000}. For onshore and offshore wind, the potential is calculated as 20\% of the available land. For solar PV, 3\% of the available land is use for estimating the potential.
@@ -361,13 +428,10 @@ Country & District heating penetration  \\
 \subsection{Biomass}
 The solid biomass can be burnt in CHP or central heating plants associated with district heating systems or in power plants to produce electricity . The model does not include biogas that could be burnt or upgraded into biomethane.A conservative approach is followed to estimate biomass potentials in every country. From the JRC-ENSPRESO database \cite{JRC_biomass, ENSPRESO}, the potential estimations for 2030 in the scenario `medium' are retrieved, but only the types of biomass which are not competing with crops are considered valid. In essence, biomass potentials include only the following items: primary agricultural residues, primary and secondary forestry energy residues including sawdust, forestry residues from landscape care, and municipal waste.
 
-\subsubsection{Existing power plants and decommissioning}
+\subsection{Existing power plants and decommissioning}
 
 For conventional technologies, \textit{i.e.} OCGT, CCGT, coal, lignite, nuclear and CHP, installed capacities in every country in 2020 and commissioning dates are retrieved from \cite{powerplantmatching}. 
-A two-step method was implemented to fill commissioning date for power plants whose data was missing. First, for units larger than 50 MW, commissioning dates have been searched and manually added. Then, for smaller units, a Kernel Density Estimation (KDE) approach is used. In essence, for every technology and country, the units with available data are used to create a distribution, which is then used to assign an estimated commissioning date for those units with missing data. For solar PV, the installed capacities in 2020 and the installation dates were obtained by processing annual installed capacities statistics from \cite{IRENA_2019}. For offshore and onshore wind, capacities and age are retrieved from \cite{thewindpower}.
-
-%From David's: The transmission lines between countries are treated as a transport model with controllable dispatch (a coupled source and sink), constrained by energy conservation at each node. This is considered to be a justifiable approximation because many of the international connections are already controllable point-to-point high-voltage direct current (HVDC) connections, such as those undersea (like France-Britain), those over land (like the Spain-France INELFE project) or those in the planning phase (like the HVDC link planned between Germany and Belgium), while the flow on borders with only high-voltage alternating current (HVAC) connections are being increasingly controlled by phase-shifting transformers (like the German-Dutch, German-Polish and German-Czech borders). This also follows the way that interconnectors are handled in market clearing with Net Transfer Capacities (NTCs) on many borders.
-Existing power plants are assumed to be decommissioned at their corresponding commissioning date plus lifetime (Table \ref{tab:inputs}). When a power plant has been retrofitted, we assume that its operating life is extended by half of its nominal lifetime. 
+A two-step method was implemented to fill commissioning date for power plants whose data was missing. First, for units larger than 50 MW, commissioning dates have been searched and manually added. Then, for smaller units, a Kernel Density Estimation (KDE) approach is used. In essence, for every technology and country, the units with available data are used to create a distribution, which is then used to assign an estimated commissioning date for those units with missing data. For solar PV, the installed capacities in 2020 and the installation dates were obtained by processing annual installed capacities statistics from \cite{IRENA_2019}. For offshore and onshore wind, capacities and age are retrieved from \cite{thewindpower}. Existing power plants are assumed to be decommissioned at their corresponding commissioning date plus lifetime (Table \ref{tab:inputs}). When a power plant has been retrofitted, we assume that its operating life is extended by half of its nominal lifetime. 
 For heating capacities, 25\% of existing capacities in 2015 are assumed to be decommissioned in every time step after 2020.
 \begin{figure*}[!h]
 \centering
@@ -375,11 +439,21 @@ For heating capacities, 25\% of existing capacities in 2015 are assumed to be de
 \caption{Age distribution of European power plants in operation \cite{powerplantmatching, IRENA_2019}.} 
 \end{figure*}
 
+
+%From David's: The transmission lines between countries are treated as a transport model with controllable dispatch (a coupled source and sink), constrained by energy conservation at each node. This is considered to be a justifiable approximation because many of the international connections are already controllable point-to-point high-voltage direct current (HVDC) connections, such as those undersea (like France-Britain), those over land (like the Spain-France INELFE project) or those in the planning phase (like the HVDC link planned between Germany and Belgium), while the flow on borders with only high-voltage alternating current (HVAC) connections are being increasingly controlled by phase-shifting transformers (like the German-Dutch, German-Polish and German-Czech borders). This also follows the way that interconnectors are handled in market clearing with Net Transfer Capacities (NTCs) on many borders.
+
 \FloatBarrier
+
+\subsection{Transport sector} \
+
+The transport sector is included only in the final analysis of the paper. In that case, road and rail transport are considered to be electrified at a rate equal to the CO$_2$ reduction in the heating and electricity sectors relative to 2020. In this way, transport-related CO$_2$ emissions curb in parallel to the other sectors. Annual energy demands from road and rail transport for every country are retrieved from \cite{ODYSSEE}. Aviation, shipping, and pipe transport are not included in the model.  A country-specific factor (averaging 3.5) is used to account for the increased efficiency when electrifying transport. Country-specific factors are computed by comparing the current car final energy consumption per km in \cite{ODYSSEE} (averaging 0.7 kWh/km) to the 0.2 kWh/km value assumed for plug-to-wheels efficiency in EVs. The characteristic weakly profile provided by the German Federal Highway Research Institute (BASt) \cite{BASt} is used to obtain hourly time series for European countries taking into account the corresponding local times. Furthermore, a temperature dependence is included in the time series to account for heating/cooling demand in transport. For temperatures below/above 15$^{\circ}$C/20$^{\circ}$C, temperature coefficients of 0.63\%/$^{\circ}$C and 0.98\%/$^{\circ}$C are assumed, see \cite{Brown_2018} for more details. When fully electrified, the annual electricity demand from transportation sector in Europe accounts for 1,102 TWh/a. 
+
+At every time step, the internal-combustion vehicles transformed into battery electric vehicles (BEV) are assumed to include a battery with a storage capacity of 50 kWh, charging capacity of 11 kW, and 90\% charging efficiency. It is considered that all of them can shift their charging time as well as discharge into the grid to facilitate the operation of the system and reduce its total cost. Furthermore, it is assumed that, at every time step, 25\% of the existing BEV can provide vehicle-to-grid (v2g) services. The BEV state of charge is forced to be higher than 75\% at 5 a.m. every day (through $e_{n,s,t}$ in equation \ref{eq_storage}) to ensure that the batteries are full in the morning peak usage. This also restricts BEV demand to be shifted within a day and prevent EV batteries from becoming seasonal storage. The percentage of BEV connected to the grid at any time is inversely proportional to the transport demand profile, which translates into an average/minimum availability of 80\%/62\%. This approach is conservative compared to most of the literature. For instance, in \cite{circular_economy} the average parking time of the European fleet of vehicles is estimated at 92\%. The cost of the EV batteries is not included in the model since it is assumed that EV owners buy them to satisfy their mobility needs. 
+
+
 \subsection{Levelised Cost of Energy (LCOE)}
 
 The Levelised Cost of Energy is defined as the total system cost per unit of consumed energy, that is, including supplied electricity and heating demand. \\
-
 
 \section{Cost assumptions}	
 
@@ -502,31 +576,31 @@ Fuel & Cost  & Source & Emissions & Source \\
 
 \begin{figure}[!h]
 	\centering
-	\includegraphics[width=\columnwidth]{figures/installed_capacity_w_TYNDP.png}
+	\includegraphics[width=\columnwidth]{figures/installed_capacity_Base.png}
 	\caption{Installed capacities for different technologies throughout transition paths shown in Fig. 1 in the main text.} \label{fig_installed_capacity} 
 \end{figure}
 
 \begin{figure}[!h]
 \centering
-\includegraphics[width=\columnwidth]{figures/build_rates_w_TYNDP.png}
+\includegraphics[width=\columnwidth]{figures/build_rates_Base.png}
 \caption{Annual build rates for different technologies throughout transition paths shown in Fig. 1 in the main text. } \label{fig_build_rates} 
 \end{figure}
 
 \begin{figure*}[!h]
 \centering
-\includegraphics[width=0.8\columnwidth]{figures/storage_expansion_w_TYNDP.png}
+\includegraphics[width=0.8\columnwidth]{figures/storage_expansion_Base.png}
 \caption{Annual build rates for batteries and hydrogen storage throughout transition paths shown in Fig. 1 in the main text.} \label{fig_battery_hydrogen} 
 \end{figure*}
 
 \begin{figure}[!h]
 \centering
-\includegraphics[width=\columnwidth]{figures/utilisation_factors_w_TYNDP.png}
-\caption{Utilisation factors for lignite, coal, gas, and nuclear power plants throughout transition paths shown in Fig. \ref{fig_carbon_budget}.} \label{fig_utilisation_factors} 
+\includegraphics[width=0.8\columnwidth]{figures/utilisation_factors_Base.png}
+\caption{Utilisation factors for lignite, coal, gas, and nuclear power plants throughout transition paths shown in Fig. 1 in the main text} \label{fig_utilisation_factors} 
 \end{figure}
 
 \begin{figure*}[!h]
 \centering
-\includegraphics[width=0.8\columnwidth]{figures/electricity_production_w_TYNDP_go.png}
+\includegraphics[width=0.8\columnwidth]{figures/electricity_production_Base_go.png}
 \caption{Evolution of electricity generation mix in every country for the Tortoise transition path.} \label{fig_primary_energy} 
 \end{figure*}
 
@@ -538,26 +612,26 @@ Fuel & Cost  & Source & Emissions & Source \\
 
 \begin{figure}[!h]
 \centering
-\includegraphics[width=0.8\columnwidth]{figures/heat_production_w_TYNDP_go.png}
-\caption{Evolution of technologies used to supply heating in residential and services sector in the cautious path. } \label{fig_heating_shares} 
+\includegraphics[width=0.8\columnwidth]{figures/heat_production_Base_go.png}
+\caption{Evolution of technologies used to supply heating in residential and services sector in the Tortoise path. } \label{fig_heating_shares} 
 \end{figure}
 
 \FloatBarrier
 
 \section{Transition paths including district heating expansion}
 
-In this scenario, the model is rerun assuming that district heating penetration in every country expands from its value in 2025, Table \ref{tab_DH_penetration}, to 100\%, so that the entire urban heat demand is supplied by district heating systems.
-For the Tortoise, path cumulative system cost reduces by 250 B\EUR. The additional cost of extending and maintaining the required district heating network can be estimated by considering a a capital cost of 220\EUR/KW$_{th}$ and 40 years life time \cite{Brown_2018, Gerhardt_2015}. Considering that the peak in urban heat demand is approximately 500GW$_{th}$, this represents 9 B\EUR/year which roughly offsets the gains. However, taking into account that expanding gas distribution network has a cost of 387\EUR/kW$_{th}$ and 40 years lifetime \cite{Brown_2018, gas_distribution}. Consequently, the avoided expansion of gas distribution networks when district heating is deployed, makes this option clearly cheaper. 
+In this scenario, the model is rerun assuming that district heating penetration in every country expands from its value in 2025, Table \ref{tab_DH_penetration}, to 100\%, so that in 2050 the entire urban heat demand is supplied by district heating systems.
+For the Tortoise path cumulative system cost reduces by 13 B\EUR. The additional cost of extending and maintaining the required district heating network can be estimated by considering a a capital cost of 220\EUR/KW$_{th}$ and 40 years life time \cite{Brown_2018, Gerhardt_2015}. Considering that the peak in urban heat demand is approximately 500GW$_{th}$, this represents 9 B\EUR/year. However, expanding gas distribution networks also implies a cost, estimated in 387\EUR/kW$_{th}$ and 40 years lifetime \cite{Brown_2018, gas_distribution}. Consequently, the avoided expansion of gas distribution networks when district heating is deployed, makes this option clearly cheaper. 
 
 \section{Transition paths including electricity transmission grid expansion}
 
-In this scenario, the model is rerun assuming that for years from 2035 onwards, transmission capacities are optimized together with the rest of the system components using 2030 values as the lower boundary. Allowing the expansion of transmission capacities results into a decrease of 84 B\EUR in the cumulative cost for the Cautious path. The reinforced interconnection contribute to the spatial smoothing of wind fluctuations, increasing the optimal onshore and offshore wind capacities at the end of the path. The required energy capacity for hydrogen storage is reduced due to interconnections contribution to balancing wind generation balancing. 
+In this scenario, the model is rerun assuming that from 2035 onwards transmission capacities are optimized together with the rest of the system components using 2030 values as the lower boundary. Allowing the expansion of transmission capacities results into a decrease of 84 B\EUR in the cumulative cost for the Tortoise path. The reinforced interconnections contribute to the spatial smoothing of wind fluctuations, increasing the optimal onshore and offshore wind capacities at the end of the path. The required energy capacity for hydrogen storage is reduced due to interconnections contribution to balancing wind generation. 
 
 \FloatBarrier
 
 \section{Transition paths including transport}
 
-\textcolor[rgb]{1,0,0}{TODO: Describe path of electrification of transport.}
+\textcolor[rgb]{1,0,0}{TODO: Add results.}
 
 \section{References}
 \bibliography{bib_transition}
