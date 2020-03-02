@@ -37,9 +37,10 @@ def plot_co2_prices():
     
     date2 = [datetime(2020,1,1,0,0,0) + timedelta(hours=8760*i*5) for i in range(0,7)]
     ax1.plot(date2, metrics.loc['co2_price',idx['go', 'TYNDP',:]], linewidth=2, color= 'gold', 
-             marker='o', markeredgecolor='gold', label='Tortoise pathway')
+             marker='o', markerfacecolor='white', markeredgecolor='gold', label='Gentle pathway')
     ax1.plot(date2, metrics.loc['co2_price',idx['wait', 'TYNDP',:]], linewidth=2, 
-             color= 'red', marker='o',  label='Hare pathway')
+             color= 'firebrick', marker='o',  markerfacecolor='white', 
+             markeredgecolor='firebrick',label='Sudden pathway')
     ax1.set_ylabel('CO$_2$ price (€/ton)', fontsize=18)
     ax1.grid(linestyle='--')
     ax1.set_ylim([0, 500])    

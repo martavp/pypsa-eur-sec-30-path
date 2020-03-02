@@ -134,7 +134,7 @@ agedata=agedata/1000 #GW
 
 #future build_rates
 idx = pd.IndexSlice
-version= 'w_DH_exp' #'Base'
+version= 'w_Tran_exp' #'w_EV_exp' # #'w_Retro' #'w_DH_exp' #'Base'  
 cum_cap=pd.read_csv('results/version-' + version +'/csvs/metrics.csv', sep=',', 
                     index_col=0, header=[0,1,2])
 path_name_go='go'
@@ -168,7 +168,7 @@ expansion_dic={'Nuclear':'nuclear expansion',
 for year in years_future:    
     for technology in [t for t in technologies if t not in ('Hydro','Waste', 'Biomass', 'Natural Gas', 'gas CHP elec')]: 
         year_ref=2025+5*((year-2020)//5)
-        line_limit='TYNDP'
+        line_limit='opt' #'TYNDP'
         build_rates_go[technology][year]= cum_cap.loc[expansion_dic[technology],idx[path_name_go, line_limit, str(year_ref)]]
         # efficiencies thermal capacities to electric capacities: CHP=0.42, OCGT=0.42, CCT=0.59
         build_rates_go['gas CHP elec'][year]= 0.42*cum_cap.loc[expansion_dic['gas CHP'],idx[path_name_go, line_limit, str(year_ref)]]        
@@ -259,7 +259,7 @@ ax2.spines["right"].set_visible(False)
 ax2.set_xticks([])
 ax3.set_xticks([])
 #ax2.set_xlabel('Installed capacity (GW)', fontsize=16, x=1.15)
-ax2.text(25, 28, 'Tortoise path', fontsize=18)
+ax2.text(25, 28, 'Gentle path', fontsize=18)
 
 a4 = build_rates_wait[['Nuclear', 'Lignite', 'Hard Coal',  'Natural Gas', 'gas CHP elec']].plot.barh(stacked=True, legend=None,
      ax=ax4, color=[color['nuclear'], color['lignite'], color['coal'], color['gas'], color['gas CHP']], alpha=1, width=0.8, linewidth=0)
@@ -281,7 +281,7 @@ ax5.spines["right"].set_visible(False)
 ax5.spines["left"].set_visible(False)
 ax4.spines["right"].set_visible(False)
 ax4.set_xlabel('Installation rate GW)', fontsize=16, x=1.15)
-ax4.text(20, 28, 'Hare path', fontsize=18)
+ax4.text(25, 28, 'Sudden path', fontsize=18)
 
 ax3.set_yticks(list(range(0,30,2)))
 ax3.set_yticklabels(list(range(2020,2050,2)))
@@ -291,12 +291,12 @@ plt.savefig('../figures/age_distribution_' + version + '.png', dpi=300, bbox_inc
 
 #%%
 
-plt.figure(figsize=(20,21))
+plt.figure(figsize=(21,21))
 gs1 = gridspec.GridSpec(116, 5)
-ax2 = plt.subplot(gs1[55:85,0:2])
-ax3 = plt.subplot(gs1[55:85,2:5])
-ax4 = plt.subplot(gs1[85:115,0:2])
-ax5 = plt.subplot(gs1[85:115,2:5])
+ax2 = plt.subplot(gs1[55:84,0:2])
+ax3 = plt.subplot(gs1[55:84,2:5])
+ax4 = plt.subplot(gs1[88:117,0:2])
+ax5 = plt.subplot(gs1[88:117,2:5])
 gs1.update(wspace=0.2, hspace=0.4)
 
 a2 = build_rates_go[['gas boiler', 'gas CHP']].plot.barh(stacked=True,
@@ -326,9 +326,9 @@ ax2.spines["right"].set_visible(False)
 ax2.set_xticks([])
 ax3.set_xticks([])
 #ax2.set_xlabel('Installed capacity (GW)', fontsize=16, x=1.15)
-ax3.text(20, 2, 'Tortoise path', fontsize=18)
+ax3.text(20, 2, 'Gentle path', fontsize=18)
 ax2.set_zorder(1)
-ax2.legend(loc=(2.02,0.35), fontsize=16)
+ax2.legend(loc=(2.02,0.3), fontsize=16)
 ax3.legend(loc=(0.6,0.5), fontsize=16)
 
 a4 = build_rates_wait[['gas boiler', 'gas CHP']].plot.barh(stacked=True, legend=None,
@@ -351,7 +351,7 @@ ax5.spines["right"].set_visible(False)
 ax5.spines["left"].set_visible(False)
 ax4.spines["right"].set_visible(False)
 ax4.set_xlabel('Installation rate (GW$_{th}$)', fontsize=16, x=1.15)
-ax5.text(20, 2, 'Hare path', fontsize=18)
+ax5.text(20, 2, 'Sudden path', fontsize=18)
 ax3.set_yticks(list(range(0,30,2)))
 ax3.set_yticklabels(list(range(2020,2050,2)))
 ax5.set_yticks(list(range(0,30,2)))
@@ -361,12 +361,12 @@ plt.savefig('../figures/heating_expansion_' + version + '.png', dpi=300, bbox_in
 
 #%%
 
-plt.figure(figsize=(20,21))
-gs1 = gridspec.GridSpec(116, 5)
+plt.figure(figsize=(21,21))
+gs1 = gridspec.GridSpec(118, 5)
 #ax2 = plt.subplot(gs1[55:85,0])
-ax3 = plt.subplot(gs1[55:85,1:5])
+ax3 = plt.subplot(gs1[55:84,1:5])
 #ax4 = plt.subplot(gs1[85:115,0])
-ax5 = plt.subplot(gs1[85:115,1:5])
+ax5 = plt.subplot(gs1[88:117,1:5])
 gs1.update(wspace=0.14, hspace=0.4)
 
 a3 = build_rates_go[['battery', 'H2']].plot.barh(stacked=True, legend=None,
@@ -393,7 +393,7 @@ ax3.set_xticks([])
 #ax2.legend(loc=(3.2,0.35), fontsize=16)
 ax3.legend(['static battery', 'hydrogen storage'], loc=(0.6,0.5), fontsize=16)
 #ax2.set_xlabel('Installed capacity (GW)', fontsize=16, x=1.15)
-ax3.text(20, 3, 'Tortoise path', fontsize=18)
+ax3.text(20, 3, 'Gentle path', fontsize=18)
 
 a5 = build_rates_wait[['battery', 'H2']].plot.barh(stacked=True, legend=None,
      ax=ax5, color=['pink', 'purple'], alpha=1, width=0.8, linewidth=0)
@@ -413,7 +413,7 @@ ax5.spines["right"].set_visible(False)
 ax5.spines["left"].set_visible(False)
 #ax4.spines["right"].set_visible(False)
 ax5.set_xlabel('Installation rate, Energy capacity (GWh)', fontsize=16)
-ax5.text(20, 3, 'Hare path', fontsize=18)
+ax5.text(20, 3, 'Sudden path', fontsize=18)
 ax3.set_yticks(list(range(0,30,2)))
 ax3.set_yticklabels(list(range(2020,2050,2)))
 ax5.set_yticks(list(range(0,30,2)))

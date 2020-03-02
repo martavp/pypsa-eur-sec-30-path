@@ -21,17 +21,19 @@ plt.rcParams['ytick.labelsize'] = 18
 
 def PV_build_rates():
     # https://www.irena.org/statistics
-    df = pd.read_csv('data/PV_capacity_IRENA_query.csv', sep=';',
+    df = pd.read_csv('data/PV_capacity_IRENA.csv', sep=';',
                  index_col=0, encoding="latin-1")
 
-    countries=['Germany', 'Italy', 'Spain' , 'Czechia', 'Belgium', 'Greece', 'UK']
+    countries=['Germany', 'Italy', 'Spain' , 'Czechia', 'Belgium', 'Greece', 
+               'UK', 'Denmark']
     dic_country={'Germany': 'Germany', 
                  'Italy':'Italy', 
                  'Spain': 'Spain', 
                  'Czechia':'Czech Republic', 
                  'Belgium':'Belgium', 
                  'Greece':'Greece', 
-                 'UK':'United Kingdom' } 
+                 'UK':'United Kingdom',
+                 'Denmark':'Denmark'} 
 
     plt.figure(figsize=(10, 6))
     gs1 = gridspec.GridSpec(1, 1)
@@ -49,7 +51,7 @@ def PV_build_rates():
     ax1.set_xlim([2002, 2018])
 
     ax1.legend(fancybox=True, fontsize=16,
-               loc=(0.02,0.45), facecolor='white', frameon=True)
+               loc=(0.02,0.4), facecolor='white', frameon=True)
   
     plt.savefig('../figures/installation_rates_PV.png', dpi=300, bbox_inches='tight')
     
