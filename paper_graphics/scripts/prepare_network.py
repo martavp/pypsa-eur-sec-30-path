@@ -181,6 +181,20 @@ def prepare_data():
     df_cooling = df_cooling*(1-options['HS']/100.)
 
     ##############
+    #Transport
+    ##############
+    transport_data = pd.read_csv('data/transport_data.csv',index_col=0)
+
+    df_transport = pd.read_csv('data/demand_time_series/transport_demand.csv',index_col=0)
+    df_transport.index = snapshots
+
+    avail_profile = pd.read_csv('data/emobility/available_profile.csv',index_col=0)
+    avail_profile.index = snapshots
+
+    dsm_profile = pd.read_csv('data/emobility/dsm_profile.csv',index_col=0)
+    dsm_profile.index = snapshots
+
+    ##############
     #VRES CF
     ##############
     weather_year = options['weather_year']
@@ -214,7 +228,7 @@ def prepare_data():
     co2_totals = 1e6*pd.read_csv(snakemake.input.co2_totals_name,index_col=0)
 
 
-    return df_elec, df_heat, df_cooling, p_max_pu, p_nom_max, ashp_cop, gshp_cop, co2_totals
+    return df_elec, df_heat, df_cooling, p_max_pu, p_nom_max, ashp_cop, gshp_cop, co2_totals, df_transport, transport_data, avail_profile, dsm_profile
 
 
 def prepare_network(options):
@@ -257,7 +271,7 @@ def prepare_network(options):
     costs["fixed"] = [(annuity(v["lifetime"],v["discount rate"])+v["FOM"]/100.)*v["investment"]*Nyears for i,v in costs.iterrows()]
 
     #load demand data
-    df_elec, df_heat, df_cooling, p_max_pu, p_nom_max, ashp_cop, gshp_cop, co2_totals = prepare_data()
+    df_elec, df_heat, df_cooling, p_max_pu, p_nom_max, ashp_cop, gshp_cop, co2_totals, df_transport, transport_data, avail_profile, dsm_profile = prepare_data()
 
     #add carriers
     network.add("Carrier","gas",co2_emissions=costs.at['gas','CO2 intensity']) # in t_CO2/MWht
@@ -590,8 +604,9 @@ def prepare_network(options):
         #NB: must add costs of central heating afterwards (EUR 400 / kWpeak, 50a, 1% FOM from Fraunhofer ISE)
 
         #central are urban nodes with district heating
+        # district heating shares come from https://www.euroheat.org/knowledge-hub/country-profiles/
         central = nodes ^ urban
-        urban_fraction = pd.read_csv('data/existing_2020/district_heating_share.csv',index_col=0).loc[nodes,str(options['year'])] #options['year']
+        urban_fraction = pd.read_csv('data/existing_2020/district_heating_share.csv',index_col=0).loc[nodes,str(2015)] #options['year']
 
         network.madd("Bus",
                      nodes + " heat",
@@ -886,14 +901,54 @@ def prepare_network(options):
                      efficiency=3,
                      p_nom_extendable=True)
 
-		# back-up for cooling, data is from gas boiler
-        #network.madd("Link",
-        #            nodes + " gas cooler",
-        #             p_nom_extendable=True,
-        #             bus0=nodes + " gas",
-        #             bus1=nodes + " cooling",
-        #             efficiency=costs.at['decentral gas boiler','efficiency'],
-        #             capital_cost=costs.at['decentral gas boiler','efficiency']*costs.at['decentral gas boiler','fixed'])
+    # transportation sector
+    if options["transport_coupling"]:
+        EV_pene = options['EV_pene']
+        network.madd("Bus",
+                     nodes,
+                     suffix=" EV battery",
+                     carrier="Li ion")
+
+        network.madd("Load",
+                     nodes,
+                     suffix=" transport",
+                     bus=nodes + " EV battery",
+                     p_set=EV_pene*(df_transport[nodes]+shift_df(df_transport[nodes],1)+shift_df(df_transport[nodes],2))/3.)
+        
+        p_nom = EV_pene*transport_data["number cars"]*0.011 #3-phase charger with 11 kW * x% of time grid-connected
+        network.madd("Link",
+                     nodes,
+                     suffix= " BEV charger",
+                     bus0=nodes,
+                     bus1=nodes + " EV battery",
+                     p_nom=p_nom,
+                     p_max_pu=avail_profile[nodes],
+                     efficiency=0.9, #[B]
+                     #These were set non-zero to find LU infeasibility when availability = 0.25
+                     #p_nom_extendable=True,
+                     #p_nom_min=p_nom,
+                     #capital_cost=1e6,  #i.e. so high it only gets built where necessary
+                     )
+
+        if options["v2g"]:
+            network.madd("Link",
+                         nodes,
+                         suffix=" V2G",
+                         bus1=nodes,
+                         bus0=nodes + " EV battery",
+                         p_nom=p_nom*options['v2g_availability'],
+                         p_max_pu=avail_profile[nodes],
+                         efficiency=0.9)  #[B]
+
+        if options["bev"]:
+            network.madd("Store",
+                         nodes,
+                         suffix=" battery storage",
+                         bus=nodes + " EV battery",
+                         e_cyclic=True,
+                         e_nom=EV_pene*transport_data["number cars"]*0.05*options["bev_availability"],
+                         e_max_pu=1,
+                         e_min_pu=dsm_profile[nodes])
 
     #add lines
     if not network.options['no_lines']:

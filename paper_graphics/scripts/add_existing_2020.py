@@ -209,7 +209,7 @@ n.links.loc[s.index,'p_nom_min'] = s
 techs = ['gas boiler','resistive heater','heat pump']
 df = pd.read_csv('data/existing_2020/existing_heating_in_MW.csv',index_col=0)
 
-s = pd.read_csv('data/existing_2020/district_heating_share.csv',index_col=0)['2015'] # district heating shares in 2020
+s = pd.read_csv('data/existing_2020/district_heating_share.csv',index_col=0)['2020'] # district heating shares
 s = s.reindex(nodes)
 
 for tech in techs:

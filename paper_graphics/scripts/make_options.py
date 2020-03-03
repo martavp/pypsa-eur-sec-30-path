@@ -53,8 +53,15 @@ options["chp"] = True
 options['cooling_coupling'] = True
 options['add_methanation'] = True
 options['biomass'] = True
+
+### retrofitting ###
 #options['HS'] = 0.02
-#options['gas_autonomy'] = True
+
+### transport ###
+options['transport_coupling'] = True
+options['EV_pene'] = (1-options['co2_reduction']-0.298835)/0.7011650
+options['bev'] = True
+options['v2g'] = True
 
 
 yaml.dump(options,open(output_name,"w"))

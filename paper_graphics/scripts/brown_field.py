@@ -75,7 +75,7 @@ n_g.links.loc[expand.index,'p_nom_min'] = expand
 
 techs = ['gas boiler','resistive heater','heat pump'] # heating plants die out
 df = pd.read_csv('data/existing_2020/existing_heating_in_MW.csv',index_col=0)
-s = pd.read_csv('data/existing_2020/district_heating_share.csv',index_col=0)['2020'] # district heating shares in 2020
+s = pd.read_csv('data/existing_2020/district_heating_share.csv',index_col=0)['2020']
 years = np.arange(2025,2020+25,5) # assuming lifetime of 20 years
 if year in years:
     for tech in techs:
