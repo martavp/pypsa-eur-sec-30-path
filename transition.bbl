@@ -5,13 +5,26 @@
 \expandafter\ifx\csname href\endcsname\relax
   \def\href#1#2{#2} \def\path#1{#1}\fi
 
-\bibitem{in-depth_2018}
-\href{https://ec.europa.eu/clima/news/commission-calls-climate-neutral-europe-2050_en}{In-depth
-  analysis in support of the {Comission} {Communication} {COM}(2018) 773 {A}
-  {Clean} {Planet} for all. {A} {European} long-term strategic vision for a
-  prosperous, modern, competitive and climate neutral economy}, Tech. rep.
-  (Nov. 2018).
-\newline\urlprefix\url{https://ec.europa.eu/clima/news/commission-calls-climate-neutral-europe-2050_en}
+\bibitem{IPCC_1.5}
+\href{https://www.ipcc.ch/sr15/}{Global {Warming} of 1.5$^{\circ}${C},
+  {Intergovernmental} {Panel} on {Climate} {Change} ({IPCC})}, Tech. rep.
+  (2018).
+\newline\urlprefix\url{https://www.ipcc.ch/sr15/}
+
+\bibitem{Raupach_2014}
+M.~R. Raupach, S.~J. Davis, G.~P. Peters, R.~M. Andrew, J.~G. Canadell,
+  P.~Ciais, P.~Friedlingstein, F.~Jotzo, D.~P. Vuuren, C.~L. Qu{\'e}r{\'e},
+  \href{https://www.nature.com/articles/nclimate2384}{Sharing a quota on
+  cumulative carbon emissions}, Nature Climate Change 4~(10) (2014) 873--879.
+\newblock \href {https://doi.org/10.1038/nclimate2384}
+  {\path{doi:10.1038/nclimate2384}}.
+\newline\urlprefix\url{https://www.nature.com/articles/nclimate2384}
+
+\bibitem{UNFCCC_inventory}
+\href{https://www.eea.europa.eu/data-and-maps/data/national-emissions-reported-to-the-unfccc-and-to-the-eu-greenhouse-gas-monitoring-mechanism-15}{National
+  emissions reported to the {UNFCCC} and to the {EU} {Greenhouse} {Gas}
+  {Monitoring} {Mechanism} , {EEA}}.
+\newline\urlprefix\url{https://www.eea.europa.eu/data-and-maps/data/national-emissions-reported-to-the-unfccc-and-to-the-eu-greenhouse-gas-monitoring-mechanism-15}
 
 \bibitem{EEA_totalGHG}
 \href{https://www.eea.europa.eu/data-and-maps/indicators/greenhouse-gas-emission-trends-6/assessment-2}{Total
@@ -32,18 +45,9 @@
 M.~Warren, \href{http://www.nature.com/articles/d41586-019-00861-z}{Thousands
   of scientists are backing the kids striking for climate change}, Nature 567
   (2019) 291--292.
-\newblock \href {http://dx.doi.org/10.1038/d41586-019-00861-z}
+\newblock \href {https://doi.org/10.1038/d41586-019-00861-z}
   {\path{doi:10.1038/d41586-019-00861-z}}.
 \newline\urlprefix\url{http://www.nature.com/articles/d41586-019-00861-z}
-
-\bibitem{Rinscheid_2019}
-A.~Rinscheid, R.~W{\"u}stenhagen,
-  \href{https://www.nature.com/articles/s41560-019-0460-9}{Germany’s decision
-  to phase out coal by 2038 lags behind citizens’ timing preferences}, Nature
-  Energy 4~(10) (2019) 856--863.
-\newblock \href {http://dx.doi.org/10.1038/s41560-019-0460-9}
-  {\path{doi:10.1038/s41560-019-0460-9}}.
-\newline\urlprefix\url{https://www.nature.com/articles/s41560-019-0460-9}
 
 \bibitem{Lantz_2012}
 E.~Lantz, R.~Wiser, M.~Hand,
@@ -55,8 +59,8 @@ E.~Lantz, R.~Wiser, M.~Hand,
 F.~Creutzig, P.~Agoston, J.~C. Goldschmidt, G.~Luderer, G.~Nemet, R.~C.
   Pietzcker, \href{https://www.nature.com/articles/nenergy2017140}{The
   underestimated potential of solar energy to mitigate climate change}, Nature
-  Energy 2~(9).
-\newblock \href {http://dx.doi.org/10.1038/nenergy.2017.140}
+  Energy 2~(9) (Aug. 2017).
+\newblock \href {https://doi.org/10.1038/nenergy.2017.140}
   {\path{doi:10.1038/nenergy.2017.140}}.
 \newline\urlprefix\url{https://www.nature.com/articles/nenergy2017140}
 
@@ -72,7 +76,7 @@ N.~M. Haegel, H.~Atwater, T.~Barnes, C.~Breyer, A.~Burrell, Y.-M. Chiang, S.~D.
   \href{https://science.sciencemag.org/content/364/6443/836}{Terawatt-scale
   photovoltaics: {Transform} global energy}, Science 364~(6443) (2019)
   836--838.
-\newblock \href {http://dx.doi.org/10.1126/science.aaw1845}
+\newblock \href {https://doi.org/10.1126/science.aaw1845}
   {\path{doi:10.1126/science.aaw1845}}.
 \newline\urlprefix\url{https://science.sciencemag.org/content/364/6443/836}
 
@@ -81,7 +85,7 @@ E.~H. Eriksen, L.~J. Schwenk-Nebbe, B.~Tranberg, T.~Brown, M.~Greiner,
   \href{http://www.sciencedirect.com/science/article/pii/S0360544217309593}{Optimal
   heterogeneity in a simplified highly renewable {European} electricity
   system}, Energy 133~(Supplement C) (2017) 913--928.
-\newblock \href {http://dx.doi.org/10.1016/j.energy.2017.05.170}
+\newblock \href {https://doi.org/10.1016/j.energy.2017.05.170}
   {\path{doi:10.1016/j.energy.2017.05.170}}.
 \newline\urlprefix\url{http://www.sciencedirect.com/science/article/pii/S0360544217309593}
 
@@ -90,7 +94,7 @@ D.~P. Schlachtberger, T.~Brown, S.~Schramm, M.~Greiner,
   \href{http://www.sciencedirect.com/science/article/pii/S0360544217309969}{The
   benefits of cooperation in a highly renewable {European} electricity
   network}, Energy 134~(Supplement C) (2017) 469--481.
-\newblock \href {http://dx.doi.org/10.1016/j.energy.2017.06.004}
+\newblock \href {https://doi.org/10.1016/j.energy.2017.06.004}
   {\path{doi:10.1016/j.energy.2017.06.004}}.
 \newline\urlprefix\url{http://www.sciencedirect.com/science/article/pii/S0360544217309969}
 
@@ -99,8 +103,7 @@ H.~C. Gils, Y.~Scholz, T.~Pregger, D.~L. de~Tena, D.~Heide,
   \href{http://www.sciencedirect.com/science/article/pii/S0360544217301238}{Integrated
   modelling of variable renewable energy-based power supply in {Europe}},
   Energy 123 (2017) 173 -- 188.
-\newblock \href
-  {http://dx.doi.org/https://doi.org/10.1016/j.energy.2017.01.115}
+\newblock \href {https://doi.org/https://doi.org/10.1016/j.energy.2017.01.115}
   {\path{doi:https://doi.org/10.1016/j.energy.2017.01.115}}.
 \newline\urlprefix\url{http://www.sciencedirect.com/science/article/pii/S0360544217301238}
 
@@ -110,7 +113,7 @@ T.~W. Brown, T.~Bischof-Niemz, K.~Blok, C.~Breyer, H.~Lund, B.~V. Mathiesen,
   to ‘burden of proof: A comprehensive review of the feasibility of 100\%
   renewable-electricity systems’}, Renewable and Sustainable Energy Reviews
   92 (2018) 834--847.
-\newblock \href {http://dx.doi.org/10.1016/j.rser.2018.04.113}
+\newblock \href {https://doi.org/10.1016/j.rser.2018.04.113}
   {\path{doi:10.1016/j.rser.2018.04.113}}.
 \newline\urlprefix\url{http://www.sciencedirect.com/science/article/pii/S1364032118303307}
 
@@ -119,7 +122,7 @@ R.~A. Rodr\'iguez, S.~Becker, G.~B. Andresen, D.~Heide, M.~Greiner,
   \href{http://www.sciencedirect.com/science/article/pii/S0960148113005351}{Transmission
   needs across a fully renewable {European} power system}, Renewable Energy 63
   (2014) 467--476.
-\newblock \href {http://dx.doi.org/10.1016/j.renene.2013.10.005}
+\newblock \href {https://doi.org/10.1016/j.renene.2013.10.005}
   {\path{doi:10.1016/j.renene.2013.10.005}}.
 \newline\urlprefix\url{http://www.sciencedirect.com/science/article/pii/S0960148113005351}
 
@@ -128,7 +131,7 @@ M.~G. Rasmussen, G.~B. Andresen, M.~Greiner,
   \href{http://www.sciencedirect.com/science/article/pii/S0301421512007677}{Storage
   and balancing synergies in a fully or highly renewable pan-{European} power
   system}, Energy Policy 51 (2012) 642 -- 651.
-\newblock \href {http://dx.doi.org/https://doi.org/10.1016/j.enpol.2012.09.009}
+\newblock \href {https://doi.org/https://doi.org/10.1016/j.enpol.2012.09.009}
   {\path{doi:https://doi.org/10.1016/j.enpol.2012.09.009}}.
 \newline\urlprefix\url{http://www.sciencedirect.com/science/article/pii/S0301421512007677}
 
@@ -138,7 +141,7 @@ F.~Cebulla, T.~Naegler, M.~Pohl,
   energy storage in highly renewable {European} energy systems: {Capacity}
   requirements, spatial distribution, and storage dispatch}, Journal of Energy
   Storage 14 (2017) 211--223.
-\newblock \href {http://dx.doi.org/10.1016/j.est.2017.10.004}
+\newblock \href {https://doi.org/10.1016/j.est.2017.10.004}
   {\path{doi:10.1016/j.est.2017.10.004}}.
 \newline\urlprefix\url{http://www.sciencedirect.com/science/article/pii/S2352152X17302815}
 
@@ -148,7 +151,7 @@ M.~Victoria, K.~Zhu, T.~Brown, G.~B. Andresen, M.~Greiner,
   role of storage technologies throughout the decarbonisation of the
   sector-coupled {European} energy system}, Energy Conversion and Management
   201 (2019) 111977.
-\newblock \href {http://dx.doi.org/10.1016/j.enconman.2019.111977}
+\newblock \href {https://doi.org/10.1016/j.enconman.2019.111977}
   {\path{doi:10.1016/j.enconman.2019.111977}}.
 \newline\urlprefix\url{http://www.sciencedirect.com/science/article/pii/S0196890419309835}
 
@@ -158,7 +161,7 @@ D.~Connolly, H.~Lund, B.~V. Mathiesen,
   {Energy} {Europe}: {The} technical and economic impact of one potential 100\%
   renewable energy scenario for the {European} {Union}}, Renewable and
   Sustainable Energy Reviews 60 (2016) 1634--1653.
-\newblock \href {http://dx.doi.org/10.1016/j.rser.2016.02.025}
+\newblock \href {https://doi.org/10.1016/j.rser.2016.02.025}
   {\path{doi:10.1016/j.rser.2016.02.025}}.
 \newline\urlprefix\url{http://www.sciencedirect.com/science/article/pii/S1364032116002331}
 
@@ -167,7 +170,7 @@ T.~Brown, D.~Schlachtberger, A.~Kies, S.~Schramm, M.~Greiner,
   \href{http://www.sciencedirect.com/science/article/pii/S036054421831288X}{Synergies
   of sector coupling and transmission reinforcement in a cost-optimised, highly
   renewable {European} energy system}, Energy 160 (2018) 720--739.
-\newblock \href {http://dx.doi.org/10.1016/j.energy.2018.06.222}
+\newblock \href {https://doi.org/10.1016/j.energy.2018.06.222}
   {\path{doi:10.1016/j.energy.2018.06.222}}.
 \newline\urlprefix\url{http://www.sciencedirect.com/science/article/pii/S036054421831288X}
 
@@ -177,7 +180,7 @@ M.~Child, C.~Kemfert, D.~Bogdanov, C.~Breyer,
   electricity generation, grid exchange and storage for the transition to a
   100\% renewable energy system in {Europe}}, Renewable Energy 139 (2019)
   80--101.
-\newblock \href {http://dx.doi.org/10.1016/j.renene.2019.02.077}
+\newblock \href {https://doi.org/10.1016/j.renene.2019.02.077}
   {\path{doi:10.1016/j.renene.2019.02.077}}.
 \newline\urlprefix\url{http://www.sciencedirect.com/science/article/pii/S0960148119302319}
 
@@ -185,7 +188,7 @@ M.~Child, C.~Kemfert, D.~Bogdanov, C.~Breyer,
 R.~Gross, R.~Hanna,
   \href{https://www.nature.com/articles/s41560-019-0383-5}{Path dependency in
   provision of domestic heating}, Nature Energy 4~(5)  358--364.
-\newblock \href {http://dx.doi.org/10.1038/s41560-019-0383-5}
+\newblock \href {https://doi.org/10.1038/s41560-019-0383-5}
   {\path{doi:10.1038/s41560-019-0383-5}}.
 \newline\urlprefix\url{https://www.nature.com/articles/s41560-019-0383-5}
 
@@ -207,7 +210,7 @@ D.~Bogdanov, J.~Farfan, K.~Sadovskaia, A.~Aghahosseini, M.~Child, A.~Gulagi,
   \href{https://www.nature.com/articles/s41467-019-08855-1}{Radical
   transformation pathway towards sustainable electricity via evolutionary
   steps}, Nature Communications 10~(1) (2019) 1--16.
-\newblock \href {http://dx.doi.org/10.1038/s41467-019-08855-1}
+\newblock \href {https://doi.org/10.1038/s41467-019-08855-1}
   {\path{doi:10.1038/s41467-019-08855-1}}.
 \newline\urlprefix\url{https://www.nature.com/articles/s41467-019-08855-1}
 
@@ -217,7 +220,7 @@ G.~Ple{\ss}mann, P.~Blechinger,
   to meet {EU} {GHG} emission reduction targets? {A} model based
   decarbonization pathway for {Europe}'s electricity supply system until 2050},
   Energy Strategy Reviews 15 (2017) 19--32.
-\newblock \href {http://dx.doi.org/10.1016/j.esr.2016.11.003}
+\newblock \href {https://doi.org/10.1016/j.esr.2016.11.003}
   {\path{doi:10.1016/j.esr.2016.11.003}}.
 \newline\urlprefix\url{http://www.sciencedirect.com/science/article/pii/S2211467X16300530}
 
@@ -226,7 +229,7 @@ C.~Gerbaulet, C.~von Hirschhausen, C.~Kemfert, C.~Lorenz, P.~Y. Oei,
   \href{http://www.sciencedirect.com/science/article/pii/S0960148119302538}{European
   electricity sector decarbonization under different levels of foresight},
   Renewable Energy 141 (2019) 973--987.
-\newblock \href {http://dx.doi.org/10.1016/j.renene.2019.02.099}
+\newblock \href {https://doi.org/10.1016/j.renene.2019.02.099}
   {\path{doi:10.1016/j.renene.2019.02.099}}.
 \newline\urlprefix\url{http://www.sciencedirect.com/science/article/pii/S0960148119302538}
 
@@ -235,7 +238,7 @@ K.~Poncelet, E.~Delarue, D.~Six, W.~D'haeseleer, Myopic optimization models for
   simulation of investment decisions in the electric power sector, in: 13th
   {International} {Conference} on the {European} {Energy} {Market} ({EEM}),
   2016, pp. 1--9.
-\newblock \href {http://dx.doi.org/10.1109/EEM.2016.7521261}
+\newblock \href {https://doi.org/10.1109/EEM.2016.7521261}
   {\path{doi:10.1109/EEM.2016.7521261}}.
 
 \bibitem{Heuberger_2018}
@@ -243,9 +246,99 @@ C.~F. Heuberger, I.~Staffell, N.~Shah, N.~M. Dowell,
   \href{https://www.nature.com/articles/s41560-018-0159-3}{Impact of myopic
   decision-making and disruptive events in power systems planning}, Nat Energy
   3~(8) (2019) 634--640.
-\newblock \href {http://dx.doi.org/10.1038/s41560-018-0159-3}
+\newblock \href {https://doi.org/10.1038/s41560-018-0159-3}
   {\path{doi:10.1038/s41560-018-0159-3}}.
 \newline\urlprefix\url{https://www.nature.com/articles/s41560-018-0159-3}
+
+\bibitem{Pfenninger_2017}
+S.~Pfenninger,
+  \href{http://www.nature.com/news/energy-scientists-must-show-their-workings-1.21517}{Energy
+  scientists must show their workings}, Nature News 542~(7642)  393.
+\newblock \href {https://doi.org/10.1038/542393a} {\path{doi:10.1038/542393a}}.
+\newline\urlprefix\url{http://www.nature.com/news/energy-scientists-must-show-their-workings-1.21517}
+
+\bibitem{Pfenninger_2018}
+S.~Pfenninger, L.~Hirth, I.~Schlecht, E.~Schmid, F.~Wiese, T.~Brown, C.~Davis,
+  M.~Gidden, H.~Heinrichs, C.~Heuberger, S.~Hilpert, U.~Krien, C.~Matke,
+  A.~Nebel, R.~Morrison, B.~Müller, G.~Pleßmann, M.~Reeg, J.~C. Richstein,
+  A.~Shivakumar, I.~Staffell, T.~Tr{\"o}ndle, C.~Wingenbach,
+  \href{http://www.sciencedirect.com/science/article/pii/S2211467X17300809}{Opening
+  the black box of energy modelling: Strategies and lessons learned}, Energy
+  Strategy Reviews 19  63--71.
+\newblock \href {https://doi.org/10.1016/j.esr.2017.12.002}
+  {\path{doi:10.1016/j.esr.2017.12.002}}.
+\newline\urlprefix\url{http://www.sciencedirect.com/science/article/pii/S2211467X17300809}
+
+\bibitem{Zhu_2019}
+K.~Zhu, M.~Victoria, T.~Brown, G.~B. Andresen, M.~Greiner,
+  \href{http://www.sciencedirect.com/science/article/pii/S030626191831835X}{Impact
+  of {CO}2 prices on the design of a highly decarbonised coupled electricity
+  and heating system in {E}urope}, Applied Energy 236 (2019) 622--634.
+\newblock \href {https://doi.org/10.1016/j.apenergy.2018.12.016}
+  {\path{doi:10.1016/j.apenergy.2018.12.016}}.
+\newline\urlprefix\url{http://www.sciencedirect.com/science/article/pii/S030626191831835X}
+
+\bibitem{Tong_2019}
+D.~Tong, Q.~Zhang, Y.~Zheng, K.~Caldeira, C.~Shearer, C.~Hong, Y.~Qin, S.~J.
+  Davis, \href{https://www.nature.com/articles/s41586-019-1364-3}{Committed
+  emissions from existing energy infrastructure jeopardize 1.5 $^{\circ}$c
+  climate target}, Nature 572~(7769)  373--377.
+\newblock \href {https://doi.org/10.1038/s41586-019-1364-3}
+  {\path{doi:10.1038/s41586-019-1364-3}}.
+\newline\urlprefix\url{https://www.nature.com/articles/s41586-019-1364-3}
+
+\bibitem{powerplantmatching}
+\href{https://github.com/FRESNA/powerplantmatching}{powerplantmatching}.
+\newline\urlprefix\url{https://github.com/FRESNA/powerplantmatching}
+
+\bibitem{IRENA_2019}
+\href{https://www.irena.org/publications/2019/Mar/Renewable-Capacity-Statistics-2019}{{Renewable
+  Capacity Statistics} 2019, {IRENA}}.
+\newline\urlprefix\url{https://www.irena.org/publications/2019/Mar/Renewable-Capacity-Statistics-2019}
+
+\bibitem{Krey_2019}
+V.~Krey, F.~Guo, P.~Kolp, W.~Zhou, R.~Schaeffer, A.~Awasthy, C.~Bertram, H.-S.
+  de~Boer, P.~Fragkos, S.~Fujimori, C.~He, G.~Iyer, K.~Keramidas, A.~C.
+  Köberle, K.~Oshiro, L.~A. Reis, B.~Shoai-Tehrani, S.~Vishwanathan,
+  P.~Capros, L.~Drouet, J.~E. Edmonds, A.~Garg, D.~E. H.~J. Gernaat, K.~Jiang,
+  M.~Kannavou, A.~Kitous, E.~Kriegler, G.~Luderer, R.~Mathur, M.~Muratori,
+  F.~Sano, D.~P. van Vuuren,
+  \href{http://www.sciencedirect.com/science/article/pii/S0360544218325039}{Looking
+  under the hood: {A} comparison of techno-economic assumptions across national
+  and global integrated assessment models}, Energy 172 (2019) 1254--1267.
+\newblock \href {https://doi.org/10.1016/j.energy.2018.12.131}
+  {\path{doi:10.1016/j.energy.2018.12.131}}.
+\newline\urlprefix\url{http://www.sciencedirect.com/science/article/pii/S0360544218325039}
+
+\bibitem{Geels_2017}
+F.~W. Geels, B.~K. Sovacool, T.~Schwanen, S.~Sorrell,
+  \href{https://science.sciencemag.org/content/357/6357/1242}{Sociotechnical
+  transitions for deep decarbonization}, Science 357~(6357) (2017) 1242--1244.
+\newblock \href {https://doi.org/10.1126/science.aao3760}
+  {\path{doi:10.1126/science.aao3760}}.
+\newline\urlprefix\url{https://science.sciencemag.org/content/357/6357/1242}
+
+\bibitem{Vartiainen_2019}
+E.~Vartiainen, G.~Masson, C.~Breyer, D.~Moser, E.~R. Medina,
+  \href{https://onlinelibrary.wiley.com/doi/abs/10.1002/pip.3189}{Impact of
+  weighted average cost of capital, capital expenditure, and other parameters
+  on future utility-scale {PV} levelised cost of electricity}, Progress in
+  Photovoltaics: Research and Applications (2017).
+\newblock \href {https://doi.org/10.1002/pip.3189}
+  {\path{doi:10.1002/pip.3189}}.
+\newline\urlprefix\url{https://onlinelibrary.wiley.com/doi/abs/10.1002/pip.3189}
+
+\bibitem{ETS}
+\href{https://sandbag.org.uk/carbon-price-viewer/}{Carbon price viewer}.
+\newline\urlprefix\url{https://sandbag.org.uk/carbon-price-viewer/}
+
+\bibitem{in-depth_2018}
+\href{https://ec.europa.eu/clima/news/commission-calls-climate-neutral-europe-2050_en}{In-depth
+  analysis in support of the {Comission} {Communication} {COM}(2018) 773 {A}
+  {Clean} {Planet} for all. {A} {European} long-term strategic vision for a
+  prosperous, modern, competitive and climate neutral economy}, Tech. rep.
+  (Nov. 2018).
+\newline\urlprefix\url{https://ec.europa.eu/clima/news/commission-calls-climate-neutral-europe-2050_en}
 
 \bibitem{JRC-EU-TIMES}
 S.~Simoes, W.~Nijs, P.~Ruiz, A.~Sgobbi, D.~Radu, P.~Bolat, C.~Thiel,
@@ -261,7 +354,7 @@ K.~L{\"o}ffler, T.~Burandt, K.~Hainsch, P.-Y. Oei,
   the low-carbon transition of the {European} energy system - {A} quantitative
   assessment of the stranded assets problem}, Energy Strategy Reviews 26
   100422.
-\newblock \href {http://dx.doi.org/10.1016/j.esr.2019.100422}
+\newblock \href {https://doi.org/10.1016/j.esr.2019.100422}
   {\path{doi:10.1016/j.esr.2019.100422}}.
 \newline\urlprefix\url{http://www.sciencedirect.com/science/article/pii/S2211467X19301142}
 
@@ -269,7 +362,7 @@ K.~L{\"o}ffler, T.~Burandt, K.~Hainsch, P.-Y. Oei,
 C.~McGlade, P.~Ekins, \href{https://www.nature.com/articles/nature14016}{The
   geographical distribution of fossil fuels unused when limiting global warming
   to 2$^{\circ}${C}}, Nature 517~(7533) (2015) 187--190.
-\newblock \href {http://dx.doi.org/10.1038/nature14016}
+\newblock \href {https://doi.org/10.1038/nature14016}
   {\path{doi:10.1038/nature14016}}.
 \newline\urlprefix\url{https://www.nature.com/articles/nature14016}
 
@@ -277,7 +370,7 @@ C.~McGlade, P.~Ekins, \href{https://www.nature.com/articles/nature14016}{The
 S.~Babrowski, T.~Heffels, P.~Jochem, W.~Fichtner,
   \href{https://doi.org/10.1007/s12667-013-0085-1}{Reducing computing time of
   energy system models by a myopic approach} 5~(1)  65--83.
-\newblock \href {http://dx.doi.org/10.1007/s12667-013-0085-1}
+\newblock \href {https://doi.org/10.1007/s12667-013-0085-1}
   {\path{doi:10.1007/s12667-013-0085-1}}.
 \newline\urlprefix\url{https://doi.org/10.1007/s12667-013-0085-1}
 
@@ -287,104 +380,15 @@ F.~Ueckerdt, R.~Pietzcker, Y.~Scholz, D.~Stetter, A.~Giannousakis, G.~Luderer,
   global power supply under region-specific consideration of challenges and
   options of integrating variable renewables in the {REMIND} model}, Energy
   Economics 64  665--684.
-\newblock \href {http://dx.doi.org/10.1016/j.eneco.2016.05.012}
+\newblock \href {https://doi.org/10.1016/j.eneco.2016.05.012}
   {\path{doi:10.1016/j.eneco.2016.05.012}}.
 \newline\urlprefix\url{http://www.sciencedirect.com/science/article/pii/S014098831630130X}
-
-\bibitem{Pfenninger_2017}
-S.~Pfenninger,
-  \href{http://www.nature.com/news/energy-scientists-must-show-their-workings-1.21517}{Energy
-  scientists must show their workings}, Nature News 542~(7642)  393.
-\newblock \href {http://dx.doi.org/10.1038/542393a}
-  {\path{doi:10.1038/542393a}}.
-\newline\urlprefix\url{http://www.nature.com/news/energy-scientists-must-show-their-workings-1.21517}
-
-\bibitem{Pfenninger_2018}
-S.~Pfenninger, L.~Hirth, I.~Schlecht, E.~Schmid, F.~Wiese, T.~Brown, C.~Davis,
-  M.~Gidden, H.~Heinrichs, C.~Heuberger, S.~Hilpert, U.~Krien, C.~Matke,
-  A.~Nebel, R.~Morrison, B.~Müller, G.~Pleßmann, M.~Reeg, J.~C. Richstein,
-  A.~Shivakumar, I.~Staffell, T.~Tr{\"o}ndle, C.~Wingenbach,
-  \href{http://www.sciencedirect.com/science/article/pii/S2211467X17300809}{Opening
-  the black box of energy modelling: Strategies and lessons learned}, Energy
-  Strategy Reviews 19  63--71.
-\newblock \href {http://dx.doi.org/10.1016/j.esr.2017.12.002}
-  {\path{doi:10.1016/j.esr.2017.12.002}}.
-\newline\urlprefix\url{http://www.sciencedirect.com/science/article/pii/S2211467X17300809}
-
-\bibitem{IPCC_1.5}
-\href{https://www.ipcc.ch/sr15/}{Global {Warming} of 1.5$^{\circ}${C},
-  {Intergovernmental} {Panel} on {Climate} {Change} ({IPCC})}, Tech. rep.
-  (2018).
-\newline\urlprefix\url{https://www.ipcc.ch/sr15/}
-
-\bibitem{Raupach_2014}
-M.~R. Raupach, S.~J. Davis, G.~P. Peters, R.~M. Andrew, J.~G. Canadell,
-  P.~Ciais, P.~Friedlingstein, F.~Jotzo, D.~P. Vuuren, C.~L. Qu{\'e}r{\'e},
-  \href{https://www.nature.com/articles/nclimate2384}{Sharing a quota on
-  cumulative carbon emissions}, Nature Climate Change 4~(10) (2014) 873--879.
-\newblock \href {http://dx.doi.org/10.1038/nclimate2384}
-  {\path{doi:10.1038/nclimate2384}}.
-\newline\urlprefix\url{https://www.nature.com/articles/nclimate2384}
-
-\bibitem{UNFCCC_inventory}
-\href{https://www.eea.europa.eu/data-and-maps/data/national-emissions-reported-to-the-unfccc-and-to-the-eu-greenhouse-gas-monitoring-mechanism-15}{National
-  emissions reported to the {UNFCCC} and to the {EU} {Greenhouse} {Gas}
-  {Monitoring} {Mechanism} , {EEA}}.
-\newline\urlprefix\url{https://www.eea.europa.eu/data-and-maps/data/national-emissions-reported-to-the-unfccc-and-to-the-eu-greenhouse-gas-monitoring-mechanism-15}
-
-\bibitem{Zhu_2019}
-K.~Zhu, M.~Victoria, T.~Brown, G.~B. Andresen, M.~Greiner,
-  \href{http://www.sciencedirect.com/science/article/pii/S030626191831835X}{Impact
-  of {CO}2 prices on the design of a highly decarbonised coupled electricity
-  and heating system in {E}urope}, Applied Energy 236 (2019) 622--634.
-\newblock \href {http://dx.doi.org/10.1016/j.apenergy.2018.12.016}
-  {\path{doi:10.1016/j.apenergy.2018.12.016}}.
-\newline\urlprefix\url{http://www.sciencedirect.com/science/article/pii/S030626191831835X}
-
-\bibitem{Tong_2019}
-D.~Tong, Q.~Zhang, Y.~Zheng, K.~Caldeira, C.~Shearer, C.~Hong, Y.~Qin, S.~J.
-  Davis, \href{https://www.nature.com/articles/s41586-019-1364-3}{Committed
-  emissions from existing energy infrastructure jeopardize 1.5 $^{\circ}$c
-  climate target}, Nature 572~(7769)  373--377.
-\newblock \href {http://dx.doi.org/10.1038/s41586-019-1364-3}
-  {\path{doi:10.1038/s41586-019-1364-3}}.
-\newline\urlprefix\url{https://www.nature.com/articles/s41586-019-1364-3}
-
-\bibitem{powerplantmatching}
-\href{https://github.com/FRESNA/powerplantmatching}{powerplantmatching}.
-\newline\urlprefix\url{https://github.com/FRESNA/powerplantmatching}
-
-\bibitem{IRENA_2019}
-\href{https://www.irena.org/publications/2019/Mar/Renewable-Capacity-Statistics-2019}{{Renewable
-  Capacity Statistics} 2019, {IRENA}}.
-\newline\urlprefix\url{https://www.irena.org/publications/2019/Mar/Renewable-Capacity-Statistics-2019}
-
-\bibitem{Geels_2017}
-F.~W. Geels, B.~K. Sovacool, T.~Schwanen, S.~Sorrell,
-  \href{https://science.sciencemag.org/content/357/6357/1242}{Sociotechnical
-  transitions for deep decarbonization}, Science 357~(6357) (2017) 1242--1244.
-\newblock \href {http://dx.doi.org/10.1126/science.aao3760}
-  {\path{doi:10.1126/science.aao3760}}.
-\newline\urlprefix\url{https://science.sciencemag.org/content/357/6357/1242}
 
 \bibitem{Neumann_2019}
 F.~Neumann, T.~Brown, \href{http://arxiv.org/abs/1910.01891}{The
   {Near}-{Optimal} {Feasible} {Space} of a {Renewable} {Power} {System}
-  {Model}}, arXiv:1910.01891.
+  {Model}}, arXiv:1910.01891 (2019).
 \newline\urlprefix\url{http://arxiv.org/abs/1910.01891}
-
-\bibitem{Vartiainen_2019}
-E.~Vartiainen, G.~Masson, C.~Breyer, D.~Moser, E.~R. Medina,
-  \href{https://onlinelibrary.wiley.com/doi/abs/10.1002/pip.3189}{Impact of
-  weighted average cost of capital, capital expenditure, and other parameters
-  on future utility-scale {PV} levelised cost of electricity}, Progress in
-  Photovoltaics: Research and Applications\href
-  {http://dx.doi.org/10.1002/pip.3189} {\path{doi:10.1002/pip.3189}}.
-\newline\urlprefix\url{https://onlinelibrary.wiley.com/doi/abs/10.1002/pip.3189}
-
-\bibitem{ETS}
-\href{https://sandbag.org.uk/carbon-price-viewer/}{Carbon price viewer}.
-\newline\urlprefix\url{https://sandbag.org.uk/carbon-price-viewer/}
 
 \bibitem{DH_penetration}
 \href{https://www.euroheat.org/knowledge-hub/country-profiles/}{{Euro} {Heat}
@@ -402,15 +406,15 @@ F.~Egli, B.~Steffen, T.~S. Schmidt,
   \href{https://www.nature.com/articles/s41467-019-12468-z}{Bias in energy
   system models with uniform cost of capital assumption}, Nature Communications
   10~(1)  1--3.
-\newblock \href {http://dx.doi.org/10.1038/s41467-019-12468-z}
+\newblock \href {https://doi.org/10.1038/s41467-019-12468-z}
   {\path{doi:10.1038/s41467-019-12468-z}}.
 \newline\urlprefix\url{https://www.nature.com/articles/s41467-019-12468-z}
 
 \bibitem{PyPSA}
 T.~Brown, J.~H\"orsch, D.~Schlachtberger,
   \href{https://doi.org/10.5334/jors.188}{{PyPSA: Python for Power System
-  Analysis}}, Journal of Open Research Software 6.
-\newblock \href {http://dx.doi.org/10.5334/jors.188}
+  Analysis}}, Journal of Open Research Software 6 (2018).
+\newblock \href {https://doi.org/10.5334/jors.188}
   {\path{doi:10.5334/jors.188}}.
 \newline\urlprefix\url{https://doi.org/10.5334/jors.188}
 

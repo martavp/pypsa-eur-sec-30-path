@@ -143,7 +143,7 @@ T.~Brown, D.~Schlachtberger, A.~Kies, S.~Schramm, M.~Greiner,
 \bibitem{DEA_2019}
 \href{https://ens.dk/en/our-services/projections-and-models/technology-data/technology-data-generation-electricity-and}{Technology
   {Data} for {Generation} of {Electricity} and {District} {Heating}, update
-  november 2019}, Tech. rep., Danish Energy Agency and Energinet.dk (2019).
+  {November} 2019}, Tech. rep., Danish Energy Agency and Energinet.dk (2019).
 \newline\urlprefix\url{https://ens.dk/en/our-services/projections-and-models/technology-data/technology-data-generation-electricity-and}
 
 \bibitem{Staffell_2019}
@@ -258,7 +258,8 @@ E.~Vartiainen, G.~Masson, C.~Breyer, D.~Moser, E.~R. Medina,
 E.~Vartiainen, G.~Masson, C.~Breyer,
   \href{http://www.etip-pv.eu/fileadmin/Documents/ETIP_PV_Publications_2017-2018/LCOE_Report_March_2017.pdf}{The
   true competitiveness of solar {PV}: a {European} case study}, Tech. rep.,
-  European technology and innovation platform for photovoltaics (2017).
+  European {Technology} and {Innovation} {Platform} for {Photovoltaics}
+  ({ETIP}) (2017).
 \newline\urlprefix\url{http://www.etip-pv.eu/fileadmin/Documents/ETIP_PV_Publications_2017-2018/LCOE_Report_March_2017.pdf}
 
 \bibitem{Lazard_2019}
@@ -300,6 +301,22 @@ K.~Schaber, \href{https://d-nb.info/1058680781/34}{Integration of {Variable}
   {M{\"u}nchen} (2013).
 \newline\urlprefix\url{https://d-nb.info/1058680781/34}
 
+\bibitem{Gerhardt_2015}
+N.~Gerhardt, A.~Scholz, F.~Sandau, H.~H.,
+  \href{http://www.energiesystemtechnik.iwes.fraunhofer.de/de/projekte/suche/2015/interaktion_strom_waerme_verkehr.html}{{Interaktion}
+  {EE-Strom}, {W{\"a}rme} und {Verkehr.} {Tech. rep.} {Fraunhofer} {IWES}}.
+\newline\urlprefix\url{http://www.energiesystemtechnik.iwes.fraunhofer.de/de/projekte/suche/2015/interaktion_strom_waerme_verkehr.html}
+
+\bibitem{Budischak_2013}
+C.~Budischak, D.~Sewell, H.~Thomson, L.~Mach, D.~E. Veron, W.~Kempton,
+  \href{http://www.sciencedirect.com/science/article/pii/S0378775312014759}{Cost-minimized
+  combinations of wind power, solar power and electrochemical storage, powering
+  the grid up to 99.9\% of the time}, Journal of Power Sources 225 (2013)
+  60--74.
+\newblock \href {http://dx.doi.org/10.1016/j.jpowsour.2012.09.054}
+  {\path{doi:10.1016/j.jpowsour.2012.09.054}}.
+\newline\urlprefix\url{http://www.sciencedirect.com/science/article/pii/S0378775312014759}
+
 \bibitem{BP_2019}
 \href{https://www.bp.com/content/dam/bp/business-sites/en/global/corporate/pdfs/energy-economics/statistical-review/bp-stats-review-2019-full-report.pdf}{{BP}
   {Statistical} {Review} of {World} {Energy}}.
@@ -320,11 +337,74 @@ W.~Zappa, M.~Junginger, M.~van~den Broek,
   {\path{doi:10.1016/j.apenergy.2018.08.109}}.
 \newline\urlprefix\url{http://www.sciencedirect.com/science/article/pii/S0306261918312790}
 
-\bibitem{Gerhardt_2015}
-N.~Gerhardt, A.~Scholz, F.~Sandau, H.~H.,
-  \href{http://www.energiesystemtechnik.iwes.fraunhofer.de/de/projekte/suche/2015/interaktion_strom_waerme_verkehr.html}{Interaktion
-  ee-strom, w{"a}rme und verkehr. {Tech. rep.} {Fraunhofer} {IWES}}.
-\newline\urlprefix\url{http://www.energiesystemtechnik.iwes.fraunhofer.de/de/projekte/suche/2015/interaktion_strom_waerme_verkehr.html}
+\bibitem{Fell_2015}
+H.-J. Fell, C.~Breyer, M.~Metayer,
+  \href{http://www.eupvsec-proceedings.com/proceedings?paper=35067}{The
+  {Projections} for the {Future} and {Quality} in the {Past} of the {World}
+  {Energy} {Outlook} for {Solar} {PV} and {Other} {Renewable} {Energy}
+  {Technologies}}, 31$^{st}$ European Photovoltaic Solar Energy Conference and
+  Exhibition (2015) 3220--3246\href
+  {http://dx.doi.org/10.4229/EUPVSEC20152015-7DV.4.61}
+  {\path{doi:10.4229/EUPVSEC20152015-7DV.4.61}}.
+\newline\urlprefix\url{http://www.eupvsec-proceedings.com/proceedings?paper=35067}
+
+\bibitem{Creutzig_2017}
+F.~Creutzig, P.~Agoston, J.~C. Goldschmidt, G.~Luderer, G.~Nemet, R.~C.
+  Pietzcker, \href{https://www.nature.com/articles/nenergy2017140}{The
+  underestimated potential of solar energy to mitigate climate change}, Nature
+  Energy 2~(9).
+\newblock \href {http://dx.doi.org/10.1038/nenergy.2017.140}
+  {\path{doi:10.1038/nenergy.2017.140}}.
+\newline\urlprefix\url{https://www.nature.com/articles/nenergy2017140}
+
+\bibitem{Haegel_2019}
+N.~M. Haegel, H.~Atwater, T.~Barnes, C.~Breyer, A.~Burrell, Y.-M. Chiang, S.~D.
+  Wolf, B.~Dimmler, D.~Feldman, S.~Glunz, J.~C. Goldschmidt, D.~Hochschild,
+  R.~Inzunza, I.~Kaizuka, B.~Kroposki, S.~Kurtz, S.~Leu, R.~Margolis,
+  K.~Matsubara, A.~Metz, W.~K. Metzger, M.~Morjaria, S.~Niki, S.~Nowak, I.~M.
+  Peters, S.~Philipps, T.~Reindl, A.~Richter, D.~Rose, K.~Sakurai,
+  R.~Schlatmann, M.~Shikano, W.~Sinke, R.~Sinton, B.~J. Stanbery, M.~Topic,
+  W.~Tumas, Y.~Ueda, J.~v.~d. Lagemaat, P.~Verlinden, M.~Vetter, E.~Warren,
+  M.~Werner, M.~Yamaguchi, A.~W. Bett,
+  \href{https://science.sciencemag.org/content/364/6443/836}{Terawatt-scale
+  photovoltaics: {Transform} global energy}, Science 364~(6443) (2019)
+  836--838.
+\newblock \href {http://dx.doi.org/10.1126/science.aaw1845}
+  {\path{doi:10.1126/science.aaw1845}}.
+\newline\urlprefix\url{https://science.sciencemag.org/content/364/6443/836}
+
+\bibitem{Fraunhofer}
+\href{https://www.ise.fraunhofer.de/content/dam/ise/de/documents/publications/studies/Photovoltaics-Report.pdf}{{Photovoltaics}
+  {Report}, {Fraunhofer} {Institute} for {Solar} {Energy} {Systems}, version
+  {November} 2019}, Tech. rep. (2019).
+\newline\urlprefix\url{https://www.ise.fraunhofer.de/content/dam/ise/de/documents/publications/studies/Photovoltaics-Report.pdf}
+
+\bibitem{in-depth_2018}
+\href{https://ec.europa.eu/clima/news/commission-calls-climate-neutral-europe-2050_en}{In-depth
+  analysis in support of the {Comission} {Communication} {COM}(2018) 773 {A}
+  {Clean} {Planet} for all. {A} {European} long-term strategic vision for a
+  prosperous, modern, competitive and climate neutral economy}, Tech. rep.
+  (Nov. 2018).
+\newline\urlprefix\url{https://ec.europa.eu/clima/news/commission-calls-climate-neutral-europe-2050_en}
+
+\bibitem{in-depth-data}
+\href{https://ec.europa.eu/energy/sites/ener/files/documents/2018_06_27_technology_pathways_-_finalreportmain2.pdf}{Technology
+  pathways in decarbonisation scenarios}, Tech. rep. (2018).
+\newline\urlprefix\url{https://ec.europa.eu/energy/sites/ener/files/documents/2018_06_27_technology_pathways_-_finalreportmain2.pdf}
+
+\bibitem{Krey_2019}
+V.~Krey, F.~Guo, P.~Kolp, W.~Zhou, R.~Schaeffer, A.~Awasthy, C.~Bertram, H.-S.
+  de~Boer, P.~Fragkos, S.~Fujimori, C.~He, G.~Iyer, K.~Keramidas, A.~C.
+  Köberle, K.~Oshiro, L.~A. Reis, B.~Shoai-Tehrani, S.~Vishwanathan,
+  P.~Capros, L.~Drouet, J.~E. Edmonds, A.~Garg, D.~E. H.~J. Gernaat, K.~Jiang,
+  M.~Kannavou, A.~Kitous, E.~Kriegler, G.~Luderer, R.~Mathur, M.~Muratori,
+  F.~Sano, D.~P. van Vuuren,
+  \href{http://www.sciencedirect.com/science/article/pii/S0360544218325039}{Looking
+  under the hood: {A} comparison of techno-economic assumptions across national
+  and global integrated assessment models}, Energy 172 (2019) 1254--1267.
+\newblock \href {http://dx.doi.org/10.1016/j.energy.2018.12.131}
+  {\path{doi:10.1016/j.energy.2018.12.131}}.
+\newline\urlprefix\url{http://www.sciencedirect.com/science/article/pii/S0360544218325039}
 
 \bibitem{gas_distribution}
 \href{https://www.bundesnetzagentur.de/DE/Sachgebiete/ElektrizitaetundGas/Unternehmen_Institutionen/DatenaustauschundMonitoring/Monitoring/Monitoringberichte/Monitoring_Berichte.html}{Tech.

@@ -134,7 +134,7 @@ agedata=agedata/1000 #GW
 
 #future build_rates
 idx = pd.IndexSlice
-version= 'w_Tran_exp' #'w_EV_exp' # #'w_Retro' #'w_DH_exp' #'Base'  
+version= 'Base'  #'w_Tran_exp' #'w_EV_exp' # #'w_Retro' #'w_DH_exp'  
 cum_cap=pd.read_csv('results/version-' + version +'/csvs/metrics.csv', sep=',', 
                     index_col=0, header=[0,1,2])
 path_name_go='go'
@@ -168,7 +168,7 @@ expansion_dic={'Nuclear':'nuclear expansion',
 for year in years_future:    
     for technology in [t for t in technologies if t not in ('Hydro','Waste', 'Biomass', 'Natural Gas', 'gas CHP elec')]: 
         year_ref=2025+5*((year-2020)//5)
-        line_limit='opt' #'TYNDP'
+        line_limit='TYNDP' #opt'
         build_rates_go[technology][year]= cum_cap.loc[expansion_dic[technology],idx[path_name_go, line_limit, str(year_ref)]]
         # efficiencies thermal capacities to electric capacities: CHP=0.42, OCGT=0.42, CCT=0.59
         build_rates_go['gas CHP elec'][year]= 0.42*cum_cap.loc[expansion_dic['gas CHP'],idx[path_name_go, line_limit, str(year_ref)]]        
@@ -193,8 +193,8 @@ ax0 = plt.subplot(gs1[0:55,0])
 ax1 = plt.subplot(gs1[0:55,1:6])
 ax2 = plt.subplot(gs1[55:85,0])
 ax3 = plt.subplot(gs1[55:85,1:6])
-ax4 = plt.subplot(gs1[85:115,0])
-ax5 = plt.subplot(gs1[85:115,1:6])
+# ax4 = plt.subplot(gs1[85:115,0])
+# ax5 = plt.subplot(gs1[85:115,1:6])
 #gs1.update(wspace=0.14, hspace=0.4)
 gs1.update(wspace=0.3, hspace=0.4)
 
@@ -256,37 +256,37 @@ ax2.spines["left"].set_visible(False)
 ax3.spines["right"].set_visible(False)
 ax3.spines["left"].set_visible(False)
 ax2.spines["right"].set_visible(False)
-ax2.set_xticks([])
-ax3.set_xticks([])
-#ax2.set_xlabel('Installed capacity (GW)', fontsize=16, x=1.15)
+#ax2.set_xticks([])
+#ax3.set_xticks([])
+ax2.set_xlabel('Installed capacity (GW/year)', fontsize=18, x=1.15)
 ax2.text(25, 28, 'Gentle path', fontsize=18)
-
-a4 = build_rates_wait[['Nuclear', 'Lignite', 'Hard Coal',  'Natural Gas', 'gas CHP elec']].plot.barh(stacked=True, legend=None,
-     ax=ax4, color=[color['nuclear'], color['lignite'], color['coal'], color['gas'], color['gas CHP']], alpha=1, width=0.8, linewidth=0)
-a5 = build_rates_wait[['Onshore Wind', 'Offshore Wind', 'Solar', 'biomass CHP', 'biomass HOP', 'biomass EOP']].plot.barh(stacked=True, legend=None,
-     ax=ax5, color=[color['onshore wind'], color['offshore wind'], color['solar PV'], color['biomass'],color['biomass'], color['biomass']], alpha=1, width=0.8, linewidth=0)
-ax4.invert_xaxis()
-ax4.invert_yaxis()
-ax5.invert_yaxis()
-ax4.set_yticks([])
-ax4.set_xlim(xlim_conv,0)
-ax5.set_xlim(0,xlim_RES)
-ax4.set_ylabel('')
-ax5.set_ylabel('')
-ax5.set_yticklabels([str(year) for year in years_future], fontsize=10) 
-ax4.spines["top"].set_visible(False)
-ax5.spines["top"].set_visible(False)
-ax4.spines["left"].set_visible(False)
-ax5.spines["right"].set_visible(False)
-ax5.spines["left"].set_visible(False)
-ax4.spines["right"].set_visible(False)
-ax4.set_xlabel('Installation rate GW)', fontsize=16, x=1.15)
-ax4.text(25, 28, 'Sudden path', fontsize=18)
-
 ax3.set_yticks(list(range(0,30,2)))
 ax3.set_yticklabels(list(range(2020,2050,2)))
-ax5.set_yticks(list(range(0,30,2)))
-ax5.set_yticklabels(list(range(2020,2050,2)))
+
+# a4 = build_rates_wait[['Nuclear', 'Lignite', 'Hard Coal',  'Natural Gas', 'gas CHP elec']].plot.barh(stacked=True, legend=None,
+#      ax=ax4, color=[color['nuclear'], color['lignite'], color['coal'], color['gas'], color['gas CHP']], alpha=1, width=0.8, linewidth=0)
+# a5 = build_rates_wait[['Onshore Wind', 'Offshore Wind', 'Solar', 'biomass CHP', 'biomass HOP', 'biomass EOP']].plot.barh(stacked=True, legend=None,
+#      ax=ax5, color=[color['onshore wind'], color['offshore wind'], color['solar PV'], color['biomass'],color['biomass'], color['biomass']], alpha=1, width=0.8, linewidth=0)
+# ax4.invert_xaxis()
+# ax4.invert_yaxis()
+# ax5.invert_yaxis()
+# ax4.set_yticks([])
+# ax4.set_xlim(xlim_conv,0)
+# ax5.set_xlim(0,xlim_RES)
+# ax4.set_ylabel('')
+# ax5.set_ylabel('')
+# ax5.set_yticklabels([str(year) for year in years_future], fontsize=10) 
+# ax4.spines["top"].set_visible(False)
+# ax5.spines["top"].set_visible(False)
+# ax4.spines["left"].set_visible(False)
+# ax5.spines["right"].set_visible(False)
+# ax5.spines["left"].set_visible(False)
+# ax4.spines["right"].set_visible(False)
+# ax4.set_xlabel('Installation rate (GW/year)', fontsize=16, x=1.15)
+# ax4.text(25, 28, 'Sudden path', fontsize=18)
+
+# ax5.set_yticks(list(range(0,30,2)))
+# ax5.set_yticklabels(list(range(2020,2050,2)))
 plt.savefig('../figures/age_distribution_' + version + '.png', dpi=300, bbox_inches='tight') 
 
 #%%
@@ -350,7 +350,7 @@ ax4.spines["left"].set_visible(False)
 ax5.spines["right"].set_visible(False)
 ax5.spines["left"].set_visible(False)
 ax4.spines["right"].set_visible(False)
-ax4.set_xlabel('Installation rate (GW$_{th}$)', fontsize=16, x=1.15)
+ax4.set_xlabel('Installation rate (GW$_{th}$/year)', fontsize=16, x=1.15)
 ax5.text(20, 2, 'Sudden path', fontsize=18)
 ax3.set_yticks(list(range(0,30,2)))
 ax3.set_yticklabels(list(range(2020,2050,2)))
@@ -412,7 +412,7 @@ ax5.spines["top"].set_visible(False)
 ax5.spines["right"].set_visible(False)
 ax5.spines["left"].set_visible(False)
 #ax4.spines["right"].set_visible(False)
-ax5.set_xlabel('Installation rate, Energy capacity (GWh)', fontsize=16)
+ax5.set_xlabel('Installation rate, Energy capacity (GWh/year)', fontsize=16)
 ax5.text(20, 3, 'Sudden path', fontsize=18)
 ax3.set_yticks(list(range(0,30,2)))
 ax3.set_yticklabels(list(range(2020,2050,2)))

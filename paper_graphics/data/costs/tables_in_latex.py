@@ -85,8 +85,9 @@ dic_ref = {'Technology Data for Energy Plants for Electricity and District heati
            'Impact of weighted average cost of capital, capital expenditure, and other parameters on future utility‐scale PV levelised cost of electricity': 'Vartiainen_2019',
            'European PV Technology and Innovation Platform' : 'Vartiainen_2017',
            'Lazard’s Levelized Cost of Energy Analysis - Version 13.0': 'Lazard_2019',           
-           #'budischak2013':'Budischak_2013',
-           #'NREL http://www.nrel.gov/docs/fy09osti/45873.pdf; budischak2013': 'Steward_2009b, Budischak_2013',
+           'budischak2013':'Budischak_2013, DEA_2019',
+           #'NREL http://www.nrel.gov/docs/fy09osti/45873.pdf; 
+           'IWES Interaktion':'Gerhardt_2015, DEA_2019',
            'Schaber thesis':'Schaber_2013',
            'Hagspiel':'Hagspiel_2014',
            'Fasihi':'Fasihi_2017',
@@ -126,16 +127,25 @@ for technology in technologies:
         efficiency = str(round(costs.loc[idx[technology,'efficiency'],'value'],2))
     else:
         efficiency= ' '  
-    if technology not in ['water tank charger', 'hydro', 'ror', 'PHS']:   
+    if technology not in ['water tank charger', 'hydro', 'ror', 'PHS',
+                          'electrolysis', 'fuel cell', 'decentral water tank storage']:   
         source = costs.loc[idx[technology,'lifetime'],'source']
+    elif technology == 'decentral water tank storage':
+        source = costs.loc[idx[technology,'investment'],'source']      
     else:
         source = costs.loc[idx[technology,'efficiency'],'source']
-        
-    file.write(' ' +name[technology] 
-    + ' & ' +  FOM
-    + ' & ' +  lifetime
-    + ' & ' + efficiency
-    + ' & ' + ' \\' + 'cite{' + dic_ref[source]+ '} ')
+    if technology == 'water tank charger':
+       file.write(' ' +name[technology] 
+        + ' & ' +  FOM
+        + ' & ' +  lifetime
+        + ' & ' + efficiency
+        + ' & ' + ' \\' + ' ') 
+    else:        
+        file.write(' ' +name[technology] 
+        + ' & ' +  FOM
+        + ' & ' +  lifetime
+        + ' & ' + efficiency
+        + ' & ' + ' \\' + 'cite{' + dic_ref[source]+ '} ')
 
     file.write('\\') 
     file.write('\\') 
@@ -174,13 +184,18 @@ for technology in technologies:
         else:
             file.write(str(int(costs_year.loc[idx[technology,'investment'],'value']))+ ' & ' )
         
-    if technology not in ['water tank charger', 'hydro', 'ror', 'PHS']:
+    if technology not in ['water tank charger', 'hydro', 'ror', 'PHS', 'decentral water tank storage']:
     # water tank charger has no lifetime, hydro reference for lifetime 
     # is IEA2011, but for cost is DIW    
         source = costs.loc[idx[technology,'lifetime'],'source']
+    elif technology == 'decentral water tank storage':
+        source = costs.loc[idx[technology,'investment'],'source']      
     else:
-        source = costs.loc[idx[technology,'efficiency'],'source']    
-    file.write( ' \\' + 'cite{' + dic_ref[source]+ '} ')
+        source = costs.loc[idx[technology,'efficiency'],'source'] 
+    if technology == 'water tank charger':
+        file.write( ' \\' + ' ')
+    else:
+        file.write( ' \\' + 'cite{' + dic_ref[source]+ '} ')
     file.write('\\') 
     file.write('\\') 
 file.close()    

@@ -92,7 +92,7 @@
 
 \begin{frontmatter}
 
-\title{Supplementary Materials for ``The benefits of ambitious short-term targets when decarbonising the sector-coupled energy system in Europe'' }
+\title{Supplementary Materials for ``Early decarbonisation of the European energy system pays off'' }
 
 \author[mymainaddress,iClimate]{Marta Victoria\corref{mycorrespondingauthor}}
 \ead{mvp@eng.au.dk}
@@ -131,6 +131,8 @@ The carbon budget from now onwards for the generation of electricity and the sup
 \includegraphics[width=\textwidth]{figures/historical_sectoral_emissions.png}
 \caption{Sectoral distribution of historical emissions in the European Union \cite{UNFCCC_inventory}. The black stars indicate committed EU reduction targets, while white stars mark under-discussion targets.} \label{fig_historical_emissions} 
 \end{figure}
+
+\FloatBarrier
 
 \section{CO$_2$ restriction paths with equivalent budget}
 
@@ -463,7 +465,7 @@ The Levelised Cost of Energy is defined as the total system cost per unit of con
 \footnotesize
 \centering
 \begin{threeparttable}
-\caption{Cost assumptions per technology and year. All costs are given in real 2015 money. } \label{tab:cost per year}
+\caption{Overnight investment cost assumptions per technology and year. All costs are given in real 2015 money. } \label{tab:cost per year}
 \centering
 \begin{tabularx}{18cm}{lccccccccr}
 \toprule
@@ -571,7 +573,14 @@ Fuel & Cost  & Source & Emissions & Source \\
 
 \FloatBarrier
 
-\section{Transition paths Tortoise and Hare. Additional results}
+\section{Realistic cost assumptions for solar PV} 
+
+The technology is forecast to keep decreasing its price achieving a cost between 151 \EUR/kW \cite{Vartiainen_2019} and 241 \cite{DEA_2019} \EUR/kW for utility-scale installations in 2050. The recent evolution of solar PV and the attained cost reduction is known to have been repeatedly underestimated by the International Energy Agency \cite{Fell_2015}, ecologist organisations \cite{Creutzig_2017}, and PV scientists \cite{Haegel_2019}.  Investment cost for utility-scale solar PV in 2020 is estimated in the range of 398-423 \EUR/kW \cite{Vartiainen_2017, DEA_2019}. For rooftop PV intallations, a wider range is found, 1070-1127 \EUR/kW \cite{DEA_2019, Fraunhofer, Vartiainen_2019}, due to the higher impact of local experience and labour costs. \\
+
+
+Assuming outdated costs for solar PV is also known to be a flaw of most Integrated Assessment Models (IAMs) and this can have a huge impact on the results. Creutzig \textit{et al.} already pointed out this problem in \cite{Creutzig_2017} where they found similar solar PV penetration than we do when realistic costs are assumed for solar PV. However, the problem persists. For instance, the PRIMES model used in the report supporting the \textit{Clean Planet for All} strategy of the EU Commission \cite{in-depth_2018} assumes 407-495 \EUR/kW in 2050 \cite{in-depth-data} which is higher than the lower range value for today's costs. Even more worrying are the findings by Krey \textsl{et al.} \cite{Krey_2019}. The authors review the techno-economic assumptions in the electricity sector among fifteen different global and national IAMs. Figure 4 on \cite{Krey_2019} shows that most of the reviewed IAMs include cost assumptions for solar PV in 2050 close to 1000 \EUR/kW. Although they do not specify if the cost refers to utility-scale or rooftop installations, the values are twice as high as the cost already achieved by this technology in large installations. 
+
+\section{Transition paths Gentle and Sudden. Additional results}
 
 \begin{figure}[!h]
 	\centering
@@ -608,7 +617,7 @@ Fuel & Cost  & Source & Emissions & Source \\
 \begin{figure*}[!h]
 \centering
 \includegraphics[width=0.8\columnwidth]{figures/electricity_production_Base_go_oldversion.png}
-\caption{Evolution of the electricity generation mix in every country for the Tortoise transition path.} \label{fig_primary_energy} 
+\caption{Evolution of the electricity generation mix in every country for the Gentle transition path.} \label{fig_primary_energy} 
 \end{figure*}
 
 
@@ -616,7 +625,7 @@ Fuel & Cost  & Source & Emissions & Source \\
 \begin{figure}[!h]
 \centering
 \includegraphics[width=0.8\columnwidth]{figures/heat_production_w_TYNDP_go_oldversion.png}
-\caption{Evolution of technologies used to supply heating in residential and services sector in the Tortoise path. } \label{fig_heating_shares} 
+\caption{Evolution of technologies used to supply heating in residential and services sector in the Gentle path. } \label{fig_heating_shares} 
 \end{figure}
 
 \FloatBarrier
@@ -624,11 +633,11 @@ Fuel & Cost  & Source & Emissions & Source \\
 \section{Transition paths including district heating expansion}
 
 In this scenario, the model is rerun assuming that district heating penetration in every country expands from its value in 2025, Table \ref{tab_DH_penetration}, to 100\%, so that in 2050 the entire urban heat demand is supplied by district heating systems.
-For the Tortoise path cumulative system cost reduces by 13 B\EUR. The additional cost of extending and maintaining the required district heating network can be estimated by considering a capital cost of 220\EUR/KW$_{th}$ and 40 years lifetime \cite{Brown_2018, Gerhardt_2015}. Considering that the peak in urban heat demand is approximately 500GW$_{th}$, this represents 9 B\EUR/year. However, expanding gas distribution networks also implies a cost, estimated in 387\EUR/kW$_{th}$ and 40 years lifetime \cite{Brown_2018, gas_distribution}. Consequently, the avoided expansion of gas distribution networks when district heating is deployed, makes this option clearly cheaper. 
+For the Gentle path cumulative system cost reduces by 13 B\EUR. The additional cost of extending and maintaining the required district heating network can be estimated by considering a capital cost of 220\EUR/KW$_{th}$ and 40 years lifetime \cite{Brown_2018, Gerhardt_2015}. Considering that the peak in urban heat demand is approximately 500GW$_{th}$, this represents 9 B\EUR/year. However, expanding gas distribution networks also implies a cost, estimated in 387\EUR/kW$_{th}$ and 40 years lifetime \cite{Brown_2018, gas_distribution}. Consequently, the avoided expansion of gas distribution networks when district heating is deployed, makes this option clearly cheaper. 
 
 \section{Transition paths including electricity transmission grid expansion}
 
-In this scenario, the model is rerun assuming that from 2035 onwards transmission capacities are optimised together with the rest of the system components using 2030 values as the lower boundary. Allowing the expansion of transmission capacities results in a decrease of 84 B\EUR in the cumulative cost for the Tortoise path. The reinforced interconnections contribute to the spatial smoothing of wind fluctuations, increasing the optimal onshore and offshore wind capacities at the end of the path. The required energy capacity for hydrogen storage is reduced due to interconnections contribution to balancing wind generation. 
+In this scenario, the model is rerun assuming that from 2035 onwards transmission capacities are optimised together with the rest of the system components using 2030 values as the lower boundary. Allowing the expansion of transmission capacities results in a decrease of 84 B\EUR in the cumulative cost for the Gentle path. The reinforced interconnections contribute to the spatial smoothing of wind fluctuations, increasing the optimal onshore and offshore wind capacities at the end of the path. The required energy capacity for hydrogen storage is reduced due to interconnections contribution to balancing wind generation. 
 
 \FloatBarrier
 
