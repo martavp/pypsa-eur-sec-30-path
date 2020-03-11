@@ -1,9 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 Created on Thu Oct 24 19:20:37 2019
-1. Usar colores de referencia
-2. Sustituir edad por año de instalación
-3. Añadir datos de thewindpower
+
 
 @author: Marta
 """
@@ -93,8 +91,11 @@ def plot_heating_historical():
         # normalization
         heat_supply=heat_supply/heat_supply.sum(axis=0)
 
-        ax1 = plt.subplot(gs1[i//5, i-(i//5)*5])
-        ax1.set_facecolor('navy')
+        ax1 = plt.subplot(gs1[i//5, i-(i//5)*5])        
+        color_list = pd.read_csv('color_scheme.csv', sep=',')
+        color = dict(zip(color_list['tech'].tolist(),
+            color_list[' color'].tolist(),))
+        ax1.set_facecolor(color['geothermal'])
         ax1.stackplot(np.arange(2000,2016), [pd.to_numeric(heat_supply.loc['solids-liquids']),
                       pd.to_numeric(heat_supply.loc['gas']),
                       pd.to_numeric(heat_supply.loc['biomass']),
@@ -102,17 +103,20 @@ def plot_heating_historical():
                       pd.to_numeric(heat_supply.loc['heatpumps']),
                       pd.to_numeric(heat_supply.loc['derived heat']),
                       pd.to_numeric(heat_supply.loc['other'])], 
-                      colors=['black', 'dimgray', 'peru',
-                              'dodgerblue', 'skyblue',  'lightcyan', 'navy'],     
+                      colors=[color['lignite'], color['gas boiler'], 
+                              color['biomass'], color['resistive heater'],
+                              color['heat pump'], color['district heating'],
+                              color['geothermal']],
                       linewidth=0,
                       labels=['coal, oil, LPG', 'gas', 'biomass & waste',
                            'electric boilers', 'heat pumps', 'district heating', 'geothermal & other'])               
         ax1.set_xlim(2000,2015)
         ax1.set_ylim(0,1)
-        ax1.set_title(dict_2toname[country], fontsize=16)
+        ax1.set_title(dict_2toname[country], fontsize=18)
         ax1.set_yticks([])
         ax1.set_xticks([])
         if i == 27:
-            ax1.legend(loc=(2.5,0.2), shadow=True,fancybox=True,prop={'size':18})
+            handles, labels = ax1.get_legend_handles_labels()
+            ax1.legend(reversed(handles), reversed(labels), loc=(2.5,0.15), shadow=True,fancybox=True,prop={'size':18})
     plt.savefig('../figures/heating_historical.png', dpi=300, bbox_inches='tight')         
 plot_heating_historical()    

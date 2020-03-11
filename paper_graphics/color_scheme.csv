@@ -14,25 +14,28 @@ gas boiler,#a9a9a9
 oil,#696969
 coal,#555555
 lignite,#000000
-resistive heater,#0000cd
-heat pump,#87ceeb
+resistive heater,#ff8c00
+heat pump,#ffc34d
 hydrogen storage,#800080
 battery storage,#ffc0cb
-hot water storage,#800080
+hot water storage,#ffe0b3
 methanation,#ffa500
 transmission lines,#4d004d
-wind and solar,#008000
+wind and solar,#2e8b57
 conventional,#a9a9a9
 balancing,#b300b3
-Power-to-heat,#0000ff
+Power-to-heat,#ff8c00
 electricity,#0000ff
 rural heat,#ff0000
 urban heat,#ffa500
 cooling,#00aecc
-waste,#ffa500
+waste,#804000
 gas CHP,#f08080
 gas CHP elec,#f08080
+gas CHP heat,#f08080
 OCGT,#ffa500
 CCGT,#ff4500
 central water tank,#daa520
 electric vehicle,#ff4500
+geothermal,#804000
+district heating,#ffe0b3

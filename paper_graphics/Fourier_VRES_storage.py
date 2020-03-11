@@ -53,12 +53,12 @@ color = dict(zip(color_list['tech'].tolist(),
             color_list[' color'].tolist(),))
 
 color['elec_demand'] = 'black'
-color['heat_demand'] = 'brown'
+color['heat_demand'] = color['resistive heater']
 color['onwind'] = color['onshore wind']
 color['solar'] = color['solar PV']
 color['battery'] = color['battery storage']
 color['H2 underground'] = 'deeppink' #color['hydrogen storage']
-color['LTES'] = 'lightpink' #color['hot water storage']
+color['LTES'] = color['hot water storage']
 color['PHS'] = color['hydro']
 
 #           'solar':'orange',
@@ -134,7 +134,7 @@ for i,tech in enumerate(['onwind', 'solar', 'elec_demand', 'heat_demand']):
     #ax1.set_xticklabels(['M', 'T', 'W', 'T', 'F', 'S', 'S','M', 'T', 'W', 'T', 'F', 'S', 'S',], fontsize=12)
     ax1.set_xticks([])
     ax1.set_xlim(0,336)
-    ax1.set_ylim(0,1.02)
+    #ax1.set_ylim(0,1.02)
     ax1.set_yticks([0, 0.5, 1])
     ax1.set_yticklabels(['0','0.5', '1'], fontsize=14)
     #ax1.set_xlabel('April,16 - May,3 2015', fontsize=14)
