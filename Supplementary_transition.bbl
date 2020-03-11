@@ -337,6 +337,12 @@ W.~Zappa, M.~Junginger, M.~van~den Broek,
   {\path{doi:10.1016/j.apenergy.2018.08.109}}.
 \newline\urlprefix\url{http://www.sciencedirect.com/science/article/pii/S0306261918312790}
 
+\bibitem{Sterchele_2020}
+\href{https://www.ise.fraunhofer.de/content/dam/ise/de/documents/publications/studies/Anhang-Studie-Wege-zu-einem-klimaneutralen-Energiesystem.pdf}{{Wege
+  Zu Einem Klimaneutralen Energiesystem - Anhang zur Studie}}, Tech. rep.
+  (2020).
+\newline\urlprefix\url{https://www.ise.fraunhofer.de/content/dam/ise/de/documents/publications/studies/Anhang-Studie-Wege-zu-einem-klimaneutralen-Energiesystem.pdf}
+
 \bibitem{Fell_2015}
 H.-J. Fell, C.~Breyer, M.~Metayer,
   \href{http://www.eupvsec-proceedings.com/proceedings?paper=35067}{The
@@ -405,10 +411,5 @@ V.~Krey, F.~Guo, P.~Kolp, W.~Zhou, R.~Schaeffer, A.~Awasthy, C.~Bertram, H.-S.
 \newblock \href {http://dx.doi.org/10.1016/j.energy.2018.12.131}
   {\path{doi:10.1016/j.energy.2018.12.131}}.
 \newline\urlprefix\url{http://www.sciencedirect.com/science/article/pii/S0360544218325039}
-
-\bibitem{gas_distribution}
-\href{https://www.bundesnetzagentur.de/DE/Sachgebiete/ElektrizitaetundGas/Unternehmen_Institutionen/DatenaustauschundMonitoring/Monitoring/Monitoringberichte/Monitoring_Berichte.html}{Tech.
-  rep. {Monitoringbericht 2017}. {Bundesnetzagentur}}.
-\newline\urlprefix\url{https://www.bundesnetzagentur.de/DE/Sachgebiete/ElektrizitaetundGas/Unternehmen_Institutionen/DatenaustauschundMonitoring/Monitoring/Monitoringberichte/Monitoring_Berichte.html}
 
 \end{thebibliography}

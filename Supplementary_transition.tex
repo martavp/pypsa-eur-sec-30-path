@@ -533,8 +533,7 @@ Technology & FOM\tnote{a} & Lifetime & Efficiency & Source\\
 \item [d] Coefficient of performance (COP) of heat pumps is modelled as a function of temperature, as described in the text. 
 %\item [c] The fuel cell technology is solid oxide, with partial (30\%) replacement after 10 years, following \cite{NRELhydrogen}. The more conservative estimate of efficiency has been taken, in line with other sources \cite{dea2016}.
 %SOFC: exchange*overnight*(1+30%-replacement-10-years-out) = 0.7532*390*(1+0.3/(1.07)**10) = 338.55 \cite{NRELhydrogen}
-\item [e] Investments in methanation and DAC are not allowed independently, only together as `Methanation+DAC', see text.
-\item [f] District heating and gas distribution networks are not included in the optimisation, but the cost of expanding those networks is estimated and compared with the system costs in the scenarios with and without district heating expansion.  
+\item [e] Investments in methanation and DAC are not allowed independently, only together as `Methanation+DAC', see text. 
 \end{tablenotes}
 \end{threeparttable}
 \end{table*}
@@ -572,13 +571,17 @@ Fuel & Cost  & Source & Emissions & Source \\
  
 
 \FloatBarrier
+\subsection{Distribution networks} 
 
-\section{Realistic cost assumptions for solar PV} 
+Half of the solar PV capacity is assumed to be installed in rooftops. Consequently, the PV deployment that we observe will require extending and increasing the capacity of electricity distribution networks. The deployment of Electric Vehicles (VEs) also requires enhancing the distribution networks. Distributed PV generation will contribute to charging EVs and this could reduce the need for an increased distribution capacity. The cost of extending distribution networks in estimated in 140 \EUR/kW$_{PV}$, with 30 years lifetime and 3\% FOM \cite{Sterchele_2020}. In the model, the cost of expanding and maintaining distribution networks are not included in the optimisation but calculated based on the optimal PV capacity and added ex post. For the Gentle path, distribution networks costs represent 140 B\EUR, that is, 2\% of the cumulative system cost.  \
+District heating and gas distribution networks are not included in the optimisation, but the cost of expanding those networks is estimated and compared with the system costs in the scenarios with and without district heating expansion, see section \ref{sec_DH_exp}. 
 
-The technology is forecast to keep decreasing its price achieving a cost between 151 \EUR/kW \cite{Vartiainen_2019} and 241 \cite{DEA_2019} \EUR/kW for utility-scale installations in 2050. The recent evolution of solar PV and the attained cost reduction is known to have been repeatedly underestimated by the International Energy Agency \cite{Fell_2015}, ecologist organisations \cite{Creutzig_2017}, and PV scientists \cite{Haegel_2019}.  Investment cost for utility-scale solar PV in 2020 is estimated in the range of 398-423 \EUR/kW \cite{Vartiainen_2017, DEA_2019}. For rooftop PV intallations, a wider range is found, 1070-1127 \EUR/kW \cite{DEA_2019, Fraunhofer, Vartiainen_2019}, due to the higher impact of local experience and labour costs. \\
+\subsection{Realistic cost assumptions for solar PV} 
+
+The combination of rapid learning with faster-than-expected capacity development has led to lower-than-expected costs for solar PV. The potential of this technology has been repeatedly underestimated by the International Energy Agency \cite{Fell_2015}, Greenpeace \cite{Creutzig_2017}, and PV scientists \cite{Haegel_2019}. Investment cost for utility-scale solar PV in 2020 is estimated in the range of 398-423 \EUR/kW \cite{Vartiainen_2017, DEA_2019}. For rooftop PV installations in Europe, a wider range is found, 1070-1127 \EUR/kW \cite{DEA_2019, Fraunhofer, Vartiainen_2019}, due to the higher impact of local experience and labour costs. Solar PV is forecast to achieve an investment cost between 151 \EUR/kW \cite{Vartiainen_2019} and 241 \EUR/kW  \cite{DEA_2019} for large installations in 2050. \\
 
 
-Assuming outdated costs for solar PV is also known to be a flaw of most Integrated Assessment Models (IAMs) and this can have a huge impact on the results. Creutzig \textit{et al.} already pointed out this problem in \cite{Creutzig_2017} where they found similar solar PV penetration than we do when realistic costs are assumed for solar PV. However, the problem persists. For instance, the PRIMES model used in the report supporting the \textit{Clean Planet for All} strategy of the EU Commission \cite{in-depth_2018} assumes 407-495 \EUR/kW in 2050 \cite{in-depth-data} which is higher than the lower range value for today's costs. Even more worrying are the findings by Krey \textsl{et al.} \cite{Krey_2019}. The authors review the techno-economic assumptions in the electricity sector among fifteen different global and national IAMs. Figure 4 on \cite{Krey_2019} shows that most of the reviewed IAMs include cost assumptions for solar PV in 2050 close to 1000 \EUR/kW. Although they do not specify if the cost refers to utility-scale or rooftop installations, the values are twice as high as the cost already achieved by this technology in large installations. 
+Assuming outdated costs for solar PV is also known to be a flaw of most Integrated Assessment Models (IAMs) and this can have a huge impact on the results. Creutzig \textit{et al.} already pointed out this problem in \cite{Creutzig_2017} where they found similar solar PV penetration to ours when realistic costs are assumed for solar PV. However, the problem persists. For instance, the PRIMES model used in the report supporting the \textit{Clean Planet for All} strategy of the EU Commission \cite{in-depth_2018} assumes 407-495 \EUR/kW in 2050 \cite{in-depth-data} which is higher than the lower range value for today's costs. Even more worrying are the findings by Krey \textsl{et al.} \cite{Krey_2019}. The authors review the techno-economic assumptions in the electricity sector among fifteen different global and national IAMs. Figure 4 on \cite{Krey_2019} shows that most of the reviewed IAMs include cost assumptions for solar PV in 2050 close to 1000 \EUR/kW. Although they do not specify if the cost refers to utility-scale or rooftop installations, the values are twice as high as the cost already achieved by this technology in large installations. 
 
 \section{Transition paths Gentle and Sudden. Additional results}
 
@@ -630,14 +633,16 @@ Assuming outdated costs for solar PV is also known to be a flaw of most Integrat
 
 \FloatBarrier
 
-\section{Transition paths including district heating expansion}
+\section{Transition paths including district heating expansion} \label{sec_DH_exp}
 
-In this scenario, the model is rerun assuming that district heating penetration in every country expands from its value in 2025, Table \ref{tab_DH_penetration}, to 100\%, so that in 2050 the entire urban heat demand is supplied by district heating systems.
-For the Gentle path cumulative system cost reduces by 13 B\EUR. The additional cost of extending and maintaining the required district heating network can be estimated by considering a capital cost of 220\EUR/KW$_{th}$ and 40 years lifetime \cite{Brown_2018, Gerhardt_2015}. Considering that the peak in urban heat demand is approximately 500GW$_{th}$, this represents 9 B\EUR/year. However, expanding gas distribution networks also implies a cost, estimated in 387\EUR/kW$_{th}$ and 40 years lifetime \cite{Brown_2018, gas_distribution}. Consequently, the avoided expansion of gas distribution networks when district heating is deployed, makes this option clearly cheaper. 
+In this scenario, the model is rerun assuming that district heating (DH) penetration in every country expands from its value in 2025, Table \ref{tab_DH_penetration}, to 100\%, so that in 2050 the entire urban heat demand is supplied by DH.
+For the Gentle path, cumulative system cost reduces by 259 B\EUR. A wide range of cost estimation for DH system is found in the literature: 107 \EUR/KW$_{th}$ for 2030 \cite{in-depth-data}, 220\EUR/KW$_{th}$ \cite{Gerhardt_2015}, 400 \EUR/KW$_{th}$ \cite{Sterchele_2020}. Assuming 40 years lifetime, 1\% FOM \cite{Sterchele_2020}, 4\% discount rate,  and considering that the peak in urban heat demand is approximately 500GW$_{th}$, the required DH expansion and maintenance represents between 6.5 and 24 B\EUR/year, which could be offset by the system cost reduction.  Furthermore, the avoided expansion of gas distribution networks when DH is deployed will also contribute to offsetting DH costs. 
+
+%However, expanding gas distribution networks also implies a cost, estimated in 387\EUR/kW$_{th}$ and 40 years lifetime \cite{Brown_2018, gas_distribution}. Consequently, the avoided expansion of gas distribution networks when district heating is deployed, makes this option clearly cheaper. In \cite{Sterchele_2020}, gas distribution networks are estimated in 28 \EUR/KW$_{th}$ 
 
 \section{Transition paths including electricity transmission grid expansion}
 
-In this scenario, the model is rerun assuming that from 2035 onwards transmission capacities are optimised together with the rest of the system components using 2030 values as the lower boundary. Allowing the expansion of transmission capacities results in a decrease of 84 B\EUR in the cumulative cost for the Gentle path. The reinforced interconnections contribute to the spatial smoothing of wind fluctuations, increasing the optimal onshore and offshore wind capacities at the end of the path. The required energy capacity for hydrogen storage is reduced due to interconnections contribution to balancing wind generation. 
+In this scenario, the model is rerun assuming that from 2035 onwards transmission capacities are optimised together with the rest of the system components using 2030 values as the lower boundary. Allowing the expansion of transmission capacities results in a decrease of 79 B\EUR in the cumulative cost for the Gentle path. The reinforced interconnections contribute to the spatial smoothing of wind fluctuations, increasing the optimal onshore and offshore wind capacities at the end of the path. The required energy capacity for hydrogen storage is reduced due to interconnections contribution to balancing wind generation. 
 
 \FloatBarrier
 
