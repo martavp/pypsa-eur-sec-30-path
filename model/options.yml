@@ -1,0 +1,109 @@
+# Default options
+
+# Hints for Yaml:
+# Scientific notation requires . before e and sign, e.g. 1.e+8 not 1e8
+# For "None" just leave the value blank or null, e.g. 'goat' :  OR 'goat' : null
+# True/False are not case-sensitive
+
+'run_name': 'ninja'
+'results_dir_name': ''
+'results_suffix': ''
+'tmin': '2015-01-01 00:00'
+'tmax': '2015-12-31 23:00'
+'python_version' : '3'
+'flex' : ''
+'year' : ''
+'weather_year' : 2015
+'discountrate': 0.07  # From a Lion Hirth paper, also reflects average of Noothout et al 2016
+'USD2019_to_EUR2019': 0.91 # [EUR/USD] ECB: https://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-usd.en.html # noqa: E501
+
+'TI' : 0 # temperature increase
+'HS' : 0 # heat saving
+'DSM' : 0 # demand-side management
+'HPC' : 0 # cost reduction for heat pump
+'RHC' : 0 # cost reduction for resistive heater
+'PtGC' : 0 # cost reduction for power-to-gas
+'dsm_heat': False
+
+'line_volume_limit_factor':   #if null, then no limit set
+'line_volume_limit_max': 31.6e+6   #line_volume_limit is set = factor * max
+'line_cost_factor': 1
+'co2_reduction':  #leave empty for None
+'resample_hours': 3H
+'heterogeneity' : null # heterogeneity parameter: can be one of: float>=1.; [min,max]; None
+'homogeneous': False 
+'heterogeneous': False 
+'gas_autonomy' : False
+'pathway': False
+'split_onwind' : True ###False
+'solver_name': 'gurobi'
+'solver_io' : null   # null or 'python'
+'solver_options':
+  'method': 2
+  'threads': 2
+  'logfile': 'solver.log'
+  'BarConvTol' : 1.e-4 #1.e-12 ###1e-8 # [0..1]
+  'BarIterLimit' : 2000 #default is 1000, not enough for some cases
+  'crossover' : 0   # or -1
+  'FeasibilityTol' : 1.e-4 #1e-2 ###1e-6 # [1e-9..1e-2]
+'formulation': 'kirchhoff'
+'save_res': True
+'costref': 'diw2030'   #'Hir',
+'CO2price': 0.          #10, #Eur/t_CO2
+'add_H2_storage' : True
+'add_battery_storage' : True
+'add_PHS': True
+'PHS_max_hours': 6.
+'add_hydro': True
+'hydro_max_hours': #if None, take E_stor from hydrocapa_df
+'add_ror': True
+'hydro_capital_cost' : False
+'add_methanation': False
+'marginal_cost_storage' : 0. #1e-4
+'abs_flow_cost': 0. #1e-4,
+'no_lines': False
+'beta_layout': 1
+# solar capacity factors in REatlas are too high compared to other
+# studies; we correct this by applying a constant 'inverter
+# inefficiency' to the p_max_pu timeseries; comparing with
+# Pietzker+(2014) http://dx.doi.org/10.1016/j.apenergy.2014.08.011
+# the produced-power weighted average of capacity factor ratios is 1.2683
+'heat_coupling': False
+'cooling_coupling': False
+'PTH': False #power to heat
+'transport_coupling' : False
+'EV_pene' : 0
+'bev' : False #turns on EV battery
+'bev_availability' : 1.0  #How many cars do smart charging
+'v2g' : False #allows feed-in to grid from EV battery
+'v2g_availability' : 1.0  #How many cars do v2g
+'transport_fuel_cell_share' : 0.   #0 means all EVs, 1 means all FCs
+'tes' : False #allows thermal storage for decentral; for central it's always there
+'tes_tau' : 3. #Thermal Energy Storage time constant - only affects decentral
+'boilers' : True #Allow gas boilers
+'chp' : False #Allow CHPs
+'biomass' : False
+'chp_parameters':
+  'eta_elec' : 0.468 #electrical efficiency with no heat output
+  'c_v' : 0.15 #loss of fuel for each addition of heat
+  'c_m' : 0.75 #backpressure ratio
+  'p_nom_ratio' : 1. #ratio of max heat output to max electrical output
+'solar_thermal' : False
+'solar_collector_angle' : 45
+'central' : False
+'central_fraction' : 0.6
+'time_dep_hp_cop' : True
+'retrofitting' : False
+'retrofitting-cost_factor' : 1.0
+'retroI-fraction' : 0.25
+'retroII-fraction' : 0.55
+'dsm_restriction_value' : 0.75  #Set to 0 for no restriction on BEV DSM
+'dsm_restriction_time' : 5  #Time at which SOC of BEV has to be dsm_restriction_value
+'ninja_solar' : False
+'transport_heating_deadband_upper' : 20.
+'transport_heating_deadband_lower' : 15.
+'ICE_lower_degree_factor' : 0.375    #in per cent increase in fuel consumption per degree above deadband
+'ICE_upper_degree_factor' : 1.6
+'EV_lower_degree_factor' : 0.98
+'EV_upper_degree_factor' : 0.63
+'LMP_cap' : False

@@ -1,0 +1,482 @@
+configfile: 'config.yaml'
+
+#rule all: # only prenetworks
+#    input:
+#        expand(config['results_dir'] + 'version-' + str(config['version']) + '/prenetworks/prenetwork-brown-{flexibility}_{line_limits}_2025.nc',**config['scenario'])
+
+#rule all: # postnetworks
+#    input:
+#        expand(config['results_dir'] + 'version-' + str(config['version']) + '/postnetworks/postnetwork-{flexibility}_{line_limits}_2050.nc',**config['scenario'])
+
+rule all: # summary
+    input: config['summary_dir'] + 'version-{version}/graphs/energy.pdf'.format(version=config['version'])
+
+
+rule build_population:
+    output:
+        csv_name='data/population.csv'
+    threads: 1
+    resources: mem_mb=1000
+    script: 'scripts/build_population.py'
+
+rule build_population_gridcell_map:
+    output:
+        pop_map_name='data/population_gridcell_map.h5'
+    threads: 1
+    resources: mem_mb=1000
+    script: 'scripts/build_population_gridcell_map.py'
+
+
+rule build_solar_thermal_profiles:
+    input:
+        pop_map_name='data/population_gridcell_map.h5'
+    output:
+        h5_name='data/heating/solar_thermal-{angle}.h5'.format(angle=config['solar_thermal_angle'])
+    threads: 8
+    resources: mem_mb=30000
+    script: 'scripts/build_solar_thermal_profiles.py'
+
+
+rule build_heat_demand_profiles:
+    input:
+        pop_map_name='data/population_gridcell_map.h5'
+    output:
+        h5_name='data/heating/daily_heat_demand.h5'
+    threads: 8
+    resources: mem_mb=30000
+    script: 'scripts/build_heat_demand_profiles.py'
+
+
+
+rule build_cop_profiles:
+    input:
+        pop_map_name='data/population_gridcell_map.h5'
+    output:
+        h5_name='data/heating/cop.h5'
+    threads: 8
+    resources: mem_mb=30000
+    script: 'scripts/build_cop_profiles.py'
+
+
+
+rule build_temp_profiles:
+    input:
+        pop_map_name='data/population_gridcell_map.h5'
+    output:
+        temp='data/heating/temp.h5'
+    threads: 8
+    resources: mem_mb=30000
+    script: 'scripts/build_temp_profiles.py'
+
+
+rule build_energy_totals:
+    output:
+        energy_name='data/energy_totals.csv',
+	    co2_name='data/co2_totals.csv',
+	    transport_name='data/transport_data.csv'
+    threads: 1
+    resources: mem_mb=10000
+    script: 'scripts/build_energy_totals.py'
+
+####################################
+rule make_options_2020:
+    input:
+        options_name='options.yml',
+        cost_name='data/costs/costs_2020.csv',
+    output:
+        options_name=config['results_dir'] + 'version-' + str(config['version']) + '/options/options-{flexibility}_{line_limits}_2020.yml'
+    threads: 1
+    resources: mem_mb=1000
+    script: 'scripts/make_options.py'
+
+rule prepare_networks_2020:
+    input:
+        options_name=config['results_dir'] + 'version-' + str(config['version']) + '/options/options-{flexibility}_{line_limits}_2020.yml',
+        population_name='data/population.csv',
+        solar_thermal_name='data/heating/solar_thermal-{angle}.h5'.format(angle=config['solar_thermal_angle']),
+	    heat_demand_name='data/heating/daily_heat_demand.h5',
+	    cop_name='data/heating/cop-2015_2.h5',
+        energy_totals_name='data/energy_totals.csv',
+        co2_totals_name='data/co2_totals.csv',
+        temp='data/heating/temp.h5',
+	    transport_name='data/transport_data.csv',
+        cost_name='data/costs/costs_2020.csv',
+    output:
+        network_name=config['results_dir'] + 'version-' + str(config['version']) + '/prenetworks/prenetwork-green-{flexibility}_{line_limits}_2020.nc'
+    threads: 1
+    resources: mem_mb=20000
+    script: 'scripts/prepare_network.py'
+
+rule add_existing_2020:
+    input:
+        options_name=config['results_dir'] + 'version-' + str(config['version']) + '/options/options-{flexibility}_{line_limits}_2020.yml',
+        split_countries='data/renewables/store_p_max_pu_betas/onwind_split_countries.csv',
+        network_name=config['results_dir'] + 'version-' + str(config['version']) + '/prenetworks/prenetwork-green-{flexibility}_{line_limits}_2020.nc'
+    output:
+        network_name=config['results_dir'] + 'version-' + str(config['version']) + '/prenetworks/prenetwork-brown-{flexibility}_{line_limits}_2020.nc'
+    threads: 1
+    resources: mem_mb=2000
+    script: 'scripts/add_existing_2020.py'
+
+rule solve_networks_2020:
+    input:
+        options_name=config['results_dir'] + 'version-' + str(config['version']) + '/options/options-{flexibility}_{line_limits}_2020.yml',
+        network_name=config['results_dir'] + 'version-' + str(config['version']) + '/prenetworks/prenetwork-brown-{flexibility}_{line_limits}_2020.nc'
+    output:
+        network_name=config['results_dir'] + 'version-' + str(config['version']) + '/postnetworks/postnetwork-{flexibility}_{line_limits}_2020.nc',
+	    shadow_name=config['results_dir'] + 'version-' + str(config['version']) + '/postnetworks/shadow-{flexibility}_{line_limits}_2020.csv'
+    threads: 4
+    resources: mem_mb=100000
+    script: 'scripts/solve_network.py'
+####################################
+
+####################################
+rule make_options_2025:
+    input:
+        options_name='options.yml',
+        cost_name='data/costs/costs_2025.csv',
+    output:
+        options_name=config['results_dir'] + 'version-' + str(config['version']) + '/options/options-{flexibility}_{line_limits}_2025.yml'
+    threads: 1
+    resources: mem_mb=1000
+    script: 'scripts/make_options.py'
+
+rule prepare_networks_2025:
+    input:
+        options_name=config['results_dir'] + 'version-' + str(config['version']) + '/options/options-{flexibility}_{line_limits}_2025.yml',
+        population_name='data/population.csv',
+        solar_thermal_name='data/heating/solar_thermal-{angle}.h5'.format(angle=config['solar_thermal_angle']),
+	    heat_demand_name='data/heating/daily_heat_demand.h5',
+	    cop_name='data/heating/cop-2015_2.h5',
+        energy_totals_name='data/energy_totals.csv',
+        co2_totals_name='data/co2_totals.csv',
+        temp='data/heating/temp.h5',
+	    transport_name='data/transport_data.csv',
+        cost_name='data/costs/costs_2025.csv',
+    output:
+        network_name=config['results_dir'] + 'version-' + str(config['version']) + '/prenetworks/prenetwork-green-{flexibility}_{line_limits}_2025.nc'
+    threads: 1
+    resources: mem_mb=20000
+    script: 'scripts/prepare_network.py'
+
+rule brown_field_2025:
+    input:
+        previous_network=config['results_dir'] + 'version-' + str(config['version']) + '/postnetworks/postnetwork-{flexibility}_{line_limits}_2020.nc',
+        network_name=config['results_dir'] + 'version-' + str(config['version']) + '/prenetworks/prenetwork-green-{flexibility}_{line_limits}_2025.nc',
+        options_name=config['results_dir'] + 'version-' + str(config['version']) + '/options/options-{flexibility}_{line_limits}_2025.yml',
+    output:
+        network_name=config['results_dir'] + 'version-' + str(config['version']) + '/prenetworks/prenetwork-brown-{flexibility}_{line_limits}_2025.nc'
+    threads: 1
+    resources: mem_mb=2000
+    script: 'scripts/brown_field.py'
+
+rule solve_networks_2025:
+    input:
+        options_name=config['results_dir'] + 'version-' + str(config['version']) + '/options/options-{flexibility}_{line_limits}_2025.yml',
+        network_name=config['results_dir'] + 'version-' + str(config['version']) + '/prenetworks/prenetwork-brown-{flexibility}_{line_limits}_2025.nc'
+    output:
+        network_name=config['results_dir'] + 'version-' + str(config['version']) + '/postnetworks/postnetwork-{flexibility}_{line_limits}_2025.nc',
+	    shadow_name=config['results_dir'] + 'version-' + str(config['version']) + '/postnetworks/shadow-{flexibility}_{line_limits}_2025.csv'
+    threads: 4
+    resources: mem_mb=100000
+    script: 'scripts/solve_network.py'
+####################################
+
+####################################
+rule make_options_2030:
+    input:
+        options_name='options.yml',
+        cost_name='data/costs/costs_2030.csv',
+    output:
+        options_name=config['results_dir'] + 'version-' + str(config['version']) + '/options/options-{flexibility}_{line_limits}_2030.yml'
+    threads: 1
+    resources: mem_mb=1000
+    script: 'scripts/make_options.py'
+
+rule prepare_networks_2030:
+    input:
+        options_name=config['results_dir'] + 'version-' + str(config['version']) + '/options/options-{flexibility}_{line_limits}_2030.yml',
+        population_name='data/population.csv',
+        solar_thermal_name='data/heating/solar_thermal-{angle}.h5'.format(angle=config['solar_thermal_angle']),
+	    heat_demand_name='data/heating/daily_heat_demand.h5',
+	    cop_name='data/heating/cop-2015_2.h5',
+        energy_totals_name='data/energy_totals.csv',
+        co2_totals_name='data/co2_totals.csv',
+        temp='data/heating/temp.h5',
+	    transport_name='data/transport_data.csv',
+        cost_name='data/costs/costs_2030.csv',
+    output:
+        network_name=config['results_dir'] + 'version-' + str(config['version']) + '/prenetworks/prenetwork-green-{flexibility}_{line_limits}_2030.nc'
+    threads: 1
+    resources: mem_mb=20000
+    script: 'scripts/prepare_network.py'
+
+rule brown_field_2030:
+    input:
+        previous_network=config['results_dir'] + 'version-' + str(config['version']) + '/postnetworks/postnetwork-{flexibility}_{line_limits}_2025.nc',
+        network_name=config['results_dir'] + 'version-' + str(config['version']) + '/prenetworks/prenetwork-green-{flexibility}_{line_limits}_2030.nc',
+        options_name=config['results_dir'] + 'version-' + str(config['version']) + '/options/options-{flexibility}_{line_limits}_2030.yml',
+    output:
+        network_name=config['results_dir'] + 'version-' + str(config['version']) + '/prenetworks/prenetwork-brown-{flexibility}_{line_limits}_2030.nc'
+    threads: 1
+    resources: mem_mb=2000
+    script: 'scripts/brown_field.py'
+
+rule solve_networks_2030:
+    input:
+        options_name=config['results_dir'] + 'version-' + str(config['version']) + '/options/options-{flexibility}_{line_limits}_2030.yml',
+        network_name=config['results_dir'] + 'version-' + str(config['version']) + '/prenetworks/prenetwork-brown-{flexibility}_{line_limits}_2030.nc'
+    output:
+        network_name=config['results_dir'] + 'version-' + str(config['version']) + '/postnetworks/postnetwork-{flexibility}_{line_limits}_2030.nc',
+	    shadow_name=config['results_dir'] + 'version-' + str(config['version']) + '/postnetworks/shadow-{flexibility}_{line_limits}_2030.csv'
+    threads: 4
+    resources: mem_mb=100000
+    script: 'scripts/solve_network.py'
+####################################
+
+####################################
+rule make_options_2035:
+    input:
+        options_name='options.yml',
+        cost_name='data/costs/costs_2035.csv',
+    output:
+        options_name=config['results_dir'] + 'version-' + str(config['version']) + '/options/options-{flexibility}_{line_limits}_2035.yml'
+    threads: 1
+    resources: mem_mb=1000
+    script: 'scripts/make_options.py'
+
+rule prepare_networks_2035:
+    input:
+        options_name=config['results_dir'] + 'version-' + str(config['version']) + '/options/options-{flexibility}_{line_limits}_2035.yml',
+        population_name='data/population.csv',
+        solar_thermal_name='data/heating/solar_thermal-{angle}.h5'.format(angle=config['solar_thermal_angle']),
+	    heat_demand_name='data/heating/daily_heat_demand.h5',
+	    cop_name='data/heating/cop-2015_2.h5',
+        energy_totals_name='data/energy_totals.csv',
+        co2_totals_name='data/co2_totals.csv',
+        temp='data/heating/temp.h5',
+	    transport_name='data/transport_data.csv',
+        cost_name='data/costs/costs_2035.csv',
+    output:
+        network_name=config['results_dir'] + 'version-' + str(config['version']) + '/prenetworks/prenetwork-green-{flexibility}_{line_limits}_2035.nc'
+    threads: 1
+    resources: mem_mb=20000
+    script: 'scripts/prepare_network.py'
+
+rule brown_field_2035:
+    input:
+        previous_network=config['results_dir'] + 'version-' + str(config['version']) + '/postnetworks/postnetwork-{flexibility}_{line_limits}_2030.nc',
+        network_name=config['results_dir'] + 'version-' + str(config['version']) + '/prenetworks/prenetwork-green-{flexibility}_{line_limits}_2035.nc',
+        options_name=config['results_dir'] + 'version-' + str(config['version']) + '/options/options-{flexibility}_{line_limits}_2035.yml',
+    output:
+        network_name=config['results_dir'] + 'version-' + str(config['version']) + '/prenetworks/prenetwork-brown-{flexibility}_{line_limits}_2035.nc'
+    threads: 1
+    resources: mem_mb=2000
+    script: 'scripts/brown_field.py'
+
+rule solve_networks_2035:
+    input:
+        options_name=config['results_dir'] + 'version-' + str(config['version']) + '/options/options-{flexibility}_{line_limits}_2035.yml',
+        network_name=config['results_dir'] + 'version-' + str(config['version']) + '/prenetworks/prenetwork-brown-{flexibility}_{line_limits}_2035.nc'
+    output:
+        network_name=config['results_dir'] + 'version-' + str(config['version']) + '/postnetworks/postnetwork-{flexibility}_{line_limits}_2035.nc',
+	    shadow_name=config['results_dir'] + 'version-' + str(config['version']) + '/postnetworks/shadow-{flexibility}_{line_limits}_2035.csv'
+    threads: 4
+    resources: mem_mb=100000
+    script: 'scripts/solve_network.py'
+####################################
+
+####################################
+rule make_options_2040:
+    input:
+        options_name='options.yml',
+        cost_name='data/costs/costs_2040.csv',
+    output:
+        options_name=config['results_dir'] + 'version-' + str(config['version']) + '/options/options-{flexibility}_{line_limits}_2040.yml'
+    threads: 1
+    resources: mem_mb=1000
+    script: 'scripts/make_options.py'
+
+rule prepare_networks_2040:
+    input:
+        options_name=config['results_dir'] + 'version-' + str(config['version']) + '/options/options-{flexibility}_{line_limits}_2040.yml',
+        population_name='data/population.csv',
+        solar_thermal_name='data/heating/solar_thermal-{angle}.h5'.format(angle=config['solar_thermal_angle']),
+	    heat_demand_name='data/heating/daily_heat_demand.h5',
+	    cop_name='data/heating/cop-2015_2.h5',
+        energy_totals_name='data/energy_totals.csv',
+        co2_totals_name='data/co2_totals.csv',
+        temp='data/heating/temp.h5',
+	    transport_name='data/transport_data.csv',
+        cost_name='data/costs/costs_2040.csv',
+    output:
+        network_name=config['results_dir'] + 'version-' + str(config['version']) + '/prenetworks/prenetwork-green-{flexibility}_{line_limits}_2040.nc'
+    threads: 1
+    resources: mem_mb=20000
+    script: 'scripts/prepare_network.py'
+
+rule brown_field_2040:
+    input:
+        previous_network=config['results_dir'] + 'version-' + str(config['version']) + '/postnetworks/postnetwork-{flexibility}_{line_limits}_2035.nc',
+        network_name=config['results_dir'] + 'version-' + str(config['version']) + '/prenetworks/prenetwork-green-{flexibility}_{line_limits}_2040.nc',
+        options_name=config['results_dir'] + 'version-' + str(config['version']) + '/options/options-{flexibility}_{line_limits}_2040.yml',
+    output:
+        network_name=config['results_dir'] + 'version-' + str(config['version']) + '/prenetworks/prenetwork-brown-{flexibility}_{line_limits}_2040.nc'
+    threads: 1
+    resources: mem_mb=2000
+    script: 'scripts/brown_field.py'
+
+rule solve_networks_2040:
+    input:
+        options_name=config['results_dir'] + 'version-' + str(config['version']) + '/options/options-{flexibility}_{line_limits}_2040.yml',
+        network_name=config['results_dir'] + 'version-' + str(config['version']) + '/prenetworks/prenetwork-brown-{flexibility}_{line_limits}_2040.nc'
+    output:
+        network_name=config['results_dir'] + 'version-' + str(config['version']) + '/postnetworks/postnetwork-{flexibility}_{line_limits}_2040.nc',
+	    shadow_name=config['results_dir'] + 'version-' + str(config['version']) + '/postnetworks/shadow-{flexibility}_{line_limits}_2040.csv'
+    threads: 4
+    resources: mem_mb=100000
+    script: 'scripts/solve_network.py'
+####################################
+
+####################################
+rule make_options_2045:
+    input:
+        options_name='options.yml',
+        cost_name='data/costs/costs_2045.csv',
+    output:
+        options_name=config['results_dir'] + 'version-' + str(config['version']) + '/options/options-{flexibility}_{line_limits}_2045.yml'
+    threads: 1
+    resources: mem_mb=1000
+    script: 'scripts/make_options.py'
+
+rule prepare_networks_2045:
+    input:
+        options_name=config['results_dir'] + 'version-' + str(config['version']) + '/options/options-{flexibility}_{line_limits}_2045.yml',
+        population_name='data/population.csv',
+        solar_thermal_name='data/heating/solar_thermal-{angle}.h5'.format(angle=config['solar_thermal_angle']),
+	    heat_demand_name='data/heating/daily_heat_demand.h5',
+	    cop_name='data/heating/cop-2015_2.h5',
+        energy_totals_name='data/energy_totals.csv',
+        co2_totals_name='data/co2_totals.csv',
+        temp='data/heating/temp.h5',
+	    transport_name='data/transport_data.csv',
+        cost_name='data/costs/costs_2045.csv',
+    output:
+        network_name=config['results_dir'] + 'version-' + str(config['version']) + '/prenetworks/prenetwork-green-{flexibility}_{line_limits}_2045.nc'
+    threads: 1
+    resources: mem_mb=20000
+    script: 'scripts/prepare_network.py'
+
+rule brown_field_2045:
+    input:
+        previous_network=config['results_dir'] + 'version-' + str(config['version']) + '/postnetworks/postnetwork-{flexibility}_{line_limits}_2040.nc',
+        network_name=config['results_dir'] + 'version-' + str(config['version']) + '/prenetworks/prenetwork-green-{flexibility}_{line_limits}_2045.nc',
+        options_name=config['results_dir'] + 'version-' + str(config['version']) + '/options/options-{flexibility}_{line_limits}_2045.yml',
+    output:
+        network_name=config['results_dir'] + 'version-' + str(config['version']) + '/prenetworks/prenetwork-brown-{flexibility}_{line_limits}_2045.nc'
+    threads: 1
+    resources: mem_mb=2000
+    script: 'scripts/brown_field.py'
+
+rule solve_networks_2045:
+    input:
+        options_name=config['results_dir'] + 'version-' + str(config['version']) + '/options/options-{flexibility}_{line_limits}_2045.yml',
+        network_name=config['results_dir'] + 'version-' + str(config['version']) + '/prenetworks/prenetwork-brown-{flexibility}_{line_limits}_2045.nc'
+    output:
+        network_name=config['results_dir'] + 'version-' + str(config['version']) + '/postnetworks/postnetwork-{flexibility}_{line_limits}_2045.nc',
+	    shadow_name=config['results_dir'] + 'version-' + str(config['version']) + '/postnetworks/shadow-{flexibility}_{line_limits}_2045.csv'
+    threads: 4
+    resources: mem_mb=100000
+    script: 'scripts/solve_network.py'
+####################################
+
+####################################
+rule make_options_2050:
+    input:
+        options_name='options.yml',
+        cost_name='data/costs/costs_2050.csv',
+    output:
+        options_name=config['results_dir'] + 'version-' + str(config['version']) + '/options/options-{flexibility}_{line_limits}_2050.yml'
+    threads: 1
+    resources: mem_mb=1000
+    script: 'scripts/make_options.py'
+
+rule prepare_networks_2050:
+    input:
+        options_name=config['results_dir'] + 'version-' + str(config['version']) + '/options/options-{flexibility}_{line_limits}_2050.yml',
+        population_name='data/population.csv',
+        solar_thermal_name='data/heating/solar_thermal-{angle}.h5'.format(angle=config['solar_thermal_angle']),
+	    heat_demand_name='data/heating/daily_heat_demand.h5',
+	    cop_name='data/heating/cop-2015_2.h5',
+        energy_totals_name='data/energy_totals.csv',
+        co2_totals_name='data/co2_totals.csv',
+        temp='data/heating/temp.h5',
+	    transport_name='data/transport_data.csv',
+        cost_name='data/costs/costs_2050.csv',
+    output:
+        network_name=config['results_dir'] + 'version-' + str(config['version']) + '/prenetworks/prenetwork-green-{flexibility}_{line_limits}_2050.nc'
+    threads: 1
+    resources: mem_mb=20000
+    script: 'scripts/prepare_network.py'
+
+rule brown_field_2050:
+    input:
+        previous_network=config['results_dir'] + 'version-' + str(config['version']) + '/postnetworks/postnetwork-{flexibility}_{line_limits}_2045.nc',
+        network_name=config['results_dir'] + 'version-' + str(config['version']) + '/prenetworks/prenetwork-green-{flexibility}_{line_limits}_2050.nc',
+        options_name=config['results_dir'] + 'version-' + str(config['version']) + '/options/options-{flexibility}_{line_limits}_2050.yml',
+    output:
+        network_name=config['results_dir'] + 'version-' + str(config['version']) + '/prenetworks/prenetwork-brown-{flexibility}_{line_limits}_2050.nc'
+    threads: 1
+    resources: mem_mb=2000
+    script: 'scripts/brown_field.py'
+
+rule solve_networks_2050:
+    input:
+        options_name=config['results_dir'] + 'version-' + str(config['version']) + '/options/options-{flexibility}_{line_limits}_2050.yml',
+        network_name=config['results_dir'] + 'version-' + str(config['version']) + '/prenetworks/prenetwork-brown-{flexibility}_{line_limits}_2050.nc'
+    output:
+        network_name=config['results_dir'] + 'version-' + str(config['version']) + '/postnetworks/postnetwork-{flexibility}_{line_limits}_2050.nc',
+	    shadow_name=config['results_dir'] + 'version-' + str(config['version']) + '/postnetworks/shadow-{flexibility}_{line_limits}_2050.csv'
+    threads: 4
+    resources: mem_mb=100000
+    script: 'scripts/solve_network.py'
+####################################
+
+
+rule make_summary:
+    input:
+        expand(config['results_dir'] + 'version-{version}/postnetworks/postnetwork-{flexibility}_{line_limits}_{year}.nc',
+               version=config['version'],
+               **config['scenario']),
+    	heat_demand_name='data/heating/daily_heat_demand.h5'
+    output:
+        costs=config['summary_dir'] + 'version-{version}/csvs/costs.csv'.format(version=config['version']),
+	    curtailment=config['summary_dir'] + 'version-{version}/csvs/curtailment.csv'.format(version=config['version']),
+	    energy=config['summary_dir'] + 'version-{version}/csvs/energy.csv'.format(version=config['version']),
+	    supply=config['summary_dir'] + 'version-{version}/csvs/supply.csv'.format(version=config['version']),
+	    supply_energy=config['summary_dir'] + 'version-{version}/csvs/supply_energy.csv'.format(version=config['version']),
+	    prices=config['summary_dir'] + 'version-{version}/csvs/prices.csv'.format(version=config['version']),
+	    metrics=config['summary_dir'] + 'version-{version}/csvs/metrics.csv'.format(version=config['version']),
+	    #weighted_prices=config['summary_dir'] + 'version-{version}/csvs/weighted_prices.csv'.format(version=config['version']),
+	    #metrics=config['summary_dir'] + 'version-{version}/csvs/metrics.csv'.format(version=config['version'])
+    threads: 2
+    resources: mem_mb=10000
+    script:
+        'scripts/make_summary.py'
+
+rule plot_summary:
+    input:
+        costs=config['summary_dir'] + 'version-{version}/csvs/costs.csv'.format(version=config['version']),
+	    curtailment=config['summary_dir'] + 'version-{version}/csvs/curtailment.csv'.format(version=config['version']),
+	    energy=config['summary_dir'] + 'version-{version}/csvs/energy.csv'.format(version=config['version']),
+	    supply=config['summary_dir'] + 'version-{version}/csvs/supply.csv'.format(version=config['version']),
+	    supply_energy=config['summary_dir'] + 'version-{version}/csvs/supply_energy.csv'.format(version=config['version']),
+	    prices=config['summary_dir'] + 'version-{version}/csvs/prices.csv'.format(version=config['version']),
+	    #metrics=config['summary_dir'] + 'version-{version}/csvs/metrics.csv'.format(version=config['version'])
+    output:
+        costs=config['summary_dir'] + 'version-{version}/graphs/costs.pdf'.format(version=config['version']),
+	    energy=config['summary_dir'] + 'version-{version}/graphs/energy.pdf'.format(version=config['version'])
+    threads: 2
+    resources: mem_mb=10000
+    script:
+        'scripts/plot_summary.py'

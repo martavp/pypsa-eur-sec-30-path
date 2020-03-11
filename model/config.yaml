@@ -1,0 +1,113 @@
+version:  w_nuclear_subsidy #Base, w_DH_exp, w_Retro, w_Tran_exp, w_EV_exp, w_smart_EV_exp, wo_CO2_budget
+# Base refers to no district heaing/grid expansion, no retrofitting
+
+results_dir: 'results/networks/'
+summary_dir: 'results/summaries/'
+
+scenario:
+  flexibility: [go,wait]
+  line_limits: [TYNDP]   #opt #beware, these are treated all as strings, so need to float() them
+  year: [2020,2025,2030,2035,2040,2045,2050]
+  
+solar_thermal_angle: 45
+
+
+plotting:
+
+  costs_max: 600
+  costs_threshold: 1
+
+  energy_max: 10000.
+  energy_min: -10000.
+  energy_threshold: 50.
+
+  tech_colors:
+    "onwind" : "b"
+    "onshore wind" : "b"
+    'offwind' : "c"
+    'offshore wind' : "c"
+    "hydro" : "#3B5323"
+    "hydro reservoir" : "#3B5323"
+    "ror" : "#78AB46"
+    "run of river" : "#78AB46"
+    'hydroelectricity' : '#006400'
+    'solar' : "y"
+    'solar PV' : "y"
+    'solar thermal' : 'coral'
+    "OCGT" : "brown"
+    "OCGT marginal" : "sandybrown"
+    "OCGT-heat" : "orange"
+    "gas boiler" : "orange"
+    "gas cooler" : "b"
+    "gas boilers" : "orange"
+    "gas boiler marginal" : "orange"
+    "gas" : "brown"
+    "fuel gas" : "brown"
+    "lines" : "k"
+    "transmission lines" : "k"
+    "H2" : "m"
+    "hydrogen storage" : "m"
+    "battery" : "slategray"
+    "battery storage" : "slategray"
+    "nuclear" : "r"
+    "nuclear marginal" : "r"
+    "coal" : "k"
+    "coal marginal" : "k"
+    "lignite" : "grey"
+    "lignite marginal" : "grey"
+    "CCGT" : "orange"
+    "CCGT marginal" : "orange"
+    "heat pumps" : "#76EE00"
+    "heat pump" : "#76EE00"
+    "cooling pump" : "#76EE00"
+    "air heat pump" : "#76EE00"
+    "ground heat pump" : "#40AA00"
+    "resistive heater" : "pink"
+    "Sabatier" : "turquoise"
+    "methanation" : "turquoise"
+    "water tanks" : "#BBBBBB"
+    "hot water storage" : "#BBBBBB"
+    "hot water charging" : "#BBBBBB"
+    "hot water discharging" : "#999999"
+    "CHP" : "r"
+    "CHP heat" : "r"
+    "CHP electric" : "r"
+    "PHS" : "g"
+    "Ambient" : "k"
+    "Electric load" : "b"
+    "Heat load" : "r"
+    "Transport load" : "grey"
+    "heat" : "r"
+    "rural heat" : "r"
+    "urban heat" : "brown"
+    "cooling" : "b"
+    "Li ion" : "grey"
+    "district heating" : "#CC4E5C"
+    "retrofitting" : "purple"
+    "building retrofitting" : "purple"
+    "BEV charger" : "grey"
+    "V2G" : "grey"
+    "transport" : "grey"
+    "electricity" : "k"
+    "transport fuel cell" : "#AAAAAA"
+    "DSM" : "b"
+    "biomass" : "#00b300"
+
+  scenario_names:
+    "elec_only" : "Electricity"
+    "transport" : "Transport"
+    "bev" : "DSM-50"
+    "bev25" : "DSM-25"
+    "bev100" : "DSM-100"
+    "v2g" : "V2G-50"
+    "v2g25" : "V2G-25"
+    "v2g100" : "V2G-100"
+    "fc50" : "FC-50"
+    "fc100" : "FC-100"
+    "base" : "Heating"
+    "methanation" : "Methanation"
+    "tes" : "TES"
+    "central" : "Central"
+    "central-tes" : "Central-TES"
+    "all_flex" : "All-Flex"
+    "all_flex-central" : "All-Flex-Central"
