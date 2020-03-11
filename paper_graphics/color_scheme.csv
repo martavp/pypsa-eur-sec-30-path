@@ -14,10 +14,10 @@ gas boiler,#a9a9a9
 oil,#696969
 coal,#555555
 lignite,#000000
-resistive heater,#1e90ff
+resistive heater,#0000cd
 heat pump,#87ceeb
 hydrogen storage,#800080
-battery storage,#800080
+battery storage,#ffc0cb
 hot water storage,#800080
 methanation,#ffa500
 transmission lines,#4d004d
@@ -34,3 +34,5 @@ gas CHP,#f08080
 gas CHP elec,#f08080
 OCGT,#ffa500
 CCGT,#ff4500
+central water tank,#daa520
+electric vehicle,#ff4500
