@@ -7,7 +7,7 @@
 import pandas as pd
 import numpy as np
 import os
-os.chdir("/home/ws/bw0928/Dokumente/data/aarhus_data/transition_paths_paper/paper_graphics/data/costs/")
+#os.chdir("/home/ws/bw0928/Dokumente/data/aarhus_data/transition_paths_paper/paper_graphics/data/costs/")
 
 
 # # data can be found in DEA
@@ -381,7 +381,7 @@ for year in years:
         elif ('€' in index) & ('kW' in index):
             CC = d_by_tech[tech].at[index,year]*1e3 # convert from EUR/KW(h) to EUR/MW(h)
         else:
-            print(tech)
+            print("check investment units: ", tech)
             CC =  d_by_tech[tech].at[index,year]
 
         # investment contains grid injection and upgrading
