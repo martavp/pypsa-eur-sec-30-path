@@ -84,10 +84,14 @@ def plot_historical_sectoral_emissions():
     gs1 = gridspec.GridSpec(1, 1)
     ax1 = plt.subplot(gs1[0,0])
 
-
-    
-    ax1.stackplot(np.arange(1990,2018), 
-                  
+    #the graph is slightly different to that shown in 
+    #https://www.eea.europa.eu/data-and-maps/indicators/greenhouse-gas-emission-trends-6/assessment-2
+    #the sector CO2 biomass in the webpage is missing here
+    ax1.stackplot(np.arange(1990,2018), [pd.to_numeric(emissions.loc['LULUCF']),], 
+                          colors=['gold'],
+                          linewidth=0,
+                          labels=['LULUCF']) 
+    ax1.stackplot(np.arange(1990,2018),                   
                   [pd.to_numeric(emissions.loc['road non-elec']),
                       pd.to_numeric(emissions.loc['rail non-elec']),
                       pd.to_numeric(emissions.loc['domestic navigation']),
@@ -118,13 +122,7 @@ def plot_historical_sectoral_emissions():
                               'heating in residential and services',
                               'electricity generation + central heating',])                 
 
-    #the graph is slightly different to that shown in 
-    #https://www.eea.europa.eu/data-and-maps/indicators/greenhouse-gas-emission-trends-6/assessment-2
-    #the sector CO2 biomass in the webpage is missing here
-    ax1.stackplot(np.arange(1990,2018), [pd.to_numeric(emissions.loc['LULUCF']),], 
-                          colors=['gold'],
-                          linewidth=0,
-                          labels=['LULUCF']) 
+
 
     total_1990 = (emissions.loc['electricity'] +
                   emissions.loc['residential non-elec'] + 
@@ -171,9 +169,9 @@ def plot_historical_sectoral_emissions():
     ax1.plot([2050],[0.05*total_1990],'ro',
              marker='*', markersize=12, markerfacecolor='black',
              markeredgecolor='black', label='EU commited target')
-        
-    ax1.legend(fancybox=True, fontsize=16, shadow=True, 
-              loc=(1.02,0.05), facecolor='white', frameon=True)
+    handles, labels = ax1.get_legend_handles_labels()
+    ax1.legend(reversed(handles), reversed(labels), fancybox=True, fontsize=16, 
+               shadow=True, loc=(1.02,0.05), facecolor='white', frameon=True)
 
     plt.tight_layout()
     plt.savefig('../figures/historical_sectoral_emissions.png', dpi=300, bbox_inches='tight')

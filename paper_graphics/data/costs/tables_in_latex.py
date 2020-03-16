@@ -100,6 +100,7 @@ dic_ref = {'Technology Data for Energy Plants for Electricity and District heati
            'IEA2011b' : 'BP_2019',
            'Is a 100% renewable European power system feasible by 2050?': 'Zappa_2019, JRC_biomass',
            'Entwicklung der spezifischen Kohlendioxid-Emissionen des deutschen Strommix in den Jahren 1990 - 2018': 'German_Environment_Agency',
+           'IEA WEM2017 97USD/boe = http://www.iea.org/media/weowebsite/2017/WEM_Documentation_WEO2017.pdf':'IEA_WEO2017'
 }
 
 # Solar thermal collector decentral & 270 & m$^{2}$ & 1.3 & 20 & variable & \cite{Henning20141003} \\
@@ -207,7 +208,7 @@ Table including fuel characteristics
 
 filename='../../../table_fuels.tex'
 file = open(filename, 'w') 
-for fuel in [ 'coal', 'lignite', 'gas', 'nuclear', 'solid biomass']:
+for fuel in [ 'coal', 'lignite', 'gas', 'oil','nuclear', 'solid biomass']:
     if idx[fuel,'fuel'] in costs.index:
         cost = str(round(costs.loc[idx[fuel,'fuel'],'value'],1))
         source1 = costs.loc[idx[fuel,'fuel'],'source']

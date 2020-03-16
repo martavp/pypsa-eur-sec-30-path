@@ -33,7 +33,7 @@ def plot_co2_prices():
     gs1 = gridspec.GridSpec(1, 1)
     ax1 = plt.subplot(gs1[0,0])
     date= [datetime.strptime(hour, '%Y-%m-%d %H:%M:%S').date() for hour in data['Date']]
-    ax1.plot(date, data['Price'] , linewidth=2, color='black', label='European Trading System')
+    ax1.plot(date, data['Price'] , linewidth=2, color='black', label='ETS market')
     
     date2 = [datetime(2020,1,1,0,0,0) + timedelta(hours=8760*i*5) for i in range(0,7)]
     ax1.plot(date2, metrics.loc['co2_price',idx['go', 'TYNDP',:]], linewidth=2, color= 'gold', 
@@ -43,8 +43,24 @@ def plot_co2_prices():
              markeredgecolor='firebrick',label='Sudden pathway')
     ax1.set_ylabel('CO$_2$ price (€/ton)', fontsize=18)
     ax1.grid(linestyle='--')
-    ax1.set_ylim([0, 500])    
-    ax1.legend(fancybox=False, fontsize=18, loc=(0.052,0.7), facecolor='white', frameon=True)
+    ax1.set_ylim([0, 500])  
+    ax1.set_xlim([datetime(2008,1,1,0,0,0), datetime(2051,1,1,0,0,0)]) 
+    ax1.plot([datetime(2005,1,1,0,0,0), datetime(2055,1,1,0,0,0)],
+             [275, 275], color='yellowgreen', linewidth = 190, alpha =0.2)
+    ax1.annotate('Co-benefits for human \n health and agriculture',
+                 xy=(datetime(2014,1,1,0,0,0),310),color='yellowgreen', fontsize=20) 
+    ax1.annotate('', xy=(datetime(2030,1,1,0,0,0), 125), 
+                 xytext=(datetime(2030,1,1,0,0,0), 425),
+                 color='yellowgreen', fontsize=20, 
+                 arrowprops = dict(arrowstyle = "->", alpha=1,
+                               color='yellowgreen', linewidth=2),)
+    ax1.annotate('', xy=(datetime(2030,1,1,0,0,0), 425), 
+                 xytext=(datetime(2030,1,1,0,0,0), 125),
+                 color='yellowgreen', fontsize=20, 
+                 arrowprops = dict(arrowstyle = "->", alpha=1,
+                               color='yellowgreen', linewidth=2),)
+    
+    ax1.legend(fancybox=False, fontsize=18, loc=(0.012,0.2), facecolor='white', frameon=True)
     plt.savefig('../figures/co2_price.png', dpi=300, bbox_inches='tight')
 
 plot_co2_prices()
