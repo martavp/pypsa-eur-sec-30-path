@@ -241,5 +241,8 @@ for i,tech in enumerate(['battery', 'H2 underground', 'PHS', 'LTES']):
         
     ax2.set_xticks([1, 10, 100, 1000, 10000])
     ax2.set_xticklabels(['1', '10', '100', '1000', '10000'], fontsize=14)
-    ax2.set_xlabel('cycling period (hours)', fontsize=14)            
+    
+    ax2.set_xlabel('cycling period (hours)', fontsize=14)  
+#ax2.minorticks_on()
+#ax2.tick_params(axis='y', which='minor', bottom=False)          
 plt.savefig('../figures/Fourier_storage.png', dpi=300, bbox_inches='tight') 

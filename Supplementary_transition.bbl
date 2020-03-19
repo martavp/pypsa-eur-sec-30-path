@@ -54,12 +54,6 @@ M.~Victoria, C.~Gallego, I.~Anton, G.~Sala,
   {\path{doi:10.4229/27thEUPVSEC2012-6CV.3.49}}.
 \newline\urlprefix\url{http://www.eupvsec-proceedings.com/proceedings?paper=17736}
 
-\bibitem{Brown_2016}
-T.~Brown, P.~Schierhorn, E.~Tr{\"o}ster, T.~Ackermann, Optimising the european
-  transmission system for 77\% renewable electricity by 2030 10~(1)  3--9.
-\newblock \href {https://doi.org/10.1049/iet-rpg.2015.0135}
-  {\path{doi:10.1049/iet-rpg.2015.0135}}.
-
 \bibitem{OPSD}
 \href{https://data.open-power-system-data.org/time_series/2018-03-13/.}{Open
   {Power} {System} {Data}. 2018. {Data} {Package} {Time} series. {Version}
@@ -164,6 +158,13 @@ D.~Caglayan, N.~Weber, H.~U. Heinrichs, J.~Linßen, M.~Robinius, P.~A. Kukla,
 \newblock \href {https://doi.org/10.20944/preprints201910.0187.v1}
   {\path{doi:10.20944/preprints201910.0187.v1}}.
 \newline\urlprefix\url{https://www.preprints.org/manuscript/201910.0187/v1}
+
+\bibitem{Brown_2016}
+T.~Brown, P.~Schierhorn, E.~Tr{\"o}ster, T.~Ackermann, Optimising the european
+  transmission system for 77\% renewable electricity by 2030, {IET} Renewable
+  Power Generation 10~(1)  3--9.
+\newblock \href {https://doi.org/10.1049/iet-rpg.2015.0135}
+  {\path{doi:10.1049/iet-rpg.2015.0135}}.
 
 \bibitem{TYNDP2016}
 \href{https://tyndp.entsoe.eu/maps-data/}{{Ten}-{Year} {Network} {Development}
@@ -329,6 +330,9 @@ C.~Budischak, D.~Sewell, H.~Thomson, L.~Mach, D.~E. Veron, W.~Kempton,
   the years 1990 - 2018, {German} {Environment} {Agency}}.
 \newline\urlprefix\url{https://www.umweltbundesamt.de/sites/default/files/medien/1410/publikationen/2019-04-10_cc_10-2019_strommix_2019.pdf}
 
+\bibitem{IEA_WEO2017}
+{Word Energy Outlook 2017, International Energy Agency}, Tech. rep.
+
 \bibitem{Zappa_2019}
 W.~Zappa, M.~Junginger, M.~van~den Broek,
   \href{http://www.sciencedirect.com/science/article/pii/S0306261918312790}{Is
@@ -359,7 +363,7 @@ H.-J. Fell, C.~Breyer, M.~Metayer,
 F.~Creutzig, P.~Agoston, J.~C. Goldschmidt, G.~Luderer, G.~Nemet, R.~C.
   Pietzcker, \href{https://www.nature.com/articles/nenergy2017140}{The
   underestimated potential of solar energy to mitigate climate change}, Nature
-  Energy 2~(9) (Aug. 2017).
+  Energy 2~(9) (2017).
 \newblock \href {https://doi.org/10.1038/nenergy.2017.140}
   {\path{doi:10.1038/nenergy.2017.140}}.
 \newline\urlprefix\url{https://www.nature.com/articles/nenergy2017140}
@@ -385,6 +389,26 @@ N.~M. Haegel, H.~Atwater, T.~Barnes, C.~Breyer, A.~Burrell, Y.-M. Chiang, S.~D.
   {Report}, {Fraunhofer} {Institute} for {Solar} {Energy} {Systems}, version
   {November} 2019}, Tech. rep. (2019).
 \newline\urlprefix\url{https://www.ise.fraunhofer.de/content/dam/ise/de/documents/publications/studies/Photovoltaics-Report.pdf}
+
+\bibitem{Child_2019}
+M.~Child, C.~Kemfert, D.~Bogdanov, C.~Breyer,
+  \href{http://www.sciencedirect.com/science/article/pii/S0960148119302319}{Flexible
+  electricity generation, grid exchange and storage for the transition to a
+  100\% renewable energy system in {Europe}}, Renewable Energy 139 (2019)
+  80--101.
+\newblock \href {https://doi.org/10.1016/j.renene.2019.02.077}
+  {\path{doi:10.1016/j.renene.2019.02.077}}.
+\newline\urlprefix\url{http://www.sciencedirect.com/science/article/pii/S0960148119302319}
+
+\bibitem{Bogdanov_2019}
+D.~Bogdanov, J.~Farfan, K.~Sadovskaia, A.~Aghahosseini, M.~Child, A.~Gulagi,
+  A.~S. Oyewo, L.~Barbosa, C.~Breyer,
+  \href{https://www.nature.com/articles/s41467-019-08855-1}{Radical
+  transformation pathway towards sustainable electricity via evolutionary
+  steps}, Nature Communications 10~(1) (2019) 1--16.
+\newblock \href {https://doi.org/10.1038/s41467-019-08855-1}
+  {\path{doi:10.1038/s41467-019-08855-1}}.
+\newline\urlprefix\url{https://www.nature.com/articles/s41467-019-08855-1}
 
 \bibitem{in-depth_2018}
 \href{https://ec.europa.eu/clima/news/commission-calls-climate-neutral-europe-2050_en}{In-depth
@@ -413,6 +437,15 @@ V.~Krey, F.~Guo, P.~Kolp, W.~Zhou, R.~Schaeffer, A.~Awasthy, C.~Bertram, H.-S.
   {\path{doi:10.1016/j.energy.2018.12.131}}.
 \newline\urlprefix\url{http://www.sciencedirect.com/science/article/pii/S0360544218325039}
 
+\bibitem{Egli_2019}
+F.~Egli, B.~Steffen, T.~S. Schmidt,
+  \href{https://www.nature.com/articles/s41467-019-12468-z}{Bias in energy
+  system models with uniform cost of capital assumption}, Nature Communications
+  10~(1) (2019) 1--3.
+\newblock \href {https://doi.org/10.1038/s41467-019-12468-z}
+  {\path{doi:10.1038/s41467-019-12468-z}}.
+\newline\urlprefix\url{https://www.nature.com/articles/s41467-019-12468-z}
+
 \bibitem{Schyska_2020}
 B.~U. Schyska, A.~Kies,
   \href{http://www.sciencedirect.com/science/article/pii/S0306261920300350}{How
@@ -422,10 +455,52 @@ B.~U. Schyska, A.~Kies,
   {\path{doi:10.1016/j.apenergy.2020.114523}}.
 \newline\urlprefix\url{http://www.sciencedirect.com/science/article/pii/S0306261920300350}
 
+\bibitem{Hermelink_2015}
+\href{https://www.eurima.org/uploads/ModuleXtender/Publications/129/Ecofys_EvaluatingOurFuture-final20151019.pdf}{{Evaluating
+  our future. The crucial role of discount rates in European Commission energy
+  system modelling, Ecofys}}, Tech. rep. (2015).
+\newline\urlprefix\url{https://www.eurima.org/uploads/ModuleXtender/Publications/129/Ecofys_EvaluatingOurFuture-final20151019.pdf}
+
+\bibitem{Emmerling_2019}
+J.~Emmerling, L.~Drouet, K.~van~der Wijst, D.~van Vuuren, V.~Bosetti,
+  M.~Tavoni, \href{https://doi.org/10.1088%2F1748-9326%2Fab3cc9}{The role of
+  the discount rate for emission pathways and negative emissions},
+  Environmental Research Letters 14~(10) (2019) 104008, publisher: IOP
+  Publishing.
+\newblock \href {https://doi.org/10.1088/1748-9326/ab3cc9}
+  {\path{doi:10.1088/1748-9326/ab3cc9}}.
+\newline\urlprefix\url{https://doi.org/10.1088%2F1748-9326%2Fab3cc9}
+
+\bibitem{IRENA_jobs}
+\href{https://www.irena.org/publications/2019/Jun/Renewable-Energy-and-Jobs-Annual-Review-2019}{{Renewable
+  Energy and Jobs Annual Review 2019, IRENA}}, Tech. rep. (2019).
+\newline\urlprefix\url{https://www.irena.org/publications/2019/Jun/Renewable-Energy-and-Jobs-Annual-Review-2019}
+
+\bibitem{Low_carbon_jobs}
+\href{http://www.ukerc.ac.uk/programmes/technology-and-policy-assessment/low-carbon-jobs.html}{{Low
+  carbon jobs: The evidence for net job creation from policy support for energy
+  efficiency and renewable energy, UKERC}}, Tech. rep. (2014).
+\newline\urlprefix\url{http://www.ukerc.ac.uk/programmes/technology-and-policy-assessment/low-carbon-jobs.html}
+
+\bibitem{IRENA_gender}
+\href{https://www.irena.org/-/media/Files/IRENA/Agency/Publication/2019/Jan/IRENA_Gender_perspective_2019.pdf}{{Renewble
+  Energy: a gender perspective}}, Tech. rep. (2019).
+\newline\urlprefix\url{https://www.irena.org/-/media/Files/IRENA/Agency/Publication/2019/Jan/IRENA_Gender_perspective_2019.pdf}
+
 \bibitem{agora}
 \href{https://www.agora-energiewende.de/fileadmin2/Projekte/2017/Heat_System_Benefit/143_Heat_System_benefits_WEB.pdf}{Agora
   {Energiewende}, {Wert} der {Effizienz} im {Gebäudesektor} in {Zeiten} der
   {Sektorenkopplung}}.
 \newline\urlprefix\url{https://www.agora-energiewende.de/fileadmin2/Projekte/2017/Heat_System_Benefit/143_Heat_System_benefits_WEB.pdf}
+
+\bibitem{Victoria_2019_storage}
+M.~Victoria, K.~Zhu, T.~Brown, G.~B. Andresen, M.~Greiner,
+  \href{http://www.sciencedirect.com/science/article/pii/S0196890419309835}{The
+  role of storage technologies throughout the decarbonisation of the
+  sector-coupled {European} energy system}, Energy Conversion and Management
+  201 (2019) 111977.
+\newblock \href {https://doi.org/10.1016/j.enconman.2019.111977}
+  {\path{doi:10.1016/j.enconman.2019.111977}}.
+\newline\urlprefix\url{http://www.sciencedirect.com/science/article/pii/S0196890419309835}
 
 \end{thebibliography}

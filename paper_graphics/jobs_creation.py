@@ -2,7 +2,7 @@
 """
 Created on Thu Mar 12 15:26:38 2020
 
-@author: marta.victoria.perez
+@author: @marta
 """
 
 
@@ -26,7 +26,7 @@ jobs_data=pd.read_csv('data/associated_jobs.csv',sep=',',
                     index_col=0, header=[0])
 
 idx = pd.IndexSlice
-version= 'Base'  #'w_Tran_exp' #'w_EV_exp' # #'w_Retro' #'w_DH_exp'
+version= 'Base'
 
 cum_cap=pd.read_csv('results/version-' + version +'/csvs/metrics.csv', sep=',', 
                     index_col=0, header=[0,1,2])
@@ -45,25 +45,27 @@ for path in ['go', 'wait']:
     for year in years_future:     
         year_ref=2025+5*((year-2020)//5)
         line_limit='TYNDP' #opt'
-        solar_expansion = cum_cap.loc['solar expansion',idx[path, line_limit, str(year_ref)]]
-        wind_expansion = cum_cap.loc[['onwind expansion', 'offwind expansion'],idx[path, line_limit, str(year_ref)]].sum()
-        biomass_expansion = cum_cap.loc[['biomass CHP expansion', 'biomass HOP expansion', 'biomass EOP expansion'],idx[path, line_limit, str(year_ref)]].sum()
+        solar_expansion = (1/5)*cum_cap.loc['solar expansion',idx[path, line_limit, str(year_ref)]] #expansion in 5 years
+        wind_expansion = (1/5)*cum_cap.loc[['onwind expansion', 'offwind expansion'],idx[path, line_limit, str(year_ref)]].sum() #expansion in 5 years
+        biomass_expansion = (1/5)*cum_cap.loc[['biomass CHP expansion', 'biomass HOP expansion', 'biomass EOP expansion'],idx[path, line_limit, str(year_ref)]].sum()
     
         dic_expansion={'solar PV' : solar_expansion, 
                        'wind' : wind_expansion, 
                        'biomass' : biomass_expansion}
         for technology in technologies:
-            #jobs-year= full-time-jobs/GWh * GWh/GW * lifetime *  newly installed MW /1000000000 (GW->Mw , million)
+            #jobs (worklife-long) = full-time-equivalent jobs/GWh * GWh/GW * lifetime *  newly installed MW / (1000*worklife) (GW->MW )
             jobs[technology][year] = (jobs_data.loc[technology, 'full-time-equivalent jobs [jobs /GWh]']*
                                   jobs_data.loc[technology, 'annual CF']*8760*
                                   jobs_data.loc[technology, 'lifetime']*
-                                  dic_expansion[technology])/(1000000000*worklife)
+                                  dic_expansion[technology])/(1000*worklife)
         
-    ax1.plot(jobs['solar PV']+jobs['wind']+jobs['biomass'], color=colors[path], linewidth=3, label=dic_label[path])
-    #ax1.plot(jobs['wind'], color=colors[path], linewidth=3, linestyle='--', label=None)
-    print('total created jobs = ' + str((jobs['solar PV']+jobs['wind']).sum())) 
+    ax1.plot(jobs['solar PV']+jobs['wind']+jobs['biomass'], color=colors[path], linewidth=4, label=dic_label[path])
+    #ax1.plot(jobs['solar PV'], color=colors[path], linewidth=3, linestyle='--', label=None)
+    print('total created jobs (millions) = ' + str(0.000001*(jobs['solar PV']+jobs['wind']+jobs['biomass']).sum())) 
 ax1.legend(fancybox=False, fontsize=20, loc=(0.6,0.83), facecolor='white', frameon=False)
-ax1.set_ylabel('Newly created jobs (Million)', fontsize=20)  
+ax1.set_ylabel('Newly created jobs (solar, wind & biomass)', fontsize=20)  
 ax1.set_xlim([2020, 2050])
-ax1.set_ylim([0, 1.0])
+ax1.set_ylim([0, 160000])
+ax1.grid()
 plt.savefig('../figures/jobs.png', dpi=300, bbox_inches='tight')
+

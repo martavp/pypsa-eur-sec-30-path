@@ -1,11 +1,13 @@
-,lifetime,annual CF,full-time-equivalent jobs [jobs /GWh],testing,installation [jobs-year/MW],Manufacturing (Cameron) [jobs-year/MW],Installation (Cameron) [jobs-year/MW],Installation (O&M) [jobs/MW]
-solar PV,25,0.11,1.7,41,21.6,16.8,13.2,0.3
-wind,20,0.3,0.5,26,4.5,3.9,1.3,0.2
-CSP,40,0.3,0.4,42,10.2,,,
-biomass,30,0.8,0.2,42,6.4,,,
-hydro,50,,,0,5.7,,,
-gas,25,,,0,1,,,
-lignite,,,,0,1.5,,,
-coal,40,,,0,4.3,,,
-geotermal,,,,0,6.8,,,
-CCS,,,,0,20.5,,,
+technology,lifetime,annual CF,full-time-equivalent jobs [jobs /GWh],installation [jobs-year/MW],Manufacturing (Cameron) [jobs-year/MW],Installation (Cameron) [jobs-year/MW],Installation (O&M) [jobs/MW],Source
+solar  PV rooftop,25,0.11,2,21.6,16.8,13.2,0.3,"Low carbon jobs, UKERC, http://www.ukerc.ac.uk/programmes/technology-and-policy-assessment/low-carbon-jobs.html"
+solar PV utility,25,0.11,0.5,21.6,16.8,13.2,0.3,"Low carbon jobs, UKERC, http://www.ukerc.ac.uk/programmes/technology-and-policy-assessment/low-carbon-jobs.html"
+solar PV,25,0.11,1.25,21.6,16.8,13.2,0.3,"Low carbon jobs, UKERC, http://www.ukerc.ac.uk/programmes/technology-and-policy-assessment/low-carbon-jobs.html"
+wind,20,0.3,0.5,4.5,3.9,1.3,0.2,"Low carbon jobs, UKERC, http://www.ukerc.ac.uk/programmes/technology-and-policy-assessment/low-carbon-jobs.html"
+CSP,40,0.3,0.4,10.2,,,,"Low carbon jobs, UKERC, http://www.ukerc.ac.uk/programmes/technology-and-policy-assessment/low-carbon-jobs.html"
+biomass,30,0.8,0.2,6.4,,,,"Low carbon jobs, UKERC, http://www.ukerc.ac.uk/programmes/technology-and-policy-assessment/low-carbon-jobs.html"
+hydro,50,,,5.7,,,,"Low carbon jobs, UKERC, http://www.ukerc.ac.uk/programmes/technology-and-policy-assessment/low-carbon-jobs.html"
+gas,25,,,1,,,,"Low carbon jobs, UKERC, http://www.ukerc.ac.uk/programmes/technology-and-policy-assessment/low-carbon-jobs.html"
+lignite,,,,1.5,,,,"Low carbon jobs, UKERC, http://www.ukerc.ac.uk/programmes/technology-and-policy-assessment/low-carbon-jobs.html"
+coal,40,,,4.3,,,,"Low carbon jobs, UKERC, http://www.ukerc.ac.uk/programmes/technology-and-policy-assessment/low-carbon-jobs.html"
+geothermal,,,,6.8,,,,"Low carbon jobs, UKERC, http://www.ukerc.ac.uk/programmes/technology-and-policy-assessment/low-carbon-jobs.html"
+CCS,,,,20.5,,,,"Low carbon jobs, UKERC, http://www.ukerc.ac.uk/programmes/technology-and-policy-assessment/low-carbon-jobs.html"

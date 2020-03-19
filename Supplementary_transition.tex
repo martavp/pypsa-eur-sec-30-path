@@ -123,13 +123,13 @@
 
 \section{Historical greenhouse gases emissions in the European Union}
 
-The carbon budget from now onwards for the generation of electricity and the supply of heating in residential and services sector in Europe accounts for 21 GtCO$_2$. It has been estimated based on a global carbon budget of 800 GtCO$_2$ to avoid temperature increments above 1.75$^{\circ}$C relative to preindustrial period with a probability of greater than 66\% \cite{IPCC_1.5}. The global budget is assumed to be split among regions according to a constant per-capita ratio which translates into a 6\% share for Europe \cite{Raupach_2014}. Out of the total emissions in Europe, the ratio corresponding to electricity and heating is considered constant and equal to present values. In 2017, electricity generation and heating in the residential and services sector emitted 1.56 GtCO$_2$ which represents 43.5\% of European emissions,  \cite{UNFCCC_inventory} and Figure \ref{fig_historical_emissions} . \\
+The carbon budget from now onwards for the generation of electricity and the supply of heating in the residential and services sector in Europe accounts for 21 GtCO$_2$. It has been estimated based on a global carbon budget of 800 GtCO$_2$ to avoid temperature increments above 1.75$^{\circ}$C relative to preindustrial period with a probability of greater than 66\% \cite{IPCC_1.5}. The global budget is assumed to be split among regions according to a constant per-capita ratio which translates into a 6\% share for Europe \cite{Raupach_2014}. Out of the total emissions in Europe, the ratio corresponding to electricity and heating is considered constant and equal to present values. In 2017, electricity generation and heating in the residential and services sector emitted 1.56 GtCO$_2$ which represents 43.5\% of European emissions,  \cite{UNFCCC_inventory} and Figure \ref{fig_historical_emissions} . \\
 %Figueres_2017, blog_budget
 
 \begin{figure}[!h]
 \centering
-\includegraphics[width=\textwidth]{figures/historical_sectoral_emissions.png}
-\caption{Sectoral distribution of historical emissions in the European Union \cite{UNFCCC_inventory}. The black stars indicate committed EU reduction targets, while white stars mark under-discussion targets. LULUCFS stands for land use, land-use change, and forestry} \label{fig_historical_emissions} 
+\includegraphics[width=0.9\textwidth]{figures/historical_sectoral_emissions.png}
+\caption{Sectoral distribution of historical emissions in the European Union \cite{UNFCCC_inventory}. The black stars indicate committed EU reduction targets, while white stars mark under-discussion targets. LULUCF stands for land use, land-use change, and forestry.} \label{fig_historical_emissions} 
 \end{figure}
 
 \FloatBarrier
@@ -148,7 +148,7 @@ Alternatively, emissions can be assumed to follow a path defined by one minus th
 \begin{equation}
 \begin{aligned}
 &	e (t) = e_0(1- CDF_{\beta}(t)) \\
-&	CDF_{\beta} (t) =\int_{-t_0}^{t} PDF_{\beta}(t) dt \\
+&	CDF_{\beta} (t) =\int_{t_0}^{t} PDF_{\beta}(t) dt \\
 &	PDF_{\beta} (t) =  \frac{\Gamma(2\beta_1)}{2\Gamma(\beta_1)} (t-t_0)^{\beta_1-1} (t_f-t_0)^{\beta_1-1}
 \end{aligned}
 \end{equation}
@@ -165,20 +165,19 @@ where $r$ is the initial linear growth rate, which here is assumed to be $r$=0, 
 & m=\frac{1+ \sqrt{1+\frac{rB}{e_0}}}{\frac{B}{e_0}}
 \end{aligned}
 \end{equation}
-Although the exponential decay path approaches asymptotically to zero, we assume here that $e(2050)=0$. By doing that, the final point of the different transition paths is equivalent and all of them achieve net-zero emissions by 2050.
+Although the exponential decay path approaches asymptotically to zero, we assume here that $e(2050)=0$. By doing that, the final point of the different transition paths is equivalent and all of them achieve net-zero emissions in the electricity and heating sectors by 2050.
 
 \FloatBarrier
 
 \newpage
 
-\section{Historical evolution of CO$_2$ emissions from heating supply in residential and services sector in European countries}
-
-Figure \ref{fig_historical_heating} depicts the historical evolution of technologies used to supply heating in different European countries. 
+\section{Historical evolution of CO$_2$ emissions from heating supply in the residential and services sector in European countries}
+Figure \ref{fig_emissions_heating} shows the CO$_2$ emissions from heating normalized to 1990 values. Some European countries have been particularly successful in reducing emissions as discussed in the main text. Figure \ref{fig_historical_heating} depicts the historical evolution of technologies used to supply heating in different European countries. 
 
 \begin{figure}[!h]
 \centering
 \includegraphics[width=12cm]{figures/emissions_heating.png}
-\caption{Historical CO$_2$ emissions from the heating in residential and services sector \cite{UNFCCC_inventory}. } \label{fig_emissions_heating} 
+\caption{Historical CO$_2$ emissions from the heating in the residential and services sector \cite{UNFCCC_inventory}. } \label{fig_emissions_heating} 
 \end{figure}
 
 \begin{figure}[!h]
@@ -191,7 +190,7 @@ Figure \ref{fig_historical_heating} depicts the historical evolution of technolo
 
 \FloatBarrier
 
-\newpage
+\clearpage
 
 \section{Historical build rates for solar photovoltaics in European countries}
 
@@ -208,19 +207,19 @@ Figure \ref{fig_historical_heating} depicts the historical evolution of technolo
 In every time step, the optimisation objective, that is, the total annualised system cost is calculated as:
 
 \begin{align}
-& \min_{\substack{G_{n,s},E_{n,s},\\F_\ell,g_{n,s,t}}} \left[ \sum_{n,s} c_{n,s} \cdot G_{n,s} +\sum_{n,s} \hat{c}_{n,s} \cdot E_{n,s} \right. \nonumber \\
-& \hspace{2cm} \left. + \sum_{\ell} c_{\ell} \cdot F_{\ell}+ \sum_{n,s,t} o_{n,s,t} \cdot g_{n,s,t} \right]
+ \min_{\substack{G_{n,s},E_{n,s},\\F_\ell,g_{n,s,t}}} \left[ \sum_{n,s} c_{n,s} \cdot G_{n,s} +\sum_{n,s} \hat{c}_{n,s} \cdot E_{n,s} \right. \nonumber 
+\left. + \sum_{\ell} c_{\ell} \cdot F_{\ell}+ \sum_{n,s,t} o_{n,s,t} \cdot g_{n,s,t} \right]
 \label{eq_objective}
 \end{align}
-where $c_{n,s}$ are the fixed annualised costs for generator and storage power capacity $G_{n,s}$ of technology $s$ in every bus $n$, $\hat{c}_{n,s}$ are the fixed annualised costs for storage energy capacity $E_{n,s}$, $c_\ell$ are the fixed annualised costs for bus connectors $F_{\ell}$, and $o_{n,s,t}$ are the variable costs (which in some cases include CO$_2$ tax) for generation and storage dispatch $g_{n,s,t}$ in every hour $t$. Bus connectors $\ell$ include transmission lines but also converters between the buses implemented in every country (see Figure \ref{Fig_buses}), for instance, heat pumps that connect the electricity and heating bus. \\
+where $c_{n,s}$ are the fixed annualised costs for generator and storage power capacity $G_{n,s}$ of technology $s$ in every bus $n$, $\hat{c}_{n,s}$ are the fixed annualised costs for storage energy capacity $E_{n,s}$, $c_\ell$ are the fixed annualised costs for bus connectors $F_{\ell}$, and $o_{n,s,t}$ are the variable costs for generation and storage dispatch $g_{n,s,t}$ in every hour $t$. Bus connectors $\ell$ include transmission lines but also converters between the buses implemented in every country (see Figure \ref{Fig_buses}), for instance, heat pumps that connect the electricity and heating bus. \\
 
-The optimisation of the system is subject to several constraints. First, hourly demand $d_{n,t}$ in every bus $n$ must be supplied by generators in that bus or imported from other buses. $f_{\ell,t}$ represents the energy flow on the link $l$ and $\alpha_{n,\ell,t}$ indicates both the direction and the efficiency of flow on the bus connectors.  $\alpha_{n,\ell,t}$ can be time dependent such as in the case of heat pumps whose conversion efficiency depends on the ambient temperature.
+The optimisation of the system is subject to several constraints. First, hourly demand $d_{n,t}$ in every bus $n$ must be supplied by generators in that bus or imported from other buses. $f_{\ell,t}$ represents the energy flow on the link $l$ and $\alpha_{n,\ell,t}$ indicates both the direction and the efficiency of flow on the bus connectors.  $\alpha_{n,\ell,t}$ can be time-dependent such as in the case of heat pumps whose conversion efficiency depends on the ambient temperature.
 
 \begin{equation}
 \sum_{s} g_{n,s,t}+ \sum_{\ell} \alpha_{n,\ell,t}\cdot f_{\ell,t} = d_{n,t} \hspace{.2cm} \leftrightarrow \hspace{0.2cm} \lambda_{n,t} \hspace{.3cm} \forall\, n,t \label{eq_energy_balance}
 \end{equation}
 
-The Lagrange multiplier $\lambda_{n,t}$,  also known as Karun-Kush-Tucker (KKT),  associated with the demand constraint indicates the marginal price of the energy carrier in the bus $n$, \textit{e.g.}, local marginal electricity price in the electricity bus. \\
+The Lagrange multiplier $\lambda_{n,t}$,  also known as Karush-Kuhn-Tucker (KKT),  associated with the demand constraint indicates the marginal price of the energy carrier in the bus $n$, \textit{e.g.}, local marginal electricity price in the electricity bus. \\
 
 Second, the maximum power flowing through the links is limited by their maximum physical capacity $F_{\ell}$. For transmission links, $\ubar{f}_{\ell,t}=-1$ and $\bar{f}_{\ell,t}=1$, which allows both import and export between neighbouring countries. For a unidirectional converter \textit{e.g.}, a heat resistor, $\ubar{f}_{\ell,t}=0$ and $\bar{f}_{\ell,t}=1$ since a heat resistor can only convert electricity into heat.
 
@@ -228,7 +227,7 @@ Second, the maximum power flowing through the links is limited by their maximum 
 \ubar{f}_{\ell,t} \cdot F_{\ell} \leq f_{\ell,t} \leq \bar{f}_{\ell,t} \cdot F_{\ell} \hspace{1cm} \forall\, \ell,t \; . \label{eq_links}
 \end{equation}
 
-For interconnecting transmission lines, the lengths $l_{\ell}$ are set by the distance between the geographical mid-points of each country, so that some of the transmission within each country is also reflected in the optimisation. A factor of 25\% is added to the line lengths to account for the fact that transmission lines cannot be placed as the crow flies due to land use restriction. For the transmission lines capacities $F_{\ell}$, a safety margin of 33\% of the installed capacity is used to satisfy n-1 requirements \cite{Brown_2016}. \\ %Linear optimal power flow is applied using Kirchhoff's formulation \cite{Horsch_2018}. 
+%For interconnecting transmission lines, the lengths $l_{\ell}$ are set by the distance between the geographical mid-points of each country, so that some of the transmission within each country is also reflected in the optimisation. A factor of 25\% is added to the line lengths to account for the fact that transmission lines cannot be placed as the crow flies due to land use restriction. For the transmission lines capacities $F_{\ell}$, a safety margin of 33\% of the installed capacity is used to satisfy n-1 requirements \cite{Brown_2016}. \\ %Linear optimal power flow is applied using Kirchhoff's formulation \cite{Horsch_2018}. 
 
 Third, for every hour the maximum capacity that can provide a generator or storage is bounded by the product between installed capacity $G_{n,s}$ and availabilities $\ubar{g}_{n,s,t}$, $\bar{g}_{n,s,t}$. For instance, for solar generators $\ubar{g}_{n,s,t}$ is zero and $\bar{g}_{n,s,t}$ refers to the capacity factor at time $t$ 
 
@@ -244,11 +243,10 @@ The maximum power capacity for generators is limited by potentials $\bar{G}_{n,s
 The storage technologies have a charging efficiency $\eta_{in}$ and rate $g_{n,s,t}^+$, a discharging efficiency $\eta_{out}$ and rate $g_{n,s,t}^-$, possible inflow $g_{n,s,t,\textrm{inflow}}$ and spillage $g_{n,s,t,\textrm{spillage}}$, and standing loss $\eta_0$. The state of charge $e_{n,s,t}$ of every storage has to be consistent with charging and discharging in every hour and is limited by the energy capacity of the storage $E_{n,s}$. It should be remarked that the storage energy capacity $E_{n,s}$ can be optimised independently of the storage power capacity $G_{n,s}$.
 
 \begin{align}
-e_{n,s,t} = & \ \eta_0 \cdot e_{n,s,t-1} + \eta_{in} |g_{n,s,t}^+| - \eta_{out}^{-1} |g_{n,s,t}^-| \nonumber \\
-& + g_{n,s,t,\textrm{inflow}} - g_{n,s,t,\textrm{spillage}} \; , \nonumber \\
+e_{n,s,t} = & \ \eta_0 \cdot e_{n,s,t-1} + \eta_{in} |g_{n,s,t}^+| - \eta_{out}^{-1} |g_{n,s,t}^-| \nonumber + g_{n,s,t,\textrm{inflow}} - g_{n,s,t,\textrm{spillage}} \; , \nonumber \\
 & 0  \leq   e_{n,s,t} \leq E_{n,s}   \hspace{0.5cm} \forall\, n,s,t \; . \label{eq_storage}
 \end{align}
-So far, equations (\ref{eq_energy_balance}) to (\ref{eq_storage}) represent mainly technical constraints but additional constraints can be imposed to bound the solution.\\
+So far, Equations (\ref{eq_energy_balance}) to (\ref{eq_storage}) represent mainly technical constraints but additional constraints can be imposed to bound the solution.\\
 
 The interconnecting transmission expansion can be limited by a global constraint
 \begin{equation}
@@ -327,16 +325,24 @@ where $\varepsilon_{s}$ represents the specific emissions in CO$_2$-tonne-per-MW
   \end{circuitikz}
 
 \end{adjustbox}
-\caption{Energy flow at a single node representing a country. Within each node, there is a bus (thick horizontal line) for every sector 
-(electricity, transport and heating), to which different loads (triangles), energy sources (circles), storage units (rectangles) and converters (lines connecting buses) are attached.}
+\caption{Energy flow at a single node representing a country. Within each node, there is a bus (thick horizontal line) for every sector (electricity, transport and heating), to which different loads (triangles), energy sources (circles), storage units (rectangles) and converters (lines connecting buses) are attached. This is equivalent to the diagram shown in Fig. 7 in the main text. }
 \label{Fig_buses}
 \end{figure}
 
 
+\subsection{Icon design acknowledgement}
+Icons used in Fig. 7 in the main text were retrieved from the Noun Project, we acknowledge the followings icons and authors: solar energy by fauzan akbar, wind energy by fauzan akbar, Air Conditioner by Arthur Shlain, Radiator by Nicolas LEULIET, Gas boiler by ProSymbols, cogeneration by Fabio Rinaldi, Water Tank by Luis Solorio, electric vehicle by Adrien Coquet, Dam by iconsmind.com, water heater by Stepan Voevodin, nitrogen by Edwin PM, Battery by notplayink!, transmission lline by DARAYANI, Tank by Fabio Rinaldi, Methane by Michael Wohlwend, Hydropower by Georgiana Ionescu, Rabbit by Marco Galtarossa, tortoise by Christopher T. Howlett.
+
 \section{Sectors description and data}
 
 \subsection{Electricity sector}
-Hourly electricity demand for every country corresponding to 2015 is retrieved from EU Network Transmission System Operators of Electricity (ENTSO-E) via the convenient dataset prepared by the Open Power System Data (OPSD) initiative \cite{OPSD}. In every country, electricity can be generated by solar PV, onshore wind, offshore wind, Open Cycle Gas Turbines (OCGT), Combined Cycle Gas Turbines (CCGT), coal, lignite, and nuclear power plants and CHP units using either gas, coal or biomass. Their costs, lifetimes and efficiencies are shown in Table \ref{tab:cost per year}.  To represent scheduled shut-down, a constant 90\% availability is assumed for nuclear power plants. Country-wise onshore and offshore wind capacity factor time series are modelled by converting wind velocity from Climate Forecast System Reanalysis (CFSR) \cite{CFSR} into wind generation, following the methodology described in \cite{Andresen_2015}. CFSR database comprises hourly resolution and spatial resolution equal to 0.3125$^{\circ}$x0.3125$^{\circ}$, which in Europe roughly corresponds to 40x40 km$^2$. For every country, a capacity layout proportional to wind resource is assumed. Following \cite{Schlachtberger_2017}, large countries are divided into up to 4 regions sorted by wind resource. Independent classes of generators with different time series and average full load hours are added to a single node representing a country. Their optimised capacities are later aggregated on a country level for analysis. Time series representing the hourly capacity factors for solar PV were obtained by converting bias-corrected CFSR reanalysis irradiance into solar electricity generation, assuming a uniform capacity layout across every country. Details on the conversion and aggregation methodology can be found in \cite{Victoria_2019b}, the complete time series dataset is available in \href{https://doi.org/10.5281/zenodo.1321809}{10.5281/zenodo.1321809}. 50\% of PV capacity in every country is assumed to be utility-scale installations and 50\% rooftop PV systems with the cost and characteristics gathered in Tables \ref{tab:cost per year} and \ref{tab:inputs}. The discount rate is assumed to be 7\% for the former and 4\% for the latter. As discussed in \cite{Victoria_2019_EUPVSEC} the impact of this assumption is limited. The maximum capacity for onshore wind, offshore wind, and solar PV that can be installed in every country is limited by the estimated potentials. Those are determined by summing the available land in every reanalysis grid cell, which in turn is calculated by considering only the suitable land for every technology, according to the Corine Land Cover (CLC) database \cite{Corine_2014} and subtracting Natura 2000 protected areas \cite{Natura2000}. For onshore and offshore wind, the potential is calculated as 20\% of the available land. For solar PV, 3\% of the available land is used for estimating the potential.
+Hourly electricity demand for every country corresponding to 2015 is retrieved from EU Network Transmission System Operators of Electricity (ENTSO-E) via the convenient dataset prepared by the Open Power System Data (OPSD) initiative \cite{OPSD}. In every country, electricity can be generated by solar PV, onshore wind, offshore wind, Open Cycle Gas Turbines (OCGT), Combined Cycle Gas Turbines (CCGT), coal, lignite, and nuclear power plants and CHP units using either gas, coal or biomass. Their costs, lifetimes and efficiencies are shown in Tables \ref{tab:cost per year} and \ref{tab:inputs}.  To represent scheduled shut-down, a constant 90\% availability is assumed for nuclear power plants. \
+
+Country-wise onshore and offshore wind capacity factor time series are modelled by converting wind velocity from Climate Forecast System Reanalysis (CFSR) \cite{CFSR} into wind generation, following the methodology described in \cite{Andresen_2015}. CFSR database comprises hourly resolution and spatial resolution equal to 0.3125$^{\circ}$x0.3125$^{\circ}$, which in Europe roughly corresponds to 40x40 km$^2$. For every country, a capacity layout proportional to wind resource is assumed. Following \cite{Schlachtberger_2017}, large countries are divided into up to 4 regions sorted by wind resource. Independent classes of generators with different time series and average full load hours are added to a single node representing a country. Their optimised capacities are later aggregated on a country level for analysis. \
+
+Time series representing the hourly capacity factors for solar PV were obtained by converting bias-corrected CFSR reanalysis irradiance into solar electricity generation, assuming a uniform capacity layout across every country. Details on the conversion and aggregation methodology can be found in \cite{Victoria_2019b}, the complete time series dataset is available in \href{https://doi.org/10.5281/zenodo.1321809}{10.5281/zenodo.1321809}. 50\% of PV capacity in every country is assumed to be utility-scale installations and 50\% rooftop PV systems with the cost and characteristics gathered in Tables \ref{tab:cost per year} and \ref{tab:inputs}. The discount rate is assumed to be 7\% for the former and 4\% for the latter. As discussed in \cite{Victoria_2019_EUPVSEC} the impact of this assumption is limited. \
+
+The maximum capacity for onshore wind, offshore wind, and solar PV that can be installed in every country is limited by the estimated potentials. Those are determined by summing the available land in every reanalysis grid cell, which in turn is calculated by considering only the suitable land for every technology, according to the Corine Land Cover (CLC) database \cite{Corine_2014} and subtracting Natura 2000 protected areas \cite{Natura2000}. For onshore and offshore wind, the potential is calculated as 20\% of the available land. For solar PV, 3\% of the available land is used for estimating the potential.
 \begin{equation}
 	Potential_{n, PV} =\sum_i 0.03 ( A^{CLC, PV}_i - A^{Natura 2000}_i) \hspace{0.3cm} \text{for} \hspace{0.3cm} i \in n
 \end{equation}
@@ -345,14 +351,13 @@ where $A^{CLC, PV}_i$ is the area of the grid cell belonging to PV categories in
 \begin{equation}
 	Potential_{n, wind} = \sum_i 0.2 ( A^{CLC, wind}_i - A^{Natura 2000}_i) k_n \hspace{0.3cm} \text{for} \hspace{0.3cm}  i \in n
 \end{equation}
-For wind, $k_n$ is a coefficient calculated by imposing the condition that in none of the grid cells the installed capacity surpasses the potential. This represents a conservative approach. Higher potentials could be attained if assumed capacity layout is not proportional to the wind resource. For offshore wind, only areas whose sea depth is lower than 50 m are considered as valid. 
+For wind, $k_n$ is a coefficient calculated by imposing the condition that in none of the grid cells the installed capacity surpasses the potential. This represents a conservative approach. Higher potentials could be attained if assumed capacity layout is not proportional to the wind resource. For offshore wind, only areas whose sea depth is lower than 50 m are considered as valid. \\
 
-
-\begin{table}[!b]
+\begin{table}[!h]
 \footnotesize
 \centering
 \begin{threeparttable}
-\caption{Land types considered suitable for every technology \cite{Corine_2014, Scholz_2012}.} \label{tab_Corine}
+\caption{Land types considered suitable for every technology. Categories in Corine Land Cover database \cite{Corine_2014} are selected following \cite{Scholz_2012}.} \label{tab_Corine}
 \centering
 \begin{tabularx}{13cm}{lp{10cm}}
 \toprule
@@ -367,19 +372,19 @@ Offshore wind & sea and ocean (44) \\
 \end{threeparttable}
 \end{table}
 
-CHP units are modelled as extraction condensing units, the feasible space representing the possible combinations of power and heat outputs is included as a constraint in the model, as detailed in \cite{Brown_2018}. Electricity can be stored in static batteries, hydrogen storage and Pumped Hydro Storage (PHS). The capacity of the later in every country is exogenously fixed at 2015 values. Alkaline electrolysers are assumed since they have a lower cost \cite{DEA_2019} and higher cumulative installed capacity \cite{Staffell_2019} than PEM electrolysers. Hydrogen can be stored in overground steel tanks or underground salt caverns \cite{Staffell_2019}. For the latter, energy capacities in every country are limited to the potential estimation for onshore salt caverns within 50 km of shore to avoid environmental issues associated with brine solution disposal, see Figure 7 in \cite{Caglayan_2019}. Electricity can also be used to produce methane by combining hydrogen and direct air captured (DAC) CO$_2$ in the Sabatier reaction. Following \cite{Brown_2018}, the energy consumed in DAC is taken into account by reducing the efficiency of the Sabatier reaction to 60\%. Alternative CO$_2$ sources, such as capturing industry process emissions or biomass-related emissions, are not included. \
+Reservoir hydropower and run-of-river capacities are exogenously fixed at their values in 2015. Hourly inflow is modelled based on rainfall in the CFSR data set as described in \cite{Brown_2018}. CHP units are modelled as extraction condensing units, the feasible space representing the possible combinations of power and heat outputs is included as a constraint in the model, as detailed in \cite{Brown_2018}. Electricity can be stored in static batteries, hydrogen storage and Pumped Hydro Storage (PHS). The capacity of the later in every country is exogenously fixed at 2015 values. Alkaline electrolysers are assumed since they have a lower cost \cite{DEA_2019} and higher cumulative installed capacity \cite{Staffell_2019} than PEM electrolysers. Hydrogen can be stored in overground steel tanks or underground salt caverns \cite{Staffell_2019}. For the latter, energy capacities in every country are limited to the potential estimation for onshore salt caverns within 50 km of shore to avoid environmental issues associated with brine solution disposal, see Figure 7 in \cite{Caglayan_2019}. Electricity can also be used to produce methane by combining hydrogen and direct air captured (DAC) CO$_2$ in the Sabatier reaction. Following \cite{Brown_2018}, the energy consumed in DAC is taken into account by reducing the efficiency of the Sabatier reaction to 60\%. Alternative CO$_2$ sources, such as capturing industry process emissions or biomass-related emissions, are not included. \\
 
 The transmission links between countries are assumed to be high-voltage direct current (HVDC) connections. The lengths $l_{\ell}$ are set by the distance between the geographical mid-points of each country so that some of the transmission within each country is also reflected in the optimisation. A factor of 25\% is added to the line lengths to account for the fact that transmission lines cannot be placed as the crow flies due to land use restriction. For the transmission line capacities $F_{\ell}$, a safety margin of 33\% of the installed capacity is used to satisfy n-1 requirements \cite{Brown_2016}. For 2020 and 2030, the capacities correspond to the values assumed in the ENTSOE Ten-Year Network Development Plan (TNYDP), see Table \ref{tab_interconnections} and \cite{TYNDP2016}. The values for 2025 are interpolated assuming a linear capacity expansion between 2020 and 2030 for every link. For years from 2035 onwards, capacities are fixed at 2030 values. \
 
 
-\begin{table}[!b]
+\begin{table}[!h]
 \footnotesize
 \centering
 \begin{threeparttable}
 \caption{Transmission capacities (MW) for interconnections \cite{TYNDP2016}.} \label{tab_interconnections}
 \centering
 
-\begin{tabularx}{10.5cm}{|lrr|lrr|lrr|}
+\begin{tabularx}{10.5cm}{lrr|lrr|lrr}
 \toprule
 Link & 2020 & 2030 & Link & 2020 & 2030 & Link & 2020 & 2030  \\
 \midrule
@@ -389,14 +394,14 @@ Link & 2020 & 2030 & Link & 2020 & 2030 & Link & 2020 & 2030  \\
 \end{threeparttable}
 \end{table}
 
-
+\FloatBarrier
 \subsection{Heating sector}
 
 Annual heat demands for European countries are retrieved from \cite{HRE}. They are converted into hourly heat demand based on the population-weighted \cite{NUTS3} Heating Degree Hour (HDH), that is, heating is assumed to be proportional to the difference between ambient temperature and a threshold temperature. 17$^{\circ}$C is assumed as threshold temperature. Ambient temperature is read from the same reanalysis database \cite{CFSR} used to model wind and solar PV time series. The estimated values for total annual demand in Europe are similar for electricity and heating, accounting for 2854 TWh$_{el}$/a and 3562 TWh$_{th}$/a respectively but heating demand shows a much more pronounced seasonal variation, see Figure \ref{fig_demands}.
 
-For every country, heating demand is split between low-population density areas and high-population density areas. 44.6\%  of the European population is estimated to live in the latter \cite{Brown_2018} where district heating systems can be deployed. In high-density population areas, heating can be supplied by central ground-sourced heat pumps, heat resistors and gas boilers, as well as by CHP units. All the previous technologies are assumed to be integrated into district heating networks. Furthermore, individual air-sourced heat pumps are also allowed in those areas. In low-density population areas, heating can be supplied by individual ground-sourced heat pumps, heat resistors and gas boilers. Costs, lifetimes, and efficiencies of the different technologies are included in Table \ref{tab:cost per year}. \
+For every country, heating demand is split between low-population density areas and high-population density areas. 44.6\%  of the European population is estimated to live in the latter \cite{Brown_2018} where district heating systems can be deployed. In high-density population areas, heating can be supplied by central ground-sourced heat pumps, heat resistors and gas boilers, as well as by CHP units. All the previous technologies are assumed to be integrated into district heating networks. Furthermore, individual air-sourced heat pumps are also allowed in those areas. In low-density population areas, heating can be supplied by individual ground-sourced heat pumps, heat resistors and gas boilers. Costs, lifetimes, and efficiencies of the different technologies are included in Tables \ref{tab:cost per year} and \ref{tab:inputs}. \
 
-The Coefficient of Performance (COP) of heat-pumps depends on ambient or ground temperature to capture the lower COP in winter. COP depends on the difference between the source and the sink temperatures $\Delta T = T_{sink}-T_{source}$. For air-sourced heat pumps (ASHP), $COP= 6.81 + 0.121 \Delta T +  0.000630 \Delta T^2$, for ground-sourced heat pumps (GSHP), $COP=8.77 + 0.150 \Delta T + 0.000734 \Delta T^2$ \cite{Staffell_2012}. The sink water temperature is assumed to be $T_{sink}=55^{\circ}$C, the source temperature for air and ground is taken from the same reanalysis database used to estimate heating demand \cite{CFSR}. Thermal energy can be stored in large water pits associated with district heating systems and individual thermal energy storage (TES), \textit{i.e.}, small water tanks.  A thermal energy density of 46.8 kWh$_{th}$/m$^3$ is assumed, corresponding to a temperature difference of 40 K. The decay of thermal energy $1 - \exp(- \frac{1}{24 \tau})$ is assumed to have a time constant of $\tau$=180 days for central TES and $\tau$=3 days for individual TES. Charging and discharging efficiencies are 90\% due to pipe losses.\\
+The Coefficient of Performance (COP) of heat-pumps depends on ambient or ground temperature to capture the lower COP in winter. COP depends on the difference between the source and the sink temperatures $\Delta T = T_{sink}-T_{source}$. For air-sourced heat pumps (ASHP), $COP= 6.81 + 0.121 \Delta T +  0.000630 \Delta T^2$, for ground-sourced heat pumps (GSHP), $COP=8.77 + 0.150 \Delta T + 0.000734 \Delta T^2$ \cite{Staffell_2012}. The sink water temperature is assumed to be $T_{sink}=55^{\circ}$C, the source temperature for air and ground is taken from the same reanalysis database used to estimate heating demand \cite{CFSR}. Thermal energy can be stored in large water pits associated with district heating systems and individual thermal energy storage (TES), \textit{i.e.}, small water tanks.  A thermal energy density of 46.8 kWh$_{th}$/m$^3$ is assumed, corresponding to a temperature difference of 40 K. The decay of thermal energy $1 - \exp(- \frac{1}{24 \tau})$ is assumed to have a time constant of $\tau$=180 days for central TES and $\tau$=3 days for individual TES. Charging and discharging efficiencies are 90\% due to pipe losses.\
 
 Capacities already existing for technologies supplying heat are retrieved from \cite{heating_capacities}. For the sake of simplicity, coal, oil and gas boilers capacities are assimilated to gas boilers. Besides that, existing capacities for heat resistors, ASHP, and GSHP are included in the model. For high-density population areas, the penetration of district-heating is assumed to remain fixed at 2015 values, \cite{DH_penetration} and Table \ref{tab_DH_penetration}. Cooling demand is currently supplied by electricity so it is included in the electricity demand time series. It is assumed to remain constant throughout the paths. For a thorough discussion of the impact of changing cooling demand, the reader is referred to \cite{Zhu_2020}.
 
@@ -409,7 +414,7 @@ Capacities already existing for technologies supplying heat are retrieved from \
 
 
 
-\begin{table}[!b]
+\begin{table}[!h]
 \footnotesize
 \centering
 \begin{threeparttable}
@@ -427,16 +432,17 @@ Country & District heating penetration  \\
 
 
 \subsection{Biomass}
-The solid biomass can be burnt in CHP or central heating plants associated with district heating systems or in power plants to produce electricity. The model does not include biogas that could be burnt or upgraded into biomethane. A conservative approach is followed to estimate biomass potentials in every country. From the JRC-ENSPRESO database \cite{JRC_biomass, ENSPRESO}, the potential estimations for 2030 in the scenario `medium' are retrieved, but only the types of biomass which are not competing with crops are considered valid. In essence, biomass potentials include only the following items: primary agricultural residues, primary and secondary forestry energy residues including sawdust, forestry residues from landscape care, and municipal waste.
+Solid biomass can be burnt in CHP or central heating plants associated with district heating systems or in power plants to produce electricity. The model does not include biogas that could be burnt or upgraded into biomethane. A conservative approach is followed to estimate biomass potentials in every country. From the JRC-ENSPRESO database \cite{JRC_biomass, ENSPRESO}, the potential estimations for 2030 in the scenario `medium' are retrieved, but only the types of biomass which are not competing with crops are considered valid. In essence, biomass potentials include only the following items: primary agricultural residues, primary and secondary forestry energy residues including sawdust, forestry residues from landscape care, and municipal waste.
 
 \subsection{Existing power plants and decommissioning}
 
-For conventional technologies, \textit{i.e.} OCGT, CCGT, coal, lignite, nuclear and CHP, installed capacities in every country in 2020 and commissioning dates are retrieved from \cite{powerplantmatching}. 
+For conventional technologies, \textit{i.e.} OCGT, CCGT, coal, lignite, nuclear and gas CHP, installed capacities in every country in 2020 and commissioning dates are retrieved from \cite{powerplantmatching}. 
 A two-step method was implemented to fill commissioning date for power plants whose data was missing. First, for units larger than 50 MW, commissioning dates have been searched and manually added. Then, for smaller units, a Kernel Density Estimation (KDE) approach is used. In essence, for every technology and country, the units with available data are used to create a distribution, which is then used to assign an estimated commissioning date for those units with missing data. For solar PV, the installed capacities in 2020 and the installation dates were obtained by processing annual installed capacities statistics from \cite{IRENA_2019}. For offshore and onshore wind, capacities and age are retrieved from \cite{thewindpower}. Existing power plants are assumed to be decommissioned at their corresponding commissioning date plus lifetime (Table \ref{tab:inputs}). When a power plant has been retrofitted, we assume that its operating life is extended by half of its nominal lifetime. 
 For heating capacities, 25\% of existing capacities in 2015 are assumed to be decommissioned in every 5-year time step after 2020.
+
 \begin{figure*}[!h]
 \centering
-\includegraphics[width=0.9\textwidth]{figures/age_distribution_existing.png}
+\includegraphics[width=\textwidth]{figures/age_distribution_existing.png}
 \caption{Age distribution of European power plants in operation \cite{powerplantmatching, IRENA_2019}.} 
 \end{figure*}
 
@@ -445,11 +451,11 @@ For heating capacities, 25\% of existing capacities in 2015 are assumed to be de
 
 \FloatBarrier
 
-\subsection{Transport sector} \
+\subsection{Transport sector} \label{sec_transport}\
 
 The transport sector is included only in the final analysis of the paper. In that case, road and rail transport are considered to be electrified at a rate equal to the CO$_2$ reduction in the heating and electricity sectors relative to 2020. In this way, transport-related CO$_2$ emissions curb in parallel to the other sectors. Annual energy demands from road and rail transport for every country are retrieved from \cite{ODYSSEE}. Aviation, shipping, and pipe transport are not included in the model.  A country-specific factor (averaging 3.5) is used to account for the increased efficiency when electrifying transport. Country-specific factors are computed by comparing the current car final energy consumption per km in \cite{ODYSSEE} (averaging 0.7 kWh/km) to the 0.2 kWh/km value assumed for plug-to-wheels efficiency in EVs. The characteristic weakly profile provided by the German Federal Highway Research Institute (BASt) \cite{BASt} is used to obtain hourly time series for European countries taking into account the corresponding local times. Furthermore, a temperature dependence is included in the time series to account for heating/cooling demand in transport. For temperatures below/above 15$^{\circ}$C/20$^{\circ}$C, temperature coefficients of 0.63\%/$^{\circ}$C and 0.98\%/$^{\circ}$C are assumed, see \cite{Brown_2018} for more details. When fully electrified, the annual electricity demand from transport sector in Europe accounts for 1,102 TWh/a. 
 
-At every time step, the internal-combustion vehicles transformed into battery electric vehicles (BEV) are assumed to include a battery with a storage capacity of 50 kWh, charging capacity of 11 kW, and 90\% charging efficiency. It is considered that all of them can shift their charging time as well as discharge into the grid to facilitate the operation of the system and reduce its total cost. Furthermore, it is assumed that, at every time step, 25\% of the existing BEV can provide vehicle-to-grid (v2g) services. The BEV state of charge is forced to be higher than 75\% at 5 a.m. every day, through $e_{n,s,t}$ in equation (\ref{eq_storage}), to ensure that the batteries are full in the morning peak usage. This also restricts BEV demand to be shifted within a day and prevent EV batteries from becoming seasonal storage. The percentage of BEV connected to the grid at any time is inversely proportional to the transport demand profile, which translates into an average/minimum availability of 80\%/62\%. This approach is conservative compared to most of the literature. For instance, in \cite{circular_economy} the average parking time of the European fleet of vehicles is estimated at 92\%. The cost of the EV batteries is not included in the model since it is assumed that EV owners buy them to satisfy their mobility needs. 
+At every time step, the internal-combustion vehicles transformed into battery electric vehicles (BEV) are assumed to include a battery with a storage capacity of 50 kWh, charging capacity of 11 kW, and 90\% charging efficiency. It is considered that half of the existing BEV of them can shift their charging time as well as discharge into the grid to facilitate the operation of the system and reduce its total cost. Furthermore, it is assumed that, at every time step, 25\% of the existing BEV can provide vehicle-to-grid (v2g) services. The BEV state of charge is forced to be higher than 75\% at 5 a.m. every day, through $e_{n,s,t}$ in Equation (\ref{eq_storage}), to ensure that the batteries are full in the morning peak usage. This also restricts BEV demand to be shifted within a day and prevent EV batteries from becoming seasonal storage. The percentage of BEV connected to the grid at any time is inversely proportional to the transport demand profile, which translates into an average/minimum availability of 80\%/62\%. This approach is conservative compared to most of the literature. For instance, in \cite{circular_economy} the average parking time of the European fleet of vehicles is estimated at 92\%. The cost of the EV batteries is not included in the model since it is assumed that EV owners buy them to satisfy their mobility needs. 
 
 
 \subsection{Levelised Cost of Energy (LCOE)}
@@ -458,7 +464,7 @@ The Levelised Cost of Energy is defined as the total system cost per unit of con
 
 \section{Cost assumptions}	
 
-\begin{table*}[!b]
+\begin{table*}[!h]
 \footnotesize
 \centering
 \begin{threeparttable}
@@ -466,7 +472,7 @@ The Levelised Cost of Energy is defined as the total system cost per unit of con
 \centering
 \begin{tabularx}{18cm}{lccccccccr}
 \toprule
-Technology\tnote{1}& Unit & 2020&2025&2030&2035&2040&2045&2050&source\\
+Technology & Unit & 2020 & 2025 & 2030 & 2035 & 2040 & 2045 & 2050 & source\\
 \midrule
 \input{table_costs.tex}
 \bottomrule
@@ -487,39 +493,6 @@ Technology & FOM\tnote{a} & Lifetime & Efficiency & Source\\
 \midrule
 \input{table_inputs.tex}
 
-%Wind onshore &3 & 25  & 1 &  \cite{} \\
-%Wind offshore  &2506   &kW\el  &3& 25 & 1 &  \cite{schroeder2013} \\
-%Solar PV rooftop           &725   &kW\el &2 & 25  & 1 &  \cite{etip} \\
-%Solar PV utility           &425   &kW\el &3 & 25  & 1 &  \cite{etip} \\
-%Open cycle gas turbine (OCGT)             &400    &kW\el  &4& 30 & 0.39 &  \cite{schroeder2013,dea2016} \\
-%Pumped hydro storage\tnote{b} & 2000 &kW\el & 1 & 80 & $0.87\cdot 0.87$ & \cite{schroeder2013} \\
-%Hydro reservoir\tnote{b} & 2000 &kW\el & 1 & 80 & 0.9 & \cite{schroeder2013} \\
-%Run-of-river\tnote{b} & 3000 &kW\el & 2 & 80 & 0.9 & \cite{schroeder2013} \\
-%Battery inverter         &310   &kW\el  & 3 & 20 & $0.9\cdot0.9$ &  \cite{budischak2013} \\
-%Battery storage & 144.6 & kWh & 0 & 15 & 1 & \cite{budischak2013} \\
-%Hydrogen electrolysis        &350   &kW\el  & 4 & 18 & 0.8 & \cite{PalzerThesis} \\
-%Hydrogen fuel cell\tnote{c} & 339 & kW\el & 3 & 20 & 0.58 & \cite{NRELhydrogen,budischak2013} \\
-%Hydrogen storage\tnote{d}        & 8.4  &kWh  & 0 &20 & 1 & \cite{budischak2013} \\
-%Methanation\tnote{e} & 750 & kW$_{H_2}$ & 2.5 & 25 & 0.8 & \cite{PalzerThesis}\\
-%\co{} direct air capture (DAC)\tnote{e} & 228 &  t\co/a & 4 & 30 & see text & \cite{Fasihi2017}\\
-%Methanation+DAC\tnote{e} & 1000 & kW$_{H_2}$ & 3 & 25 & 0.6 & \cite{PalzerThesis,Fasihi2017}\\
-%Air-sourced heat pump decentral & 1050 & kW\th  & 3.5& 20 & variable & \cite{Henning20141003,PalzerThesis} \\
-%Air-sourced heat pump central & 700 & kW\th  & 3.5& 20 & variable & \cite{PalzerThesis} \\
-%Ground-sourced heat pump decentral & 1400 & kW\th & 3.5 &20& variable & \cite{PalzerThesis}\\
-%Resistive heater & 100 & kW\th & 2 & 20 & 0.9  & \cite{SchaberThesis} \\
-%Gas condensing boiler decentral & 175 & kW\th & 2 & 20 & 0.9& \cite{PalzerThesis} \\
-%Gas condensing boiler central & 63 & kW\th & 1 & 22 & 0.9& \cite{PalzerThesis} \\
-%Combined heat and power (CHP) central &600& kW\th & 3 & 25 & see text & \cite{Henning20141003} \\
-%Solar thermal collector decentral & 270 & m$^{2}$ & 1.3 & 20 & variable & \cite{Henning20141003} \\
-%Solar thermal collector central & 140 & m$^{2}$ & 1.4 & 20 & variable & \cite{Henning20141003} \\
-%Hot water tank decentral & 860 & m${}^3$  & 1& 20 & $\tau = $ 3 days & \cite{IEESWV,Henning20141003} \\
-%Hot water tank central & 30 & m${}^3$  & 1& 40 & $\tau = $ 180 days & \cite{IEESWV,Henning20141003} \\
-%Hot water tank (dis)charging & 0 &   & & & $0.9\cdot 0.9$ & \cite{Henning20141003} \\
-%High-density district heating network\tnote{f} & 220 & kW\th  & 1 & 40  & 1 & \cite{IEESWV} \\
-%Gas distribution network\tnote{f} & 387 & kW\th & 2 & 40 & 1 & based on \cite{bnetza2017} \\
-%Building retrofitting\tnote{f} & see text &  & 1 & 50 & 1 & \cite{Henning20141003,PalzerThesis} \\
-%HVDC transmission line       &400    &MWkm & 2 & 40 & 1 & \cite{Hagspiel} \\
-%HVDC converter pair & 150 & kW & 2 & 40 & 1 &  \cite{Hagspiel} \\
 \bottomrule
 \end{tabularx}
 
@@ -540,7 +513,7 @@ Technology & FOM\tnote{a} & Lifetime & Efficiency & Source\\
 \begin{threeparttable}
 \caption{Costs and emissions coefficient of fuels.} \label{tab:costs}
 \centering
-\begin{tabularx}{0.6\textwidth}{lrrrl}
+\begin{tabularx}{0.7\textwidth}{lrrrl}
 \toprule
 Fuel & Cost  & Source & Emissions & Source \\
  & [\EUR/MWh$_{th}$] & & [tCO$_2$/MWh$_{th}$] &  \\
@@ -562,7 +535,7 @@ Fuel & Cost  & Source & Emissions & Source \\
 
 \begin{figure}[!h]
 \centering
-\includegraphics[width=12cm]{figures/cost_evolution.png}
+\includegraphics[width=13cm]{figures/cost_evolution.png}
 \caption{Evolution of costs, relative to 2020, for some selected technologies. } \label{fig_cost_evolution} 
 \end{figure}
  
@@ -570,25 +543,39 @@ Fuel & Cost  & Source & Emissions & Source \\
 \FloatBarrier
 \subsection{Distribution networks} 
 
-Half of the solar PV capacity is assumed to be installed in rooftops. Consequently, the PV deployment that we observe will require extending and increasing the capacity of electricity distribution networks. The deployment of Electric Vehicles (VEs) also requires enhancing the distribution networks. Distributed PV generation will contribute to charging EVs and this could reduce the need for an increased distribution capacity. The cost of extending distribution networks in estimated in 140 \EUR/kW$_{PV}$, with 30 years lifetime and 3\% FOM \cite{Sterchele_2020, DEA_2019}. In the model, the cost of expanding and maintaining distribution networks are not included in the optimisation but calculated based on the optimal PV capacity and added ex post. For the Gentle path, distribution networks costs represent 140 B\EUR, that is, 2.6\% of the cumulative system cost.  \
-District heating and gas distribution networks are not included in the optimisation, but the cost of expanding those networks is estimated and compared with the system costs in the scenarios with and without district heating expansion, see section \ref{sec_DH_exp}. 
+Half of the solar PV capacity is assumed to be installed in rooftops. Consequently, the PV deployment that we observe will require extending and increasing the capacity of electricity distribution networks. The deployment of Electric Vehicles (VEs) also requires enhancing the distribution networks. Distributed PV generation will contribute to charging EVs and this could reduce the need for an increased distribution capacity. The cost of extending distribution networks is estimated in 140 \EUR/kW$_{PV}$, with 30 years lifetime and 3\% FOM \cite{Sterchele_2020, DEA_2019}. In the model, the cost of expanding and maintaining distribution networks are not included in the optimisation but calculated based on the optimal PV capacity and added ex-post. For the Gentle path, distribution networks costs represent 140 B\EUR, that is, 2.6\% of the cumulative system cost.  \
+District heating and gas distribution networks are not included in the optimisation, but the cost of expanding those networks is estimated and compared with the system costs in the scenarios with and without district heating expansion, see Section \ref{sec_DH_exp}. 
 
 \subsection{Realistic cost assumptions for solar PV} 
 
-The combination of rapid learning with faster-than-expected capacity development has led to lower-than-expected costs for solar PV. The potential of this technology has been repeatedly underestimated by the International Energy Agency \cite{Fell_2015}, Greenpeace \cite{Creutzig_2017}, and PV scientists \cite{Haegel_2019}. Investment cost for utility-scale solar PV in 2020 is estimated in the range of 398-423 \EUR/kW \cite{Vartiainen_2017, DEA_2019}. For rooftop PV installations in Europe, a wider range is found, 1070-1127 \EUR/kW \cite{DEA_2019, Fraunhofer, Vartiainen_2019}, due to the higher impact of local experience and labour costs. Solar PV is forecast to achieve an investment cost between 151 \EUR/kW \cite{Vartiainen_2019} and 241 \EUR/kW  \cite{DEA_2019} for large installations in 2050. \\
+The combination of rapid learning with faster-than-expected capacity development has led to lower-than-expected costs for solar PV. The potential of this technology has been repeatedly underestimated by the International Energy Agency \cite{Fell_2015}, Greenpeace \cite{Creutzig_2017}, and PV scientists \cite{Haegel_2019}. The investment cost for utility-scale solar PV in 2020 is estimated in the range of 398-423 \EUR/kW \cite{Vartiainen_2017, DEA_2019}. For rooftop PV installations in Europe, a wider range is found, 1070-1127 \EUR/kW \cite{DEA_2019, Fraunhofer, Vartiainen_2019}, due to the higher impact of local experience and labour costs. Solar PV is forecast to achieve an investment cost between 151 \EUR/kW \cite{Vartiainen_2019} and 241 \EUR/kW  \cite{DEA_2019} for large installations in 2050. \\
 
 
-Assuming outdated costs for solar PV is also known to be a flaw of most Integrated Assessment Models (IAMs) and this can have a huge impact on the results. Creutzig \textit{et al.} already pointed out this problem in \cite{Creutzig_2017} where they found similar solar PV penetration to ours when realistic costs are assumed for solar PV. However, the problem persists. For instance, the PRIMES model used in the report supporting the \textit{Clean Planet for All} strategy of the EU Commission \cite{in-depth_2018} assumes 407-495 \EUR/kW in 2050 \cite{in-depth-data} which is higher than the lower range value for today's costs. Even more worrying are the findings by Krey \textsl{et al.} \cite{Krey_2019}. The authors review the techno-economic assumptions in the electricity sector among fifteen different global and national IAMs. Figure 4 on \cite{Krey_2019} shows that most of the reviewed IAMs include cost assumptions for solar PV in 2050 close to 1000 \EUR/kW. Although they do not specify if the cost refers to utility-scale or rooftop installations, the values are twice as high as the cost already achieved by this technology in large installations. 
+Assuming outdated costs for solar PV is also known to be a flaw of most Integrated Assessment Models (IAMs) and it can have a huge impact on the results. Creutzig \textit{et al.} already pointed out this problem in \cite{Creutzig_2017} where they found similar solar PV penetration to ours when realistic costs are assumed for solar PV. Breyer and co-workers have also emphasized the key role that solar PV plays in decarbonisation paths in Europe \cite{Child_2019} and globally \cite{Bogdanov_2019} when proper costs are assumed. However, the problem persists. For instance, the PRIMES model used in the report supporting the \textit{Clean Planet for All} strategy of the EU Commission \cite{in-depth_2018} assumes 407-495 \EUR/kW in 2050 \cite{in-depth-data} which is higher than the lower range value for today's costs. Even more worrying are the findings by Krey \textsl{et al.} \cite{Krey_2019}. The authors review the techno-economic assumptions in the electricity sector among fifteen different global and national IAMs. Figure 4 in \cite{Krey_2019} shows that most of the reviewed IAMs include cost assumptions for solar PV in 2050 close to 1000 \EUR/kW. Although they do not specify if the cost refers to utility-scale or rooftop installations, the values are twice as high as the cost already achieved by this technology in large installations. 
 
 \subsection{Discount rate}
 
-How regional differences in cost of capital influence the optimal design of power systems \cite{Schyska_2020}
+We use a financial discount rate to annualise the cost of every asset including generation, storage, and transmission. The financial discount rate is equal to 7\% for all the investment, except decentral assets such as rooftop PV or individual water tanks for which 4\% is assumed. Discount rates are influenced by the economic situation in a country and this could strongly impact the results \cite{Egli_2019}. Moreover, the accumulated experience with a certain technology, globally and inside the country, affects the perceived risks and the cost of capital for that technology. When investigating transition paths, other authors have considered sector-specific discount rates although they do not update them as the technology becomes more mature \cite{in-depth_2018}. It is extremely difficult to meaningfully estimate country-specific discount rates for future years. Hence, we have chosen a constant 7\% discount rate for all the technologies and countries. Schyska and Kies assessed the impacts of different cost of capital on the optimal European power system \cite{Schyska_2020}. \\
 
-\subsection{Cumulative system cost}
+Besides the financial discount rate, a different social discount rate is used to calculate the cumulative system cost. This is common practice when comparing transition paths derived from IAMs and energy models \cite{in-depth_2018, Hermelink_2015}. We have selected a social discount rate of 2\%, which is similar to the inflation rate in the European Union, that averaged 2.4\% in the past 20 years. This is in agreement with reference \cite{Emmerling_2019}, in which the impact of discount rates for  emissions pathways and negative emissions are analysed. The authors recommend using low social discount rates, around 2\%. It is worth remarking that the cumulative cost remains lower for the Gentle path provided that discount rates lower than 15\% are assumed.
+%The chosen social discount rate can have a large impact on the results. 
 
-Cumulative system cost are calculated as 
+\clearpage
 
 \section{Transition paths Gentle and Sudden. Additional results}
+
+\begin{figure*}[!h]
+\centering
+\includegraphics[width=0.9\textwidth]{figures/age_distribution_Base.png}
+\caption{Age distribution of European power plants in operation \cite{powerplantmatching, IRENA_2019} and required annual installation throughout the Gentle and Sudden paths.} 
+\end{figure*}
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=\columnwidth]{figures/System_cost_Base.png}
+	\caption{Annualised system cost for the European electricity and heating system throughout transition paths Gentle and Sudden shown in Fig. 1 in the main text. Conventional includes costs associated with coal, lignite, and gas power plants producing electricity as well as costs for fossil-fueled boilers and CHP units. Power-to-heat includes costs associated with heat pumps and heat resistors. Balancing includes costs of electric batteries, H$_2$ storage, and methanation. } \label{fig_system_cost} 
+\end{figure}
+
 
 \begin{figure}[!h]
 	\centering
@@ -604,13 +591,13 @@ Cumulative system cost are calculated as
 
 \begin{figure*}[!h]
 \centering
-\includegraphics[width=0.8\columnwidth]{figures/storage_expansion_Base.png}
+\includegraphics[width=0.7\columnwidth]{figures/storage_expansion_Base.png}
 \caption{Annual build rates for batteries and hydrogen storage throughout transition paths shown in Fig. 1 in the main text.} \label{fig_battery_hydrogen} 
 \end{figure*}
 
 \begin{figure*}[!h]
 \centering
-\includegraphics[width=0.8\columnwidth]{figures/methanation_expansion_Base.png}
+\includegraphics[width=0.7\columnwidth]{figures/methanation_expansion_Base.png}
 \caption{Annual synthetic methane production throughout transition paths shown in Fig. 1 in the main text.} \label{fig_synthetic_methane} 
 \end{figure*}
 
@@ -628,31 +615,31 @@ Cumulative system cost are calculated as
 \begin{figure}[!h]
 \centering
 \includegraphics[width=0.8\columnwidth]{figures/revenue_vs_expenditure_Base.png}
-\caption{Market revenues to total expenditure for lignite, coal, OCGT, CCGT, and nuclear power plants throughout transition paths shown in Fig. 1 in the main text. Total expenditure includes fixed and variable costs, fuel costs and cost associated with CO$_2$ price. } \label{fig_revenues_vs_expenditure} 
+\caption{Ratio of market revenues to total expenditure for lignite, coal, OCGT, CCGT, and nuclear power plants throughout transition paths shown in Fig. 1 in the main text. Total expenditure includes fixed and variable costs, fuel costs and cost associated with CO$_2$ price. } \label{fig_revenues_vs_expenditure} 
 \end{figure}
 
 \begin{figure}[!h]
 \centering
 \includegraphics[width=0.8\columnwidth]{figures/revenue_vs_variablecost_Base.png}
-\caption{Market revenues to variable cost for lignite, coal, OCGT, CCGT, and nuclear power plants throughout transition paths shown in Fig. 1 in the main text. Variable cost includes variable operation costs, fuel costs and cost associated with CO$_2$ price. } \label{fig_revenues_vs_variable} 
+\caption{Ratio of market revenues to operational expenditure (OPEX) for lignite, coal, OCGT, CCGT, and nuclear power plants throughout transition paths shown in Fig. 1 in the main text. OPEX includes fixed and variable operation and maintenance costs, fuel costs and cost associated with CO$_2$ price. } \label{fig_revenues_vs_variable} 
 \end{figure}
 
 
 \begin{figure}[!h]
 \centering
 \includegraphics[width=0.8\columnwidth]{figures/deficit_Base.png}
-\caption{Cost not recovered via market revenues for lignite, coal, OCGT, CCGT, and nuclear power plants throughout transition paths shown in Fig. 1 in the main text} \label{fig_deficit} 
+\caption{Expenditures not recovered via market revenues for lignite, coal, OCGT, CCGT, and nuclear power plants throughout transition paths shown in Fig. 1 in the main text.} \label{fig_deficit} 
 \end{figure}
 
 \FloatBarrier
 
+\clearpage
 \subsection{Country-resolved results}
 
 \begin{figure}[!h]
 \centering
-%\includegraphics[width=\columnwidth]{figures/spatial_plot_primary_energy.png}
-\caption{Primary energy in every country in 2050. \textcolor[rgb]{1,0,0}{TODO: Add spatial plot.} } \label{fig_spatial_plot} 
-%(left) Cautious transition path, (right) Greenfield optimisation for 2050.
+\includegraphics[width=0.8\columnwidth]{figures/spatial_electricity_generation_Base.png}
+\caption{Electricity generation in every country in 2050 for transition path Gentle. Fuel used in OCGT plants is synthetic methane produced by combining electrolysed-H$_2$ and direct-air-captured CO$_2$.} \label{fig_spatial_plot} 
 \end{figure}
 
 \begin{figure*}[!h]
@@ -663,54 +650,109 @@ Cumulative system cost are calculated as
 
 \begin{figure}[!h]
 \centering
-\includegraphics[width=0.8\columnwidth]{figures/heat_production_Base_go.png}
-\caption{Evolution of technologies used to supply heating in residential and services sector in the Gentle path. } \label{fig_heating_shares} 
+\includegraphics[width=0.8\columnwidth]{figures/heat_production_w_DH_exp_go.png}
+\caption{Evolution of technologies used to supply heating in the residential and services sector in the Gentle path. } \label{fig_heating_shares} 
+\end{figure}
+
+\FloatBarrier
+
+\subsection{Jobs creation}
+
+Currently, the total number of renewable energy jobs in member states of the European Union is estimated at 1.2 million \cite{IRENA_jobs}. In \cite{Low_carbon_jobs}, a systematic review of literature is conducted and the average number of full-time-equivalent (FTE) jobs associated with every renewable technology is provided. FTE jobs include both installation as well as operation and maintenance jobs.  Using that data, and assuming 40-year work life, we have estimated the newly created jobs associated with the expansion of solar PV, wind and biomass capacities. Cumulative new jobs represent 1.9 and 1.8 million for the Gentle and Sudden path respectively. This is in agreement with the analysis included in the \textsl{Clean Energy for All} strategy \cite{in-depth_2018} which estimates the creation of 2.1 million jobs under the 1.5$^{\circ}$C scenario. As other technological sectors, renewables suffer from a major gender imbalance. The transition is expected to have a positive impact on this aspect since women represent 32\% of the renewable energy workforce while they only account for 22\% of the workforce in the oil and gas industry \cite{IRENA_gender}. 
+
+\begin{table}[!h]
+\footnotesize
+\centering
+\begin{threeparttable}
+\caption{Technology assumptions and average jobs creation based on the systematic literature review in \cite{Low_carbon_jobs}.} \label{tab_jobs}
+\centering
+\begin{tabularx}{13cm}{lccc}
+\toprule
+	technology & lifetime (years) &	annual CF &	full-time-equivalent jobs (jobs /GWh) \\
+\midrule
+solar PV (rooftop) 	& 25	& 0.11 &	2 \\
+solar PV (utility-scale)	& 25	& 0.11 &	0.5 \\
+wind	& 20	& 0.325 &	0.5 \\
+biomass	& 30	& 0.8	& 0.2 \\
+\bottomrule
+\end{tabularx}
+\end{threeparttable}
+\end{table}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.5\columnwidth]{figures/jobs.png}
+\caption{Estimated new jobs in wind, solar PV, and biomass throughout transition paths shown in Fig.1 in the main text.} \label{fig_jobs} 
 \end{figure}
 
 \FloatBarrier
 \section{Additional analysis}
-\begin{table}[!b]
+\begin{table}[!h]
 \footnotesize
 \centering
 \begin{threeparttable}
 \caption{Cumulative system costs (B\EUR) for additional analyses.} \label{tab_additional_analyses}
 \centering
-\begin{tabularx}{12cm}{lccc}
+\begin{tabularx}{17cm}{lcccc}
 \toprule
-Analysis & Gentle path & Sudden path & Difference\\
+Analysis & Gentle path & Sudden path & Difference & Change relative to Base (Gentle) \\
 \midrule
-Base	& 6,994	& 7,341	& 347 \\
-District Heating expansion	& 6,756	& 7,069	& 313 \\
-Building retrofitting	& 6,234	& 6,537	& 303 \\
-Transmission expansion after 2030 & 6,901 &	7,205	& 304 \\
-EV expansion &	7,428	& 7,860 &	432 \\
+Base	& 6,994	& 7,341	& 347 & \\
+District Heating expansion	& 6,756	& 7,069	& 313 & -238 \\
+Heat savings due to building retrofitting	& 6,234	& 6,537	& 303 & -760 \\
+Transmission expansion after 2030 & 6,901 &	7,205	& 304 & -93 \\
+Including road and rail transport &	7,428	& 7,860 &	432 & 434  \\
 \bottomrule
 \end{tabularx}
 \end{threeparttable}
 \end{table}
+
 \subsection{Transition paths including district heating expansion} \label{sec_DH_exp}
 
-In this scenario, the model is rerun assuming that district heating (DH) penetration in every country expands from its value in 2025, Table \ref{tab_DH_penetration}, to 100\%, so that in 2050 the entire urban heat demand is supplied by DH.
-For the Gentle path, cumulative system cost reduces by 259 B\EUR. A wide range of cost estimation for DH system is found in the literature: 107 \EUR/KW$_{th}$ for 2030 \cite{in-depth-data}, 220\EUR/KW$_{th}$ \cite{Gerhardt_2015}, 400 \EUR/KW$_{th}$ \cite{Sterchele_2020}. Assuming 40 years lifetime, 1\% FOM \cite{Sterchele_2020}, 4\% discount rate,  and considering that the peak in urban heat demand is approximately 500GW$_{th}$, the required DH expansion and maintenance represents between 6.5 and 24 B\EUR/a, which could be offset by the system cost reduction.  Furthermore, the avoided expansion of gas distribution networks when DH is deployed will also contribute to offsetting DH costs. 
+So far district heating (DH) penetration has been assumed to remain constant at 2015 values, Table \ref{tab_DH_penetration}. In this scenario, the model is rerun assuming that DH penetration in every country expands from its value in 2015  to 100\%, so that in 2050 the entire urban heat demand is supplied by DH. For the Gentle path, cumulative system cost reduces by 238 B\EUR. \\
+
+A wide range of cost estimation for DH system is found in the literature: 107 \EUR/kW$_{th}$ for 2030 \cite{in-depth-data}, 220\EUR/kW$_{th}$ \cite{Gerhardt_2015}, 400 \EUR/kW$_{th}$ \cite{Sterchele_2020}. Assuming 40 years lifetime, 1\% FOM \cite{Sterchele_2020}, 4\% discount rate,  and considering that the peak in urban heat demand is approximately 500GW$_{th}$, the required DH expansion and maintenance represents between 6.5 and 24 B\EUR/a, which could be offset by the system cost reduction.  Furthermore, the avoided expansion of gas distribution networks when DH is deployed will also contribute to offsetting DH costs. 
 
 %However, expanding gas distribution networks also implies a cost, estimated in 387\EUR/kW$_{th}$ and 40 years lifetime \cite{Brown_2018, gas_distribution}. Consequently, the avoided expansion of gas distribution networks when district heating is deployed, makes this option clearly cheaper. In \cite{Sterchele_2020}, gas distribution networks are estimated in 28 \EUR/KW$_{th}$ 
 
 \subsection{Transition paths assuming heating demand reduction due to building retrofitting}
 
-Retrofitting building stock at a rate of 2\% have been observed in the past \cite{agora}\textcolor[rgb]{1,0,0}{check reference}. Assuming a 2\% reduction of space heating per year and neglecting any rebound effect, this will translate into an approximately decrease of 40\% of heating demand in 2050. This represents 2137 TWh$_{th}$/a which is similar to the Baseline scenario in the \textsl{Clean Planet for All} analysis, which assumes 2208 $_{th}$/a in 2050 \cite{in-depth_2018}. Cumulative system cost decreases by 760 B\EUR compared to the paths with constant heating demand.
-
+Retrofitting building stock rates of 2\% have been observed in the past \cite{agora}. Assuming a 2\% reduction of space heating per year, and neglecting any rebound effect, will translate into an approximate decrease of 40\% of heating demand in 2050. Hence, heating demand in 2050 would represent 2,137 TWh$_{th}$/a which is similar to the Baseline scenario in the \textsl{Clean Planet for All} analysis, which assumes 2,208 $_{th}$/a in 2050 \cite{in-depth_2018}. Cumulative system cost decreases by 760 B\EUR compared to the paths with constant heating demand.
 
 \subsection{Transition paths including electricity transmission grid expansion}
 
-In this scenario, the model is rerun assuming that from 2035 onwards transmission capacities are optimised together with the rest of the system components using 2030 values as the lower boundary. Allowing the expansion of transmission capacities results in a decrease of 93 B\EUR in the cumulative cost for the Gentle path. The reinforced interconnections contribute to the spatial smoothing of wind fluctuations, increasing the optimal onshore and offshore wind capacities at the end of the path. The required energy capacity for hydrogen storage is reduced due to interconnections contribution to balancing wind generation. 
+In this scenario, the model is rerun assuming that from 2035 onwards transmission capacities are optimised together with the rest of the system components using 2030 values as the lower boundary. Allowing the expansion of transmission capacities results in a decrease of 93 B\EUR in the cumulative cost for the Gentle path. The optimal configuration at the end of the paths includes a transmission volume approximately three times higher than that of 2030. The reinforced interconnections contribute to the spatial smoothing of wind fluctuations, increasing the optimal onshore and offshore wind capacities at the end of the path. The required energy capacity for hydrogen storage is reduced due to the contribution of interconnections to balancing wind generation. 
 
 \FloatBarrier
 
 \subsection{Transition paths including transport}
+Finally, the Gentle and Sudden paths are rerun including road and rail transport in the model. For every transition path and time step, the transport electrification is assumed to be equal to the CO$_2$ emissions reduction relative to 2020. In this way, emissions in that sector curb parallel to those of heating and electricity sectors. This is roughly correct because the decarbonisation of the electricity generation happens faster and earlier than that of the heating sector.  
+At every moment, half of the battery electric vehicles (BEVs) are assumed to allow demand-side management and a quarter of the available BEVs are assumed to provide vehicle-to-grid services, as described in Section \ref{sec_transport} of this document.\\
 
-\textcolor[rgb]{1,0,0}{El coste total del sistema aumenta en 434 B\EUR para la Gentle path pero cuando se calcula el LCOE este no aumenta. Cuando se añade el transporte, el LCOE no aumenta, porque el aumento de demanda trae felxibilidad en forma de baterías}
+For the Gentle path, cumulative system cost increase by 434 B\EUR . The cost of the EV or their batteries are not included in the model since it is assumed that EV owners buy them to satisfy their mobility needs. The system cost increase was expected, since, when fully electrified, road and rail transport increase electricity demand by 1,102 TWh$_{el}$/a. The evolution of LCOE is very similar to that of the initial scenario in which only electricity and heating sectors are included. The reason behind is that the additional flexibility brought by EV batteries facilitate the system operation. Balancing costs are slightly reduced in 2050, mostly because lower static battery capacities are necessary. The large short-term storage capacity provided by EV batteries has a positive effect on the optimal penetration of solar PV. These effects were already identified in \cite{Brown_2018, Victoria_2019_storage}.
 
-\section{References}
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=\columnwidth]{figures/System_cost_w_EV_exp.png}
+	\caption{Annualised system cost for the European electricity, heating and transport system throughout transition paths Gentle and Sudden. Conventional includes costs associated with coal, lignite, and gas power plants producing electricity as well as costs for fossil-fueled boilers and CHP units. Power-to-heat includes costs associated with heat pumps and heat resistors. Balancing includes costs of electric batteries, H$_2$ storage, and methanation.} 
+\end{figure}
+
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=\columnwidth]{figures/LCOE_w_EV_exp.png}
+	\caption{Levelized Cost of Energy (LCOE) for the European electricity, heating and transport system throughout transition paths Gentle and Sudden. Conventional includes costs associated with coal, lignite, and gas power plants producing electricity as well as costs for fossil-fueled boilers and CHP units. Power-to-heat includes costs associated with heat pumps and heat resistors. Balancing includes costs of electric batteries, H$_2$ storage, and methanation.} 
+\end{figure}
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=\columnwidth]{figures/installed_capacity_w_EV_exp.png}
+	\caption{Installed capacities for different technologies throughout transition paths Gentle and Sudden when the electricity, heating and transport sectors are included. } 
+\end{figure}
+
+\FloatBarrier
+
+%\section{References}
 \bibliography{bib_transition}
 
 \end{document}
