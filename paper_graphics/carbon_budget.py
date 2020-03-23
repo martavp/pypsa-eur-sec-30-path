@@ -18,6 +18,12 @@ plt.rcParams['xtick.direction'] = 'in'
 plt.rcParams['ytick.direction'] = 'in'
 plt.rcParams['xtick.labelsize'] = 20
 plt.rcParams['ytick.labelsize'] = 20
+from matplotlib.offsetbox import OffsetImage,AnchoredOffsetbox
+def place_image(im, loc=3, ax=None, zoom=1, **kw):
+    if ax==None: ax=plt.gca()
+    imagebox = OffsetImage(im, zoom=zoom)
+    ab = AnchoredOffsetbox(loc=loc, child=imagebox, frameon=False, **kw)
+    ax.add_artist(ab)
 
 def plot_carbon_budget_w_transport():
     
@@ -27,7 +33,7 @@ def plot_carbon_budget_w_transport():
     df = pd.read_csv(fn, encoding="latin-1")
     df.loc[df["Year"] == "1985-1987","Year"] = 1986
     df["Year"] = df["Year"].astype(int)
-    df = df.set_index(['Year', 'Sector_name', 'Country_code', 'Pollutant_name' ]).sort_index()
+    df = df.set_index(['Year', 'Sector_name', 'Country_code', 'Pollutant_name']).sort_index()
 
     e = pd.Series()
     e["electricity"] = '1.A.1.a - Public Electricity and Heat Production'
@@ -75,19 +81,25 @@ def plot_carbon_budget_w_transport():
     print('carbon budget = '+ str(800*0.06*ratio))
     e_0= ratio*emissions[2017]['total woL'] 
    
-    CO2_CAP = pd.DataFrame(index = pd.Series(data=np.arange(2020,2055,5), name='year'),
-                           columns=pd.Series(data=['last-minute', 'cautious'], name='paths'))
+    CO2_CAP = pd.DataFrame(index = pd.Series(data=np.arange(2020,2055,5), 
+                                             name='year'),
+                           columns=pd.Series(data=['last-minute', 'cautious'], 
+                                             name='paths'))
     
     colors = pl.cm.hot(np.linspace(0,1,6))
 
-    colors=['lightgray', 'lightgray', 'firebrick',  'gold', 'lightgray', 'lightgray']
+    colors=['lightgray', 'lightgray', 'firebrick',  'gold', 'lightgray', 
+            'lightgray']
     plt.figure(figsize=(10, 7))
     gs1 = gridspec.GridSpec(1, 1)
     ax1 = plt.subplot(gs1[0,0])
 
-    ax1.plot(emissions.loc['electricity'] + emissions.loc['residential non-elec'] 
-            + emissions.loc['services non-elec'] + emissions.loc['rail non-elec']
-            + emissions.loc["road non-elec"], color='black', linewidth=3, label=None)
+    ax1.plot(emissions.loc['electricity'] 
+            + emissions.loc['residential non-elec'] 
+            + emissions.loc['services non-elec'] 
+            + emissions.loc['rail non-elec']
+            + emissions.loc["road non-elec"], 
+            color='black', linewidth=3, label=None)
 
 
     ax1.plot([2017,2020],2*[emissions[2017]['electricity'] + 
@@ -126,7 +138,7 @@ def plot_carbon_budget_w_transport():
     
     #save last-minute path
     beta_0 = 3
-    CO2_CAP['last-minute']=[(1-beta.cdf(t, beta_0, beta_0))*e_0 for t in np.arange(0,1.01,1/4)]+ [0,0]
+    CO2_CAP['last-minute'] = [(1-beta.cdf(t, beta_0, beta_0))*e_0 for t in np.arange(0,1.01,1/4)] + [0,0]
     
     for r in [0.0]: #, -0.072, 0.05]: # exponential decay without delay
         T=carbon_budget/e_0
@@ -139,7 +151,7 @@ def plot_carbon_budget_w_transport():
         i=i+1
     
     #save cautious path
-    CO2_CAP['cautious']=[e_0*(1+(m+r)*t)*np.exp(-m*t) for t in np.arange(0,30,5)]+[0] 
+    CO2_CAP['cautious'] = [e_0*(1+(m+r)*t)*np.exp(-m*t) for t in np.arange(0,30,5)]+[0] 
 
 #    for t_d in [0, 2, 5, 7]: #exponential decay with r=0 and delay
 #        r=0.
@@ -226,12 +238,18 @@ def plot_carbon_budget_w_transport():
     ax1.legend(fancybox=False, fontsize=20,
            loc=(0.5,0.83), facecolor='white', frameon=False)
 
-    ax1.plot(emissions.loc['electricity'], color='gray', linewidth=3, label=None) 
-    ax1.plot(emissions.loc['residential non-elec'] + emissions.loc['services non-elec'], color='gray', linewidth=3, label=None) 
-    ax1.plot(emissions.loc['rail non-elec'] + emissions.loc['road non-elec'], color='gray', linewidth=3, label=None) 
+    ax1.plot(emissions.loc['electricity'], color='gray', linewidth=3, 
+             label=None) 
+    ax1.plot(emissions.loc['residential non-elec'] 
+             + emissions.loc['services non-elec'], 
+             color='gray', linewidth=3, label=None) 
+    ax1.plot(emissions.loc['rail non-elec'] + emissions.loc['road non-elec'], 
+             color='gray', linewidth=3, label=None) 
    
-    plt.savefig('../figures/carbon_budget_w_transport.png', dpi=300, bbox_inches='tight')
-    CO2_CAP.to_csv('CO2_CAP_w_transport.csv', sep=';', line_terminator='\n', float_format='%.3f')
+    plt.savefig('../figures/carbon_budget_w_transport.png', dpi=300, 
+                bbox_inches='tight')
+    CO2_CAP.to_csv('CO2_CAP_w_transport.csv', sep=';', line_terminator='\n',
+                   float_format='%.3f')
     
 plot_carbon_budget_w_transport()
 #%%
@@ -299,18 +317,23 @@ def plot_carbon_budget():
     print('carbon budget = '+ str(800*0.06*ratio))
     e_0= ratio*emissions[2017]['total woL'] 
    
-    CO2_CAP = pd.DataFrame(index = pd.Series(data=np.arange(2020,2055,5), name='year'),
-                           columns=pd.Series(data=['last-minute', 'cautious'], name='paths'))
+    CO2_CAP = pd.DataFrame(index = pd.Series(data=np.arange(2020,2055,5), 
+                                             name='year'),
+                           columns=pd.Series(data=['last-minute', 'cautious'], 
+                                             name='paths'))
     
     colors = pl.cm.hot(np.linspace(0,1,6))
 
-    colors=['lightgray', 'lightgray', 'firebrick',  'gold', 'lightgray', 'lightgray']
+    colors=['lightgray', 'lightgray', 'firebrick',  'gold', 'lightgray', 
+            'lightgray']
     plt.figure(figsize=(10, 6))
     gs1 = gridspec.GridSpec(1, 1)
     ax1 = plt.subplot(gs1[0,0])
 
-    ax1.plot(emissions.loc['electricity'] + emissions.loc['residential non-elec'] 
-            + emissions.loc['services non-elec'], color='black', linewidth=3, label=None)
+    ax1.plot(emissions.loc['electricity'] 
+            + emissions.loc['residential non-elec'] 
+            + emissions.loc['services non-elec'],
+            color='black', linewidth=3, label=None)
 
 
     ax1.plot([2017,2020],2*[emissions[2017]['electricity'] + 
@@ -380,13 +403,16 @@ def plot_carbon_budget():
                  bbox=dict(boxstyle="round", linewidth=2, 
                            fc='white', ec='firebrick'))
     ax1.annotate('gentle', xy=(2040,0.15), #cautious
-                 xytext=(2040, 0.5),
+                 xytext=(2038, 0.5),
                  color='gold', fontsize=20, 
                  arrowprops = dict(arrowstyle = "->", alpha=1,
                                color='gold', linewidth=2),
                  bbox=dict(boxstyle="round", linewidth=2, 
                            fc='white', ec='gold')) 
-                 
+    # im_tortoise=plt.imread('../figures/tortoise.png')
+    # place_image(im_tortoise, loc='lower left', ax=ax1, pad=0, zoom=0.06) 
+    # im_hare=plt.imread('../figures/hare.png')
+    # place_image(im_hare, loc='center right', ax=ax1, pad=0, zoom=0.06)         
     ax1.set_yticks(np.arange(0.5,2.5,0.5))
     ax1.plot([2020],[0.8*(emissions[1990]['electricity'] + 
                  emissions[1990]['residential non-elec'] + 
@@ -430,10 +456,14 @@ def plot_carbon_budget():
     ax1.legend(fancybox=False, fontsize=20,
            loc=(0.5,0.83), facecolor='white', frameon=False)
 
-    ax1.plot(emissions.loc['electricity'], color='gray', linewidth=3, label=None) 
-    ax1.plot(emissions.loc['residential non-elec'] + emissions.loc['services non-elec'], color='gray', linewidth=3, label=None) 
+    ax1.plot(emissions.loc['electricity'], color='gray', linewidth=3, 
+             label=None) 
+    ax1.plot(emissions.loc['residential non-elec'] 
+             + emissions.loc['services non-elec'], 
+             color='gray', linewidth=3, label=None) 
    
     plt.savefig('../figures/carbon_budget.png', dpi=300, bbox_inches='tight')
-    CO2_CAP.to_csv('CO2_CAP.csv', sep=';', line_terminator='\n', float_format='%.3f')
+    CO2_CAP.to_csv('CO2_CAP.csv', sep=';', line_terminator='\n', 
+                   float_format='%.3f')
 
 plot_carbon_budget()    
