@@ -247,9 +247,7 @@ def plot_carbon_budget_w_transport():
              color='gray', linewidth=3, label=None) 
    
     plt.savefig('../figures/carbon_budget_w_transport.png', dpi=300, 
-                bbox_inches='tight')
-    CO2_CAP.to_csv('CO2_CAP_w_transport.csv', sep=';', line_terminator='\n',
-                   float_format='%.3f')
+                bbox_inches='tight')    
     
 plot_carbon_budget_w_transport()
 #%%
