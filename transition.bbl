@@ -51,6 +51,14 @@ M.~R. Raupach, S.~J. Davis, G.~P. Peters, R.~M. Andrew, J.~G. Canadell,
   {\path{doi:10.1038/nclimate2384}}.
 \newline\urlprefix\url{https://www.nature.com/articles/nclimate2384}
 
+\bibitem{Matthews_2016}
+H.~D. Matthews, \href{https://www.nature.com/articles/nclimate2774}{Quantifying
+  historical carbon and climate debts among nations}, Nature Climate Change
+  6~(1) (2016) 60--64.
+\newblock \href {https://doi.org/10.1038/nclimate2774}
+  {\path{doi:10.1038/nclimate2774}}.
+\newline\urlprefix\url{https://www.nature.com/articles/nclimate2774}
+
 \bibitem{UNFCCC_inventory}
 \href{https://www.eea.europa.eu/data-and-maps/data/national-emissions-reported-to-the-unfccc-and-to-the-eu-greenhouse-gas-monitoring-mechanism-15}{National
   emissions reported to the {UNFCCC} and to the {EU} {Greenhouse} {Gas}
@@ -92,6 +100,20 @@ F.~Creutzig, P.~Agoston, J.~C. Goldschmidt, G.~Luderer, G.~Nemet, R.~C.
 \newblock \href {https://doi.org/10.1038/nenergy.2017.140}
   {\path{doi:10.1038/nenergy.2017.140}}.
 \newline\urlprefix\url{https://www.nature.com/articles/nenergy2017140}
+
+\bibitem{Krey_2019}
+V.~Krey, F.~Guo, P.~Kolp, W.~Zhou, R.~Schaeffer, A.~Awasthy, C.~Bertram, H.-S.
+  de~Boer, P.~Fragkos, S.~Fujimori, C.~He, G.~Iyer, K.~Keramidas, A.~C.
+  Köberle, K.~Oshiro, L.~A. Reis, B.~Shoai-Tehrani, S.~Vishwanathan,
+  P.~Capros, L.~Drouet, J.~E. Edmonds, A.~Garg, D.~E. H.~J. Gernaat, K.~Jiang,
+  M.~Kannavou, A.~Kitous, E.~Kriegler, G.~Luderer, R.~Mathur, M.~Muratori,
+  F.~Sano, D.~P. van Vuuren,
+  \href{http://www.sciencedirect.com/science/article/pii/S0360544218325039}{Looking
+  under the hood: {A} comparison of techno-economic assumptions across national
+  and global integrated assessment models}, Energy 172 (2019) 1254--1267.
+\newblock \href {https://doi.org/10.1016/j.energy.2018.12.131}
+  {\path{doi:10.1016/j.energy.2018.12.131}}.
+\newline\urlprefix\url{http://www.sciencedirect.com/science/article/pii/S0360544218325039}
 
 \bibitem{Pfenninger_2017}
 S.~Pfenninger,
@@ -303,20 +325,6 @@ D.~Tong, Q.~Zhang, Y.~Zheng, K.~Caldeira, C.~Shearer, C.~Hong, Y.~Qin, S.~J.
 \newblock \href {https://doi.org/10.1038/s41586-019-1364-3}
   {\path{doi:10.1038/s41586-019-1364-3}}.
 \newline\urlprefix\url{https://www.nature.com/articles/s41586-019-1364-3}
-
-\bibitem{Krey_2019}
-V.~Krey, F.~Guo, P.~Kolp, W.~Zhou, R.~Schaeffer, A.~Awasthy, C.~Bertram, H.-S.
-  de~Boer, P.~Fragkos, S.~Fujimori, C.~He, G.~Iyer, K.~Keramidas, A.~C.
-  Köberle, K.~Oshiro, L.~A. Reis, B.~Shoai-Tehrani, S.~Vishwanathan,
-  P.~Capros, L.~Drouet, J.~E. Edmonds, A.~Garg, D.~E. H.~J. Gernaat, K.~Jiang,
-  M.~Kannavou, A.~Kitous, E.~Kriegler, G.~Luderer, R.~Mathur, M.~Muratori,
-  F.~Sano, D.~P. van Vuuren,
-  \href{http://www.sciencedirect.com/science/article/pii/S0360544218325039}{Looking
-  under the hood: {A} comparison of techno-economic assumptions across national
-  and global integrated assessment models}, Energy 172 (2019) 1254--1267.
-\newblock \href {https://doi.org/10.1016/j.energy.2018.12.131}
-  {\path{doi:10.1016/j.energy.2018.12.131}}.
-\newline\urlprefix\url{http://www.sciencedirect.com/science/article/pii/S0360544218325039}
 
 \bibitem{Geels_2017}
 F.~W. Geels, B.~K. Sovacool, T.~Schwanen, S.~Sorrell,
