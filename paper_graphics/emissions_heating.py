@@ -57,11 +57,11 @@ def plot_emissions_heating():
         if country in ['FR']:
             ax1.plot((emissions.loc['residential non-elec'] + 
                       emissions.loc['services non-elec'])/(emissions[1990]['residential non-elec'] + emissions[1990]['services non-elec']), 
-                      linewidth=3, label=dic_country[country], color='gray', alpha=0.3)
+                      linewidth=3, label=dic_country[country], color='lightslategray', alpha=0.3)
         else:
             ax1.plot((emissions.loc['residential non-elec'] + 
                       emissions.loc['services non-elec'])/(emissions[1990]['residential non-elec'] + emissions[1990]['services non-elec']), 
-                     linewidth=3, label=None, color='gray', alpha=0.3)
+                     linewidth=3, label=None, color='lightslategray', alpha=0.3)
 
     ax1.set_ylabel('CO$_2$ emissions (normalised to 1990 level)',fontsize=18)
     ax1.set_xlim([1990, 2017])        

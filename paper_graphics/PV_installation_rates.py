@@ -34,7 +34,14 @@ def PV_build_rates():
                  'Greece':'Greece', 
                  'UK':'United Kingdom',
                  'Denmark':'Denmark'} 
-
+    markers = {'Germany': 'o', 
+                 'Italy':'s', 
+                 'Spain': '*', 
+                 'Czechia':'>', 
+                 'Belgium':'^', 
+                 'Greece':'+', 
+                 'UK':'d',
+                 'Denmark':'x'} 
     plt.figure(figsize=(10, 6))
     gs1 = gridspec.GridSpec(1, 1)
     ax1 = plt.subplot(gs1[0,0])
@@ -42,7 +49,7 @@ def PV_build_rates():
         cumulative=np.array(df.loc[country])/1000 #GW
         rate=np.diff(cumulative)
         ax1.plot([int(x) for x in df.columns[1:]], rate, linewidth=3, alpha=0.8,
-                  label=dic_country[country], marker='o', markerfacecolor='white')
+                  label=dic_country[country], marker=markers[country], markerfacecolor='white')
 
 
     ax1.set_ylabel('Photovoltaic annual installed capacity (GW)',fontsize=18)
@@ -52,7 +59,7 @@ def PV_build_rates():
 
     ax1.legend(fancybox=True, fontsize=16,
                loc=(0.02,0.4), facecolor='white', frameon=True)
-  
+    ax1.grid(linestyle='--', axis='y')
     plt.savefig('../figures/installation_rates_PV.png', dpi=300, bbox_inches='tight')
     
 PV_build_rates()    

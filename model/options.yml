@@ -5,7 +5,7 @@
 # For "None" just leave the value blank or null, e.g. 'goat' :  OR 'goat' : null
 # True/False are not case-sensitive
 
-'run_name': 'ninja'
+'run_name': 'testing'
 'results_dir_name': ''
 'results_suffix': ''
 'tmin': '2015-01-01 00:00'
@@ -63,11 +63,6 @@
 'abs_flow_cost': 0. #1e-4,
 'no_lines': False
 'beta_layout': 1
-# solar capacity factors in REatlas are too high compared to other
-# studies; we correct this by applying a constant 'inverter
-# inefficiency' to the p_max_pu timeseries; comparing with
-# Pietzker+(2014) http://dx.doi.org/10.1016/j.apenergy.2014.08.011
-# the produced-power weighted average of capacity factor ratios is 1.2683
 'heat_coupling': False
 'cooling_coupling': False
 'PTH': False #power to heat

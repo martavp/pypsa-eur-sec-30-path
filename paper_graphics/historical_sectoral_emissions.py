@@ -157,18 +157,16 @@ def plot_historical_sectoral_emissions():
              marker='*', markersize=12, markerfacecolor='white',
              markeredgecolor='black')
     ax1.plot([2050, 2050],[0.2*total_1990, 0.05*total_1990],
-             color='gray', linewidth=4, alpha=0.5) 
-    ax1.plot([2050],[0.2*total_1990],'ro',
+             color='gray', linewidth=2, alpha=0.5, marker='_') 
+    ax1.plot([2050],[0.125*total_1990],'ro',
              marker='*', markersize=12, markerfacecolor='black',
-             markeredgecolor='black')   
+             markeredgecolor='black', label='EU commited target')  
     ax1.plot([2050],[0.0*(emissions[1990]['electricity'] + 
                  emissions[1990]['residential non-elec'] + 
                  emissions[1990]['services non-elec'])],
          marker='*', markersize=12, markerfacecolor='white', linewidth=0,
          markeredgecolor='black', label='EU under-discussion target')         
-    ax1.plot([2050],[0.05*total_1990],'ro',
-             marker='*', markersize=12, markerfacecolor='black',
-             markeredgecolor='black', label='EU commited target')
+
     handles, labels = ax1.get_legend_handles_labels()
     ax1.legend(reversed(handles), reversed(labels), fancybox=True, fontsize=16, 
                shadow=True, loc=(1.02,0.05), facecolor='white', frameon=True)

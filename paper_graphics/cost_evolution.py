@@ -105,7 +105,7 @@ for technology in technologies:
 ax1.set_ylim([0.2,1])    
 ax1.set_xlim([2020,2050]) 
 ax1.set_yticks([1, 0.9, 0.8, 0.7, 0.6, 0.5, 0.4, 0.3])
-ax1.grid(linestyle='--')
+ax1.grid(linestyle='--', axis='y')
 ax1.set_ylabel('relative annualised cost', fontsize=20 )
 ax1.legend(loc=(1.01,0.1), fontsize=16)
 plt.savefig('../figures/cost_evolution.png', dpi=300, bbox_inches='tight')        

@@ -224,8 +224,13 @@ P.~Ruiz, A.~Sgobbi, W.~Nijs, C.~Thiel, F.~Dalla, T.~Kobert, B.~Elbersen, G.~H.
 \newline\urlprefix\url{https://data.jrc.ec.europa.eu/dataset/74ed5a04-7d74-4807-9eab-b94774309d9f/resource/94aca7d6-89af-4969-a74c-2c7ab4376788}
 
 \bibitem{powerplantmatching}
-\href{https://github.com/FRESNA/powerplantmatching}{powerplantmatching}.
-\newline\urlprefix\url{https://github.com/FRESNA/powerplantmatching}
+F.~Gotzens, H.~Heinrichs, J.~Hörsch, F.~Hofmann,
+  \href{http://www.sciencedirect.com/science/article/pii/S2211467X18301056}{Performing
+  energy modelling exercises in a transparent way - {The} issue of data quality
+  in power plant databases}, Energy Strategy Reviews 23 (2019) 1--12.
+\newblock \href {https://doi.org/10.1016/j.esr.2018.11.004}
+  {\path{doi:10.1016/j.esr.2018.11.004}}.
+\newline\urlprefix\url{http://www.sciencedirect.com/science/article/pii/S2211467X18301056}
 
 \bibitem{thewindpower}
 \href{https://www.thewindpower.net/}{Wind energy database}.

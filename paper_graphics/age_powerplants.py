@@ -25,7 +25,7 @@ plt.rcParams['ytick.labelsize'] = 14
 
 # Conventional capacities read from power plants database: 
 #https://github.com/FRESNA/powerplantmatching
-data=pd.read_csv('data/matched_data_red.csv')
+data=pd.read_csv('data/existing_infrastructure/powerplants.csv')
 years=np.arange(1965, 2019, 1)
 
 technologies=['Hydro', 'Nuclear', 'Hard Coal', 'Lignite', 'Natural Gas', 'gas CHP', 
@@ -714,7 +714,7 @@ ax3.minorticks_on()
 ax3.tick_params(axis='x', which='minor', bottom=False)
 ax3.text(900, 28, 'Gentle path', fontsize=14)
 im=plt.imread('../figures/tortoise.png')
-place_image(im, loc='lower right', ax=ax3, pad=0, zoom=0.09)
+place_image(im, loc='lower right', ax=ax3, pad=0, zoom=0.07)
 
 a5 = build_rates_wait[['battery', 'H2']].plot.barh(stacked=True, legend=None,
      ax=ax5, color=['pink', 'purple'], alpha=1, width=0.8, linewidth=0)
@@ -728,7 +728,7 @@ ax5.spines["right"].set_visible(False)
 ax5.set_xlabel('Installation rate, Energy capacity (GWh/a)', fontsize=14)
 ax5.text(900, 28, 'Sudden path', fontsize=14)
 im=plt.imread('../figures/hare.png')
-place_image(im, loc='lower right', ax=ax5, pad=0, zoom=0.09)
+place_image(im, loc='lower right', ax=ax5, pad=0, zoom=0.07)
 trans = ax5.get_xaxis_transform()
 
 
@@ -778,7 +778,7 @@ ax3.tick_params(axis='x', which='minor', bottom=False)
 
 ax3.text(225, 28, 'Gentle path', fontsize=14)
 im=plt.imread('../figures/tortoise.png')
-place_image(im, loc='lower right', ax=ax3, pad=0, zoom=0.09)
+place_image(im, loc='lower right', ax=ax3, pad=0, zoom=0.07)
 
 a5 = build_rates_wait[['methanation']].plot.barh(stacked=True, legend=None,
      ax=ax5, color=[color['methanation']], alpha=1, width=0.8, linewidth=0)
@@ -793,7 +793,7 @@ ax5.spines["right"].set_visible(False)
 ax5.set_xlabel('Synthetic methane production (TWh/a)', fontsize=14)
 ax5.text(225, 28, 'Sudden path', fontsize=14)
 im=plt.imread('../figures/hare.png')
-place_image(im, loc='lower right', ax=ax5, pad=0, zoom=0.09)
+place_image(im, loc='lower right', ax=ax5, pad=0, zoom=0.07)
 trans = ax5.get_xaxis_transform()
 
 

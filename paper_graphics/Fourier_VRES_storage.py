@@ -16,7 +16,6 @@ years=['2050']
 
 techs=['elec_demand','battery', 'H2', 'H2 underground', 'PHS', 'EV_battery', 
        'ITES', 'LTES', 'onwind', 'solar', 'hydro']
-
 datos = pd.DataFrame(index=pd.MultiIndex.from_product([pd.Series(data=techs, name='tech',),
                                                        pd.Series(data=years, name='years',)]), 
                       columns=pd.Series(data=np.arange(0,8760), name='hour',))
@@ -42,6 +41,7 @@ for year in years:
   
     datos.loc[idx['ITES', year], :] = np.array(network.stores_t.e[network.stores.index[network.stores.index.str[3:] == 'urban water tank']].sum(axis=1)/network.stores.e_nom_opt[network.stores.index[network.stores.index.str[3:] == 'urban water tank']].sum())
     datos.loc[idx['LTES', year], :] = np.array(network.stores_t.e[network.stores.index[network.stores.index.str[3:] == 'central water tank']].sum(axis=1)/network.stores.e_nom_opt[network.stores.index[network.stores.index.str[3:] == 'central water tank']].sum())
+
 # Save dataframe to  csv file 
 #datos.to_csv('generation_storage_timeseries.csv', sep=',')            
 #datos=pd.read_csv('generation_storage_timeseries.csv', sep=',', header=0, index_col=(0,1,2))
@@ -61,16 +61,7 @@ color['H2 underground'] = 'deeppink' #color['hydrogen storage']
 color['LTES'] = color['hot water storage']
 color['PHS'] = color['hydro']
 
-#           'solar':'orange',
-#           'gas': 'brown',
-#           'hydro':"#3B5323",
-#           'PHS':'yellowgreen',
-#           'battery':'gold',
-#           'H2':'purple',
-#           'H2 underground':'pink',
-#           'EV_battery':'lightskyblue', 
-#           'LTES':'black', 
-#           'ITES':'brown'}
+
 
 dic_label={'elec_demand':'electricity \n demand',
            'heat_demand':'heating \n demand',

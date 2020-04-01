@@ -24,7 +24,7 @@ def place_image(im, loc=3, ax=None, zoom=1, **kw):
     imagebox = OffsetImage(im, zoom=zoom)
     ab = AnchoredOffsetbox(loc=loc, child=imagebox, frameon=False, **kw)
     ax.add_artist(ab)
-
+#%%
 def plot_carbon_budget_w_transport():
     
     # https://www.eea.europa.eu/data-and-maps/data/national-emissions-reported-to-the-unfccc-and-to-the-eu-greenhouse-gas-monitoring-mechanism-15    
@@ -212,22 +212,16 @@ def plot_carbon_budget_w_transport():
            emissions[1990]['services non-elec'] +
                  emissions[1990]['rail non-elec'] +
                  emissions[1990]['road non-elec'] )],
-          color='gray', linewidth=4, alpha=0.5) 
-    ax1.plot([2050],[0.2*(emissions[1990]['electricity'] + 
-                 emissions[1990]['residential non-elec'] + 
-                 emissions[1990]['services non-elec'] +
-                 emissions[1990]['rail non-elec'] +
-                 emissions[1990]['road non-elec'] )],'ro',
-         marker='*', markersize=12, markerfacecolor='black',
-         markeredgecolor='black') 
-    ax1.plot([2050],[0.015*(emissions[1990]['electricity'] + 
+          color='gray', linewidth=2, marker='_', alpha=0.5) 
+    ax1.plot([2050],[0.01*(emissions[1990]['electricity'] + 
                  emissions[1990]['residential non-elec'] + 
                  emissions[1990]['services non-elec'] +
                  emissions[1990]['rail non-elec'] +
                  emissions[1990]['road non-elec'] )],
          marker='*', markersize=12, markerfacecolor='white', linewidth=0,
-         markeredgecolor='black', label='EU under-discussion target')    
-    ax1.plot([2050],[0.05*(emissions[1990]['electricity'] + 
+         markeredgecolor='black', label='EU under-discussion target',
+         zorder=10, clip_on=False) 
+    ax1.plot([2050],[0.125*(emissions[1990]['electricity'] + 
                  emissions[1990]['residential non-elec'] + 
                  emissions[1990]['services non-elec'] +
                  emissions[1990]['rail non-elec'] +
@@ -434,23 +428,20 @@ def plot_carbon_budget():
            0.05*(emissions[1990]['electricity'] + 
            emissions[1990]['residential non-elec'] + 
            emissions[1990]['services non-elec'])],
-          color='gray', linewidth=4, alpha=0.5) 
-    ax1.plot([2050],[0.2*(emissions[1990]['electricity'] + 
+          color='gray', linewidth=2, marker='_', alpha=0.5) 
+    
+    ax1.plot([2050],[0.125*(emissions[1990]['electricity'] + 
                  emissions[1990]['residential non-elec'] + 
                  emissions[1990]['services non-elec'])],'ro',
          marker='*', markersize=12, markerfacecolor='black',
-         markeredgecolor='black') 
-    ax1.plot([2050],[0.015*(emissions[1990]['electricity'] + 
+         markeredgecolor='black', label='EU commited target') 
+    ax1.plot([2050],[0.01*(emissions[1990]['electricity'] + 
                  emissions[1990]['residential non-elec'] + 
                  emissions[1990]['services non-elec'])],
          marker='*', markersize=12, markerfacecolor='white', linewidth=0,
-         markeredgecolor='black', label='EU under-discussion target')    
-    ax1.plot([2050],[0.05*(emissions[1990]['electricity'] + 
-                 emissions[1990]['residential non-elec'] + 
-                 emissions[1990]['services non-elec'])],'ro',
-         marker='*', markersize=12, markerfacecolor='black',
-         markeredgecolor='black', label='EU commited target')
-        
+         markeredgecolor='black', label='EU under-discussion target',
+         zorder=10, clip_on=False)    
+   
     ax1.legend(fancybox=False, fontsize=20,
            loc=(0.5,0.83), facecolor='white', frameon=False)
 

@@ -109,12 +109,14 @@ def plot_heating_historical():
                               color['geothermal']],
                       linewidth=0,
                       labels=['coal, oil, LPG', 'gas', 'biomass & waste',
-                           'electric boilers', 'heat pumps', 'district heating', 'geothermal & other'])               
+                           'electric boilers', 'heat pumps', 'district heating', 
+                           'geothermal & other'], zorder=-3)      
+        ax1.tick_params(right=True)        
         ax1.set_xlim(2000,2015)
         ax1.set_ylim(0,1)
         ax1.set_title(dict_2toname[country], fontsize=18)
-        ax1.set_yticks([])
-        ax1.set_xticks([])
+        ax1.set_yticklabels([])
+        ax1.set_xticklabels([])
         if i == 27:
             handles, labels = ax1.get_legend_handles_labels()
             ax1.legend(reversed(handles), reversed(labels), loc=(2.5,0.15), shadow=True,fancybox=True,prop={'size':18})

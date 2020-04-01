@@ -16,8 +16,8 @@ sns.set_style('ticks')
 plt.style.use('seaborn-ticks')
 plt.rcParams['xtick.direction'] = 'in'
 plt.rcParams['ytick.direction'] = 'in'
-plt.rcParams['xtick.labelsize'] = 20
-plt.rcParams['ytick.labelsize'] = 20
+plt.rcParams['xtick.labelsize'] = 14
+plt.rcParams['ytick.labelsize'] = 14
 
 plt.figure(figsize=(10, 7))
 gs1 = gridspec.GridSpec(1, 1)
@@ -62,10 +62,13 @@ for path in ['go', 'wait']:
     ax1.plot(jobs['solar PV']+jobs['wind']+jobs['biomass'], color=colors[path], linewidth=4, label=dic_label[path])
     #ax1.plot(jobs['solar PV'], color=colors[path], linewidth=3, linestyle='--', label=None)
     print('total created jobs (millions) = ' + str(0.000001*(jobs['solar PV']+jobs['wind']+jobs['biomass']).sum())) 
-ax1.legend(fancybox=False, fontsize=20, loc=(0.6,0.83), facecolor='white', frameon=False)
-ax1.set_ylabel('Newly created jobs (solar, wind & biomass)', fontsize=20)  
+ax1.legend(fancybox=True, fontsize=14, loc=(0.6,0.7), facecolor='white', frameon=True)
+
+ax1.set_yticks(list(range(20000,160000,20000)))
+ax1.set_yticklabels(['20k', '40k', '60k', '80k', '100k', '120k', '140k'  ], fontsize=14)
+ax1.set_ylabel('Newly created jobs (solar, wind & biomass)', fontsize=14)  
 ax1.set_xlim([2020, 2050])
 ax1.set_ylim([0, 160000])
-ax1.grid()
+ax1.grid(linestyle='--', axis='y')
 plt.savefig('../figures/jobs.png', dpi=300, bbox_inches='tight')
 

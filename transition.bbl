@@ -309,8 +309,13 @@ K.~Zhu, M.~Victoria, T.~Brown, G.~B. Andresen, M.~Greiner,
 \newline\urlprefix\url{http://www.sciencedirect.com/science/article/pii/S030626191831835X}
 
 \bibitem{powerplantmatching}
-\href{https://github.com/FRESNA/powerplantmatching}{powerplantmatching}.
-\newline\urlprefix\url{https://github.com/FRESNA/powerplantmatching}
+F.~Gotzens, H.~Heinrichs, J.~Hörsch, F.~Hofmann,
+  \href{http://www.sciencedirect.com/science/article/pii/S2211467X18301056}{Performing
+  energy modelling exercises in a transparent way - {The} issue of data quality
+  in power plant databases}, Energy Strategy Reviews 23 (2019) 1--12.
+\newblock \href {https://doi.org/10.1016/j.esr.2018.11.004}
+  {\path{doi:10.1016/j.esr.2018.11.004}}.
+\newline\urlprefix\url{http://www.sciencedirect.com/science/article/pii/S2211467X18301056}
 
 \bibitem{IRENA_2019}
 \href{https://www.irena.org/publications/2019/Mar/Renewable-Capacity-Statistics-2019}{{Renewable
@@ -406,6 +411,16 @@ F.~Ueckerdt, R.~Pietzcker, Y.~Scholz, D.~Stetter, A.~Giannousakis, G.~Luderer,
 \newblock \href {https://doi.org/10.1016/j.eneco.2016.05.012}
   {\path{doi:10.1016/j.eneco.2016.05.012}}.
 \newline\urlprefix\url{http://www.sciencedirect.com/science/article/pii/S014098831630130X}
+
+\bibitem{Pietzcker_2014}
+R.~C. Pietzcker, D.~Stetter, S.~Manger, G.~Luderer,
+  \href{http://www.sciencedirect.com/science/article/pii/S0306261914008149}{Using
+  the sun to decarbonize the power sector: {The} economic potential of
+  photovoltaics and concentrating solar power}, Applied Energy 135 (2014)
+  704--720.
+\newblock \href {https://doi.org/10.1016/j.apenergy.2014.08.011}
+  {\path{doi:10.1016/j.apenergy.2014.08.011}}.
+\newline\urlprefix\url{http://www.sciencedirect.com/science/article/pii/S0306261914008149}
 
 \bibitem{Egli_2019}
 F.~Egli, B.~Steffen, T.~S. Schmidt,
