@@ -17,7 +17,7 @@ Table including initial distruct heating penetration
 DH_df = pd.read_csv('data/existing_infrastructure/district_heating_share.csv',
                     index_col=0)
 
-filename='../table_DH.tex'
+filename='../paper/table_DH.tex'
 file = open(filename, 'w') 
 for country in DH_df.index:
     
@@ -60,7 +60,7 @@ df.to_csv('data/existing_infrastructure/TYNDP2016.csv')
 #%%
 #write latex table
 
-filename='../table_TYNDP.tex'
+filename='../paper/table_TYNDP.tex'
              
 file = open(filename, 'w')
 df.drop(index=df.index[-1],inplace=True)

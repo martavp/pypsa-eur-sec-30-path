@@ -18,7 +18,7 @@ Latex table including FOM, efficiencies and lifetimes
 idx = pd.IndexSlice
 costs = pd.read_csv('outputs/costs_2020.csv',index_col=list(range(2))).sort_index()
 
-filename='../../../table_inputs.tex'
+filename='../../../paper/table_inputs.tex'
              
 file = open(filename, 'w')
 technologies=['onwind', 'offwind', 'solar-utility', 'solar-rooftop', 'OCGT',
@@ -157,7 +157,7 @@ file.close()
 Table including costs as a function of years
 """
 years=np.arange(2020,2055,5)
-filename='../../../table_costs.tex'
+filename='../../../paper/table_costs.tex'
 file = open(filename, 'w')
 technologies=[t for t in technologies if t not in ['water tank charger']]
 dic_units={'EUR/kWel':'\EUR/kW$_{el}$',
@@ -206,7 +206,7 @@ file.close()
 Table including fuel characteristics
 """
 
-filename='../../../table_fuels.tex'
+filename='../../../paper/table_fuels.tex'
 file = open(filename, 'w') 
 for fuel in [ 'coal', 'lignite', 'gas', 'oil','nuclear', 'solid biomass']:
     if idx[fuel,'fuel'] in costs.index:
