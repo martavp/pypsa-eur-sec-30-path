@@ -1,4 +1,4 @@
-﻿# transitions_paths_paper
+﻿# PyPSA-Eur-Sec-30-path
 
 This repository includes the model PyPSA-Eur-Sec-30-Path used in the paper “Early decarbonisation of the European energy system pays off".
 
