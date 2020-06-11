@@ -5,7 +5,7 @@ CCGT,efficiency,0.6,per unit,Technology Data for Energy Plants for Electricity a
 CCGT,investment,855.0,EUR/kWel,Technology Data for Energy Plants for Electricity and District heating generation
 CCGT,lifetime,25.0,years,Technology Data for Energy Plants for Electricity and District heating generation
 DAC,FOM,4.0,%/year,Fasihi
-DAC,investment,250.0,EUR/(tCO2/a),Fasihi/Climeworks
+DAC,investment,577.75,EUR/(tCO2/a),Fasihi/Climeworks
 DAC,lifetime,30.0,years,Fasihi
 HVAC overhead,FOM,2.0,%/year,Hagspiel
 HVAC overhead,investment,400.0,EUR/MW/km,Hagspiel
@@ -63,10 +63,10 @@ central gas CHP,VOM,4.300000000000001,EUR/MWh,Technology Data for Energy Plants 
 central gas CHP,efficiency,1.0,per unit,Technology Data for Energy Plants for Electricity and District heating generation
 central gas CHP,investment,575.0,EUR/kWel,Technology Data for Energy Plants for Electricity and District heating generation
 central gas CHP,lifetime,25.0,years,Technology Data for Energy Plants for Electricity and District heating generation
-central gas boiler,FOM,2.962,%/year,Technology Data for Energy Plants for Electricity and District heating generation
+central gas boiler,FOM,3.5,%/year,Technology Data for Energy Plants for Electricity and District heating generation
 central gas boiler,VOM,1.05,EUR/MWh,Technology Data for Energy Plants for Electricity and District heating generation
 central gas boiler,efficiency,1.0,per unit,Technology Data for Energy Plants for Electricity and District heating generation
-central gas boiler,investment,65.0,EUR/kWth,Technology Data for Energy Plants for Electricity and District heating generation
+central gas boiler,investment,55.0,EUR/kWth,Technology Data for Energy Plants for Electricity and District heating generation
 central gas boiler,lifetime,25.0,years,Technology Data for Energy Plants for Electricity and District heating generation
 central ground-sourced heat pump,FOM,0.32,%/year,Technology Data for Energy Plants for Electricity and District heating generation
 central ground-sourced heat pump,VOM,3.45,EUR/MWh,Technology Data for Energy Plants for Electricity and District heating generation
@@ -84,25 +84,25 @@ central water tank storage,efficiency,1.0,per unit,Technology Data for Energy Pl
 central water tank storage,investment,0.562,EUR/kWh,Technology Data for Energy Plants for Electricity and District heating generation
 central water tank storage,lifetime,22.5,years,Technology Data for Energy Plants for Electricity and District heating generation
 coal,CO2 intensity,0.3361257109943121,tCO2/MWth,Entwicklung der spezifischen Kohlendioxid-Emissionen des deutschen Strommix in den Jahren 1990 - 2018
-coal,FOM,1.6,%/year,Lazard’s Levelized Cost of Energy Analysis - Version 13.0
-coal,VOM,3.5,EUR/MWhel,Lazard’s Levelized Cost of Energy Analysis - Version 13.0
-coal,efficiency,0.33,per unit,Lazard’s Levelized Cost of Energy Analysis - Version 13.0
+coal,FOM,1.6,%/year,Lazard Levelized Cost of Energy Analysis - Version 13.0
+coal,VOM,3.5,EUR/MWhel,Lazard Levelized Cost of Energy Analysis - Version 13.0
+coal,efficiency,0.33,per unit,Lazard Levelized Cost of Energy Analysis - Version 13.0
 coal,fuel,8.15,EUR/MWhth,BP 2019
-coal,investment,3845.5065858353655,EUR/kWel,Lazard’s Levelized Cost of Energy Analysis - Version 13.0
-coal,lifetime,40.0,years,Lazard’s Levelized Cost of Energy Analysis - Version 13.0
-decentral air-sourced heat pump,FOM,0.03,%/year,Technology Data for Energy Plants for Electricity and District heating generation
+coal,investment,3845.5065858353655,EUR/kWel,Lazard Levelized Cost of Energy Analysis - Version 13.0
+coal,lifetime,40.0,years,Lazard Levelized Cost of Energy Analysis - Version 13.0
+decentral air-sourced heat pump,FOM,2.978,%/year,Technology Data for Energy Plants for Electricity and District heating generation
 decentral air-sourced heat pump,VOM,0.0,EUR/MWh,Technology Data for Energy Plants for Electricity and District heating generation
 decentral air-sourced heat pump,discount rate,0.04,per unit,Palzer thesis
 decentral air-sourced heat pump,efficiency,4.0,per unit,Technology Data for Energy Plants for Electricity and District heating generation
 decentral air-sourced heat pump,investment,894.9999999999999,EUR/kWth,Technology Data for Energy Plants for Electricity and District heating generation
 decentral air-sourced heat pump,lifetime,18.0,years,Technology Data for Energy Plants for Electricity and District heating generation
-decentral gas boiler,FOM,0.066,%/year,Technology Data for Energy Plants for Electricity and District heating generation
+decentral gas boiler,FOM,6.624,%/year,Technology Data for Energy Plants for Electricity and District heating generation
 decentral gas boiler,VOM,0.0,EUR/MWh,Technology Data for Energy Plants for Electricity and District heating generation
 decentral gas boiler,discount rate,0.04,per unit,Palzer thesis
 decentral gas boiler,efficiency,0.975,per unit,Technology Data for Energy Plants for Electricity and District heating generation
 decentral gas boiler,investment,304.4508355104325,EUR/kWth,Technology Data for Energy Plants for Electricity and District heating generation
 decentral gas boiler,lifetime,20.0,years,Technology Data for Energy Plants for Electricity and District heating generation
-decentral ground-sourced heat pump,FOM,0.018,%/year,Technology Data for Energy Plants for Electricity and District heating generation
+decentral ground-sourced heat pump,FOM,1.838,%/year,Technology Data for Energy Plants for Electricity and District heating generation
 decentral ground-sourced heat pump,VOM,0.0,EUR/MWh,Technology Data for Energy Plants for Electricity and District heating generation
 decentral ground-sourced heat pump,discount rate,0.04,per unit,Palzer thesis
 decentral ground-sourced heat pump,efficiency,4.0,per unit,Technology Data for Energy Plants for Electricity and District heating generation
@@ -144,22 +144,22 @@ hydrogen storage underground,efficiency,1.0,per unit,Technology Data for Energy 
 hydrogen storage underground,investment,2.5,EUR/kWh,Technology Data for Energy Plants for Electricity and District heating generation
 hydrogen storage underground,lifetime,100.0,years,Technology Data for Energy Plants for Electricity and District heating generation
 lignite,CO2 intensity,0.4069083447332422,tCO2/MWth,Entwicklung der spezifischen Kohlendioxid-Emissionen des deutschen Strommix in den Jahren 1990 - 2018
-lignite,FOM,1.6,%/year,Lazard’s Levelized Cost of Energy Analysis - Version 13.0
-lignite,VOM,3.5,EUR/MWhel,Lazard’s Levelized Cost of Energy Analysis - Version 13.0
-lignite,efficiency,0.33,per unit,Lazard’s Levelized Cost of Energy Analysis - Version 13.0
+lignite,FOM,1.6,%/year,Lazard Levelized Cost of Energy Analysis - Version 13.0
+lignite,VOM,3.5,EUR/MWhel,Lazard Levelized Cost of Energy Analysis - Version 13.0
+lignite,efficiency,0.33,per unit,Lazard Levelized Cost of Energy Analysis - Version 13.0
 lignite,fuel,2.9,EUR/MWhth,DIW
-lignite,investment,3845.5065858353655,EUR/kWel,Lazard’s Levelized Cost of Energy Analysis - Version 13.0
-lignite,lifetime,40.0,years,Lazard’s Levelized Cost of Energy Analysis - Version 13.0
+lignite,investment,3845.5065858353655,EUR/kWel,Lazard Levelized Cost of Energy Analysis - Version 13.0
+lignite,lifetime,40.0,years,Lazard Levelized Cost of Energy Analysis - Version 13.0
 methanation,FOM,3.0,%/year,Schaber thesis
 methanation,efficiency,0.6,per unit,Palzer; Breyer for DAC
 methanation,investment,1000.0,EUR/kWH2,Schaber thesis
 methanation,lifetime,25.0,years,Schaber thesis
-nuclear,FOM,1.4,%/year,Lazard’s Levelized Cost of Energy Analysis - Version 13.0
-nuclear,VOM,3.5,EUR/MWhel,Lazard’s Levelized Cost of Energy Analysis - Version 13.0
-nuclear,efficiency,0.33,per unit,Lazard’s Levelized Cost of Energy Analysis - Version 13.0
-nuclear,fuel,2.6,EUR/MWhth,Lazard’s Levelized Cost of Energy Analysis - Version 13.0
-nuclear,investment,7940.45143669789,EUR/kWel,Lazard’s Levelized Cost of Energy Analysis - Version 13.0
-nuclear,lifetime,40.0,years,Lazard’s Levelized Cost of Energy Analysis - Version 13.0
+nuclear,FOM,1.4,%/year,Lazard Levelized Cost of Energy Analysis - Version 13.0
+nuclear,VOM,3.5,EUR/MWhel,Lazard Levelized Cost of Energy Analysis - Version 13.0
+nuclear,efficiency,0.33,per unit,Lazard Levelized Cost of Energy Analysis - Version 13.0
+nuclear,fuel,2.6,EUR/MWhth,Lazard Levelized Cost of Energy Analysis - Version 13.0
+nuclear,investment,7940.45143669789,EUR/kWel,Lazard Levelized Cost of Energy Analysis - Version 13.0
+nuclear,lifetime,40.0,years,Lazard Levelized Cost of Energy Analysis - Version 13.0
 offwind,FOM,1.873,%/year,Technology Data for Energy Plants for Electricity and District heating generation
 offwind,VOM,2.8189417092525084,EUR/MWhel,Technology Data for Energy Plants for Electricity and District heating generation
 offwind,efficiency,1.0,per unit,Technology Data for Energy Plants for Electricity and District heating generation
@@ -206,6 +206,6 @@ solar-utility,FOM,3.0,%/year,ETIP PV
 solar-utility,investment,326.11743538735954,EUR/kWel,"Impact of weighted average cost of capital, capital expenditure, and other parameters on future utility‐scale PV levelised cost of electricity"
 solar-utility,lifetime,30.0,years,"Impact of weighted average cost of capital, capital expenditure, and other parameters on future utility‐scale PV levelised cost of electricity"
 solid biomass,fuel,25.2,EUR/MWhth,Is a 100% renewable European power system feasible by 2050?
-uranium,fuel,2.6,EUR/MWhth,Lazard’s Levelized Cost of Energy Analysis - Version 13.0
+uranium,fuel,2.6,EUR/MWhth,Lazard Levelized Cost of Energy Analysis - Version 13.0
 water tank charger,efficiency,0.9,per unit,HP
 water tank discharger,efficiency,0.9,per unit,HP

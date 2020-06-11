@@ -84,7 +84,7 @@ name={'onwind' : 'Onshore Wind',
 dic_ref = {'Technology Data for Energy Plants for Electricity and District heating generation':'DEA_2019',
            'Impact of weighted average cost of capital, capital expenditure, and other parameters on future utility‐scale PV levelised cost of electricity': 'Vartiainen_2019',
            'European PV Technology and Innovation Platform' : 'Vartiainen_2017',
-           'Lazard’s Levelized Cost of Energy Analysis - Version 13.0': 'Lazard_2019',           
+           'Lazard Levelized Cost of Energy Analysis - Version 13.0': 'Lazard_2019',           
            'budischak2013':'Budischak_2013, DEA_2019',
            #'NREL http://www.nrel.gov/docs/fy09osti/45873.pdf; 
            'IWES Interaktion':'Gerhardt_2015, DEA_2019',
