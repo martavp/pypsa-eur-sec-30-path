@@ -45,20 +45,20 @@ def plot_co2_prices():
     ax1.grid(linestyle='--')
     ax1.set_ylim([0, 500])  
     ax1.set_xlim([datetime(2008,1,1,0,0,0), datetime(2051,1,1,0,0,0)]) 
-    ax1.plot([datetime(2005,1,1,0,0,0), datetime(2055,1,1,0,0,0)],
-             [275, 275], color='yellowgreen', linewidth = 190, alpha =0.15)
+    ax1.plot([datetime(2005,1,1,0,0,0), datetime(2050,1,1,0,0,0)],
+              [275, 275], color='yellowgreen', linewidth = 195, alpha =0.15)
     ax1.annotate('Co-benefits for human \n health and agriculture',
                  xy=(datetime(2017,1,1,0,0,0),310),color='yellowgreen', fontsize=16) 
     ax1.annotate('', xy=(datetime(2030,1,1,0,0,0), 125), 
-                 xytext=(datetime(2030,1,1,0,0,0), 425),
-                 color='yellowgreen', fontsize=16, 
-                 arrowprops = dict(arrowstyle = "->", alpha=1,
-                               color='yellowgreen', linewidth=2),)
+                  xytext=(datetime(2030,1,1,0,0,0), 425),
+                  color='yellowgreen', fontsize=16, 
+                  arrowprops = dict(arrowstyle = "->", alpha=1,
+                                color='yellowgreen', linewidth=2),)
     ax1.annotate('', xy=(datetime(2030,1,1,0,0,0), 425), 
-                 xytext=(datetime(2030,1,1,0,0,0), 125),
-                 color='yellowgreen', fontsize=16, 
-                 arrowprops = dict(arrowstyle = "->", alpha=1,
-                               color='yellowgreen', linewidth=2),)
+                  xytext=(datetime(2030,1,1,0,0,0), 125),
+                  color='yellowgreen', fontsize=16, 
+                  arrowprops = dict(arrowstyle = "->", alpha=1,
+                                color='yellowgreen', linewidth=2),)
     
     ax1.legend(fancybox=False, fontsize=16, loc=(0.012,0.2), facecolor='white', frameon=True)
     plt.savefig('../figures/co2_price.png', dpi=300, bbox_inches='tight')

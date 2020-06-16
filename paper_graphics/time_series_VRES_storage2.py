@@ -78,9 +78,9 @@ dic_label={'elec_demand':'electricity demand',
            'ITES':'ITES'}
 
 # Fourier transform for the demand, wind and solar
-plt.figure(figsize=(12, 8))
-gs1 = gridspec.GridSpec(2, 2)
-gs1.update(wspace=0.05, hspace=0.2)
+plt.figure(figsize=(12, 10))
+gs1 = gridspec.GridSpec(7, 2)
+gs1.update(wspace=0.05, hspace=0.3)
 dic_linewidth={'elec_demand':2,
                'heat_demand':2,
                'solar':5,
@@ -112,10 +112,7 @@ dic_alpha={'elec_demand':0.5,
    
 for i,tech in enumerate(['solar', 'onwind', 'elec_demand', 'heat_demand']):    
     
-    ax1 = plt.subplot(gs1[0,0])
-    #ax1.text(0.9, 0.9, 'a)', transform=ax1.transAxes, fontsize=16)
-    #n_days=14
-    #hour_ini=2190-6-24*2+13*24+7*24
+    ax1 = plt.subplot(gs1[i,0])
     if tech=='solar':
         n_averaging=1 #24*31
     else:
@@ -128,16 +125,22 @@ for i,tech in enumerate(['solar', 'onwind', 'elec_demand', 'heat_demand']):
             alpha=dic_alpha[tech],
             label=dic_label[tech]) 
     ax1.set_xticks(np.arange(24*12,365*24,24*30.4))
-    ax1.set_xticklabels(['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul','Ago', 'Sep', 'Oct', 'Nov', 'Dec'], fontsize=12)    
+    ax1.tick_params(direction='in')
+    if i==0:    
+        ax1.xaxis.set_label_position('top') 
+        ax1.xaxis.set_ticks_position('top')
+        ax1.set_xticklabels(['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul','Ago', 'Sep', 'Oct', 'Nov', 'Dec'], fontsize=12)    
+    else:
+        ax1.xaxis.set_ticks_position('top')
+        ax1.set_xticklabels([])
 
     ax1.set_xlim(0,8760)
     ax1.set_ylim(0,1.00)
     ax1.set_yticks([0, 0.5, 1])
-    ax1.set_yticklabels(['0','0.5', '1'], fontsize=14)
+    ax1.set_yticklabels(['0',' ', '1'], fontsize=14)
     #ax1.set_xlabel(
 
-    ax2 = plt.subplot(gs1[1,0])
-    #ax1.text(0.9, 0.9, 'a)', transform=ax1.transAxes, fontsize=16)
+    ax2 = plt.subplot(gs1[4:7,0])
     n_days=7
     hour_ini=32*24# 2 of February 
     ax2.plot(np.arange(0,24*n_days), datos.loc[idx[tech, year], :][hour_ini:hour_ini+24*n_days]/np.max(datos.loc[idx[tech, year], :]), 
@@ -146,19 +149,21 @@ for i,tech in enumerate(['solar', 'onwind', 'elec_demand', 'heat_demand']):
             linestyle=dic_linestyle[tech],            
             alpha=1,
             label=dic_label[tech]) 
-    #ax2.set_xticks(np.arange(12,336+12,24))
-    #ax2.set_xticklabels(['M', 'T', 'W', 'T', 'F', 'S', 'S','M', 'T', 'W', 'T', 'F', 'S', 'S',], fontsize=12)
     ax2.set_xticks([])
     ax2.set_xlim(0,24*n_days)
     ax2.set_ylim(0,1.00)
     ax2.set_yticks([])
-    ax1.legend(loc=(0.4, 1.03), shadow=True, fancybox=True, prop={'size':12}) #'center left'
+    ax1.legend(loc='lower right', shadow=True, fancybox=True, prop={'size':12}) #'center left'
     ax2.set_yticks([0, 0.5, 1])
     ax2.set_yticklabels(['0','0.5', '1'], fontsize=14)
     ax2.set_xticks(np.arange(12,24*n_days+12,24))
-    ax2.set_xticklabels(['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun',], fontsize=12)
-    ax2.set_xlabel('2-8 Feb 2015', fontsize=14)
-
+    ax2.tick_params(direction='in')
+    if i==3:
+        ax2.set_xticklabels(['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun',], fontsize=12)
+        ax2.set_xlabel('2-8 Feb 2015', fontsize=14)
+    else:
+        ax2.set_xticklabels([])
+    
     
     # ax2 = plt.subplot(gs1[0,1])
     # #ax2.text(0.9, 0.9, 'b)', transform=ax2.transAxes, fontsize=16)
@@ -205,24 +210,29 @@ for i,tech in enumerate(['solar', 'onwind', 'elec_demand', 'heat_demand']):
     
 for i,tech in enumerate(['battery', 'PHS', 'H2 underground',  'LTES']):    
     
-    ax1 = plt.subplot(gs1[0,1])
-    #ax1.text(0.9, 0.9, 'a)', transform=ax1.transAxes, fontsize=16)
+    ax1 = plt.subplot(gs1[i,1])
     ax1.plot(np.arange(0,8760), datos.loc[idx[tech, year], :]/np.max(datos.loc[idx[tech, year], :]), 
             color=color[tech],
             linewidth=2,
             linestyle=dic_linestyle[tech],            
             alpha=dic_alpha[tech],
             label=dic_label[tech]) 
-    ax1.set_xticks(np.arange(24*12,365*24,24*30.4))
-    ax1.set_xticklabels(['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul','Ago', 'Sep', 'Oct', 'Nov', 'Dec'], fontsize=12)    
+    
+    ax1.tick_params(direction='in')
+    if i==0:            
+        ax1.xaxis.set_label_position('top') 
+        ax1.xaxis.set_ticks_position('top')
+        ax1.set_xticklabels(['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul','Ago', 'Sep', 'Oct', 'Nov', 'Dec'], fontsize=12)    
+    else:
+        ax1.xaxis.set_ticks_position('top')
+        ax1.set_xticklabels([])
+    
     ax1.set_xlim(0,8760)
     ax1.set_ylim(0,1.00)
     ax1.set_yticks([])
-    #ax1.set_yticks([0, 0.5, 1])
-    #ax1.set_yticklabels(['0','0.5', '1'], fontsize=14)
+
     
-    ax2 = plt.subplot(gs1[1,1])
-    #ax2.text(0.9, 0.9, 'a)', transform=ax1.transAxes, fontsize=16)
+    ax2 = plt.subplot(gs1[4:7,1])
     n_days=7
     hour_ini=32*24 # 2 of February 
     ax2.plot(np.arange(0,24*n_days), datos.loc[idx[tech, year], :][hour_ini:hour_ini+24*n_days]/np.max(datos.loc[idx[tech, year], :]), 
@@ -235,12 +245,15 @@ for i,tech in enumerate(['battery', 'PHS', 'H2 underground',  'LTES']):
     ax2.set_xlim(0,24*n_days)
     ax2.set_ylim(0,1.00)
     ax2.set_yticks([])
-    #ax2.set_yticks([0, 0.5, 1])
-    #ax2.set_yticklabels(['0','0.5', '1'], fontsize=14)
+    
     ax2.set_xticks(np.arange(12,24*n_days+12,24))
-    ax2.set_xticklabels(['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun',], fontsize=12)
+    ax2.tick_params(direction='in')
+    if i==3:
+        ax2.set_xticklabels(['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun',], fontsize=12)
+    else:
+        ax2.set_xticklabels([])
     ax2.set_xlabel('2-8 Feb 2015', fontsize=14)
-    ax1.legend(loc=(0.4, 1.03), shadow=True, fancybox=True, prop={'size':12}) #'center left'
+    ax1.legend(loc='lower right', shadow=True, fancybox=True, prop={'size':12}) #'center left'
     # ax2 = plt.subplot(gs1[1,1])
     # #ax2.text(0.9, 0.9, 'b)', transform=ax2.transAxes, fontsize=16)
     # ax2.set_xlim(1,10000)
@@ -285,4 +298,4 @@ for i,tech in enumerate(['battery', 'PHS', 'H2 underground',  'LTES']):
     # ax2.set_xlabel('cycling period (hours)', fontsize=14)  
 #ax2.minorticks_on()
 #ax2.tick_params(axis='y', which='minor', bottom=False)          
-plt.savefig('../figures/time_series.png', dpi=300, bbox_inches='tight') 
+plt.savefig('../figures/time_series2.png', dpi=300, bbox_inches='tight') 

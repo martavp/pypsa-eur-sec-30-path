@@ -102,3 +102,7 @@
 'EV_lower_degree_factor' : 0.98
 'EV_upper_degree_factor' : 0.63
 'LMP_cap' : False
+'w_EV_exp': False
+'w_Tran_exp': False 
+'w_Retro': False
+'w_DH_exp': False
