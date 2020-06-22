@@ -607,7 +607,6 @@ def prepare_network(options):
         # district heating shares come from https://www.euroheat.org/knowledge-hub/country-profiles/
         central = nodes ^ urban
         urban_fraction = pd.read_csv('data/existing_2020/district_heating_share.csv',index_col=0).loc[nodes,str(2015)] #options['year']
-
         network.madd("Bus",
                      nodes + " heat",
                      carrier="heat")

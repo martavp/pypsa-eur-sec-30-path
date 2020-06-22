@@ -61,7 +61,7 @@ tech_colors={'hydro':color['hydro'],
 transmission_capacities=n.links.p_nom_opt[n.links.index[n.links.index.str[2] == "-"]]
 
 
-df = pd.read_csv('results/version-w_DH_exp/electricity_production_w_DH_exp_go.csv',index_col=0,header=[0,1])
+df = pd.read_csv('results/version-Base/electricity_production_Base_go.csv',index_col=0,header=[0,1])
 index = ['hydro','solar','onwind','offwind', 'gas']
 df = df.reindex(index)
 df = df.reorder_levels(['year','country'],axis=1)['2050'].T

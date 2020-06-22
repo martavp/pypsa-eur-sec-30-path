@@ -30,6 +30,7 @@ options['co2_reduction'] = float(CO2_budget.loc[year,flex])
 
 if snakemake.wildcards.line_limits == "opt":
     options['line_volume_limit_factor'] = None
+    options['w_Tran_exp'] = True
 elif snakemake.wildcards.line_limits == "TYNDP":
     options['line_volume_limit_factor'] = 'TYNDP'
 else:
@@ -65,8 +66,10 @@ options['transport_coupling'] = True
 options['EV_pene'] = (1-options['co2_reduction']-0.298835)/0.7011650
 options['bev'] = True
 options['v2g'] = True
-options['bev_availability'] = 0.5
-options['v2g_availability'] = 0.25
+options['bev_availability'] = 1.0 #0.5
+options['v2g_availability'] = 0.5 #0.25
 options['w_EV_exp'] = True
+
+
 
 yaml.dump(options,open(output_name,"w"))

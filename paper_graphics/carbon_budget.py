@@ -88,8 +88,8 @@ def plot_carbon_budget_w_transport():
     
     colors = pl.cm.hot(np.linspace(0,1,6))
 
-    colors=['lightgray', 'lightgray', 'firebrick',  'gold', 'lightgray', 
-            'lightgray']
+    colors=['silver', 'lightgray', 'firebrick', 'gold', 'silver', 
+            'silver']
     plt.figure(figsize=(10, 7))
     gs1 = gridspec.GridSpec(1, 1)
     ax1 = plt.subplot(gs1[0,0])
@@ -114,9 +114,9 @@ def plot_carbon_budget_w_transport():
     ax1.set_ylim([0,2.5])
     ax1.set_xlim([1990,2051])
 
-    ax1.annotate('Electricity + Heating \n + Transport', xy=(1991,2.4), 
+    ax1.annotate('Electricity + heating \n + Transport', xy=(1991,2.4), 
              color='black', fontsize=20) 
-    ax1.annotate('Electricity & central heating', xy=(1991,1.45), 
+    ax1.annotate('Electricity + central heating', xy=(1991,1.45), 
              color='dimgray', fontsize=20)
     ax1.annotate('Individual heating', xy=(1991,0.5), 
              color='dimgray', fontsize=20)
@@ -164,15 +164,15 @@ def plot_carbon_budget_w_transport():
 #                 alpha=0.75, label=None) 
 #        i=i+1
     
-    ax1.annotate('sudden', xy=(2032,0.9), #last-minute
-                 xytext=(2036, 1.1),
+    ax1.annotate('late and sudden', xy=(2032,0.9), #last-minute
+                 xytext=(2036, 1.2),
                  color='firebrick', fontsize=20, 
                  arrowprops = dict(arrowstyle = "->", alpha=1,
                                color='firebrick', linewidth=2),
                  bbox=dict(boxstyle="round", linewidth=2, 
                            fc='white', ec='firebrick'))
-    ax1.annotate('gentle', xy=(2043,0.16), #cautious
-                 xytext=(2041, 0.5),
+    ax1.annotate('slow and steady', xy=(2043,0.16), #cautious
+                 xytext=(2036, 0.7),
                  color='gold', fontsize=20, 
                  arrowprops = dict(arrowstyle = "->", alpha=1,
                                color='gold', linewidth=2),
@@ -316,8 +316,8 @@ def plot_carbon_budget():
     
     colors = pl.cm.hot(np.linspace(0,1,6))
 
-    colors=['lightgray', 'lightgray', 'firebrick',  'gold', 'lightgray', 
-            'lightgray']
+    colors=['silver', 'silver', 'firebrick',  'gold', 'silver', 
+            'silver']
     plt.figure(figsize=(10, 6))
     gs1 = gridspec.GridSpec(1, 1)
     ax1 = plt.subplot(gs1[0,0])
@@ -338,9 +338,9 @@ def plot_carbon_budget():
     ax1.set_ylim([0,2.5])
     ax1.set_xlim([1990,2051])
 
-    ax1.annotate('Electricity + Heating', xy=(1995,2.2), 
+    ax1.annotate('Electricity + heating', xy=(1991,2.2), 
              color='black', fontsize=20) 
-    ax1.annotate('Electricity & central heating', xy=(1991,1.45), 
+    ax1.annotate('Electricity + central heating', xy=(1991,1.45), 
              color='dimgray', fontsize=20)
     ax1.annotate('Individual heating', xy=(1991,0.8), 
              color='dimgray', fontsize=20)
@@ -387,15 +387,15 @@ def plot_carbon_budget():
 #                 alpha=0.75, label=None) 
 #        i=i+1
     
-    ax1.annotate('sudden', xy=(2025,1.4), #last-minute
+    ax1.annotate('late and rapid', xy=(2025,1.4), #last-minute
                  xytext=(2028, 1.65),
                  color='firebrick', fontsize=20, 
                  arrowprops = dict(arrowstyle = "->", alpha=1,
                                color='firebrick', linewidth=2),
                  bbox=dict(boxstyle="round", linewidth=2, 
                            fc='white', ec='firebrick'))
-    ax1.annotate('gentle', xy=(2040,0.15), #cautious
-                 xytext=(2038, 0.5),
+    ax1.annotate('slow and steady', xy=(2040,0.15), #cautious
+                 xytext=(2033, 0.7),
                  color='gold', fontsize=20, 
                  arrowprops = dict(arrowstyle = "->", alpha=1,
                                color='gold', linewidth=2),

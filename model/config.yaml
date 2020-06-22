@@ -1,12 +1,12 @@
-version:  w_nuclear_subsidy #Base, w_DH_exp, w_Retro, w_Tran_exp, w_EV_exp, w_smart_EV_exp, wo_CO2_budget
-# Base refers to no district heaing/grid expansion, no retrofitting
+version: w_EV_100_50_exp  #, w_DH_exp, w_Retro, w_Tran_exp, w_EV_exp, wo_CO2_budget, 
+# Base refers to no district heating/grid expansion, no building retrofitting
 
 results_dir: 'results/networks/'
 summary_dir: 'results/summaries/'
 
 scenario:
   flexibility: [go,wait]
-  line_limits: [TYNDP]   #opt #beware, these are treated all as strings, so need to float() them
+  line_limits: [TYNDP]   #TYNDP #opt #beware, these are treated all as strings, so need to float() them
   year: [2020,2025,2030,2035,2040,2045,2050]
   
 solar_thermal_angle: 45

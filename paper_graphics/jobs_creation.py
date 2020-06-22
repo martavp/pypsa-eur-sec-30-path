@@ -34,8 +34,8 @@ years_future=np.arange(2020, 2050, 1)
 technologies=['solar PV', 'wind', 'biomass']
 jobs = pd.DataFrame(index = pd.Series(data=years_future, name='year'),
                        columns = pd.Series(data=technologies, name='technology'))
-dic_label={'go':'Gentle path',
-           'wait':'Sudden path'}
+dic_label={'go':'Slow and steady path',
+           'wait':'Late and rapid path'}
 colors={'go':'gold',
           'wait':'firebrick'}
 
