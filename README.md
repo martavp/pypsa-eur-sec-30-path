@@ -1,5 +1,7 @@
 ﻿# PyPSA-Eur-Sec-30-path
 
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+
 This repository includes the model PyPSA-Eur-Sec-30-Path used in the paper “Early decarbonisation of the European energy system pays off".
 
 
