@@ -18,9 +18,6 @@ The necessary data to run the model can be retrieved from the [data bundle](http
 
 The data bundle is about 800 MB and it includes time series for electricity and heating demand, [solar PV capacity factor time series](https://zenodo.org/record/2613651#.XniBkXJ7mUk), [onshore and offshore wind capacity factor time series](https://zenodo.org/record/3253876#.XniBsnJ7mUl), the Corine Land Cover database, the Nature 2000 network database, JRC-IDEES-2015 database, JRC ENSPRESO biomass potentials, the DEA Technology Catalogue which is used for technology costs evolution, existing and planned transmission capacities included in the TYNDP2016, EEA emission statistics, emobility statistics, hydrogen salt cavern potentials, ETS historical CO_2 price evolution, current share of district heating. 
 
+Copyright 2015-2020 Kun Zhu (AU), Marta Victoria (AU), and Tom Brown (KIT).
 
-All code in this directory is copyright 2015-2020 Tom Brown (KIT), David Schlachtberger (FIAS), Kun Zhu (AU) and Marta Victoria (AU)
-
-This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 3 of the License, or (at your option) any later version.
-
-This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License, see [LICENSE](https://github.com/martavp/pypsa-eur-sec-30-path/blob/master/LICENSE.txt) for further information.
