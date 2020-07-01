@@ -171,7 +171,7 @@ def plot_carbon_budget_w_transport():
                                color='firebrick', linewidth=2),
                  bbox=dict(boxstyle="round", linewidth=2, 
                            fc='white', ec='firebrick'))
-    ax1.annotate('slow and steady', xy=(2043,0.16), #cautious
+    ax1.annotate('early and steady', xy=(2043,0.16), #cautious
                  xytext=(2036, 0.7),
                  color='gold', fontsize=20, 
                  arrowprops = dict(arrowstyle = "->", alpha=1,
@@ -394,7 +394,7 @@ def plot_carbon_budget():
                                color='firebrick', linewidth=2),
                  bbox=dict(boxstyle="round", linewidth=2, 
                            fc='white', ec='firebrick'))
-    ax1.annotate('slow and steady', xy=(2040,0.15), #cautious
+    ax1.annotate('early and steady', xy=(2040,0.15), #cautious
                  xytext=(2033, 0.7),
                  color='gold', fontsize=20, 
                  arrowprops = dict(arrowstyle = "->", alpha=1,

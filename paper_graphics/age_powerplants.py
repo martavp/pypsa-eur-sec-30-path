@@ -329,7 +329,7 @@ ax3.set_yticklabels(['2020',
 ax2.set_xticks([]) 
 ax3.set_xticks([]) 
 
-ax3.text(160, 28, 'Slow and steady path', fontsize=16) 
+ax3.text(160, 28, 'Early and steady path', fontsize=16) 
 im=plt.imread('../figures/tortoise.png')
 place_image(im, loc='lower right', ax=ax3, pad=0, zoom=0.1)
 
@@ -384,7 +384,7 @@ ax5.set_xticks(list(range(0,210,10)))
 plt.savefig('../figures/age_distribution_' + version + '.png', dpi=300, bbox_inches='tight') 
 #%%
 """
-Plot only Slow and steady path
+Plot only Early and steady path
 """
 plt.figure(figsize=(20,11))
 gs1 = gridspec.GridSpec(120, 152) 
@@ -484,7 +484,7 @@ ax3.set_yticklabels(['2020',
                      '2045', ], fontsize=12)
 
 ax2.set_xlabel('Installation rate (GW/a)', fontsize=14, x=1.15)
-ax3.text(105, 28, 'Slow and steady path', fontsize=16)
+ax3.text(105, 28, 'Early and steady path', fontsize=16)
 ax2.minorticks_on()
 ax2.tick_params(axis='x', which='minor', bottom=False)
 ax2.set_xticks(list(range(0,20,5)))
@@ -625,7 +625,7 @@ ax3.set_yticklabels(['2020',
 ax2.set_xticks([]) 
 ax3.set_xticks([]) 
 
-ax3.text(70, 28, 'Slow and steady path', fontsize=14)
+ax3.text(70, 28, 'Early and steady path', fontsize=14)
 im=plt.imread('../figures/tortoise.png')
 place_image(im, loc='lower right', ax=ax3, pad=0, zoom=0.09)
 
@@ -712,7 +712,7 @@ ax3.set_yticklabels(['2020',
 ax3.set_xticks([]) 
 ax3.minorticks_on()
 ax3.tick_params(axis='x', which='minor', bottom=False)
-ax3.text(800, 28, 'Slow and steady path', fontsize=14)
+ax3.text(800, 28, 'Early and steady path', fontsize=14)
 im=plt.imread('../figures/tortoise.png')
 place_image(im, loc='lower right', ax=ax3, pad=0, zoom=0.07)
 
@@ -776,7 +776,7 @@ ax3.set_xticks([])
 ax3.minorticks_on()
 ax3.tick_params(axis='x', which='minor', bottom=False)
 
-ax3.text(225, 23, 'Slow and steady path', fontsize=14)
+ax3.text(225, 23, 'Early and steady path', fontsize=14)
 im=plt.imread('../figures/tortoise.png')
 place_image(im, loc='lower right', ax=ax3, pad=0, zoom=0.07)
 
