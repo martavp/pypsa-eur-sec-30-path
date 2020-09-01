@@ -103,7 +103,7 @@
 
 \begin{abstract}
 
-For a given carbon budget over several decades, different transformation rates for the energy system yield starkly different results. We consider a budget of 33 GtCO$_2$ for the cumulative carbon dioxide emissions from the European electricity, heating, and transport sectors between 2020 and 2050, which represents Europe's contribution to the Paris Agreement. We have found that following an early and steady path in which emissions are strongly reduced in the first decade is more cost-effective than following a late and rapid path in which low initial reduction targets quickly deplete the carbon budget and require a sharp reduction later. Costs of solar photovoltaic, onshore and offshore wind have plummeted during the last decade. We found that those technologies can become the cornerstone of a fully decarbonised energy system and that installation rates similar to historical maxima are required to achieve timely decarbonization. Key to those results is a proper representation of existing balancing strategies through an open, hourly-resolved, networked model of the sector-coupled European energy system.
+For a given carbon budget over several decades, different transformation rates for the energy system yield starkly different results. We consider a budget of 33 GtCO$_2$ for the cumulative carbon dioxide emissions from the European electricity, heating, and transport sectors between 2020 and 2050, which represents Europe's contribution to the Paris Agreement. We have found that following an early and steady path in which emissions are strongly reduced in the first decade is more cost-effective than following a late and rapid path in which low initial reduction targets quickly deplete the carbon budget and require a sharp reduction later. We show that solar photovoltaic, onshore and offshore wind can become the cornerstone of a fully decarbonised energy system and that installation rates similar to historical maxima are required to achieve timely decarbonization. Key to those results is a proper representation of existing balancing strategies through an open, hourly-resolved, networked model of the sector-coupled European energy system.
 
 %In the context of increasing public climate change awareness and plummeting costs for wind and solar photovoltaics, discussions on increasing CO$_2$ reduction targets for Europe have started. Here, we model alternative transition paths with strict carbon budget for the sector-coupled networked European energy system. We show that up-to-date costs for wind and solar and the inclusion of highly resolved time series for balancing make climate action with renewables more cost-effective than previously seen. Ambitious CO$_2$ reductions in the short term not only trigger a cheaper transition but also incentivise more stable CO$_2$ prices and build rates for the required new capacities which could be beneficial from the point of view of investors, social acceptance, local economies, and jobs creation.
 
@@ -128,19 +128,18 @@ A remaining global carbon budget of 800 Gigatons (Gt) of CO$_2$ can be emitted f
 \begin{figure}[!h]
 \centering
 	\includegraphics[width=\columnwidth]{../figures/carbon_budget_2.png}
-\caption{Historical CO$_2$ emissions from the European power system and heating supply in the residential and services sectors \cite{UNFCCC_inventory}. The various future transition paths shown in the figure have the same cumulative CO$_2$ emissions, which correspond to the remaining 21 Gt CO$_2$ budget to avoid human-induced warming above 1.75$^{\circ}$C with a probability of more than 66\%, assuming current sectoral distribution for Europe, and equity sharing principle among regions. Black stars indicate committed EU reduction targets, while white stars mark targets under discussion. See also Supplementary Figure 1.} \label{fig_carbon_budget} 
+\caption{Historical CO$_2$ emissions from the European power system and heating supply in the residential and services sectors. Data source \cite{UNFCCC_inventory}. The various future transition paths shown in the figure have the same cumulative CO$_2$ emissions, which correspond to the remaining 21 Gt CO$_2$ budget to avoid human-induced warming above 1.75$^{\circ}$C with a probability of more than 66\%, assuming current sectoral distribution for Europe, and equity sharing principle among regions. Black stars indicate committed EU reduction targets, while white stars mark targets under discussion. See also Supplementary Figure 1.} \label{fig_carbon_budget} 
 \end{figure}
 
 \FloatBarrier
 
-\paragraph{\textbf{Sector coupling}} \
+
 Electricity generation is expected to spearhead the transition spurred by the dramatic cost reduction of wind energy \cite{Lantz_2012} and solar photovoltaics (PV) \cite{Creutzig_2017, Haegel_2019}. A vast body of literature shows that a power system based on wind, solar, and hydro generation can supply hourly electricity demand in Europe as long as proper balancing is provided \cite{Eriksen_2017, Schlachtberger_2017, Gils_2017a, Brown_response}. This can be done by reinforcing interconnections among neighbouring countries \cite{Rodriguez_2014} to smooth renewable fluctuations by regional aggregation or through temporal balancing using local storage \cite{Rasmussen_2012, Cebulla_2017, Victoria_2019_storage}. Moreover, coupling the power system with other sectors such as heating or transport could provide additional flexibilities facilitating the system operation and simultaneously helping to abate emissions in those sectors \cite{Connolly_2016, Brown_2018, Child_2019}. \\
 
 CO$_2$ emissions from heating in the residential and services sectors show a more modest historical reduction trend compared to electricity generation (Figure \ref{fig_carbon_budget}). Nordic countries have been particularly successful in reducing carbon emissions from the heating sector by using sector-coupling strategies, Supplementary Figures 2 and 3. Denmark, where more than half of the households are connected to district heating systems \cite{Gross_2019}, has shifted the fuel used in Central Heat and Power (CHP) units from coal to biomass and urban waste incineration \cite{DEA_2015}. Sweden encouraged a large-scale switch from electric resistance heaters to heat pumps \cite{Gross_2019} which are now supported by high CO$_2$ prices \cite{Carbon_pricing_2019} and low electricity taxes.\\ 
 
-Energy models assuming greenfield optimisation, that is, building the European energy system from scratch without considering current capacities, shows that sector-coupling decreases the system cost and reduces the need for extending transmission lines due to the additional local flexibility brought by the heating and transport sectors \cite{Brown_2018}. Sector-coupling allows large CO$_2$ reductions before large capacities of storage become necessary, providing more time to further develop storage technologies \cite{Victoria_2019_storage}. Greenfield optimisation is useful to investigate the optimal configuration of the fully-decarbonised system, but it does not provide insights on how to transition towards it. Today's generation fleet and decisions taken in intermediate steps will shape the final configuration. 
+Energy models assuming greenfield optimisation, that is, building the European energy system from scratch without considering current capacities, shows that sector-coupling decreases the system cost and reduces the need for extending transmission lines due to the additional local flexibility brought by the heating and transport sectors \cite{Brown_2018}. Sector-coupling allows large CO$_2$ reductions before large capacities of storage become necessary, providing more time to further develop storage technologies \cite{Victoria_2019_storage}. Greenfield optimisation is useful to investigate the optimal configuration of the fully-decarbonised system, but it does not provide insights on how to transition towards it. Today's generation fleet and decisions taken in intermediate steps will shape the final configuration. \\
 
-\paragraph{\textbf{Myopic optimization and carbon budget}} \
 Transition paths for the European power system have been analysed using myopic optimisation, i.e., without full foresight over the investment horizon \cite{Bogdanov_2019, Plesmann_2017, Gerbaulet_2019, Poncelet_2016}. Myopic optimisation results in higher cumulative system cost than optimising the entire transition period with perfect foresight because the former leads to stranded investments \cite{Gerbaulet_2019, Heuberger_2018}. However, the myopic approach is less sensitive to the assumed discount rate and can capture better short-sighted behaviour of political actors and investors \cite{Poncelet_2016, Gerbaulet_2019}. \\
 
 Transition paths under stringent carbon budgets have been mainly investigated using Integrated Assessment Models (IAMs), which represent a broader approach including other sectors, globe, land, and climate models \cite{Creutzig_2017, Rogelj_2018, Vanvuuren_2018, Grubler_2018}. However, the low temporal resolution and outdated cost assumptions for wind and solar PV \cite{Creutzig_2017, Krey_2019} in IAMs could hinder the role that renewable technologies could play in decarbonising the energy sector. \\
@@ -154,7 +153,7 @@ First, we investigate the consequences of following two alternative transition p
 
 \paragraph{\textbf{Cumulative costs and system configuration}} \
 
-The two alternative paths arrive at a similar system configuration in 2050, Figure \ref{fig_system_cost}. Towards the end of the period, under heavy CO$_2$ restriction, balancing technologies appear in the system. They include large storage capacities comprising electric batteries and hydrogen storage, and production of synthetic methane.  Cumulative system cost for the Early and steady path represents 7,611 billion euros (B\EUR), while the Late and rapid path accounts for 7,971 B\EUR. In 2050, the cost per unit of delivered energy (including electricity and thermal energy) is approximately 54 \EUR /MWh. The newly built conventional capacity for electricity generation is very modest in both cases, Figure \ref{fig_age_distribution} and Supplementary Figure 5. No new lignite, coal or nuclear capacity is installed. Thus, at the end of both paths, conventional technologies include only gas-fueled power plants, CHP and boilers. Biomass contributes to balancing renewable power but plays a minor role. \\
+The two alternative paths arrive at a similar system configuration in 2050, Figure \ref{fig_system_cost}. Towards the end of the period, under heavy CO$_2$ restriction, balancing technologies appear in the system. They include large storage capacities comprising electric batteries and hydrogen storage, and production of synthetic methane.  Cumulative system cost for the Early and steady path represents 7,875 billion euros (B\EUR), while the Late and rapid path accounts for 8,238 B\EUR. In 2050, the cost per unit of delivered energy (including electricity and thermal energy) is approximately 59 \EUR /MWh. The newly built conventional capacity for electricity generation is very modest in both cases, Figure \ref{fig_age_distribution} and Supplementary Figure 5. No new lignite, coal or nuclear capacity is installed. Thus, at the end of both paths, conventional technologies include only gas-fueled power plants, CHP and boilers. Biomass contributes to balancing renewable power but plays a minor role. \\
 
 Decarbonising the power system has proven to be cheaper than the heating sector \cite{Zhu_2019}. Consequently, although CO$_2$ allowances differ, the electricity sector gets quickly decarbonised in both paths and more notable differences appear in new conventional heating capacities, Figure \ref{fig_heating_expansion}. In both paths, yearly costs initially decrease as the power system takes advantage of the low costs of wind and solar. Removing the final emissions in heating causes total costs to rise again towards 2050. The main reason behind the higher cumulative system cost for the Late and rapid strategy is that the earlier depletion of carbon budget forces it to reach zero emissions by 2040 when renewable generation and balancing technologies are more expensive than in 2050.
 
@@ -167,7 +166,7 @@ Decarbonising the power system has proven to be cheaper than the heating sector 
 \begin{figure*}[!h]
 \centering
 \includegraphics[width=\textwidth]{../figures/age_distribution_Base_Gentle.png}
-\caption{Age distribution of European power plants in operation \cite{powerplantmatching, IRENA_2019} and required annual installation throughout the Early and steady path, see also Supplementary Figures 5-10.} \label{fig_age_distribution} 
+\caption{Age distribution of European power plants in operation and required annual installation throughout the Early and steady path. Historical data from \cite{powerplantmatching, IRENA_2019}, see also Supplementary Figures 5-10.} \label{fig_age_distribution} 
 \end{figure*}
 
 \paragraph{\textbf{Stranded assets}} \
@@ -194,8 +193,7 @@ The required CO$_2$ price at every 5-years time step, Figure \ref{fig_co2price},
 \begin{figure}[!h]
 \centering
 \includegraphics[width=\columnwidth]{../figures/co2_price.png}
-\caption{Historical evolution of CO$_2$ price in the EU Emissions Trading System \cite{ETS} and required CO$_2$ price obtained from the model throughout transition paths shown in Figure \ref{fig_carbon_budget}. 
-Co-benefits of reducing CO$_2$ emissions in Europe due to avoided premature mortality, reduced lost workdays, and increased crop yields are estimated in the range of 125-425 \EUR/ton CO$_2$ \cite{Vandyck_2018}.} \label{fig_co2price} 
+\caption{Historical evolution of CO$_2$ price in the EU Emissions Trading System \cite{ETS} and required CO$_2$ price obtained from the model throughout transition paths shown in Figure \ref{fig_carbon_budget}. Co-benefits of reducing CO$_2$ emissions in Europe due to avoided premature mortality, reduced lost workdays, and increased crop yields are estimated in the range of 125-425 \EUR/ton CO$_2$ \cite{Vandyck_2018}.} \label{fig_co2price} 
 \end{figure}
 
 \paragraph{\textbf{Country and hourly resolved results}} \
@@ -236,23 +234,23 @@ IAMs and partial equilibrium models with similar spatial resolution have also be
 Analysis & Early and steady path & Late and rapid path & Difference & Change relative to Baseline \\
  &  &  & & (Early and steady) \\
 \midrule
-Baseline	& 7,611	& 7,971	& 360 & \\
-District heating expansion	& 7,280	& 7,598	& 318 & -331 \\
-Space heat savings due to building renovation	& 6,772	& 7,084	& 312 & -839 \\
-Transmission expansion after 2030 & 7,518 &	7,833	& 315 & -93 \\
-Including road and rail transport &	8,038	& 8,482 &	444 & 427 \\
+Baseline	& 7,875	& 8,238	& 363 & \\
+District heating expansion	& 7,688	& 8,003	& 315 & -187 (-2.4\%) \\
+Space heat savings due to building renovation	& 6,989	& 7,319	& 330 & -886 (-11.43\%)\\
+Transmission expansion after 2030 & 7,771 &	8,081	& 310 & -104 (-1.3\%)\\
+Including road and rail transport &	8,303	& 8,753 &	450 & 428 \\
 \bottomrule
 \end{tabularx}
 \end{threeparttable}
 \end{table*}
 
-In Nordic countries, district heating (DH) has proven to be useful to decarbonise the heating sector, Supplementary Figure 2. It allows lower cost large-scale technologies such as heat pumps and CHP units, enables a faster conversion because it is easier to substitute one central heating unit than a myriad of individual domestic systems, and facilitates long-term thermal energy storage, via cheap large water pits, Figure \ref{fig_time_series}, that help to balance the large seasonal variation of heating demand, Supplementary Figure 23. So far, we have assumed that DH penetration remains constant at 2015 values. When DH is assumed to expand linearly so that in 2050 it supplies the entire urban heating demand in every country, cumulative system cost for the Early and steady path reduces by 331 B\EUR. This roughly offsets the cost of extending and maintaining the DH networks and avoids the additional expansion of gas distribution networks, Supplementary Note 5. \\
+In Nordic countries, district heating (DH) has proven to be useful to decarbonise the heating sector, Supplementary Figure 2. It allows lower cost large-scale technologies such as heat pumps and CHP units, enables a faster conversion because it is easier to substitute one central heating unit than a myriad of individual domestic systems, and facilitates long-term thermal energy storage, via cheap large water pits, Figure \ref{fig_time_series}, that help to balance the large seasonal variation of heating demand, Supplementary Figure 23. So far, we have assumed that DH penetration remains constant at 2015 values. When DH is assumed to expand linearly so that in 2050 it supplies the entire urban heating demand in every country, cumulative system cost for the Early and steady path reduces by 2.4\%. This roughly offsets the cost of extending and maintaining the DH networks and avoids the additional expansion of gas distribution networks, Supplementary Note 5. \\
 
 
-We now look at the impact of efficiency measurements by modifying the constant heat demand assumption. When a 2\% reduction of space heating demand per year is assumed due to renovations of the building stock, while demand for hot water is kept constant and rebound effects are neglected, cumulative system cost decreases by 839 B\EUR, significantly offsetting costs of renovations, Supplementary Note 6. \\
+We now look at the impact of efficiency measurements by modifying the constant heat demand assumption. When a 2\% reduction of space heating demand per year is assumed due to renovations of the building stock, while demand for hot water is kept constant and rebound effects are neglected, cumulative system cost decreases by 11.3\%, significantly offsetting costs of renovations, Supplementary Note 6. \\
 
 
-When the model is allowed to optimise transmission capacities after 2030, together with the generation and storage assets, the optimal configuration at the end of the paths includes a transmission volume approximately three times higher than that of 2030. The reinforced interconnections contribute to the spatial smoothing of wind fluctuations, increasing the optimal onshore and offshore wind capacities at the end of the path. The required energy capacity for hydrogen storage is reduced due to the contribution of interconnections to balancing wind generation. Although the cumulative system cost is 93 B\EUR lower, it is unclear to what extent it compensates the social acceptance issues associated with extending transmission capacities. \\
+When the model is allowed to optimise transmission capacities after 2030, together with the generation and storage assets, the optimal configuration at the end of the paths includes a transmission volume approximately three times higher than that of 2030. The reinforced interconnections contribute to the spatial smoothing of wind fluctuations, increasing the optimal onshore and offshore wind capacities at the end of the path. The required energy capacity for hydrogen storage is reduced due to the contribution of interconnections to balancing wind generation. Although the cumulative system cost is 1.3\% lower, it is unclear to what extent it compensates the social acceptance issues associated with extending transmission capacities. \\
 
 Neither of the paths installs new nuclear capacity. This technology is only part of the optimal system in 2050 when nuclear costs are lower by 15\% compared to the reference cost and no transmission capacity expansion is allowed. In all the previous scenarios, the difference in cumulative system cost for the Early and steady and the Late and rapid path is roughly the same, Table \ref{tab_additional_analyses}.
 
@@ -261,19 +259,22 @@ Neither of the paths installs new nuclear capacity. This technology is only part
 
 Finally, both paths are re-run including the coupling of road and rail transport, as described in Supplementary Note 3.5. For every time step, the electrification of transport is assumed to be equal to the CO$_2$ emissions reduction relative to 2020. In this way, emissions in that sector sink roughly parallel to those of heating and electricity sectors. This is roughly correct because the decarbonisation of the electricity generation happens faster and earlier than that of the heating sector. At every moment, half of the battery electric vehicles (BEVs) present in the model are assumed to allow demand-side management and a quarter of the available BEVs are assumed to provide vehicle-to-grid services. The possible use of hydrogen in the transport sector is not considered.\\
 
-For the Early and steady path, cumulative system cost increase by 427 B\EUR. The cost of the EV or their batteries are not included in the model since it is assumed that EV owners buy them to satisfy their mobility needs. The system cost increase was expected, since, when fully electrified, road and rail transport increase electricity demand by 1,102 TWh$_{el}$/a. However, the evolution of LCOE remains similar throughout the transition, Supplementary Figures 6 and 20. The additional flexibility provided by EVs reduces the need for static batteries and incentivises a higher solar PV penetration, as previously observed \cite{Brown_2018, Victoria_2019_storage}.
+For the Early and steady path, cumulative system cost increase by 5.4\%. The cost of the EV or their batteries are not included in the model since it is assumed that EV owners buy them to satisfy their mobility needs. The system cost increase was expected, since, when fully electrified, road and rail transport increase electricity demand by 1,102 TWh$_{el}$/a. However, the evolution of LCOE remains similar throughout the transition, Supplementary Figures 6 and 20. The additional flexibility provided by EVs reduces the need for static batteries and incentivises a higher solar PV penetration, as previously observed \cite{Brown_2018, Victoria_2019_storage}.
 
-\paragraph{\textbf{Wind and solar dominant electricity mix}} \
+\section{Discussion}
+
+In this section we briefly compare our results with other revelant analysis of decarbonisation pathways for Europe and indicate the main limitations of this study. \\
 
 The analysis accompanying the EU \textit{Clean Planet for All} strategy \cite{in-depth_2018} comprises 8 scenarios, three of which are compatible with limiting temperature increase at the end of the century to 1.5$^{\circ}$C. All of them include a nuclear capacity higher than 85 GW in 2050. Most probably this is a result of the lower cost assumed for nuclear in \cite{in-depth_2018}. Scenario 1.5Life in \cite{in-depth_2018} assumes significant lifestyle changes and consumer choices, while Scenario 1.5Tech relies on bioenergy with carbon capture and storage (BECCS). 
+
 In ENTSO-E scenario report \cite{TYNDP_scenarios}, biomass accounts for more than 30\% of the electricity mix in 2050. Using cost-optimization we have shown that a decarbonised European electricity mix based mainly on wind and solar is cost-effective.  It can also avoid the concerns associated with nuclear, biomass and BECCS. A proper evaluation of feasibility requires a multidimensional approach which on top of the land availability, technological and economical aspects considered here, includes also social acceptance, institutions, and politics. Although that evaluation is out of the scope of this work, the gradual transition described in the Early and steady path could potentially be beneficial when those aspects are taken into consideration. 
 
-
+A recent analysis of the globally cost-effective emission pathways for the EU ETS showed that increasing the linear reduction factor for 2021-2030 from current value of 2.2\% to 4\% is cost-effective \cite{Zaklan_2020}. This is supported by the increase in renewable penetration and efficiency targets for 2030 and the coal phase-out plans of several European countries. For the ETS sectors, failing to reduce emissions in the next decade, would require a drastic reduction after 2030 and higher cumulative costs. The results in this paper, which includes also diffuse sectors such as transport and domestic heating supply, back this recommendation. 
 
 
 \section{Conclusions} \
 
-When comparing alternative transition paths for the European energy system with the same carbon budget, we find that a transition including an early and steady CO$_2$ reduction is consistently around 300 B\EUR cheaper than a path where low targets in the initial period demand a sharper reduction later.  We found that up-to-date costs for wind and solar and the inclusion of highly resolved time series for balancing allows a fully decarbonised system relying on those technologies together with hydro and minor contribution from biomass. The required renewable build rates to decarbonise the electricity and heating sectors correspond to the highest historical values, making the transition challenging yet possible. We have shown that early action not only allows room for decision-making later but it also pays off. 
+When comparing alternative transition paths for the European energy system with the same carbon budget, we find that a transition including an early and steady CO$_2$ reduction is consistently around 350 B\EUR cheaper than a path where low targets in the initial period demand a sharper reduction later.  We found that up-to-date costs for wind and solar and the inclusion of highly resolved time series for balancing allows a fully decarbonised system relying on those technologies together with hydro and minor contribution from biomass. The required renewable build rates to decarbonise the electricity and heating sectors correspond to the highest historical values, making the transition challenging yet possible. We have shown that early action not only allows room for decision-making later but it also pays off. 
 
 
 
@@ -297,17 +298,21 @@ To estimate the cumulative cost of every transition path, the annualised cost fo
 \caption{Model diagram representing the main generation and storage technologies in every country.} \label{fig_model} 
 \end{figure}
 
-\section{Data and code availability}
+\section{Data availability}
 
-The model is implemented in the open-source framework Python for Power System Analysis (PyPSA) \cite{PyPSA}. The model and data used in this paper can be retrieved from the repository \href{https://github.com/martavp/pypsa-eur-sec-30-path}{pypsa-eur-sec-30-path}.
+The model is implemented in the open-source framework Python for Power System Analysis (PyPSA) \cite{PyPSA}. The model and data used in this paper can be retrieved from the repository \href{https://github.com/martavp/pypsa-eur-sec-30-path}{pypsa-eur-sec-30-path}. 
 
-\section{Authors contribution}
+\section{Code availability}
 
-M. Victoria designed the analysis, drafted the manuscript and contributed to the data acquisition, analysis and interpretation of data. K. Zhu contributed to the data acquisition, modelling, analysis and interpretation of data. 
-T. Brown, G. B. Andresen and M. Greiner contributed to the initial idea and made substantial revisions of the manuscript. 
+\section{Author contributions}
+
+M.V. designed the analysis, drafted the manuscript and contributed to the data acquisition, analysis and interpretation of data. K. Z. contributed to the data acquisition, modelling, analysis and interpretation of data. T.B., G. B.A. and M.G. contributed to the initial idea and made substantial revisions of the manuscript. 
 
 \section{Acknowledgements}
-M. Victoria, K. Zhu, G. B. Andresen and M. Greiner are fully or partially funded by the RE-INVEST project, which is supported by  the  Innovation  Fund  Denmark  under  grant  number  6154-00022B. T.B. acknowledges funding from the Helmholtz Association under grant no. VH-NG-1352. The responsibility for the contents lies solely with the authors.
+M.V., K.Z., G.B.A. and M.G. are fully or partially funded by the RE-INVEST project, which is supported by  the  Innovation  Fund  Denmark  under  grant  number  6154-00022B. T.B. acknowledges funding from the Helmholtz Association under grant no. VH-NG-1352. The responsibility for the contents lies solely with the authors.
+
+\section{Competing interests}
+The authors declare no competing interests.
 
 %\section{References}
 \bibliography{bib_transition}
