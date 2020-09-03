@@ -2,7 +2,7 @@
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
-This repository includes the model PyPSA-Eur-Sec-30-Path used in the paper “Early decarbonisation of the European energy system pays off".
+This repository includes the model PyPSA-Eur-Sec-30-Path used in the paper ["Early decarbonisation of the European energy system pays off"](https://arxiv.org/abs/2004.11009).
 
 
 The model allows the myopic optimization of the sector-couple European energy system in 5-year steps, using hourly resolution and one-node-per-country network. 
