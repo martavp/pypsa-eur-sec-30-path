@@ -144,7 +144,7 @@ agedata=agedata/1000 #GW
 
 #future build_rates
 idx = pd.IndexSlice
-version = 'Base'  #'Base'  #'w_Tran_exp' #'w_EV_exp' # #'w_Retro' #'w_DH_exp' #'wo_CO2_budget' 
+version = 'w_EV_exp'  #'Base'  #'w_Tran_exp' #'w_EV_exp' # #'w_Retro' #'w_DH_exp' #'wo_CO2_budget' 
 cum_cap=pd.read_csv('results/version-' + version +'/csvs/metrics.csv', sep=',', 
                     index_col=0, header=[0,1,2])
 energy=pd.read_csv('results/version-' + version +'/csvs/energy.csv', sep=',', 
@@ -246,7 +246,7 @@ ax0.invert_xaxis()
 ax0.invert_yaxis()
 ax1.invert_yaxis()
 ax0.set_yticks([])
-xlim_RES=210 
+xlim_RES=210
 xlim_conv=15 
 ax0.set_xlim(xlim_conv,0)
 ax1.set_xlim(0,xlim_RES)
@@ -379,7 +379,7 @@ ax5.set_yticklabels(['2020',
                      '2040', 
                      '2045', ], fontsize=12)
 ax4.set_xticks(list(range(0,20,5)))
-ax5.set_xticks(list(range(0,210,10))) 
+ax5.set_xticks(list(range(0,xlim_RES,10))) 
 
 plt.savefig('../figures/age_distribution_' + version + '.png', dpi=300, bbox_inches='tight') 
 #%%
