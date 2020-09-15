@@ -144,7 +144,7 @@ agedata=agedata/1000 #GW
 
 #future build_rates
 idx = pd.IndexSlice
-version = 'w_EV_exp'  #'Base'  #'w_Tran_exp' #'w_EV_exp' # #'w_Retro' #'w_DH_exp' #'wo_CO2_budget' 
+version = 'Base'  #'Base'  #'w_Tran_exp' #'w_EV_exp' # #'w_Retro' #'w_DH_exp' #'wo_CO2_budget' 
 cum_cap=pd.read_csv('results/version-' + version +'/csvs/metrics.csv', sep=',', 
                     index_col=0, header=[0,1,2])
 energy=pd.read_csv('results/version-' + version +'/csvs/energy.csv', sep=',', 
@@ -288,7 +288,8 @@ ax1.set_yticklabels(['1970',
                      '2015'], fontsize=12)
 ax0.set_zorder(1)
 ax0.legend(loc=(5.2,0.5), fontsize=14)
-ax1.legend(loc=(0.25,0.15), fontsize=14) 
+handles, labels = ax1.get_legend_handles_labels()
+ax1.legend(reversed(handles), reversed(labels), loc=(0.25,0.15), fontsize=14) 
 
 
 a2 = build_rates_go[['Nuclear', 'Lignite', 'Hard Coal',  'Natural Gas', 'gas CHP elec']].plot.barh(stacked=True, legend=None,
@@ -329,7 +330,7 @@ ax3.set_yticklabels(['2020',
 ax2.set_xticks([]) 
 ax3.set_xticks([]) 
 
-ax3.text(160, 28, 'Early and steady path', fontsize=16) 
+ax3.text(160, 28, 'Early and Steady path', fontsize=16) 
 im=plt.imread('../figures/tortoise.png')
 place_image(im, loc='lower right', ax=ax3, pad=0, zoom=0.1)
 
@@ -354,7 +355,7 @@ ax4.spines["left"].set_visible(False)
 ax5.spines["right"].set_visible(False)
 ax4.set_xlabel('Installation rate (GW/a)', fontsize=14, x=1.15)
 
-ax5.text(160, 28, 'Late and rapid path', fontsize=16) 
+ax5.text(160, 28, 'Late and Rapid path', fontsize=16) 
 im=plt.imread('../figures/hare.png')
 place_image(im, loc='lower right', ax=ax5, pad=0, zoom=0.1)
 trans = ax5.get_xaxis_transform()
@@ -384,7 +385,7 @@ ax5.set_xticks(list(range(0,xlim_RES,10)))
 plt.savefig('../figures/age_distribution_' + version + '.png', dpi=300, bbox_inches='tight') 
 #%%
 """
-Plot only Early and steady path
+Plot only Early and Steady path
 """
 plt.figure(figsize=(20,11))
 gs1 = gridspec.GridSpec(120, 152) 
@@ -403,7 +404,7 @@ ax0.invert_xaxis()
 ax0.invert_yaxis()
 ax1.invert_yaxis()
 ax0.set_yticks([])
-xlim_RES=130 
+xlim_RES=130
 xlim_conv=15 
 ax0.set_xlim(xlim_conv,0)
 ax1.set_xlim(0,xlim_RES)
@@ -445,7 +446,8 @@ ax1.set_yticklabels(['1970',
                      '2015'], fontsize=12)
 ax0.set_zorder(1)
 ax0.legend(loc=(5.19,0.5), fontsize=14)
-ax1.legend(loc=(0.428,0.15), fontsize=14) 
+handles, labels = ax1.get_legend_handles_labels()
+ax1.legend(reversed(handles), reversed(labels), loc=(0.428,0.15), fontsize=14) 
 
 a2 = build_rates_go[['Nuclear', 'Lignite', 'Hard Coal',  'Natural Gas', 'gas CHP elec']].plot.barh(stacked=True, legend=None,
      ax=ax2, color=[color['nuclear'], color['lignite'], color['coal'], color['gas'], color['gas CHP']], alpha=1, width=0.8, linewidth=0)
@@ -484,7 +486,7 @@ ax3.set_yticklabels(['2020',
                      '2045', ], fontsize=12)
 
 ax2.set_xlabel('Installation rate (GW/a)', fontsize=14, x=1.15)
-ax3.text(105, 28, 'Early and steady path', fontsize=16)
+ax3.text(100, 28, 'Early and Steady path', fontsize=16)
 ax2.minorticks_on()
 ax2.tick_params(axis='x', which='minor', bottom=False)
 ax2.set_xticks(list(range(0,20,5)))
@@ -625,7 +627,7 @@ ax3.set_yticklabels(['2020',
 ax2.set_xticks([]) 
 ax3.set_xticks([]) 
 
-ax3.text(70, 28, 'Early and steady path', fontsize=14)
+ax3.text(65, 28, 'Early and Steady path', fontsize=14)
 im=plt.imread('../figures/tortoise.png')
 place_image(im, loc='lower right', ax=ax3, pad=0, zoom=0.09)
 
@@ -650,7 +652,7 @@ ax4.spines["left"].set_visible(False)
 ax5.spines["right"].set_visible(False)
 ax4.set_xlabel('Installation rate (GW$_{th}$/a)', fontsize=14, x=1.15)
 
-ax5.text(70, 28, 'Late and rapid path', fontsize=14)
+ax5.text(65, 28, 'Late and Rapid path', fontsize=14)
 im=plt.imread('../figures/hare.png')
 place_image(im, loc='lower right', ax=ax5, pad=0, zoom=0.09)
 trans = ax5.get_xaxis_transform()
@@ -712,7 +714,7 @@ ax3.set_yticklabels(['2020',
 ax3.set_xticks([]) 
 ax3.minorticks_on()
 ax3.tick_params(axis='x', which='minor', bottom=False)
-ax3.text(800, 28, 'Early and steady path', fontsize=14)
+ax3.text(800, 28, 'Early and Steady path', fontsize=14)
 im=plt.imread('../figures/tortoise.png')
 place_image(im, loc='lower right', ax=ax3, pad=0, zoom=0.07)
 
@@ -726,7 +728,7 @@ ax5.set_yticklabels([str(year) for year in years_future], fontsize=12)
 ax5.spines["top"].set_visible(False)
 ax5.spines["right"].set_visible(False)
 ax5.set_xlabel('Installation rate, Energy capacity (GWh/a)', fontsize=14)
-ax5.text(800, 28, 'Late and rapid path', fontsize=14)
+ax5.text(800, 28, 'Late and Rapid path', fontsize=14)
 im=plt.imread('../figures/hare.png')
 place_image(im, loc='lower right', ax=ax5, pad=0, zoom=0.07)
 trans = ax5.get_xaxis_transform()
@@ -776,7 +778,7 @@ ax3.set_xticks([])
 ax3.minorticks_on()
 ax3.tick_params(axis='x', which='minor', bottom=False)
 
-ax3.text(225, 23, 'Early and steady path', fontsize=14)
+ax3.text(225, 23, 'Early and Steady path', fontsize=14)
 im=plt.imread('../figures/tortoise.png')
 place_image(im, loc='lower right', ax=ax3, pad=0, zoom=0.07)
 
@@ -791,7 +793,7 @@ ax5.set_yticklabels([str(year) for year in years_future], fontsize=12)
 ax5.spines["top"].set_visible(False)
 ax5.spines["right"].set_visible(False)
 ax5.set_xlabel('Synthetic methane production (TWh/a)', fontsize=14)
-ax5.text(225, 23, 'Late and rapid path', fontsize=14)
+ax5.text(225, 23, 'Late and Rapid path', fontsize=14)
 im=plt.imread('../figures/hare.png')
 place_image(im, loc='lower right', ax=ax5, pad=0, zoom=0.07)
 trans = ax5.get_xaxis_transform()

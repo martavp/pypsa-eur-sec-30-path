@@ -58,6 +58,12 @@ tech_colors={'hydro':color['hydro'],
              'offwind':color['offwind'], 
              'gas':color['gas']}
 
+tech_colors={'hydro':'black',
+             'solar':'black',
+             'onwind':'black',
+             'offwind':'black',
+             'gas':'black'}
+
 transmission_capacities=n.links.p_nom_opt[n.links.index[n.links.index.str[2] == "-"]]
 
 
@@ -75,7 +81,7 @@ def plot_fig():
     plt.rcParams['patch.linewidth'] = 0  
     n.buses.drop(n.buses.index[n.buses.index.str.len()!=2], inplace=True)
     
-    bus_size_factor = 0.008 
+    bus_size_factor = 0.008
     link_size_factor = 0.001
     n.plot(color_geomap={'ocean': 'lightblue', 'land': 'cornsilk'}, 
            boundaries=[-10.5, 30, 35, 70],
@@ -142,7 +148,7 @@ def plot_fig():
     ax.add_artist(l3)
     
 
-    plt.savefig('../figures/spatial_electricity_generation_' + version + '.png',  dpi=300, bbox_inches='tight')
+    plt.savefig('../figures/TEST_spatial_electricity_generation_' + version + '.png',  dpi=300, bbox_inches='tight')
     return fig
 prueba=plot_fig()    
 
