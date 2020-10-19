@@ -24,7 +24,7 @@ plt.rcParams['ytick.labelsize'] = 14
 path = '../../postnetworks/'  
 network_name= path+'postnetwork-go_TYNDP_2050.nc'  
 network = pypsa.Network(network_name)
-        
+#%%        
 dem_electricity=network.loads_t.p[network.loads.index[network.loads.index.str.len() == 2]].sum(axis=1)/1000 #MWh -> GWh
 dem_heat = (network.loads_t.p[network.loads.index[network.loads.index.str[3:] == 'heat']].sum(axis=1)
 +network.loads_t.p[network.loads.index[network.loads.index.str[3:] == 'central heat']].sum(axis=1)
