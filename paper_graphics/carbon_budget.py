@@ -88,7 +88,7 @@ def plot_carbon_budget_w_transport():
     
     colors = pl.cm.hot(np.linspace(0,1,6))
 
-    colors=['silver', 'lightgray', 'firebrick', 'gold', 'silver', 
+    colors=['silver', 'lightgray', 'firebrick', 'dodgerblue', 'silver', 
             'silver']
     plt.figure(figsize=(10, 7))
     gs1 = gridspec.GridSpec(1, 1)
@@ -173,11 +173,11 @@ def plot_carbon_budget_w_transport():
                            fc='white', ec='firebrick'))
     ax1.annotate('Early and Steady', xy=(2043,0.16), #cautious
                  xytext=(2036, 0.7),
-                 color='gold', fontsize=20, 
+                 color='dodgerblue', fontsize=20, 
                  arrowprops = dict(arrowstyle = "->", alpha=1,
-                               color='gold', linewidth=2),
+                               color='dodgerblue', linewidth=2),
                  bbox=dict(boxstyle="round", linewidth=2, 
-                           fc='white', ec='gold')) 
+                           fc='white', ec='dodgerblue')) 
                  
     ax1.set_yticks(np.arange(0.5, 4.0, 0.5))
     ax1.plot([2020],[0.8*(emissions[1990]['electricity'] + 
@@ -316,7 +316,7 @@ def plot_carbon_budget():
     
     colors = pl.cm.hot(np.linspace(0,1,6))
 
-    colors=['silver', 'silver', 'firebrick',  'gold', 'silver', 
+    colors=['silver', 'silver', 'firebrick',  'dodgerblue', 'silver', 
             'silver']
     plt.figure(figsize=(10, 6))
     gs1 = gridspec.GridSpec(1, 1)
@@ -396,11 +396,11 @@ def plot_carbon_budget():
                            fc='white', ec='firebrick'))
     ax1.annotate('Early and Steady', xy=(2040,0.15), #cautious
                  xytext=(2033, 0.7),
-                 color='gold', fontsize=20, 
+                 color='dodgerblue', fontsize=20, 
                  arrowprops = dict(arrowstyle = "->", alpha=1,
-                               color='gold', linewidth=2),
+                               color='dodgerblue', linewidth=2),
                  bbox=dict(boxstyle="round", linewidth=2, 
-                           fc='white', ec='gold')) 
+                           fc='white', ec='dodgerblue')) 
     # im_tortoise=plt.imread('../figures/tortoise.png')
     # place_image(im_tortoise, loc='lower left', ax=ax1, pad=0, zoom=0.06) 
     # im_hare=plt.imread('../figures/hare.png')
