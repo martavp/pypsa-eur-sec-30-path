@@ -4,7 +4,7 @@
 
 [![DOI](https://zenodo.org/badge/218088509.svg)](https://zenodo.org/badge/latestdoi/218088509)
 
-This repository includes the model PyPSA-Eur-Sec-30-Path used in the paper ["Early decarbonisation of the European energy system pays off"](https://arxiv.org/abs/2004.11009).
+This repository includes the model PyPSA-Eur-Sec-30-Path used in the paper ["Early decarbonisation of the European energy system pays off"](https://www.nature.com/articles/s41467-020-20015-4).
 
 
 The model allows the myopic optimization of the sector-couple European energy system in 5-year steps, using hourly resolution and one-node-per-country network. 
@@ -21,7 +21,7 @@ The necessary input data to run the model can be retrieved from the repository [
 
 The input data bundle is about 800 MB and it includes time series for electricity and heating demand, [solar PV capacity factor time series](https://zenodo.org/record/2613651#.XniBkXJ7mUk), [onshore and offshore wind capacity factor time series](https://zenodo.org/record/3253876#.XniBsnJ7mUl), the Corine Land Cover database, the Nature 2000 network database, JRC-IDEES-2015 database, JRC ENSPRESO biomass potentials, the DEA Technology Catalogue which is used for technology costs evolution, existing and planned transmission capacities included in the TYNDP2016, EEA emission statistics, emobility statistics, hydrogen salt cavern potentials, ETS historical CO_2 price evolution, current share of district heating. 
 
-The directory 'paper_graphics/' includes scripts to produce the figures in the main text and supplementary materials of the paper ["Early decarbonisation of the European energy system pays off"](https://arxiv.org/abs/2004.11009). They are also available in the directory 'figures/'.
+The directory 'paper_graphics/' includes scripts to produce the figures in the main text and supplementary materials of the paper ["Early decarbonisation of the European energy system pays off"](https://www.nature.com/articles/s41467-020-20015-4). They are also available in the directory 'figures/'.
 
 ### License ###
 Copyright 2015-2020 Kun Zhu (AU), Marta Victoria (AU), and Tom Brown (KIT).
